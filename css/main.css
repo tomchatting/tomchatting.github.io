@@ -54,7 +54,7 @@ ol.nav { list-style: none; margin-left: 0; }
 .nav>li>a { color: #CF40CB; }
 .nav>li>a:hover { background-color: #CF40CB; color: #FFF; } 
 
-@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) 
+@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
 { 
 	header, section, article, footer { width: 95%; margin: 0 auto; min-width: 320px; }
 	img { max-width: 100%; }
