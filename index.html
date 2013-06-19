@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article class="{{ post.category }}">
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
     <span class="extra">{{ post.category }}, {{ post.date | date_to_string }}</span>
