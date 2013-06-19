@@ -1,13 +1,34 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Home
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+{% for post in site.posts %}
+<article class="{{ post.category }}">
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <span class="extra">{{ post.category }}, {{ post.date | date_to_string }}</span>
+    {{ post.content }}
+</article>
+<hr />
+{% endfor %}
+<ol class="nav  pagination">
+    <li class="pagination__prev">
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+            <a href="/">Previous</a>
+        {% else %}
+            <a href="/page{{paginator.previous_page}}">Previous</a>
+        {% endif %}
+        {% else %}
+            Previous
+        {% endif %}
+    </li><!--
+    
+ --><li class="pagination__next">
+        {% if paginator.next_page %}
+            <a href="/page{{paginator.next_page}}">Next</a>
+        {% else %}
+            Next
+        {% endif %}
+    </li>
+</ol>
