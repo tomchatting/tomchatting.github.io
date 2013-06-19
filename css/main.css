@@ -51,8 +51,8 @@ footer { padding-top: 10px; padding-bottom: 10px; color: #ccc; font-size: small;
 ol.nav { list-style: none; margin-left: 0; }
 .pagination>li { padding: 12px; }
 .nav>li, .nav>li>a { display: inline-block; zoom: 1; }
-.nav>li>a { color: #CF40CB; }
-.nav>li>a:hover { background-color: #CF40CB; color: #FFF; } 
+.pagination>li>a { color: #CF40CB; }
+.pagination>li>a:hover { background-color: #CF40CB; color: #FFF; } 
 
 @media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
 { 
