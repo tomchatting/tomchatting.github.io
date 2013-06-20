@@ -58,4 +58,5 @@ ol.nav { list-style: none; margin-left: 0; }
 { 
 	header, section, article, footer { width: 95%; margin: 0 auto; min-width: 320px; }
 	img { max-width: 100%; }
+	.quote blockquote { width: auto; }
 }
