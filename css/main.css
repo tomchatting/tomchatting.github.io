@@ -1,53 +1,191 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
-@import url(http://necolas.github.com/normalize.css/2.0.1/normalize.css);
-@import url(http://dg9t.eu/fonts/stylesheet.css);
-html { font: 16px 'Source Sans Pro', sans-serif; color: #444; }
-hr { border: 0; border-bottom: solid 1px rgb(229,229,229); height: 1px; clear: both; }
-.wrapper { border-top: 10px solid #536878; border-image:url('top.png') 100% 1 0 repeat; }
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(//necolas.github.com/normalize.css/2.0.1/normalize.css);
+@import url(/fonts/stylesheet.css);
 
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
+/*----------------------
+	Globals, unresets
+-----------------------*/
 
-a         { color: #536878; text-decoration: none; }
-a:hover   { color: #000; }
-a:visited { color: #536878; }
+html { 
+	font: 16px 'Source Sans Pro', sans-serif; color: #444;
+}
 
-table { font-size: inherit; font: 100%; }
+hr { 
+	border: 0;
+	border-bottom: solid 1px rgb(229,229,229); 
+	height: 1px; 
+	clear: both; 
+}
 
-h1.title {font-family: 'BlackoutMidnight', sans-serif; display: inline-block; font-size: 2em;}
+.wrapper { 
+	border-top: 10px solid #536878; 
+	border-image:url('top.png') 100% 1 0 repeat; 
+}
 
-header, section, article, footer, hr { width: 640px; margin: 0 auto; }
-img { max-width: 640px; max-height: 500px; }
+h1 { 
+	margin-bottom: 1em;
+}
 
-ul.nav { list-style: none; display:inline-block; }
-ul.nav li { display:inline; margin: 1em; }
-ul.nav li a { color: #ccc; }
+p { 
+	margin: 1em 0;
+}
 
-article:last-child { border: 0; }
-article h1 { display: inline; }
-.extra { float: right; line-height: 40px; color: #999; font-style:italic; font-size: small; height: 40px; vertical-align: baseline; }
+table { 
+	font-size: inherit; font: 100%;
+}
 
-.note a { color: #2679D5; }
-.note a:hover { background-color: #2679D5; color: #FFF; }
+header, section, article, hr, footer>p { 
+	width: 640px; margin: 0 auto;
+}
 
-.article a { color: #C95C26; }
-.article a:hover { background-color: #C95C26; color: #FFF; }
+img { 
+	max-width: 640px;
+	max-height: 500px; 
+}
 
-.link a { color: #CF40CB; }
-.link a:hover { background-color: #CF40CB; color: #FFF; }
+/*----------------------
+	Links
+-----------------------*/
 
-.quote a { color: #5CC932; }
-.quote a:hover { background-color: #5CC932; color: #FFF; }
+a { 
+	color: #536878; 
+	text-decoration: none;
+}
 
-.photo a { color: #99A4BD; }
-.photo a:hover { background-color: #99A4BD; color: #FFF; }
+a:hover {
+	color: #000;
+}
 
-.quote blockquote { font-family: Georgia, serif; font-size: 18px; font-style: italic; width: 500px; margin: 0.25em 0; padding: 0.25em 40px; line-height: 1.45; position: relative; color: #383838; }
-.quote blockquote:before { display: block; content: "\201C"; font-size: 80px; position: absolute; left: -20px; top: -20px; color: #7a7a7a; }
-.quote blockquote cite { color: #999999; font-size: 14px; display: block; margin-top: 5px; }
-.quote blockquote cite:before { content: "\2014 \2009"; }
- 
-footer { padding-top: 10px; padding-bottom: 10px; color: #ccc; font-size: small; }
+a:visited {
+	color: #536878;
+}
+
+/*----------------------
+	Header, navbar
+-----------------------*/
+
+h1.title {
+	font-family: 'BlackoutMidnight', sans-serif; 
+	display: inline-block; 
+	font-size: 2em;
+}
+
+ul.nav { 
+	list-style: none; 
+	display:inline-block; 
+}
+
+ul.nav li { 
+	display:inline;
+	margin: 1em; 
+}
+
+ul.nav li a {
+	color: #ccc;
+}
+
+/*----------------------
+	Articles
+-----------------------*/
+
+article h1 {
+	display: inline;
+}
+
+.extra {
+	float: right;
+	line-height: 40px;
+	color: #999;
+	font-style:italic;
+	font-size: small;
+	height: 40px;
+	vertical-align: baseline;
+	text-transform: capitalize;
+}
+
+.note a {
+	color: #2679D5;
+}
+
+	.note a:hover {
+		background-color: #2679D5; color: #FFF;
+	}
+
+.article a {
+	color: #C95C26;
+}
+
+	.article a:hover {
+		background-color: #C95C26; color: #FFF;
+	}
+
+.link a {
+	color: #CF40CB;
+}
+
+	.link a:hover {
+		background-color: #CF40CB;
+		color: #FFF
+	}
+
+.quote a { 
+	color: #5CC932;
+}
+
+	.quote a:hover {
+		background-color: #5CC932;
+		color: #FFF;
+	}
+
+	.quote blockquote {
+		font-family: Georgia, serif;
+		font-size: 18px;
+		font-style: italic;
+		width: 500px;
+		margin: 0.25em 0;
+		padding: 0.25em 40px;
+		line-height: 1.45;
+		position: relative;
+		color: #383838;
+	}
+	
+	.quote blockquote:before { 
+		display: block;
+		content: "\201C";
+		font-size: 80px;
+		position: absolute;
+		left: -20px;
+		top: -20px;
+		color: #7a7a7a;
+	}
+	
+	.quote blockquote cite {
+		color: #999999;
+		font-size: 14px;
+		display: block;
+		margin-top: 5px;
+	}
+	
+	.quote blockquote cite:before {
+		content: "\2014 \2009";
+	}
+
+.photo a { 
+	color: #99A4BD;
+}
+
+	.photo a:hover {
+		background-color: #99A4BD; color: #FFF;
+	}
+
+
+article:last-child {
+	border: 0;
+}
+
+/*----------------------
+	Pagination, Footer
+-----------------------*/
  
 .pagination { text-align: center; }
 ol.nav { list-style: none; margin-left: 0; }
@@ -56,11 +194,30 @@ ol.nav { list-style: none; margin-left: 0; }
 .pagination>li>a { color: #F00; }
 .pagination>li>a:hover { background-color: #F00; color: #FFF; } 
 
+footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #ccc;
+	font-size: small;
+	background-color: #333;
+	clear: both;
+}
+
+	footer a {
+		color: #ccc !important;
+		text-decoration: underline;
+	}
+
+/*----------------------
+	Mobiles
+-----------------------*/
+
 @media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
 { 
-	header, section, article, footer, hr { width: 90%; margin: 0 auto; min-width: 320px; }
+	header, section, article, footer p, hr { width: 90%; margin: 0 auto; min-width: 320px; }
 	img { max-width: 100%; }
 	.quote blockquote { width: auto; }
+	.extra { float: none; display: block; }
 }
 
 @media handheld, only screen and (max-width: 565px), only screen and (max-device-width: 565px) 
