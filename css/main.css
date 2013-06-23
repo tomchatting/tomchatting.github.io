@@ -21,6 +21,7 @@ img { max-width: 640px; max-height: 500px; }
 
 ul.nav { list-style: none; display:inline-block; }
 ul.nav li { display:inline; margin: 1em; }
+ul.nav li a { color: #ccc; }
 
 article:last-child { border: 0; }
 article h1 { display: inline; }
