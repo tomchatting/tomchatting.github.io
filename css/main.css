@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 @import url(http://necolas.github.com/normalize.css/2.0.1/normalize.css);
 @import url(http://dg9t.eu/fonts/stylesheet.css);
-html { font: 16px 'Source Sans Pro', sans-serif; border-top: 10px solid #536878; border-image:url('top.png') 100% 1 0 repeat;  }
-hr { border: 0; border-bottom: solid 1px #EEE; height: 1px; margin: 0; clear: both; }
+html { font: 16px 'Source Sans Pro', sans-serif; color: #444; }
+hr { border: 0; border-bottom: solid 1px rgb(229,229,229); height: 1px; clear: both; }
+.wrapper { border-top: 10px solid #536878; border-image:url('top.png') 100% 1 0 repeat; }
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
@@ -15,7 +16,7 @@ table { font-size: inherit; font: 100%; }
 
 h1.title {font-family: 'BlackoutMidnight', sans-serif; display: inline-block; font-size: 2em;}
 
-header, section, article, footer { width: 640px; margin: 0 auto; }
+header, section, article, footer, hr { width: 640px; margin: 0 auto; }
 img { max-width: 640px; max-height: 500px; }
 
 ul.nav { list-style: none; display:inline-block; }

@@ -11,15 +11,19 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
+        
+		<style>
+        ul.nav li.{{ page.title }} a, ul.nav li.{{ page.title }} a:hover { color: #F00; }
+        </style>
 
     </head>
     <body>
-
+	<div class="wrapper">
         <header>
             <h1 class="title"><font style="color: #536878;">@<font style="color: #333;">Phenomenon</font>Tom</font></h1>
             <ul class="nav">
-                <li><a href="/">home</a></li>
-                <li><a href="/about">about</a></li>
+                <li class="Home"><a href="/">Home</a></li>
+                <li class="About"><a href="/about">About</a></li>
             </ul>
         </header>
         <hr />
@@ -29,5 +33,6 @@
 		<footer>
         	<p><a href="http://github.com/tomchatting/tomchatting.github.io/">:-)</a> Jekyll. Theme by me.</p>
         </footer>
+    </div>
     </body>
 </html>
