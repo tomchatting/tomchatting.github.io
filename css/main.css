@@ -209,6 +209,16 @@ footer {
 	}
 
 /*----------------------
+	Other
+-----------------------*/
+
+.mugshot {
+	border-radius: 600px;	
+	float: left;
+	margin-right: 15px;
+}
+
+/*----------------------
 	Mobiles
 -----------------------*/
 
@@ -218,6 +228,7 @@ footer {
 	img { max-width: 100%; }
 	.quote blockquote { width: auto; }
 	.extra { float: none; display: block; }
+	.mugshot { float: none; margin-right: 0; }
 }
 
 @media handheld, only screen and (max-width: 565px), only screen and (max-device-width: 565px) 

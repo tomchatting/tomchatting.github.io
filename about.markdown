@@ -6,6 +6,10 @@ permalink: /about/
 
 # About Me
 
+### Thomas Chatting
+
+<img src="/img/mugshot.jpg" class="mugshot" height="100px" />
+
 Hello, world, my name is Thomas Chatting and I am a 21 year old full-time Pharmacy student studying in Huddersfield, UK.
 
 My web "aliases" (if you can call them that) that I can reel off the top of my head are:
