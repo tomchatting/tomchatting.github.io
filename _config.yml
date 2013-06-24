@@ -1,6 +1,3 @@
 name: dg9t
-pygments: false
+pygments: true
 paginate: 5
-ftp_host: dg9t.eu
-ftp_dir: /public_html/
-ftp_passive: false
