@@ -19,7 +19,7 @@ My web "aliases" (if you can call them that) that I can reel off the top of my h
 * PhenomenonTom
 * Spoolio
 
-Originally from Leeds my lifelong hobby and passion is technology. Ranging from being the first person in my class at college to own an Android phone (the G1, no less) to owning and running some sort of webspace since around 2004, and generally being the go-to tech support guy for my friends and family--and if they're reading this, turn it off and on again, call me on Skype (in that order).
+Originally from Leeds my lifelong hobby and passion is technology. Ranging from being the first person in my class at college to own an Android phone (the G1, no less) to owning and running some sort of webspace since around 2004, and generally being the go-to tech support guy for my friends and family--and if they're reading this, turn it off and on again, call me on Skype (in that order)--my passions in technology are wide and varied.
 
 From speccing and building modern PCs to meddling with Windows system files, and now--more recently--trying to develop various applications for Windows, Web, and mobile (some of which you can see on [Github][github]; my spare time is generally filled with attempts to make myself productive while doing something I enjoy.
 
@@ -37,7 +37,7 @@ If you wish to get in contact you can email me at tom.chatting--*at*--live--*dot
 
 This site is hosted on [GitHub pages][ghpages] using [Jekyll][jekyll], and most of the content is written in John Gruber's [Markdown][markdown].
 
-The code for this site and all of the posts in raw format can be poked around with on it's [GitHub Repository][ghrepo], but please don't steal (my) stuff.
+The code for this site and all of the posts in raw format can be poked around with on its [GitHub Repository][ghrepo], but please don't steal (my) stuff.
 
 [github]: //github.com/tomchatting
 [tweet]: //twitter.com/?status=Ohai,%20@PhenomenonTom%20
