@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Thomas Chatting</title>
+ <link href="http://dg9t.eu/feed.xml" rel="self"/>
+ <link href="http://dg9t.eu/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://dg9t.eu/</id>
+ <author>
+   <name>Thomas Chatting</name>
+   <email>iglootom+feed@gmail.com</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://dg9t.eu{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://dg9t.eu{{ post.id }}</id>
+    <content type="html">{{ post.content }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>

@@ -224,7 +224,7 @@ footer {
 
 @media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
 { 
-	header, section, article, footer p, hr { width: 90%; margin: 0 auto; min-width: 320px; }
+	header, section, article, footer p, hr { width: 90%; margin: 0 auto; min-width: 300px; }
 	img { max-width: 100%; }
 	.quote blockquote { width: auto; }
 	.extra { float: none; display: block; }
@@ -235,4 +235,5 @@ footer {
 { 
 	h1.title { font-size: 1em; }
 	ul.nav li { margin: 0.5em; }
+	ul.nav { padding-left: 10px; }
 }
