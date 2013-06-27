@@ -212,10 +212,18 @@ footer {
 	Other
 -----------------------*/
 
-.mugshot {
-	border-radius: 600px;	
+.float-left {
 	float: left;
 	margin-right: 15px;
+}
+
+.float-right {
+	float: right;
+	margin-left: 15px;
+}
+
+.mugshot {
+	border-radius: 600px;	
 }
 
 /*----------------------

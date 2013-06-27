@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Pokemon Two Player Nuzlocke Challenge"
+date:   2013-06-27 10:00
+category: article
+---
+
+My friend Matty and I have decided to run a two-player Nuzlocke challenge with Pokemon Diamond and Pearl.
+
+![The basic rules](http://cdn.bulbagarden.net/upload/6/65/Basic_Nuzlocke_rules.png "The basic rules")
+
+<img src="http://i.imgur.com/xISdT3f.png" class="float-left" alt="">
+
+The rules we are using are adapted from a Red and Blue challenge, so the levels may turn out to be a bit difficult, but who doesn't like a challenge?
+
+The first dilemma is our rule-set states you may only have as many *active* Pokemon as your rival had at your last battle, but Nuzlocke rules state you must "catch the first Pokemon in each area and nothing else".
+
+The easiest way around this was to follow the Nuzlocke rules, but box all "inactives" at Gyms and WiFi battles.
+
+<img src="http://i.imgur.com/qCLxyL9.png" class="float-right" alt="">
+
+My main issue with the system at the moment, at the early stages of the game, is that mine and Matty's teams are *very* similar, due to the fact that early routes are filled with Bidoof and Starly. That being said, I managed to catch a Magikarp while Matty got an Abra, I got a Shinx while he got an Onix, so hopefully our parties will be diverse and fights won't just be pound-offs.
+
+## My Party
+
+*All level 10, inactives in italics*
+
+![](https://www.pokecheck.org/i/anim/393.gif) Darwin, the Bidoof.
+
+![](https://www.pokecheck.org/i/anim/403.gif) Sparks, the Shinx.
+
+![](https://www.pokecheck.org/i/anim/399.gif) *Buck, the Bidoof.*
+
+![](https://www.pokecheck.org/i/anim/129.gif) *Gulp, the Magikarp.*
+
+![](https://www.pokecheck.org/i/anim/401.gif) *Bugsy, the Kricketot.*
+
+## Grinding is a real grind
+
+Getting Pokemon to flat levels is a real bore, especially early game when all wild Pokemon do is use Growl and Growth; I would *kill* for an exp share.
+
+## Anyway
+
+I'll be updating the blog with notes on my (and Matty's) progress in the coming days/weeks.
+
