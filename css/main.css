@@ -22,10 +22,6 @@ hr {
 	border-image:url('top.png') 100% 1 0 repeat; 
 }
 
-h1 { 
-	margin-bottom: 1em;
-}
-
 p { 
 	margin: 1em 0;
 }
@@ -35,12 +31,19 @@ table {
 }
 
 header, section, article, hr, footer>p { 
-	width: 640px; margin: 0 auto;
+	width: 640px;
+	margin: 0 auto;
+	position: relative;
 }
 
 img { 
 	max-width: 640px;
 	max-height: 500px; 
+}
+
+::selection {
+	background-color: #C95C26;	
+	color: #fff;
 }
 
 /*----------------------
@@ -181,6 +184,11 @@ article h1 {
 
 article:last-child {
 	border: 0;
+}
+
+h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
 }
 
 /*----------------------
