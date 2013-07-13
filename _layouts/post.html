@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="{{ page.category }}">
     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <span class="extra">{{ post.date | date: "%d %B, %Y" }}</span>
+    <span class="extra">{{ page.date | date: "%d %B, %Y" }}</span>
     
     {{ content }}
 
