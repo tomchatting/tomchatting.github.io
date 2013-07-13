@@ -6,7 +6,7 @@ title: Home
 {% for post in paginator.posts %}
 <article class="{{ post.category }}">
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <span class="extra">{{ post.category }}, {{ post.date | date_to_string }}</span>
+    <span class="extra">{{ post.date | date: "%d %B, %Y" }}</span>
     {{ post.content }}
 </article>
 <hr />

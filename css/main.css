@@ -96,12 +96,10 @@ article h1 {
 }
 
 .extra {
-	float: right;
-	line-height: 40px;
+	display: block;
 	color: #999;
 	font-style:italic;
 	font-size: small;
-	height: 40px;
 	vertical-align: baseline;
 	text-transform: capitalize;
 }
@@ -244,7 +242,6 @@ footer {
 	header, section, article, footer p, hr { width: 90%; margin: 0 auto; min-width: 300px; }
 	img { max-width: 100%; }
 	.quote blockquote { width: auto; }
-	.extra { float: none; display: block; }
 	.mugshot { float: none; margin-right: 0; }
 }
 
