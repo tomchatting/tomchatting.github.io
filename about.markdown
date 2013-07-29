@@ -6,7 +6,7 @@ permalink: /about/
 
 # About Me
 
-### Thomas Chatting
+## Thomas Chatting
 
 <img src="/img/mugshot.jpg" class="mugshot float-left" height="100px" />
 
