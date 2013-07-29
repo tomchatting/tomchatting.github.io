@@ -1,13 +1,11 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 @import url(normalize.css);
-@import url(/fonts/stylesheet.css);
 
 /*----------------------
 	Globals, unresets
 -----------------------*/
 
 html { 
-	font: 16px 'Source Sans Pro', sans-serif;
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #444;
 	background: #fff;
 }
@@ -202,11 +200,6 @@ article h1 {
 
 article:last-child {
 	border: 0;
-}
-
-h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
 }
 
 /*----------------------
