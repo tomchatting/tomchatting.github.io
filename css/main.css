@@ -14,9 +14,10 @@ html {
 
 hr { 
 	border: 0;
-	border-bottom: solid 1px rgb(229,229,229); 
+	border-top: solid 1px rgb(229,229,229); 
 	height: 1px; 
-	clear: both; 
+	clear: both;
+	padding-bottom: 10px; 
 }
 
 /*.wrapper { 
@@ -46,6 +47,10 @@ img {
 ::selection {
 	background-color: #C95C26;	
 	color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;	
 }
 
 /*----------------------
@@ -78,7 +83,6 @@ header {
 }
 
 h1.title {
-	/*font-family: 'BlackoutMidnight', sans-serif; */
 	display: inline-block; 
 	font-size: 2em;
 	text-shadow: 0 0 5px rgba(0,0,0,0.25);
@@ -96,8 +100,11 @@ ul.nav li {
 }
 
 ul.nav li a {
-	color: #fff;
-	font-weight: bold;
+	color: rgba(255,255,255,0.7);
+}
+
+ul.nav li a:hover {
+	color: rgba(255,255,255,1.0);
 }
 
 /*----------------------
@@ -111,8 +118,6 @@ article h1 {
 .extra {
 	display: block;
 	color: #999;
-	font-style:italic;
-	font-size: small;
 	vertical-align: baseline;
 	text-transform: capitalize;
 }
