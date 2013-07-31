@@ -1,0 +1,95 @@
+---
+layout: post
+title:  "League of Legends: Supporting 101"
+date:   2013-07-31 11:00
+category: article
+---
+
+<div class="callout callout-warning">
+What follows is a post on the popular <abbr title="Multiplayer online battle arena">MOBA</abbr> <a href="//leagueoflegends.com">League of Legends</a>, and is aimed at people who have a good base knowledge in the game, are level 30, and have dipped their toes into ranked. Feel free to skip over this one. -- Tom
+</div>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/oIIxlgcuQRU" frameborder="0" allowfullscreen="1"> </iframe>
+
+Way back last year when lower jungle camps still spawned at 1:40, and the huge success of the season 2 world finals were just a pipe dream at the back of Tryndamere's mind, I bit the bullet and signed up for LoL.
+
+I find it fitting that I joined League the week Lulu was released, because (by my will or otherwise) I've found myself time and time again <abbr title="(To play a lot/be the strongest at)">maining</abbr> supports. Keep in mind that I'm currently climbing the Elo ladder for the first time--as a person who played with 3-5 friends at a time ranked seemed irrelevant to me--but I'd like to share my thoughts/feelings/insights into the support role. 
+
+## Support styles
+
+I guess I can categorise a few different support styles in blanket terms, in theory all supports can match all styles:
+
+* **Safe** -- Soraka, Sona, Taric, Lulu, Janna
+* **Gun-ho** -- Blitzcrank, Thresh, Taric, Leona
+* **Counter-aggressive** -- Blitzcrank, Leona, Taric, Thresh, Lulu, Sona (post level 6)
+
+Safe supports let your ADC/Marksman farm all day long, with you just popping their mana/hp back to full and stopping any threats with a quick stun, damage reduction spell, or just by having wards and good awareness of when champions are charging an auto attack.
+
+Gun-ho supports grab the enemy marksman (sometimes literally) and try-hard to leave them on a platter for their own marksman to mop-up an easy kill.
+
+Counter-aggressive supports play safe until initiated on, they then turn the tide and become gun-ho themselves.
+
+## How2supp0rt
+
+The "easiest" support champion I could recommend at the moment is Leona. If you're <abbr title="Re-climbing the Elo ladder on a second account">smurfing</abbr> and need a champion for every role, buy Leona for support. She's seldom banned and easily the strongest support in the game.
+
+### Runes
+
+I swear by Gold runes. They are very expensive though so you don't need to necessarily buy them if you're smurfing, but if you're planning on playing more than one support, I highly recommend you buy Gold Quintessences.
+
+![Example rune page](http://i.imgur.com/14fWefZ.png)
+
+> **Wait, why no Gold yellows?**  
+> While gold quintessences give you +3 GP10 (*Philo gives you +5/10 as a comparison*), nine gold yellows only add +2 GP10, which may sound like a lot, but leaves you missing out on 12 armour which armour yellows could be providing. That's the difference between an auto attack killing you, and leaving you with enough health to return to base.
+
+### Masteries
+
+I like to go [1/12/17 for melee supports](http://i.imgur.com/YJ9zmye.jpg) and [5/0/25 for ranged](http://i.imgur.com/jLFzwF7.jpg), with a completed Utility tree and more cooldown reduction for ranged supports and a slightly sacrificed Utility tree and more defence points for melee (the explanation shouldn't be necessary). 
+
+### Playing Leona
+
+![Playing Leona](http://i.imgur.com/AE9oErN.gif)
+
+Level Shield of Daybreak (Q), Zenith Blade (E) , Eclipse (W). Max W first followed by Q. Your "combo" is to activate your Q and W, then E onto the enemy marksman and let things happen. Your ultimate is great at locking down enemies, or slowing/stopping them when they try to run. Remember Solar Flare stuns enemies trapped in the centre, and slows enemies around it.
+
+### Beating Leona
+
+In ranked, counter Leona with champions like Soraka, Lulu, Alistar, and Janna. These heroes all have interrupts, heals and/or shields to disrupt and fix the damage from a Leona.
+
+![Beating Leona](http://i.imgur.com/UbZnDdM.gif)
+
+A quick E, W, Q combo can protect your carry from Leona, and deal tonnes of damage in return.
+
+## The support mindset
+
+> Watching people like Krepo and XPecial and Madlife, you'd think all support heroes were point-and-click, you'd never guess from a glance that Thresh, Lulu, Blitzcrank and more all have skillshots.
+ 
+The first biggest misconception I've ever seen in League is that "support is easy", and I want to shut that one down straight away. No matter what way you look at it, early game, <abbr title="Formerly ADCs or AD Carries">marksmen</abbr> **suck**. I'd even go far as saying that early game, the support is *stronger* than their lane partner. This is highlighted with the fact that when you look at your death recap as a marksman after first blood, you'll see *Leona* probably did 50%+ of the total damage, with that pesky Ezreal mopping up with a strategic Q or <abbr title="Auto Attack">AA</abbr>. Now, watching people like Krepo and XPecial and Madlife, you'd think all support heroes were point-and-click, you'd never guess from a glance that Thresh, Lulu, Blitzcrank and more all have skillshots. But, no. Support is not easy. As a support you not only have to be a move ahead of your marksman, you have to have wards timed and accounted for, cooldowns stacked in your head, minimap awareness, strong <abbr title="The idea that you make the enemy know you're there by poking and harassing">lane-presence</abbr>, and the mind-set that when it comes to it, you will die for your marksman.
+
+### Going 1-6 isn't that bad
+
+Yesterday, I had a game which was a prime example of this. As Thresh, I had a Tristana in my lane who managed to finish laning phase 0-0 with higher farm than the enemy Vayne who was 4-0. The junglers had left bot alone, we had struggled from the start and I conceded first blood. I finished laning phase 0-4. GG, right? Perhaps not. League is a game about pressure, CS, objectives, and **morale**. Laning phase ended, Tristana picked up a shutdown bonus on Vayne and the team picked on her after that, and we shut her down hard. The idea that you if you can sometimes just throw yourself in the way of the marksmans inevitable death isn't just a noble afterthought, it's a calculated decision. I'm not saying suicide and go 0-10, far from it, I'm saying if you dying--and "feeding" as our Nidalee so eloquently put it--keeps your carry alive and able to outfarm under the tower, it's less a "suicide" and more a "calculation".
+
+Your greatest asset as a support is your kit. Learn your Q through R, buy items like Aegis (upgrade it to a Locket), Randuin's, Zeke's Herald, Twin Shadows, Mikael's Crucible etc. Have trouble remembering? Make a custom item set, you want something that looks like this:
+
+![How to support](http://i.imgur.com/g1jfTZ7.png)
+
+Keep your carry alive, keep yourself alive (unless you need a "calculated death"), **secure the kills for the team, then your carry**. By that, I mean, only leave a kill if you are certain your carry can lasthit it. If you're on Skype or TeamSpeak, great, they're going to be telling you straight away if you need to lasthit; on solo queue, it's more of a gained skill. As a rule in thumb: when in doubt, just do as much damage as you can, even if it means *taking the kill*. At the end of the day, assist gold is better than no gold for your carry/jungler/roaming mid/tp'ing top laner.
+
+### Wards are not an optional endeavour
+
+![Minimum wards](http://i.imgur.com/hX27BeQ.jpg)
+
+The sightstone is an incredible item. If you're not building it first you should be building it either directly after your gold item or at the same time as level 1 boots. When you b, always buy a pink and a couple of pots if you can. Mapped above are common locations for wards and smart locations for wards if you're on bot lane, top lane can be translated similarly. **Make bottom lane an impenetrable fortress for all but your team**. (*NB: if the enemy purple team has a Zac, or Thresh, ward purple side tri bush to stop lantern/jump ganks.*)
+
+### Shield supports take more skill
+
+Yeah, you could be Soraka and just heal your carry back up to full after taking poke, or just sit there dancing as Sona giving your marksman an armour buff, but real men use shields. There is skill involved in noticing when an enemy is moving to auto attack your ally, there is skill involved in landing the shield down. The true secret, is to make your carry think "I didn't take any damage from that <abbr title="Caitlyn's passive">headshot</abbr>". This doesn't necessarily mean you need to level your shield though, level one shields suffice on Lulu (Q or W can sometimes be better levelled), Thresh (E > Q > W), or even an aggressive Janna. Just make an early investment in an emblem of valour (just make sure to let your jungler know, else you'll be buying <abbr title="Banner of command">promote</abbr>).
+
+### There's a reason you get 3/5G every time you auto attack
+
+Harass. Poke. Prod. Annoy the hell out of the enemies. Do not just afk in the bush and wait for things to happen (unless that's how your carry wants the lane to be played, in which case, disregard their instructions, see above.).
+
+## Remember it's a game
+
+If it's going badly, don't sweat. If you're getting flamed, mute them and report them. **Good luck, have fun**.

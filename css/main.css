@@ -8,6 +8,7 @@ html {
 	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #444;
 	background: #fff;
+	line-height: 23px;
 }
 
 hr { 
@@ -48,9 +49,20 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+	font-weight: 500;
 	margin-top: 20px;
 	margin-bottom: 10px;	
+}
+
+.callout, blockquote {
+	margin: 20px 0;
+	padding: 15px 30px 15px 15px;
+	border-left: 5px solid #eee;
+}
+
+.callout-warning {
+	background-color: #fefbed;
+	border-color: #f1e7bc;
 }
 
 /*----------------------
@@ -137,6 +149,11 @@ article h1 {
 	.article a:hover {
 		background-color: #C95C26; color: #FFF;
 	}
+	
+	.article blockquote {
+		background-color: #f0f7fd;
+		border-color: #d0e3f0;	
+	}
 
 .link a {
 	color: #CF40CB;
@@ -173,7 +190,7 @@ article h1 {
 		content: "\201C";
 		font-size: 80px;
 		position: absolute;
-		left: -20px;
+		left: -10px;
 		top: -20px;
 		color: #7a7a7a;
 	}
