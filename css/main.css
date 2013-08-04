@@ -177,6 +177,7 @@ article h1 {
 		line-height: 1.45;
 		position: relative;
 		color: #383838;
+		border: 0;
 	}
 	
 	.quote blockquote:before { 
