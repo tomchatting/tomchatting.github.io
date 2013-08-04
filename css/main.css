@@ -264,7 +264,7 @@ footer {
 
 .banner {
     padding-top: 30%; /* [1] */
- 	background-color: #382F4E; /*5E0042/9C4D3A*/
+ 	background-color: #382F4E; /*382F4E/9C4D3A*/
     display: block;
 }
 
@@ -291,9 +291,9 @@ footer {
 
 @media handheld, only screen and (max-width: 565px), only screen and (max-device-width: 565px) 
 { 
-	h1.title { font-size: 1em; }
+	h1.title { display: block; }
 	ul.nav li { margin: 0.5em; }
-	ul.nav { padding-left: 10px; }
+	ul.nav { padding-left: 0; }
 }
 
 /*----------------------
