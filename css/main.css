@@ -263,12 +263,12 @@ footer {
 -----------------------*/
 
 .banner {
-    padding-top: 30%; /* [1] */
+    padding-top: 10%; /* [1] */
  	background-color: #382F4E; /*382F4E/9C4D3A*/
     display: block;
 }
 
-@media only screen and (min-width: 400px) { /* [2] */
+@media only screen and (min-width: 565px) { /* [2] */
 
     .banner {
         padding-top: 100px; /* [3] */
