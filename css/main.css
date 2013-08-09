@@ -13,10 +13,11 @@ html {
 
 hr { 
 	border: 0;
-	border-top: solid 1px rgb(229,229,229); 
+	border-bottom: solid 1px rgb(229,229,229); 
 	height: 1px; 
 	clear: both;
-	padding-bottom: 10px; 
+	width: 320px;
+	margin: 40px auto;
 }
 
 p { 
@@ -27,7 +28,7 @@ table {
 	font-size: inherit; font: 100%;
 }
 
-section, article, hr, footer>p { 
+section, article, footer>p { 
 	width: 640px;
 	margin: 0 auto;
 	position: relative;
@@ -82,10 +83,10 @@ a:visited {
 -----------------------*/
 
 header {
-	margin-bottom: 10px;	
-	    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+	margin-bottom: 40px;	
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
 }
 
@@ -264,7 +265,7 @@ footer {
 
 .banner {
     padding-top: 10%; /* [1] */
- 	background-color: #382F4E; /*382F4E/9C4D3A*/
+ 	background-color: #43567C;
     display: block;
 }
 
