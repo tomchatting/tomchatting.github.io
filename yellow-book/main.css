@@ -1,0 +1,84 @@
+html {
+    background: url(images/bg.jpg) fixed;
+    background-color: #FFE6B2;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 800px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #333333;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3em;
+}
+
+img {
+    max-width: 95%;
+}
+
+a {
+    color: #2679D5; 
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #2679D5;
+    color: #ffffff;
+}
+
+.cites {
+    font-size: 0.8em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #333333;
+    margin: 0;
+    width: 25%;
+}
+
+table {
+    border: 1px solid #333333;  
+    border-collapse:collapse;
+}
+
+td, th {
+    border-left: 1px solid #333333; 
+    border-bottom: 1px solid #333333;  
+    padding: 0.4em;
+}
+
+th {
+    background: #FFE6B2;
+}
+
+.callout, blockquote {
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #d0e3f0;
+    background-color: #f0f7fd;
+}
+
+.callout-warning {
+    background-color: #fefbed;
+    border-color: #f1e7bc;
+}
+
+.right {
+    float: right;
+}
+
+.banner {
+    font-size: 3em;
+}
