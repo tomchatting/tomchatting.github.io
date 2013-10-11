@@ -274,7 +274,7 @@ footer {
 @media only screen and (min-width: 565px) { /* [2] */
 
     .banner {
-        padding-top: 25px; /* [3] */
+        padding-top: 50px; /* [3] */
     }
 
 }
