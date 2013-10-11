@@ -100,6 +100,7 @@ h1.title {
 ul.nav { 
 	list-style: none; 
 	display:block; 
+    padding: 1em;
 }
 
 ul.nav li { 
@@ -266,7 +267,7 @@ footer {
 
 .banner {
     padding-top: 10%; /* [1] */
- 	background-color: #E74C3C;
+ 	background-color: #9B59B6;
     display: block;
 }
 
