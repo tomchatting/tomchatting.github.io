@@ -5,10 +5,10 @@
 -----------------------*/
 
 html { 
-	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #444;
+	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
 	background: #fff;
-	line-height: 23px;
+	line-height: 26px;
 }
 
 hr { 
@@ -87,18 +87,19 @@ header {
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
+    text-align: center;
 }
 
 h1.title {
-	display: inline-block; 
-	font-size: 2em;
+	display: block; 
+	font-size: 4em;
 	color: #fff;
+    line-height: 1em;
 }
 
 ul.nav { 
 	list-style: none; 
-	display:inline-block; 
+	display:block; 
 }
 
 ul.nav li { 
@@ -265,14 +266,14 @@ footer {
 
 .banner {
     padding-top: 10%; /* [1] */
- 	background-color: #504563;
+ 	background-color: #E74C3C;
     display: block;
 }
 
 @media only screen and (min-width: 565px) { /* [2] */
 
     .banner {
-        padding-top: 100px; /* [3] */
+        padding-top: 25px; /* [3] */
     }
 
 }
