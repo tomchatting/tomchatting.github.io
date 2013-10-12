@@ -5,7 +5,7 @@ date:   2013-08-06 19:50
 category: note
 ---
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/PF-_H54mydE" frameborder="0" allowfullscreen="1"> </iframe>
+<iframe width="640" height="315" src="//www.youtube.com/embed/PF-_H54mydE" frameborder="0" allowfullscreen="1"> </iframe>
 
 When I initially did the setup routine and migrated my previous blog to Jekyll, I saw it as a temporary thing while I redeveloped my bespoke blog engine "SquareCMS". What I didn't anticipate was falling in love with the workflow of, developing for, and writing with [Jekyll](//jekyllrb.com/).
 
