@@ -5,7 +5,7 @@ date:   2013-08-09 14:30
 category: note
 ---
 
-<iframe width="640" height="315" src="//www.youtube.com/embed/2o-bAHQs1cc" frameborder="0" allowfullscreen="1"> </iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/2o-bAHQs1cc" frameborder="0" allowfullscreen="1"> </iframe>
 
 <img src="http://i.imgur.com/sVWe3ny.png" height="300px" class="float-left" />
 
