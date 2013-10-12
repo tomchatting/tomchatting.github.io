@@ -9,7 +9,7 @@ category: article
 What follows is a post on the popular <abbr title="Multiplayer online battle arena">MOBA</abbr> <a href="//leagueoflegends.com">League of Legends</a>, and is aimed at people who have a good base knowledge in the game, are level 30, and have dipped their toes into ranked. Feel free to skip over this one. -- Tom
 </div>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/oIIxlgcuQRU" frameborder="0" allowfullscreen="1"> </iframe>
+<iframe width="640" height="315" src="//www.youtube.com/embed/oIIxlgcuQRU" frameborder="0" allowfullscreen="1"> </iframe>
 
 Way back last year when lower jungle camps still spawned at 1:40, and the huge success of the season 2 world finals were just a pipe dream at the back of Tryndamere's mind, I bit the bullet and signed up for LoL.
 
