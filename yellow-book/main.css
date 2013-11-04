@@ -4,8 +4,8 @@ html {
 
 body {
     margin: 0 auto;
-    padding: 2em;
-    max-width: 800px;
+    padding: 0.5em;
+    max-width: 600px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5em;
@@ -46,9 +46,16 @@ hr {
     width: 25%;
 }
 
+hr.full {
+    width: 100%;
+    border-color: #e5e5e5;
+    margin-top: 20px;
+}
+
 table {
     border: 1px solid #333333;  
     border-collapse:collapse;
+    width: 100%;
 }
 
 td, th {
@@ -77,6 +84,35 @@ th {
     float: right;
 }
 
+.banner p {
+    line-height: 1.4;
+    color: #cdbfe3;
+}
+
 .banner {
-    font-size: 3em;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: #eee;
+    background-color: #563d7c;
+    border-color: #463265;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 0 rgba(255,255,255,.1);
+    border-radius: 5px;
+}
+
+.float-left {
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+.clear {
+    clear:both;
+}
+
+.light {
+    color: #777;   
 }
