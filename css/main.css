@@ -290,7 +290,7 @@ footer {
 	Mobiles
 -----------------------*/
 
-@media handheld, only screen and (max-width: 600px), only screen and (max-device-width: 600px) 
+@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
 { 
 	section, article, footer p, iframe { width: 90%; margin: 0 auto;}
 	header, section, article, footer, p, hr { min-width: 300px; }
