@@ -29,13 +29,13 @@ table {
 }
 
 section, article, footer>p { 
-	width: 640px;
+	width: 600px;
 	margin: 0 auto;
 	position: relative;
 }
 
-img { 
-	max-width: 640px;
+img, iframe { 
+	max-width: 600px;
 	max-height: 500px; 
 }
 
@@ -282,7 +282,7 @@ footer {
 	Mobiles
 -----------------------*/
 
-@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
+@media handheld, only screen and (max-width: 600px), only screen and (max-device-width: 600px) 
 { 
 	section, article, footer p, iframe { width: 90%; margin: 0 auto;}
 	header, section, article, footer, p, hr { min-width: 300px; }
