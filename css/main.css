@@ -34,7 +34,7 @@ table {
 	position: relative;
 }
 
-.banner, .footer {
+.banner, footer {
     margin: 10px 0 10px;
     border-radius: 5px;
 }
@@ -234,8 +234,7 @@ ol.nav { list-style: none; margin-left: 0; }
 .pagination>li>a:hover { background-color: #F00; color: #FFF; } 
 
 footer {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px;
 	color: #ccc;
 	background-color: #333;
 	clear: both;
