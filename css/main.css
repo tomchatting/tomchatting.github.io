@@ -35,7 +35,7 @@ table {
 }
 
 .banner, .footer {
-    margin: 10px;
+    margin: 10px 0 10px;
     border-radius: 5px;
 }
 
