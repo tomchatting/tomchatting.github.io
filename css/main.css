@@ -93,6 +93,11 @@ header {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
+    color: #eee;
+    background-color: #563d7c;
+    border-color: #463265;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 0 rgba(255,255,255,.1);
 }
 
 h1.title {
@@ -271,9 +276,7 @@ footer {
 
 .banner {
     padding-top: 10%; /* [1] */
- 	background-color: #6f1f44;
     display: block;
-    font-weight: 200;
 }
 
 @media only screen and (min-width: 565px) { /* [2] */
