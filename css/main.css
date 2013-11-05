@@ -292,7 +292,7 @@ footer {
 
 @media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
 { 
-	section, article, footer p, iframe { width: 90%; margin: 0 auto;}
+	section, article, footer, iframe, header { width: 90%; margin: 0 auto;}
 	header, section, article, footer, p, hr { min-width: 300px; }
 	img { max-width: 100%; }
 	.quote blockquote { width: auto; }
