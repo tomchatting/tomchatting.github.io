@@ -165,7 +165,7 @@ article p, article pre, article ul, article ol, article figure, article footnote
     text-align: center;
 }
 
-article>h1 a {
+article>h1 a:link {
     color: #000;
 }
 
