@@ -264,9 +264,9 @@ blockquote {
 .pagination { text-align: center; }
 ol.nav { list-style: none; margin-left: 0; }
 .pagination>li { padding: 0 20px; }
-.nav>li, .nav>li>a { display: inline-block; zoom: 1; color: #CF40CB; }
-.pagination>li>a { color: #CF40CB; }
-.pagination>li>a:hover { background-color: #CF40CB; color: #fff; } 
+.nav>li, .nav>li>a { display: inline-block; zoom: 1; }
+.wrapper .pagination>li>a { color: #CF40CB; }
+.wrapper .pagination>li>a:hover { background-color: #CF40CB; color: #fff; } 
 
 /*----------------------
 	Other
