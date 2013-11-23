@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+<h1 class="article-title">About Me</h1>
 
 ## Thomas Chatting
 
-<img src="/img/mugshot.png" class="mugshot float-left" height="100px" />
+<img src="/img/mugshot.png" class="mugshot float-left" height="100px">
 
 Hello, world, my name is Thomas Chatting and I am a 21 year old full-time Pharmacy student studying in Huddersfield, UK.
 
