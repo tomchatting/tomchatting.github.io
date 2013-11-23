@@ -156,11 +156,11 @@ article p, article pre, article ul, article ol, article figure, article footnote
     text-align: center;
 }
 
-article>h1 a:link {
+article>h1.article-title a:link {
     color: #000;
 }
 
-article>h1 a:hover {
+article>h1.article-title a:hover {
     color: #fff;
     background: #000;
 }
