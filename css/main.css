@@ -103,6 +103,10 @@ header img {
     margin-bottom: 2.6em;
 }
 
+header a:hover {
+    background-image: url('/img/hero-hover.png');
+}
+
 
 /*-------------------
     Footer
