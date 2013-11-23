@@ -156,11 +156,11 @@ article p, article pre, article ul, article ol, article figure, article footnote
     text-align: center;
 }
 
-.wrapper article>h1.article-title a:link {
+.wrapper article h1.article-title a:link {
     color: #000;
 }
 
-.wrapper article>h1.article-title a:hover {
+.wrapper article h1.article-title a:hover {
     color: #fff;
     background: #000;
 }
@@ -264,7 +264,7 @@ blockquote {
 .pagination { text-align: center; }
 ol.nav { list-style: none; margin-left: 0; }
 .pagination>li { padding: 0 20px; }
-.nav>li, .nav>li>a { display: inline-block; zoom: 1; }
+.nav>li, .nav>li>a { display: inline-block; zoom: 1; color: #CF40CB; }
 .pagination>li>a { color: #CF40CB; }
 .pagination>li>a:hover { background-color: #CF40CB; color: #fff; } 
 
