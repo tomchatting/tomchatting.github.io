@@ -88,7 +88,7 @@ header {
     max-width: 960px;
 }
 
-header>a {
+header a {
     width: 100%;
     background-image: url('/img/hero.png');
     display: inline-block;
@@ -104,7 +104,7 @@ header img {
     margin-bottom: 2.6em;
 }
 
-header>a:hover {
+header a:hover {
     background: none;
     background-image: url('/img/hero.png');
     background-repeat: no-repeat;
@@ -123,7 +123,7 @@ footer {
     padding-top: 1em;
 }
 
-footer>a {
+footer a: {
     width: 100%;
     background-image: url('/img/happy-feet.png');
     display: inline-block;
@@ -139,7 +139,7 @@ footer img {
     display: none;
 }
 
-footer>a:hover {
+footer a:hover {
     background: none;
     background-image: url('/img/happy-feet.png');
     background-size:100%;
@@ -165,11 +165,11 @@ article p, article pre, article ul, article ol, article figure, article footnote
     text-align: center;
 }
 
-article h1 a:link {
+article>h1 a {
     color: #000;
 }
 
-article h1 a:hover {
+article>h1 a:hover {
     color: #fff;
     background: #000;
 }
