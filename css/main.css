@@ -1,14 +1,243 @@
-@import url(normalize.css);
+/*----------------
+    Basic as fuck reset
+-------------------*/
 
-/*----------------------
-	Globals, unresets
------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    font-size: 1em;
+    outline: none;
+}
 
-html { 
-	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #333;
-	background: #fff;
-	line-height: 26px;
+/*------------------
+    Bitches love white
+-------------------*/
+
+html {
+    background: #fff;
+}
+
+ol, ul {
+    padding-left: 2em;
+    padding-top: 20px;
+}
+
+sup, sub {
+    font-size: small;
+}
+
+/*-------------------
+    Make the body do the hard work
+---------------------*/
+body {
+    font: 18px/30px droid-serif, georgia, serif;
+    color: #000;
+    text-align: justify;
+    hyphens: auto;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: open-sans, sans-serif;
+    font-weight: 900;
+    padding-top: 1em;
+    color: #CF40CB;
+}
+
+h2 {font-size: 24px;}
+h3 {font-size: 20px;}
+h4 {font-size: 18px;}
+
+/*-------------------
+    Wrapper
+-------------------*/
+.wrapper {
+	margin-top: 90px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+/*-------------------
+    Header
+-------------------*/
+header {
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    max-width: 960px;
+}
+
+header>a {
+    width: 100%;
+    background-image: url('/img/hero.png');
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+    background-position: 10% 50%;
+    height: 60px;
+}
+
+header img {
+    display: none;
+    margin-bottom: 2.6em;
+}
+
+header>a:hover {
+    background: none;
+    background-image: url('/img/hero.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+/*-------------------
+    Footer
+-------------------*/
+footer {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    max-width: 960px;
+    height: 40px;
+    padding-top: 1em;
+}
+
+footer>a {
+    width: 100%;
+    background-image: url('/img/happy-feet.png');
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+    height: 40px;
+    background-size:100%;
+    background-position: bottom;
+}
+
+footer img {
+    display: none;
+}
+
+footer>a:hover {
+    background: none;
+    background-image: url('/img/happy-feet.png');
+    background-size:100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
+/*--------------------
+    Articles
+---------------------*/
+
+article p, article pre, article ul, article ol, article figure, article footnotes, article h2, article h3, article h4, article h5, article h6 {
+    margin-right: 132px;
+    margin-left: 132px;
+}
+
+.article-title {
+    font-size: 48px;
+    margin: 0 0 6px;
+    padding: 0.5em 0 0 0;
+    line-height: 57px;
+    text-align: center;
+}
+
+.article-title>a:link {
+    color: #000;
+}
+
+.article-title>a:hover {
+    color: #fff;
+    background: #000;
+}
+
+.article-date {
+    text-align: center;
+    font-style: italic;
+    padding: 0 !important;
+}
+
+.callout {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width:920px;
+}
+
+img {
+    max-width: 100%;
+}
+
+article p {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+
+/*--------------------
+    Links
+-------------------*/
+a:link {
+    color: #2679D5;
+}
+
+a:hover {
+    color: #fff;
+    background: #2679D5;
+}
+
+/*------------------
+    Media Queries
+------------------*/
+@media (max-width: 940px) {
+
+	body {
+		font-size: 125%;
+	}
+
+    article p, article pre, article ul, article ol, article figure, article footnotes, article h2, article h3, article h4, article h5, article h6 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .article-title {
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    article p {
+        line-height: 20px;
+    }
+
+    .callout {
+        font-size: 20px;
+    }
+
+    iframe {
+        max-width: 97%;
+    }
+}
+
+@media (max-width: 700px) {
+
+	body {
+		font-size: 110%;
+	}
+
 }
 
 hr { 
@@ -16,48 +245,18 @@ hr {
 	border-bottom: solid 1px rgb(229,229,229); 
 	height: 1px; 
 	clear: both;
-	width: 320px;
-	margin: 40px auto;
+	width: 50%;
+	margin: 20px auto;
 }
 
-p { 
-	margin: 0 0 10px;
-}
-
-table { 
-	font-size: inherit; font: 100%;
-}
-
-.wrapper { 
-	width: 600px;
-	margin: 0 auto;
-	position: relative;
-}
-
-header, footer {
-    margin: 10px 0 10px;
-    border-radius: 5px;
-}
-
-img, iframe { 
-	max-width: 600px;
-	max-height: 500px; 
-}
-
-::selection {
-	background-color: #C95C26;	
-	color: #fff;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
-	margin-top: 20px;
-	margin-bottom: 10px;	
+blockquote {
+    font-style: italic;
+    background: #f5f5f5;
 }
 
 .callout, blockquote {
 	margin: 20px 0;
-	padding: 15px 30px 15px 15px;
+	padding: 15px 2em 15px 15px;
 	border-left: 5px solid #eee;
 }
 
@@ -67,188 +266,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------------------
-	Links
------------------------*/
-
-a { 
-	color: #536878; 
-	text-decoration: none;
-}
-
-a:hover {
-	color: #000;
-}
-
-a:visited {
-	color: #536878;
-}
-
-/*----------------------
-	Header, navbar
------------------------*/
-
-header {
-	margin-bottom: 40px;	
-	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: center;
-    color: #eee;
-    background-color: #563d7c;
-    border-color: #463265;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.15);
-    box-shadow: 0 1px 0 rgba(255,255,255,.1);
-}
-
-h1.title {
-	display: block; 
-	font-size: 3em;
-    font-weight: 200;
-    line-height: 1em;
-}
-
-ul.nav { 
-	list-style: none; 
-	display:block; 
-    padding: 1.5em;
-}
-
-ul.nav li { 
-	display:inline;
-	margin: 1em; 
-}
-
-ul.nav li a {
-	color: rgba(255,255,255,0.7);
-}
-
-ul.nav li a:hover {
-	color: rgba(255,255,255,1.0);
-}
-
-/*----------------------
-	Articles
------------------------*/
-
-article h1 {
-	display: inline;
-}
-
-.extra {
-	display: block;
-	color: #999;
-	vertical-align: baseline;
-	text-transform: capitalize;
-}
-
-.note a {
-	color: #2679D5;
-}
-
-	.note a:hover {
-		background-color: #2679D5; color: #FFF;
-	}
-
-.article a {
-	color: #C95C26;
-}
-
-	.article a:hover {
-		background-color: #C95C26; color: #FFF;
-	}
-	
-	.article blockquote {
-		background-color: #f0f7fd;
-		border-color: #d0e3f0;	
-	}
-
-.link a {
-	color: #CF40CB;
-}
-
-	.link a:hover {
-		background-color: #CF40CB;
-		color: #FFF
-	}
-
-.quote a { 
-	color: #5CC932;
-}
-
-	.quote a:hover {
-		background-color: #5CC932;
-		color: #FFF;
-	}
-
-	.quote blockquote {
-		font-family: Georgia, serif;
-		font-size: 18px;
-		font-style: italic;
-		width: 500px;
-		margin: 0.25em 0;
-		padding: 0.25em 40px;
-		line-height: 1.45;
-		position: relative;
-		color: #383838;
-		border: 0;
-	}
-	
-	.quote blockquote:before { 
-		display: block;
-		content: "\201C";
-		font-size: 80px;
-		position: absolute;
-		left: -10px;
-		top: -20px;
-		color: #7a7a7a;
-	}
-	
-	.quote blockquote cite {
-		color: #999999;
-		font-size: 14px;
-		display: block;
-		margin-top: 5px;
-	}
-	
-	.quote blockquote cite:before {
-		content: "\2014 \2009";
-	}
-
-.photo a { 
-	color: #99A4BD;
-}
-
-	.photo a:hover {
-		background-color: #99A4BD; color: #FFF;
-	}
-
-
-article:last-child {
-	border: 0;
-}
-
-/*----------------------
 	Pagination, Footer
 -----------------------*/
  
 .pagination { text-align: center; }
 ol.nav { list-style: none; margin-left: 0; }
-.pagination>li { padding: 12px; }
+.pagination>li { padding: 0 20px; }
 .nav>li, .nav>li>a { display: inline-block; zoom: 1; }
-.pagination>li>a { color: #F00; }
-.pagination>li>a:hover { background-color: #F00; color: #FFF; } 
-
-footer {
-	padding: 10px;
-	color: #ccc;
-	background-color: #333;
-	clear: both;
-}
-
-	footer a {
-		color: #ccc !important;
-		text-decoration: underline;
-	}
+.pagination>li>a { color: #CF40CB; }
+.pagination>li>a:hover { background-color: #CF40CB; color: #fff; } 
 
 /*----------------------
 	Other
@@ -267,44 +293,6 @@ footer {
 .mugshot {
 	border-radius: 600px;	
 	margin-top: 15px;
-}
-
-/*----------------------
-	Banner
------------------------*/
-
-.banner {
-    padding-top: 10%; /* [1] */
-    display: block;
-}
-
-@media only screen and (min-width: 565px) { /* [2] */
-
-    .banner {
-        padding-top: 50px; /* [3] */
-    }
-
-}
-
-/*----------------------
-	Mobiles
------------------------*/
-
-@media handheld, only screen and (max-width: 640px), only screen and (max-device-width: 640px) 
-{ 
-	section, article, footer, iframe, header { width: 90%; margin: 0 auto;}
-	header, section, article, footer, p, hr { min-width: 300px; }
-	img { max-width: 100%; }
-	.quote blockquote { width: auto; }
-	.mugshot { float: none; margin-right: 0; }
-	hr { width: 60%; }
-}
-
-@media handheld, only screen and (max-width: 565px), only screen and (max-device-width: 565px) 
-{ 
-	h1.title { display: block; }
-	ul.nav li { margin: 0.5em; }
-	ul.nav { padding-left: 0; }
 }
 
 /*----------------------
