@@ -190,7 +190,7 @@ article p {
 /*--------------------
     Links
 -------------------*/
-a:link {
+a:link, a:visited {
     color: #2679D5;
 }
 
