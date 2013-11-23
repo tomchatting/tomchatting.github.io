@@ -94,7 +94,7 @@ header a {
     display: inline-block;
     background-repeat: no-repeat;
     text-align: center;
-    background-size:100%;
+    background-position: 10% 50%;
     height: 120px;
 }
 
