@@ -1,5 +1,5 @@
 /*----------------
-    Basic as fuck reset -- #E22805
+    Basic as fuck reset
 -------------------*/
 
 * {
@@ -91,6 +91,7 @@ header {
 header a {
     width: 100%;
     background-image: url('/img/hero.png');
+    background-color: #E22805;
     display: inline-block;
     background-repeat: no-repeat;
     text-align: center;
@@ -104,7 +105,7 @@ header img {
 }
 
 header a:hover {
-    background-image: url('/img/hero-hover.png');
+    background-color: #FB5E42;
 }
 
 
