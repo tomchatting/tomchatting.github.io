@@ -180,9 +180,14 @@ footer img {
     Articles
 ---------------------*/
 
-article p, article pre, article ul, article ol, article figure, article footnotes, article h2, article h3, article h4, article h5, article h6 {
+article p, article pre, article ul, article ol, article figure, article footnotes, article h2, article h3, article h4, article h5, article h6, .photo-meta {
     margin-right: 132px;
     margin-left: 132px;
+}
+
+article {
+    border-bottom: solid 1px rgb(229,229,229);    
+    padding-top: 1em;
 }
 
 .article-title {
@@ -193,7 +198,7 @@ article p, article pre, article ul, article ol, article figure, article footnote
     text-align: center;
 }
 
-.wrapper article h1.article-title a:link {
+.wrapper article h1.article-title a:link, .wrapper article h1.article-title a:visited {
     color: #000;
 }
 
@@ -206,6 +211,7 @@ article p, article pre, article ul, article ol, article figure, article footnote
     text-align: center;
     font-style: italic;
     padding: 0 !important;
+    color: #666;
 }
 
 .callout {
@@ -228,6 +234,64 @@ article p {
     padding-bottom: 0.5em;
 }
 
+article.photo .article-date, article.photo h1, article.photo p:not(.img-holder) {
+    font-size: 1em;
+    line-height: 1em;
+    display: inline;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+article.photo h1 a:after, article.link>h1 a:after {
+    content: " \00BB";
+}
+
+article.photo p.img-holder {
+    clear: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #f5f5f5;
+    text-align: center;
+    margin-top: 1em;
+}
+
+article.photo img {
+    display: inline-block;
+    vertical-align: bottom;
+
+    max-height: 700px;
+    max-width: 100%;
+}
+
+.photo-meta {
+    padding: 2em 0;
+}
+
+article.link {
+    width: auto;
+    float: left;
+    margin: 1em 132px 1em 132px;
+    border: 0;
+    padding: 0;
+}
+
+article.link:after {
+    content: "•••";
+    color: #666;
+}
+
+article.link>.article-date, article.link>h1, article.link>p {
+    font-size: 1em;
+    line-height: 1em;
+    display: inline;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
 /*------------------
     Media Queries
 ------------------*/
@@ -237,7 +301,7 @@ article p {
 		font-size: 125%;
 	}
 
-    article p, article pre, article ul, article ol, article figure, article footnotes, article h2, article h3, article h4, article h5, article h6 {
+    article p, article pre, article ul, article ol, article figure, article footnotes, article h2, article h3, article h4, article h5, article h6, .photo-meta, article.link {
         margin-right: 15px;
         margin-left: 15px;
     }
@@ -267,15 +331,6 @@ article p {
 		font-size: 110%;
 	}
 
-}
-
-hr { 
-	border: 0;
-	border-bottom: solid 1px rgb(229,229,229); 
-	height: 1px; 
-	clear: both;
-	width: 50%;
-	margin: 20px auto;
 }
 
 blockquote {

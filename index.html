@@ -5,9 +5,23 @@ title: Home
 
 {% for post in paginator.posts %}
 <article class="{{ post.category }}">
-    <h1 class="article-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    {% if post.category != "photo" %}
+    <h1 class="article-title">
+        {% if post.link %}
+            <a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
+        {% else %}
+            <a href="{{ post.url }}">{{ post.title }}</a></h1>
+        {% endif %}
     <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
     {{ post.content }}
+    {% else %}
+        <p class="img-holder"><a href="{{ post.link }}" target="_blank"><img src="{{ post.link }}" alt="{{ post.title }}"></a></p>
+        <div class="photo-meta">
+            <h1 class="article-title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
+            <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
+            <p>{{ post.content }}</p>
+        </div>
+    {% endif %}
 </article>
 <hr />
 {% endfor %}

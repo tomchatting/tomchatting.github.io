@@ -1,0 +1,9 @@
+---
+layout: post
+title: ":not()"
+date: 2013-11-24 17:20:00
+category: link
+link: https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+---
+
+A quick *how-to* on using the :not() selector in CSS.
