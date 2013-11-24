@@ -81,7 +81,7 @@ h4 {font-size: 18px;}
 
 .s-nav {
     margin-top: 140px;
-    height: 40px;
+    min-height: 40px;
     margin-left: 14px;
     margin-right: 14px;
     background: #2c2c2c;
