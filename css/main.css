@@ -127,7 +127,7 @@ header {
 header a {
     width: 100%;
     background-image: url('/img/hero.png');
-    background-color: #E22805;
+    background-color: #e74c3c; /* "pomegranite" */
     display: inline-block;
     background-repeat: no-repeat;
     text-align: center;
