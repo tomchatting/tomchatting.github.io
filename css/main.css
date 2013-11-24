@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6 {
-    color: #CF40CB;
+    color: #e74c3c;
 }
 h2 {font-size: 24px;}
 h3 {font-size: 20px;}
@@ -357,8 +357,8 @@ blockquote {
 ol.nav { list-style: none; margin-left: 0; }
 .pagination>li { padding: 0 20px; }
 .nav>li, .nav>li>a { display: inline-block; zoom: 1; }
-.wrapper .pagination>li>a { color: #CF40CB; }
-.wrapper .pagination>li>a:hover { background-color: #CF40CB; color: #fff; } 
+.wrapper .pagination>li>a { color: #e74c3c; }
+.wrapper .pagination>li>a:hover { background-color: #e74c3c; color: #fff; } 
 
 /*----------------------
 	Other
