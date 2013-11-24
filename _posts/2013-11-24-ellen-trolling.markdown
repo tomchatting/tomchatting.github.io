@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ellen trolling"
-date: 2013-11-24 17:23:00
+date: 2013-11-24 17:23
 category: link
 link: http://www.youtube.com/watch?v=rBRPXtJLnpU
 ---
