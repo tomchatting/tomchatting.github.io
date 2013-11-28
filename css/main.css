@@ -379,6 +379,10 @@ ol.nav { list-style: none; margin-left: 0; }
 	margin-top: 15px;
 }
 
+abbr {
+    border-bottom: 1px dashed #eee;
+}
+
 /*----------------------
    Print styles.
 -----------------------*/
