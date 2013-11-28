@@ -380,7 +380,7 @@ ol.nav { list-style: none; margin-left: 0; }
 }
 
 abbr {
-    border-bottom: 1px dashed #eee;
+    border-bottom: 1px dashed #000;
 }
 
 /*----------------------
