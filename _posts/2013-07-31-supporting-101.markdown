@@ -6,7 +6,7 @@ category: article
 ---
 
 <div class="callout callout-warning">
-What follows is a post on the popular <abbr title="Multiplayer online battle arena">MOBA</abbr> <a href="//leagueoflegends.com">League of Legends</a>, and is aimed at people who have a good base knowledge in the game, are level 30, and have dipped their toes into ranked. Feel free to skip over this one. -- Tom
+A lot of information in this post is now out of date due to a massive rework of the support role. It's a good idea to read my <a href="//dg9t.eu/article/2013/11/28/supporting-part-2.html">updated notes</a> once you've blasted through this.
 </div>
 
 <iframe width="640" height="315" src="//www.youtube.com/embed/oIIxlgcuQRU" frameborder="0" allowfullscreen="1"> </iframe>
