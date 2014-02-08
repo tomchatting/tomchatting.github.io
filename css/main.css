@@ -234,6 +234,10 @@ article p {
     padding-bottom: 0.5em;
 }
 
+article p:last-child {
+    padding-bottom: 2em;
+}
+
 article.photo .article-date, article.photo h1, article.photo p:not(.img-holder) {
     font-size: 1em;
     line-height: 1em;
