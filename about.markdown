@@ -10,7 +10,7 @@ permalink: /about/
 
 <img src="/img/mugshot.png" class="mugshot float-left" height="100px">
 
-Hello, world, my name is Thomas Chatting and I am a 21 year old full-time Pharmacy student studying in Huddersfield, UK.
+Hello, world, my name is Thomas Chatting and I am a 22 year old student studying in Huddersfield, UK.
 
 My web "aliases" (if you can call them that) that I can reel off the top of my head are:
 * tomchatting
