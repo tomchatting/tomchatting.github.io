@@ -2,9 +2,8 @@
 layout: post
 title:  "Gambino"
 date:   2014-01-16 17:00
-category: note
+category: video
+link:   //www.youtube.com/embed/pHHWPTs1zxg
 ---
 
-<iframe width="668" height="376" src="//www.youtube.com/embed/pHHWPTs1zxg" frameborder="0" allowfullscreen="1"> </iframe>
-
-**It feels like only Gaminbo gets me. Y'know?**
+It feels like only Gaminbo gets me. Y'know?

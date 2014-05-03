@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ page.title }}--It's Y'main man Tom</title>
-        <script src="//use.edgefonts.net/droid-serif;open-sans.js"></script>
-        <link rel="stylesheet" href="/css/main.css" type="text/css">
-        <link rel="stylesheet" href="/css/syntax.css">
-        <!--[if lt IE 9]>
-            <script src="/css/html5shiv.js"></script>
-        <![endif]-->
-        
-    </head>
-    <body>
-        <a name="top"></a>
-        <header>   
-            <a href="/"><img src="/img/hero.png"></a>   
-        </header>
-        
-        <nav class="s-nav">
-            <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="//google.com/+ThomasChatting" target="_blank">Google+</a></li>
-                <li><a href="//facebook.com/tom.chatting" target="_blank">Facebook</a></li>
-                <li><a href="//twitter.com/phenomenontom" target="_blank">Twitter</a></li>
-            </ul>
-        </nav>
-        
-        <div class="wrapper">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }} - Return of the Tom</title>
+    
+    <meta name="description" content="The ramblings of some guy." />
+	<meta name="author" content="Thomas Chatting" />
+    <!--[if lt IE 9]>
+    <script src="/css/html5shiv.js"></script>
+    <![endif]-->
 
-            {{ content }}
-            
-        </div>
+    
+    <link rel="stylesheet" href="/css/normalize.css" />
+	<link rel="stylesheet" href="//tom.dg9t.eu/static/ClearSans.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+</head>
+<body> 
+    <div class="site-header-icon">
+        <h1>@</h1> <span><a href="/">PhenomenonTom</a></span>
+    </div>
+    
+    <nav class="s-nav">
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="//google.com/+ThomasChatting" target="_blank">Google+</a></li>
+            <li><a href="//facebook.com/tom.chatting" target="_blank">Facebook</a></li>
+            <li><a href="//twitter.com/phenomenontom" target="_blank">Twitter</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
         
-        <footer>
-            <a href="#top"><img src="/img/happy-feet.png"></a>     
-        </footer>
+        {{ content }}
+
+    </div>
+    
+    <footer class="container">
+    &copy; Thomas Chatting 2014.
+    </footer>
         
     </body>
 

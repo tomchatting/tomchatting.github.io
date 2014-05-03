@@ -3,9 +3,27 @@ layout: default
 title: Home
 ---
 
+<hr>
 {% for post in paginator.posts %}
 <article class="{{ post.category }}">
-    {% if post.category != "photo" %}
+    {% if post.category == "video" %}
+<iframe allowfullscreen="1" frameborder="0" height="376" src="{{ post.link }}" width="668"> </iframe>
+
+    <div class="video-meta">
+        <h1 class="article-title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
+        <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
+        <p>{{ post.content }}</p>
+    </div>
+    {% endif %}
+    {% if post.category == "photo" %}
+    <p class="img-holder"><a href="{{ post.link }}" target="_blank"><img src="{{ post.link }}" alt="{{ post.title }}"></a></p>
+    <div class="photo-meta">
+        <h1 class="article-title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
+        <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
+        <p>{{ post.content }}</p>
+    </div>
+    {% endif %}
+    {% if (post.category != "photo" and post.category != "video") %}
     <h1 class="article-title">
         {% if post.link %}
             <a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
@@ -13,17 +31,9 @@ title: Home
             <a href="{{ post.url }}">{{ post.title }}</a></h1>
         {% endif %}
     <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
-    {{ post.content }}
-    {% else %}
-        <p class="img-holder"><a href="{{ post.link }}" target="_blank"><img src="{{ post.link }}" alt="{{ post.title }}"></a></p>
-        <div class="photo-meta">
-            <h1 class="article-title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
-            <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
-            <p>{{ post.content }}</p>
-        </div>
     {% endif %}
 </article>
-<hr />
+<hr>
 {% endfor %}
 <ol class="nav  pagination">
     <li class="pagination__prev">
