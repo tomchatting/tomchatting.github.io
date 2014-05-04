@@ -1,5 +1,11 @@
-html { font: 1em/1.5 serif; font-family: clear_sansregular, Helvetica, Arial, sans-serif; color: #323232;}
-body { padding: 0; margin: 0; }
+html { 
+    font: 1em/1.5 serif; 
+    font-family: clear_sansregular, Helvetica, Arial, sans-serif; 
+    color: #323232;
+    background: url('/img/congruent_pentagon.png') repeat;
+}
+
+body { padding: 0; margin: 0; margin-left: 10px; background: #fff; width: auto;  }
 .site-header-icon { margin-left: 132px; font-size: 40px; }
 .site-header-icon h1 { color: #fff; margin: 0; padding: 0; text-align: center; background: #323232; width: 120px; height: 120px; display: inline-block; }
 .site-header-icon a, .site-header-icon a:visited { color: #323232; text-decoration: none; }
@@ -36,10 +42,12 @@ nav ul, nav li {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-right: 15px;
 }
 
 nav a, nav a:visited {
     color: #434343;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -53,17 +61,13 @@ nav a:hover {
 }
 
 .container a:hover {
+    text-decoration: underline;
+}
+
+.container article h1.article-title a:hover {
     color: #fff;
     background: #2679D5;
-}
-
-.wrapper article h1.article-title a:link, .wrapper article h1.article-title a:visited {
-    color: #000;
-}
-
-.wrapper article h1.article-title a:hover {
-    color: #fff;
-    background: #000;
+    text-decoration: none;
 }
 
 .article-date {
@@ -148,6 +152,13 @@ border-color: #f1e7bc;
 }
 
 footer {
-    color: #fff;
+    color: #fefefe;
     background: #323232;
+    padding-left: 130px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer a, footer a:visited {
+    color: #fff;
 }
