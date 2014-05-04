@@ -7,7 +7,7 @@ html {
 
 body { padding: 0; margin: 0; margin-left: 10px; background: #fff; width: auto;  }
 .site-header-icon { margin-left: 132px; font-size: 40px; }
-.site-header-icon h1 { color: #fff; margin: 0; padding: 0; text-align: center; background: #323232; width: 120px; height: 120px; display: inline-block; }
+.site-header-icon h1 { color: #fff; margin: 0; padding: 0; text-align: center; background: #323232 url('/img/stardust.png') repeat; width: 120px; height: 120px; display: inline-block; }
 .site-header-icon a, .site-header-icon a:visited { color: #323232; text-decoration: none; }
 .container, nav { margin-left: 132px; width: 650px; }
 
@@ -154,6 +154,7 @@ border-color: #f1e7bc;
 footer {
     color: #fefefe;
     background: #323232;
+    background: url('/img/stardust.png') repeat;
     padding-left: 130px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -161,4 +162,12 @@ footer {
 
 footer a, footer a:visited {
     color: #fff;
+}
+
+.prologue {
+    background: url('/img/stardust.png') repeat;
+    color: #fff;
+    width: 650px;
+    padding-left: 130px;
+    font-size: 36px;
 }
