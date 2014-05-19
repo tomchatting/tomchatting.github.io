@@ -2,7 +2,8 @@ html {
     font: 1em/1.5 serif; 
     font-family: clear_sansregular, Helvetica, Arial, sans-serif; 
     color: #323232;
-    background: url('/img/congruent_pentagon.png') repeat;
+    /*background: url('/img/congruent_pentagon.png') repeat;*/
+    background: url('/img/chromebook.png') fixed;
 }
 
 body { padding: 0; margin: 0; margin-left: 10px; background: #fff; width: auto;  }
