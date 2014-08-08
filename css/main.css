@@ -181,4 +181,4 @@ footer a, footer a:visited, nav a, nav a:visited {
 
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 568px) { .site-header { font-size: 22px; } .prologue h2 { font-size: 18px; } }
+and (max-device-width : 568px) { .site-header { font-size: 22px !important; } .prologue h2 { font-size: 18px !important; } }
