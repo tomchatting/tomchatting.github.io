@@ -1,23 +1,25 @@
 html { 
     font: 1em/1.5 serif; 
-    font-family: clear_sansregular, Helvetica, Arial, sans-serif; 
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
     color: #323232;
-    /*background: url('/img/congruent_pentagon.png') repeat;*/
-    background: url('/img/chromebook.png') fixed;
+    /*background: url('/img/congruent_pentagon.png') repeat;
+    background: url('/img/chromebook.png') fixed;*/
 }
 
-body { padding: 0; margin: 0; margin-left: 10px; background: #fff; width: auto;  }
-.site-header-icon { margin-left: 132px; font-size: 40px; }
-.site-header-icon h1 { color: #fff; margin: 0; padding: 0; text-align: center; background: #323232 url('/img/stardust.png') repeat; width: 120px; height: 120px; display: inline-block; }
-.site-header-icon a, .site-header-icon a:visited { color: #323232; text-decoration: none; }
-.container, nav { margin-left: 132px; width: 650px; }
+body { padding: 0; margin: 0; background: #fff; width: auto;  }
 
-.container p { text-align: justify; }
+.wrapper, nav, .site-header h1, .prologue h2 { max-width: 38rem; margin: 0 auto; padding-left: 2%; padding-right: 2%; }
+
+.site-header { font-size: 40px; background: #f0f0f0; }
+.site-header h1 { font-weight: normal; overflow: hidden; }
+.site-header a, .site-header a:visited { color: rgb(102,102,102); text-decoration: none; }
+.container, nav { width: auto; }
+
+.container p { text-align: justify;  }
 hr { border: none; border-bottom: 1px solid #eee; margin: 20px 0; }
 
 nav {
     padding-top: 20px;
-    padding-left: 130px;
 }
 
 ol.nav {
@@ -52,8 +54,7 @@ nav a, nav a:visited {
 }
 
 nav a:hover {
-    color: #fff;
-    background: #434343;
+    color: #ffd45b;
 }
 
 .container a:link, .container a:visited {
@@ -86,7 +87,8 @@ nav a:hover {
 iframe {
     display: block;
     margin: 0 auto;
-    max-width:650px;
+    max-width:38rem;
+    width: auto;
     padding-bottom: 15px;
 }
 
@@ -152,23 +154,27 @@ background-color: #fefbed;
 border-color: #f1e7bc;
 }
 
-footer {
-    color: #fefefe;
-    background: #323232;
-    background: url('/img/stardust.png') repeat;
-    padding-left: 130px;
-    padding-top: 15px;
+.nav-wrap, footer {
+    background: #404040;
+    color: #fff;
     padding-bottom: 15px;
 }
 
-footer a, footer a:visited {
+footer {
+    text-align: center;
+    padding-top: 15px;
+}
+
+footer a, footer a:visited, nav a, nav a:visited {
     color: #fff;
 }
 
 .prologue {
-    background: url('/img/stardust.png') repeat;
-    color: #fff;
-    width: 650px;
-    padding-left: 130px;
-    font-size: 36px;
+    background: #297ea9;
+    color: #89c4e2;
+}
+
+.prologue h2 {
+    font-size: 32px;
+    font-weight: normal;
 }

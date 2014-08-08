@@ -12,40 +12,45 @@
 
     
     <link rel="stylesheet" href="/css/normalize.css" />
-	<link rel="stylesheet" href="//tom.dg9t.eu/static/ClearSans.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/syntax.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     
 </head>
 <body> 
-    <div class="site-header-icon">
-        <h1>@</h1> <span><a href="/">PhenomenonTom</a></span>
+    <div class="site-header">
+       <h1><a href="/">Thomas<strong>Chatting</strong></a></h1>
     </div>
     
-    <nav class="s-nav">
-        <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="//google.com/+ThomasChatting" target="_blank">Google+</a></li>
-            <li><a href="//facebook.com/tom.chatting" target="_blank">Facebook</a></li>
-            <li><a href="//twitter.com/phenomenontom" target="_blank">Twitter</a></li>
-        </ul>
-    </nav>
+    <div class="nav-wrap">
+        <nav class="s-nav">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="//google.com/+ThomasChatting" target="_blank">Google+</a></li>
+                <li><a href="//facebook.com/tom.chatting" target="_blank">Facebook</a></li>
+                <li><a href="//twitter.com/phenomenontom" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+    </div>
     
     <div class="prologue">
-        <p>PhenomenonTom is the superhero alias for Thomas Chatting, and dg9t is nearly the md5 hash for Tom.</p>
+        <h2>PhenomenonTom is the superhero alias for Thomas Chatting, and dg9t is nearly the md5 hash for Tom.</h2>
     </div>
 
-    <div class="container">
-        
-        {{ content }}
 
-    </div>
-    
+    <div class="wrapper">
+        <div class="container">
+            
+            {{ content }}
+
+        </div>
+    </div> 
+
     <footer>
         <p>&copy; Thomas Chatting 2014. Site built in Brackets and hosted by Github.</p>
         <p>There's <a href="/feed.xml">an RSS feed</a> and I'm also <a href="//twitter.com/phenomenontom">on Twitter</a>.</p>
     </footer>
-        
-    </body>
+</body>
 
 </html>
