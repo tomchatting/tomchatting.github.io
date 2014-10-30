@@ -31,11 +31,17 @@ hr      {border: 0; border-top: 1px #ccc solid;}
 iframe  {max-width: 612px;}
 ol.nav  {list-style: none; margin-left: 0;}
 .pagination
-        {text-align: left;}
+        {text-align: center;}
 .nav>li, .nav>li>a 
-        {display: inline-block; zoom: 1;}
+        {display: inline-block; zoom: 1; height: 50px; line-height: 50px;}
 .pagination>li 
-        {padding-right: 20px;}
+        {position: relative; width: 50%; box-sizing: border-box; border: 1px solid #ccc; color: #ccc;}
+.pagination>li:first-child
+        {border-right: 0;}
+.pagination>li a
+        {display:block; width: 100%;}
+.pagination>li a:hover
+        {background:  rgb(87,159,225); color: #fff; text-decoration: none;}
 li.video, li.link, li.photo
         {padding-left: 10px;background-repeat: no-repeat; background-position: 0% 50%;}
 li.video{background-image: url(/img/video.svg);}
