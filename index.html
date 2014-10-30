@@ -3,39 +3,17 @@ layout: default
 title: Home
 ---
 
-<hr>
-{% for post in paginator.posts %}
-<article class="{{ post.category }}">
-    {% if post.category == "video" %}
-<iframe allowfullscreen="1" frameborder="0" height="376" src="{{ post.link }}" width="668"> </iframe>
-
-    <div class="video-meta">
-        <h1 class="article-title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
-        <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
-        <p>{{ post.content }}</p>
-    </div>
-    {% endif %}
-    {% if post.category == "photo" %}
-    <p class="img-holder"><a href="{{ post.link }}" target="_blank"><img src="{{ post.link }}" alt="{{ post.title }}"></a></p>
-    <div class="photo-meta">
-        <h1 class="article-title"><a href="{{ post.link }}">{{ post.title }}</a></h1>
-        <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
-        <p>{{ post.content }}</p>
-    </div>
-    {% endif %}
-    {% if (post.category != "photo" and post.category != "video") %}
-    <h1 class="article-title">
-        {% if post.link %}
-            <a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
+<h2>Blog posts</h2>
+<ul class=post-list>
+    {% for post in paginator.posts %}
+        {% if post.category == "link" %}
+            <li class={{post.category}}><date><em>{{ post.date | date: "%Y-%m-%d" }}</em></date> <a href="{{ post.link }}" target="_blank">{{ post.title }}</a></li>
         {% else %}
-            <a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <li class={{post.category}}><date><em>{{ post.date | date: "%Y-%m-%d" }}</em></date> <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endif %}
-    <p class="article-date">{{ post.date | date: "%d %B, %Y" }}</p>
-    {{ post.content }}
-    {% endif %}
-</article>
-<hr>
-{% endfor %}
+    {% endfor %}
+</ul>
+<p><ins>Page {{paginator.page}} of {{paginator.total_pages}} spanning {{paginator.total_posts}} blog entries.</ins></p>
 <ol class="nav  pagination">
     <li class="pagination__prev">
         {% if paginator.previous_page %}
