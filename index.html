@@ -5,7 +5,7 @@ title: Contents
 <h2>Blog posts</h2>
     <ul class=post-list>
         {% for post in paginator.posts %}
-        {% if post.category == "link" %}<li class={{post.category}}><ins><em>{{ post.date | date: "%Y-%m-%d" }}</em></ins> <a href={{ post.link }} target="_blank">{{ post.title }}</a></li>{% else %}<li class={{post.category}}><ins><em>{{ post.date | date: "%Y-%m-%d" }}</em></ins> <a href={{ post.url }}>{{ post.title }}</a></li>{% endif %}{% endfor %}
+        <li class={{post.category}}><ins><em>{{post.date | date: "%Y-%m-%d"}}</em></ins> <a href={% if post.category == "link" %}"{{post.link}}"{% else %}{{post.url}}{% endif %}>{{post.title}}</a></li>{% endfor %}
 
     </ul>
 
