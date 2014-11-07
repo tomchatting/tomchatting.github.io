@@ -5,7 +5,7 @@ date: 2014-11-07 23:11
 category: article
 ---
 
-## How I fell in love with Murakami
+### How I fell in love with Murakami
 
 In my quest to invest myself more heavily in Japanese culture (beyond Japanese game shows and manga) I decided to plunge into the world of Japanese literature. After much thought and blurb-reading, I happened upon *Hard-Boiled Wonderland and the End of the World* by Haruki Murakami. The author, speculated to have been shortlisted for the Nobel Prize for Literature multiple times, is said to be “poetic” in his writing style; easy to read, yet thought-provoking and impactful. I was told to expect a mix of “western-style fantasy” and “science-fiction mystery”, and boy, does Murakami deliver.
 
@@ -17,7 +17,9 @@ A fascinating mystery science-fiction adventure with an ending that leaves you t
 
 ♦ 4.5/5
 
-### Footnotes
+---------------------------------------
+
+#### Footnotes
 
 * Hard-Boiled Wonderland and the End of the World is available on [Amazon](http://www.amazon.co.uk/Hard-Boiled-Wonderland-End-World-International/dp/0679743464) and all good book stores
 * For Japanese game shows I highly recommend [/r/japanesegameshows](http://www.reddit.com/r/japanesegameshows)
