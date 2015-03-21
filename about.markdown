@@ -6,13 +6,10 @@ permalink: /about/
 
 <h1 class="article-title">About Me</h1>
 
-## Thomas Chatting
-
-<img src="/img/mugshot.png" class="mugshot float-left" height="100px">
-
-Hello, world, my name is Thomas Chatting and I am a 22 year old student studying in Huddersfield, UK.
+Hello world! My name is Thomas Chatting and I am a 23 year old working for one of the largest banks in the UK.
 
 My web "aliases" (if you can call them that) that I can reel off the top of my head are:
+
 * tomchatting
 * iglootom
 * RxTom
@@ -31,7 +28,7 @@ Back in High School due to the fact ICT staff became fed-up with me, I was moved
 
 ## Contact
 
-If you wish to get in contact you can email me at tom.chatting--*at*--live--*dot*--co--*dot*--uk, or more casually [tweet me][tweet].
+If you wish to get in contact you can email me at thomas.chatting--*at*--icloud--*dot*--com, or more casually [tweet me][tweet].
 
 ## Colophon
 
