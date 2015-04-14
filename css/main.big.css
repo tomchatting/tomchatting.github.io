@@ -10,7 +10,7 @@ html {
 }
 header {
     background: #579fe1;
-    height: 50px;
+    min-height: 50px;
     text-align: center;
     color: #fefefe;
     padding: 10px;
