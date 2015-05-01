@@ -9,10 +9,10 @@ html {
     color: #333;
 }
 header {
-    background: rgb(238, 238, 238)/*#579fe1;*/
+    background: #579fe1;
     min-height: 50px;
     text-align: center;
-    color: #333;
+    color: #fefefe;
     padding: 10px;
     margin-bottom: 15px;
 }
