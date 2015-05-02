@@ -192,3 +192,6 @@ article {
 .related-posts a:hover small {
     color: #126d92;
 }
+.archive li {
+    margin: 0;
+}
