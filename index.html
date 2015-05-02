@@ -1,19 +1,38 @@
 ---
 layout: default
-title: Contents
+title: Home
 ---
-<h2>Blog posts</h2>
-    <ul class=post-list>
-        {% for post in paginator.posts %}
-        <li class={{post.category}}><ins><em>{{post.date | date: "%Y-%m-%d"}}</em></ins> <a href={% if post.category == "link" %}"{{post.link}}"{% else %}{{post.url}}{% endif %}>{{post.title}}</a></li>{% endfor %}
+    {% for page in paginator.posts %}
+<article class="{{ page.category }}">
+    <h1 class="article-title">
+        {% if page.link && page.category == "link" %}
+            <a href="{{ page.link }}" class="link">{{ page.title }}</a>
+        {% else %}
+            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+        {% endif %}
+    </h1>
+    <date>{{ page.date | date: "%d %B, %Y" }}</date>
+    
+    {% if page.link %}
+        {% if page.category == "photo" %}
+            <p><img src={{ page.link }}></p>
+        {% elsif page.category == "video" %}
+            <iframe allowfullscreen="1" frameborder="0" height="376" src="{{ page.link }}" width="668"> </iframe>
+        {% endif %}
+    {% endif %}
+    
+    {{ page.content }}
+    
+    {% include end_plug.html %}
 
-    </ul>
+</article>
+    {% endfor %}
 
-    <p><ins>Page {{paginator.page}} of {{paginator.total_pages}} spanning {{paginator.total_posts}} blog entries.</ins></p>
+    <p><ins>Post {{paginator.page}} of {{paginator.total_pages}} blog entries.</ins></p>
 
     <ol class="nav pagination">
         
-        <li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="/page{{paginator.previous_page}}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li><!--
-     --><li class="pagination__next">{% if paginator.next_page %}<a href="/page{{paginator.next_page}}">Older</a>{% else %}Older{% endif %}</li>
+        <li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li><!--
+    --><li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li>
         
     </ol>

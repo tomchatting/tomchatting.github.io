@@ -2,15 +2,14 @@
 <html lang=en>
     <meta charset=utf-8>
     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
-    <title>{{ page.title }} - Yeah Boi!</title>
+    <title>{% if page.title == "Home" %}Thomas Chatting{% else %}{{ page.title }}{% endif %} - Yeah Boi!</title>
     <link rel=stylesheet href=/css/main.big.css>
     <link rel=stylesheet href=/css/syntax.css>
 
-    <header><div>Pardon the lack of content, I've finally gotten around to instaling Brackets and Github on the PC/Mac but I'm not making any promises.</div></header>
-    <div class=wrapper><a href=/><img src="https://a.ppy.sh/2067217?1420665252.png" height="50px" style="border-radius: 200px; border-style: double;"></a></div>
+    <div class=wrapper><a href=/><img src="https://a.ppy.sh/2067217?1420665252.png" height="50px" style="border-radius: 200px; border-style: double; margin-top:25px;"></a></div>
     <hr>
     <div class=wrapper>
-    <p><b>Hi!</b> <ins>My name's Thomas, and I'm a 23 year old nerd from Leeds. I like Adventure Time, League of Legends, and the Oxford comma.</ins></p>
+    <p>Hi! <ins>My name's Thomas, and I'm a 23 year old nerd from Leeds. I like Adventure Time, League of Legends, and the Oxford comma.</ins></p>
         
     {{ content }}
     

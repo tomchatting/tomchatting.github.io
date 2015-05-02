@@ -1,4 +1,4 @@
 name: dg9t
-pygments: false
-paginate: 15
+highlighter: pygments
+paginate: 1
 markdown: kramdown
