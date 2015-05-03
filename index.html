@@ -8,7 +8,7 @@ title: Home
         {% if page.link && page.category == "link" %}
             <a href="{{ page.link }}" class="link">{{ page.title }}</a>
         {% else %}
-            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            <a href="{{ page.url }}">{{ page.title }}</a>
         {% endif %}
     </h1>
     <date>{{ page.date | date: "%d %B, %Y" }}</date>
