@@ -7,8 +7,6 @@ category: article
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/59824094&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
-![](http://i.imgur.com/CNX5hZN.png)
-
 Ah Season 2015, smiting champions, Cinderhulk, super-mega-special-super-special-awesome Baron buff, Dragon stacks and *crazy ass* support builds. Let's jump in head first!
 
 ### Just buy this and win
@@ -27,3 +25,5 @@ Roaming and edging advantages means more than ever this season, games are incred
 ### "What the fuck is that build..."
 
 Zero AP Annie/Morgana sounds like trash, but support this season isn't about carrying with damage, it's about carrying with [utility](http://matchhistory.euw.leagueoflegends.com/en/#match-details/EUW1/2092496922/36795625?tab=stats).
+
+![](http://i.imgur.com/CNX5hZN.png)
