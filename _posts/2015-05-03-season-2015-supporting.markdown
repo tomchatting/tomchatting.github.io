@@ -2,6 +2,7 @@
 layout: post
 title: "Supporting in Season 2015"
 date: 2015-05-03 22:14
+headline: "Please note this is now so out of date I've gone back and added this disclaimer to that effect"
 category: article
 ---
 

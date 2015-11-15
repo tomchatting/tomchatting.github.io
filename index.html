@@ -4,15 +4,18 @@ title: Home
 ---
     {% for page in paginator.posts %}
 <article class="{{ page.category }}">
-    <h1 class="article-title">
+    <h1 class="article-title" title="{{ page.date | date: "%d %B, %Y" }}">
         {% if page.link && page.category == "link" %}
             <a href="{{ page.link }}" class="link">{{ page.title }}</a>
         {% else %}
             <a href="{{ page.url }}">{{ page.title }}</a>
         {% endif %}
     </h1>
-    <date>{{ page.date | date: "%d %B, %Y" }}</date>
-    
+
+    {% if page.headline %}
+      <h2 class=headline>{{ page.headline }}</h2>
+    {% endif %}
+
     {% if page.link %}
         {% if page.category == "photo" %}
             <p><img src={{ page.link }}></p>
@@ -20,9 +23,11 @@ title: Home
             <iframe allowfullscreen="1" frameborder="0" height="376" src="{{ page.link }}" width="668"> </iframe>
         {% endif %}
     {% endif %}
-    
-    {{ page.content }}
-    
+
+    <div class=content>
+      {{ page.content }}
+    </div>
+
     {% include end_plug.html %}
 
 </article>
@@ -31,8 +36,8 @@ title: Home
     <p><ins>Post {{paginator.page}} of {{paginator.total_pages}} blog entries.</ins></p>
 
     <ol class="nav pagination">
-        
+
         <li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li><!--
     --><li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li>
-        
+
     </ol>
