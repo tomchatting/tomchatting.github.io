@@ -203,8 +203,10 @@ article {
   float: left;
 }
 .top p {
-  padding-top: 30px;
+  padding-top: 40px;
   padding-left: 10px;
+  padding-bottom: 20px;
+  clear: right;
 }
 .headline {
   color: #999;
