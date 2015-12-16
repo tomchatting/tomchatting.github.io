@@ -5,21 +5,21 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Thomas Chatting</title>
- <link href="http://tomchatting.github.io/feed.xml" rel="self"/>
- <link href="http://tomchatting.github.io/"/>
+ <link href="{{ site.url }}/feed.xml" rel="self"/>
+ <link href="{{ site.url }}/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://dg9t.eu/</id>
+ <id>{{ site.url }}/</id>
  <author>
    <name>Thomas Chatting</name>
-   <email>iglootom+feed@gmail.com</email>
+   <email>thomas.chatting@icloud.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://tomchatting.github.io{{ post.url }}"/>
+   <link href="{{ site.url }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://tomchatting.github.io{{ post.id }}</id>
+   <id>{{ site.url }}{{ post.id }}</id>
     <content type="html">{{ post.content }}</content>
  </entry>
  {% endfor %}
