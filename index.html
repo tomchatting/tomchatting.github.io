@@ -37,7 +37,7 @@ title: Home
 
     <ol class="nav pagination">
 
-        <li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li><!--
-    --><li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li>
+      <li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li><!--
+    --><li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li>
 
     </ol>

@@ -3,9 +3,9 @@
     padding: 0;
 }
 html {
-    font: 16px/26px helvetica, arial, sans-serif;
+    font: 18px/1.5 'Helvetica Neue', helvetica, arial, sans-serif;
     background: #fff;
-    color: #333;
+    color: #515151;
 }
 header {
     background: #579fe1;
@@ -132,13 +132,7 @@ li.photo {
 h2.title {
     color: #579fe1;
 }
-ul.post-list {
-    font-size: 17px;
-    line-height: 22px;
-}
-ul.post-list ins {
-    font-size: 14px;
-}
+
 .callout, blockquote {
     margin: 20px 0;
     padding: 15px 2em 15px 15px;
@@ -162,7 +156,8 @@ pre {
     text-align: center;
 }
 article .content p {
-  font-family: Georgia, times, sans-serif;
+  /* font-family: Georgia, times, sans-serif; */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .article-title a {
     color: #333;
@@ -177,12 +172,8 @@ article .content p {
     h1.hero {
     line-height: 60px;
 }
-}article ul {
-    padding-left: 15px;
 }
-article {
-    padding-bottom: 20px;
-}
+
 .related-posts {
     list-style: none;
     margin: 0;
@@ -214,4 +205,11 @@ article {
   font-size: 24px;
   font-weight: normal;
   padding-bottom: 50px;
+}
+ul, ol, dl, pre {
+  margin-bottom: 1rem;
+  padding-left: 40px;
+}
+li {
+  margin-bottom: 0.25rem;
 }
