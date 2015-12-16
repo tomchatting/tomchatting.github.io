@@ -165,15 +165,6 @@ article .content p {
 .article-title a.link {
     color: #126d92;
 }
-@media only screen and (max-width:598px) {
-    .wrapper {
-    margin: 1% 3%}
-}@media only screen and (max-width:443px) {
-    h1.hero {
-    line-height: 60px;
-}
-}
-
 .related-posts {
     list-style: none;
     margin: 0;
@@ -212,4 +203,21 @@ ul, ol, dl, pre {
 }
 li {
   margin-bottom: 0.25rem;
+}
+@media only screen and (max-width:598px) {
+    .wrapper {
+    margin: 1% 3%;}
+    pre {
+      padding-left: 0;
+    }
+    ul, ol, dl {
+      padding-left: 20px;
+    }
+}@media only screen and (max-width:443px) {
+    h1.hero {
+    line-height: 60px;
+}
+}
+ol.nav {
+  padding-left: 0;
 }
