@@ -3,10 +3,10 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>Thomas Chatting</title>
- <link href="http://dg9t.eu/feed.xml" rel="self"/>
- <link href="http://dg9t.eu/"/>
+ <link href="http://tomchatting.github.io/feed.xml" rel="self"/>
+ <link href="http://tomchatting.github.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://dg9t.eu/</id>
  <author>
@@ -17,11 +17,11 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://dg9t.eu{{ post.url }}"/>
+   <link href="http://tomchatting.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://dg9t.eu{{ post.id }}</id>
+   <id>http://tomchatting.github.io{{ post.id }}</id>
     <content type="html">{{ post.content }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>
