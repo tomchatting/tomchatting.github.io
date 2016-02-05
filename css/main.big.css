@@ -150,10 +150,9 @@ pre {
     overflow-x: auto;
 }
 .article-title {
-    font-size: 48px;
-    line-height: 1.2em;
+    font-size: 3.5em;
+    line-height: 1.125em;
     margin-bottom: 0;
-    text-align: center;
 }
 article .content p {
   /* font-family: Georgia, times, sans-serif; */
@@ -192,7 +191,6 @@ article .content p {
 }
 .headline {
   color: #999;
-  text-align: center;
   font-size: 24px;
   font-weight: normal;
   padding-bottom: 50px;
