@@ -1,5 +1,8 @@
-name: dg9t
-highlighter: pygments
+name: tomchatting
+highlighter: rouge
 paginate: 1
 markdown: kramdown
 url: "http://tomchatting.github.io"
+
+# Gems
+gems: [jekyll-paginate]
