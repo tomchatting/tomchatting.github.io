@@ -21,7 +21,7 @@ header div {
 }
 .wrapper {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 690px;
 }
 h1.hero {
     font-size: 48px;
@@ -72,7 +72,7 @@ a:hover {
     text-decoration: underline;
 }
 img {
-    max-width: 612px;
+    max-width: 690px;
 }
 hr {
     border: 0;
@@ -80,7 +80,7 @@ hr {
     margin: 15px 0;
 }
 iframe {
-    max-width: 650px;
+    max-width: 690px;
 }
 ol.nav {
     list-style: none;
