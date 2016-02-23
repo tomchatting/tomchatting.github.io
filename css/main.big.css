@@ -21,7 +21,7 @@ header div {
 }
 .wrapper {
     margin: 0 auto;
-    max-width: 690px;
+    max-width: 600px;
 }
 h1.hero {
     font-size: 48px;
@@ -72,7 +72,7 @@ a:hover {
     text-decoration: underline;
 }
 img {
-    max-width: 690px;
+    max-width: 600px;
 }
 hr {
     border: 0;
@@ -80,7 +80,8 @@ hr {
     margin: 15px 0;
 }
 iframe {
-    max-width: 690px;
+    max-width: 650px;
+    margin-left: -25px;
 }
 ol.nav {
     list-style: none;
@@ -134,15 +135,12 @@ h2.title {
 }
 
 .callout, blockquote {
-    margin: 20px 0;
-    padding: 15px 2em 15px 15px;
-    border-left: 5px solid #eee;
-    background: #f5f5f5;
+    margin-left: -25px;
+    padding-left: 20px;
+    border-left: 5px solid #ff0059;
+    color: #777;
 }
 iframe {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
     padding-bottom: 15px;
 }
 pre {
@@ -150,7 +148,7 @@ pre {
     overflow-x: auto;
 }
 .article-title {
-    font-size: 3.5em;
+    font-size: 50px;
     line-height: 1.125em;
     margin-bottom: 0;
 }
@@ -161,8 +159,16 @@ article .content p {
 .article-title a {
     color: #333;
 }
+.article-title a:hover {
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+}
 .article-title a.link {
     color: #126d92;
+}
+article cite {
+    background-color: #FFFF00;
 }
 .related-posts {
     list-style: none;
