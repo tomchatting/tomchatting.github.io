@@ -118,5 +118,5 @@ references to aim for, but there is no such thing as too many references.
 Layout and some examples taken from the University of Exeter's Study Skills guide
 to referencing found [here](https://education.exeter.ac.uk/dll/studyskills/harvard_referencing.htm).
 
-A fantastic tool for creating reference guide's is [Neil's Toolbox](http://www.neilstoolbox.com/bibliography-creator/), to which I would
+A fantastic tool for creating reference guides/bibliographies is [Neil's Toolbox](http://www.neilstoolbox.com/bibliography-creator/), to which I would
 like to credit my entire degree.
