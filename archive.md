@@ -13,3 +13,5 @@ permalink: /archive/
 {% endfor %}
 
 </ul>
+
+<hr>
