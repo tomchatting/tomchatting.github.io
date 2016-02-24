@@ -2,42 +2,40 @@
 layout: default
 title: Home
 ---
-    {% for page in paginator.posts %}
+{% for page in paginator.posts %}
 <article class="{{ page.category }}">
-    <h1 class="article-title" title="{{ page.date | date: "%d %B, %Y" }}">
-        {% if page.link && page.category == "link" %}
-            <a href="{{ page.link }}" class="link">{{ page.title }}</a>
-        {% else %}
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        {% endif %}
-    </h1>
-
-    {% if page.headline %}
-      <h2 class=headline>{{ page.headline }}</h2>
+  <h1 class="article-title" title="{{ page.date | date: "%d %B, %Y" }}">
+    {% if page.link && page.category == "link" %}
+    <a href="{{ page.link }}" class="link">{{ page.title }}</a>
+    {% else %}
+    <a href="{{ page.url }}">{{ page.title }}</a>
     {% endif %}
+  </h1>
 
-    {% if page.link %}
-        {% if page.category == "photo" %}
-            <p><img src={{ page.link }}></p>
-        {% elsif page.category == "video" %}
-            <iframe allowfullscreen="1" frameborder="0" height="376" src="{{ page.link }}" width="668"> </iframe>
-        {% endif %}
-    {% endif %}
+  {% if page.headline %}
+    <h2 class=headline>{{ page.headline }}</h2>
+  {% endif %}
 
-    <div class=content>
-      {{ page.content }}
-    </div>
+  {% if page.link %}
+  {% if page.category == "photo" %}
+  <p><img src={{ page.link }}></p>
+  {% elsif page.category == "video" %}
+  <iframe allowfullscreen="1" frameborder="0" height="376" src="{{ page.link }}" width="668"> </iframe>
+  {% endif %}
+  {% endif %}
 
-    {% include end_plug.html %}
+  <div class=content>
+    {{ page.content }}
+  </div>
+
+  {% include end_plug.html %}
 
 </article>
-    {% endfor %}
+{% endfor %}
 
-    <p><ins>Post {{paginator.page}} of {{paginator.total_pages}}.</ins></p>
+<p><ins>Post {{paginator.page}} of {{paginator.total_pages}}.</ins></p>
 
-    <ol class="nav pagination">
-
-      <li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li><!--
+<ol class="nav pagination">
+<li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li><!--
     --><li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li>
-
-    </ol>
+</ol>
