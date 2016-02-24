@@ -15,32 +15,28 @@ layout: default
   {% if page.headline %}
   <h2 class=headline>{{ page.headline }}</h2>
   {% endif %}
-
   <div class=content>
   {{ content }}
   </div>
-
   {% include end_plug.html %}
 </article>
-
 </div>
 
 <hr>
 
 <div class=wrapper>
-
 <aside class=related>
   <h2>Recent posts</h2>
   <ul class='related-posts'>
   {% for post in site.related_posts limit:3 %}
-    <li>
-      <h3>
-        <a href='{{ post.url }}'>
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-        </a>
-      </h3>
-    </li>
+  <li>
+    <h3>
+      <a href='{{ post.url }}'>
+        {{ post.title }}
+        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+      </a>
+    </h3>
+  </li>
   {% endfor %}
   </ul>
 </aside>
