@@ -126,7 +126,7 @@ ol.nav {
   position: relative;
   width: 50%;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   color: #ccc;
 }
 
@@ -138,9 +138,8 @@ ol.nav {
   display: block;
   width: 100%}
 .pagination>li a:hover {
-  background: #126d92;
-  color: #fff;
-  text-decoration: none;
+  background: #f5f5f5;
+  text-decoration: underline;
 }
 
 .post-list li a, .post-list li a:visited {
