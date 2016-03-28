@@ -4,33 +4,21 @@ title: About
 permalink: /about/
 ---
 
-<h1 class="article-title">About Me</h1>
+<h1 class="article-title">hello, world!</h1>
 
-Hello world! My name is Thomas Chatting and I am a 23 year old working for one of the largest banks in the UK.
+My name's Tom, and I'm a 24 year old working at one of the UK's biggest banks. If you're reading this, you've either taken a stab at the URL or realised my name at the bottom of the site is actually a link. Either way, well done you.
 
-My web "aliases" (if you can call them that) that I can reel off the top of my head are:
+## tom
 
-* tomchatting
-* iglootom
-* RxTom
-* PhenomenonTom
-* Spoolio
+As a kid, I remember we had a family DOS box but I can't remember much of that. The first family PC I remember was a custom OEM built Windows 98SE box in coral blue, which we had from when I was about 7 up until just before high school, when we upgraded the machine and stuck with Windows XP until I got my own laptop running Windows Vista. Since then, I've just build my own PC's but sometimes you can see me hipstering out with my MacBook Air.
 
-Originally from Leeds my lifelong hobby and passion is technology. Ranging from being the first person in my class at college to own an Android phone (the G1, no less) to owning and running some sort of webspace since around 2004, and generally being the go-to tech support guy for my friends and family--and if they're reading this, turn it off and on again, call me on Skype (in that order)--my passions in technology are wide and varied.
+Phone wise I've gone from an Android G1 to an iPhone and back... then back again. I currently rock an iPhone 5s, like the filthy hypocrite I am.
 
-From speccing and building modern PCs to meddling with Windows system files, and now--more recently--trying to develop various applications for Windows, Web, and mobile (some of which you can see on [Github][github]; my spare time is generally filled with attempts to make myself productive while doing something I enjoy.
-
-## Early "Work"
-
-![Early site](http://i.imgur.com/CkdVs.png)
-
-Back in High School due to the fact ICT staff became fed-up with me, I was moved into a room more lovingly known as the "IT Cupboard", where the technicians taught me HTML, Windows Server basics, and that being a complete computer nerd was cool and came with perks like Subway platters. Most of their teachings went into circumventing the school firewall to allow me and my friends access to online games during classes, bouncing from free-domain-host to free-domain-host to avoid the blocks--but in the long run taught me a lot about the basics of programming, server running, and page development, leading me to be comfortable with HTML, CSS, JS, and more recently after college, PHP, Ruby, Python, .Net, and Java.
-
-## Contact
+## contact
 
 If you wish to get in contact you can email me at thomas.chatting--*at*--icloud--*dot*--com, or more casually [tweet me][tweet].
 
-## Colophon
+## colophon
 
 This site is hosted on [GitHub pages][ghpages] using [Jekyll][jekyll], and most of the content is written in John Gruber's [Markdown][markdown].
 

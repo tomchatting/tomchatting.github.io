@@ -1,6 +1,6 @@
 name: tomchatting
 highlighter: rouge
-paginate: 1
+paginate: 5
 markdown: kramdown
 url: "http://tomchatting.github.io"
 
