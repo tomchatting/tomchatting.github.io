@@ -4,14 +4,14 @@
 }
 
 html {
-  font: 16px/1.6 'Helvetica Neue', helvetica, arial, sans-serif;
+  font: 18px/1.7 'Helvetica Neue', helvetica, arial, sans-serif;
   background: #fff;
   color: #333;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 h1.hero {
