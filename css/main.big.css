@@ -241,6 +241,11 @@ li {
   margin-bottom: 0.25rem;
 }
 
+a.hero:hover {text-decoration: none;}
+.article-title.hero {
+  height: 500px; text-align: center; line-height: 500px; color: #333;
+}
+
 @media only screen and (max-width:598px) {
   iframe {
     max-width: 100%;
@@ -257,6 +262,9 @@ li {
   }
   ul, ol, dl {
     padding-left: 20px;
+  }
+  .article-title.hero {
+    height: 250px; text-align: center; line-height: 1em; padding-top:150px;
   }
 }@media only screen and (max-width:443px) {
   h1.hero {

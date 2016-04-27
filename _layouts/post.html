@@ -2,8 +2,17 @@
 layout: default
 ---
 <article class={{ page.category }}>
+  {% if page.hero %}
+</article>
+</div>
+  <h1 class="article-title hero" style="background: url({{ page.hero }}) no-repeat 50%; margin-top: -50px;">{{ page.title }}</h1>
+<div class=wrapper>
+<article class={{ page.category }}>
+  <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
+  {% else %}
   <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
   <h1 class="article-title">{{ page.title }}</h1>
+  {% endif %}
 
   {% if page.link %}
   {% if page.category == "photo" %}

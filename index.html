@@ -3,15 +3,23 @@ layout: default
 title: Home
 ---
 {% for page in paginator.posts %}
-<article class="{{ page.category }}">
-  <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
-  <h1 class="article-title">
-    {% if page.link && page.category == "link" %}
-    <a href="{{ page.link }}" class="link">{{ page.title }}</a>
-    {% else %}
-    <a href="{{ page.url }}">{{ page.title }}</a>
-    {% endif %}
-  </h1>
+{% if page.hero %}
+</article>
+</div>
+<a class=hero href={{ page.url }}><h1 class="article-title hero" style="background: url({{ page.hero }}) no-repeat 50% ;">{{ page.title }}</h1></a>
+<div class=wrapper>
+<article class={{ page.category }}>
+<date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
+{% else %}
+<date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
+<h1 class="article-title">
+  {% if page.link && page.category == "link" %}
+  <a href="{{ page.link }}" class="link">{{ page.title }}</a>
+  {% else %}
+  <a href="{{ page.url }}">{{ page.title }}</a>
+  {% endif %}
+</h1>
+{% endif %}
 
   {% if page.headline %}
     <h2 class=headline>{{ page.headline }}</h2>
