@@ -3,15 +3,11 @@ layout: default
 title: Home
 ---
 {% for page in paginator.posts %}
-{% if page.hero %}
-</article>
-</div>
-<a class=hero href={{ page.url }}><h1 class="article-title hero" style="background: url({{ page.hero }}) no-repeat 50% ;">{{ page.title }}</h1></a>
-<div class=wrapper>
 <article class={{ page.category }}>
+{% if page.hero %}
+<h1 style="background: url({{ page.hero }}) no-repeat 50% ;" class="article-title hero"><a class=hero href={{ page.url }}>{{ page.title }}</a></h1>
 <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
 {% else %}
-<date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
 <h1 class="article-title">
   {% if page.link && page.category == "link" %}
   <a href="{{ page.link }}" class="link">{{ page.title }}</a>
@@ -19,6 +15,7 @@ title: Home
   <a href="{{ page.url }}">{{ page.title }}</a>
   {% endif %}
 </h1>
+<date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
 {% endif %}
 
   {% if page.headline %}
@@ -42,7 +39,7 @@ title: Home
 </article>
 {% endfor %}
 
-<p><ins>Page {{paginator.page}} of {{paginator.total_pages}}.</ins></p>
+<p>Page {{paginator.page}} of {{paginator.total_pages}}.</p>
 
 <ol class="nav pagination">
 <li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li><!--
