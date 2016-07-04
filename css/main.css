@@ -16,8 +16,8 @@ header h2 { font-size: 1em; color: #646464; font-weight: normal; margin-top: 0; 
 
 date { color: #9a9a9a; font-size: 1.2em; }
 
-h1.hero { height: 200px; }
-a.hero { background: #2C3E50; display:block; width: 100%; opacity: 0.9; color: #fff; }
+h1.hero { height: 200px; position: relative; }
+a.hero { background: #2C3E50; display:block; width: 100%; opacity: 0.9; color: #fff; position: absolute; bottom: 0; left: 0;}
 
 article cite { background-color: #FFFF00; }
 article { padding-bottom: 40px; }
