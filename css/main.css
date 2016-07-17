@@ -23,6 +23,7 @@ article cite { background-color: #FFFF00; }
 article blockquote { position: relative; font-style: italic; color: #9a9a9a; }
 article blockquote::before { content: ">"; position: absolute; left: -20px; }
 article { padding-bottom: 40px; }
+article h1 { margin: 0.67em 0 0; }
 
 .related-posts { list-style: none; margin: 0; padding: 0; }
 .related-posts li { padding: 0; margin: 0; }
