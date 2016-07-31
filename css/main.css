@@ -24,7 +24,7 @@ article blockquote { position: relative; font-style: italic; color: #9a9a9a; }
 article blockquote::before { content: ">"; position: absolute; left: -20px; }
 article { padding-bottom: 40px; }
 article h1.article-title { margin: 0.67em 0 0; }
-article pre { width: 100%; overflow-x: auto; }
+article pre { width: 100%; overflow-x: auto; margin: 0; }
 
 .related-posts { list-style: none; margin: 0; padding: 0; }
 .related-posts li { padding: 0; margin: 0; }
