@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
 ---
 
 <h1 class="article-title">hello, world!</h1>
 
-My name's Tom, and I'm a 24 year old working at one of the UK's biggest banks. If you're reading this, you've either taken a stab at the URL or realised my name at the bottom of the site is actually a link. Either way, well done you.
+My name's Tom, and I'm a 24 year old working at one of the UK's biggest banks.
 
 ## tom
 
