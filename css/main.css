@@ -21,13 +21,14 @@ h1.hero { height: 200px; position: relative; }
 a.hero { background: #2C3E50; display:block; width: 100%; opacity: 0.9; color: #fff; position: absolute; bottom: 0; left: 0;}
 
 article h1:first-child { margin: 0; padding-top: 20px; }
-article h1 a { color: #313131; }
+article h1 a, article h1 a:visited { color: #313131; }
 article cite { background-color: #FFFF00; }
 article blockquote { position: relative; font-style: italic; color: #9a9a9a; }
 article blockquote::before { content: ">"; position: absolute; left: -20px; }
 article { padding-bottom: 40px; }
 article h1.article-title { margin: 0.67em 0 0; }
 article pre { width: 100%; overflow-x: auto; margin: 0; }
+article .headline { font-weight: normal; font-size: 1.4em; }
 
 .related-posts { list-style: none; margin: 0; padding: 0; }
 .related-posts li { padding: 0; margin: 0; }
