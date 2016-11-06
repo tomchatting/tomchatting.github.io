@@ -1,12 +1,14 @@
 ---
 layout: default
 ---
+<p><a href=/>↩ Home</a></p>
+
 <article class={{ page.category }}>
   {% if page.hero %}
-  <h1 style="background: url({{ page.hero }}) no-repeat 50% ;" class="article-title hero"><a class=hero href={{ page.url }}>{{ page.title }}</a></h1>
+  <div style='background: url({{ page.hero }}) no-repeat 50%; min-height: 150px; position:relative;'><h1 class=hero>{{ page.title }}</h1></div>
   <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
   {% else %}
-  <h1 class="article-title">{{ page.title }}</h1>
+  <h1 class=article-title>{{ page.title }}</h1>
   <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
   {% endif %}
 

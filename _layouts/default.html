@@ -2,25 +2,28 @@
 <html lang=en>
 <meta charset=utf-8>
 <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
-<title>{% if page.title == "Home" %}tom{% else %}{{ page.title }} - tom{% endif %}</title>
-<link rel=stylesheet href=/css/main.css>
-<link rel=stylesheet href=/css/syntax.css>
+<title>{% if page.title == "Home" %}@PhenomenonTom{% else %}{{ page.title }} - @PhenomenonTom{% endif %}</title>
+<link rel=stylesheet href=/static/main.css>
+<link rel=stylesheet href=/static/syntax.css>
+<script src=/static/tagline.js></script>
 
 <div class=wrapper>
   <header>
-    <h1><a href=/>thomas chatting</a></h1>
-    <h2>A weblog of ramblings, lists and occasional rants by a <a href=/about/>24 year old human male</a> who keeps redesigning said weblog without adding content</h2>
-    <nav>
-      <ul>
-        <li><a href=/about/>about tom</a></li>
-        <li><a href=/archive/>archive</a></li>
-      </ul>
+    <img src=http://i.imgur.com/jw4bVzl.jpg width=100 height=100 alt>
+    <h2><script>document.write(random_tag);</script></h2>
   </header>
 
 {{ content }}
 
   <footer>
+    <hr>
+    <nav>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li><a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </nav>
     <p>&copy; <a href=/about>Thomas Chatting</a> 2016. Site built in <a href=//atom.io target=_blank>Atom</a> and hosted by <a href=//pages.github.com target=_blank>GitHub</a>.</p>
-    <p>This blog contains entirely my own unedited thoughts and opinions and in no way reflects any real thoughts and opinions of anyone else, nor myself for that matter.</p>
   </footer>
 </div>
