@@ -2,46 +2,15 @@
 layout: default
 title: Home
 ---
-{% for page in paginator.posts %}
-<article class={{ page.category }}>
-{% if page.hero %}
-<h1 style="background: url({{ page.hero }}) no-repeat 50% ;" class="article-title hero"><a class=hero href={{ page.url }}>{{ page.title }}</a></h1>
-<date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
-{% else %}
-<h1 class="article-title">
-  {% if page.link && page.category == "link" %}
-  <a href="{{ page.link }}" class="link">{{ page.title }}</a>
-  {% else %}
-  <a href="{{ page.url }}">{{ page.title }}</a>
-  {% endif %}
-</h1>
-<date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
-{% endif %}
+<h4 class=center>I'm Tom and sometimes I blog things, here are some of those things:</h4>
 
-  {% if page.headline %}
-    <h2 class=headline>{{ page.headline }}</h2>
-  {% endif %}
+{% for post in site.posts %}
 
-  {% if page.link %}
-  {% if page.category == "photo" %}
-  <p><img src={{ page.link }}></p>
-  {% elsif page.category == "video" %}
-  <iframe allowfullscreen="1" frameborder="0" height="376" src="{{ page.link }}" width="668"> </iframe>
-  {% endif %}
-  {% endif %}
+<ul class=list>
+  <li class=list-item>
+    <div class=list-timestamp><time>{{ post.date | date: "%b %d, %Y" }}</time></div>
+    <div class=list-truncate><a href={{ post.url }}>{{ post.title }}</a></div>
+  </li>
+</ul>
 
-  <div class=content>
-    {{ page.content }}
-  </div>
-
-  {% include end_plug.html %}
-
-</article>
 {% endfor %}
-
-<p>Page {{paginator.page}} of {{paginator.total_pages}}.</p>
-
-<ol class="nav pagination">
-<li class="pagination__next">{% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>{% else %}Older{% endif %}</li><!--
-    --><li class="pagination__prev">{% if paginator.previous_page %}{% if paginator.previous_page == 1 %}<a href="/">Newer</a>{% else %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>{% endif %}{% else %}Newer{% endif %}</li>
-</ol>
