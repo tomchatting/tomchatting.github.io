@@ -12,6 +12,4 @@ var tags = [
   '<i>"lol"</i> - you'
 ];
 
-var num = tags.length-1;
-
-var random_tag = tags[Math.round(Math.random()*num)];
+var random_tag = tags[Math.round(Math.random()*(tags.length-1))];
