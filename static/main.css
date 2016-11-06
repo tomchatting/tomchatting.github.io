@@ -12,7 +12,6 @@ header img { border-radius: 100% }
 footer nav ul { list-style: none; padding: 0; }
 footer nav li { display: inline-block; }
 footer nav li:not(:last-child):after { content: ',' }
-
 figure { margin: 0; }
 
 blockquote {
