@@ -7,7 +7,9 @@ var tags = [
   'A new design every week or your money back',
   'Come on, grab your friends!',
   'Follow me on Twitter!',
-  'Steamed hams'
+  'Steamed hams',
+  'My other blog gets updates',
+  '<i>"lol"</i> - you'
 ];
 
 var num = tags.length-1;
