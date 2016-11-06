@@ -8,7 +8,7 @@ title: Home
 
 <ul class=list>
   <li class=list-item>
-    <div class=list-timestamp><time>{{ post.date | date: "%b %d, %Y" }}</time></div>
+    <div class=list-timestamp><date>{{ post.date | date: "%b %d, %Y" }}</date></div>
     <div class=list-truncate>{% if post.link %}✈ {% endif %}<a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a></div>
   </li>
 </ul>

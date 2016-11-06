@@ -5,11 +5,11 @@ layout: default
 
 <article class={{ page.category }}>
   {% if page.hero %}
-  <div style='background: url({{ page.hero }}) no-repeat 50%; min-height: 150px; position:relative;'><h1 class=hero>{{ page.title }}</h1></div>
-  <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
+  <p class=center><date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date></p>
+  <div style='background: url({{ page.hero }}) no-repeat 50%; min-height: 200px; position:relative; text-align: center;'><h1 class=hero>{{ page.title }}</h1></div>
   {% else %}
+  <p class=center><date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date></p>
   <h1 class=article-title>{{ page.title }}</h1>
-  <date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date>
   {% endif %}
 
   {% if page.link %}
