@@ -2,15 +2,19 @@
 layout: default
 title: Home
 ---
-<h4 class=center>I'm Tom and sometimes I blog things, here are some of those things:</h4>
+<h2 class=center>I'm Tom and sometimes I blog things, here are some of those things:</h2>
 
 {% for post in site.posts %}
-
-<ul class=list>
+  {% assign currentdate = post.date | date: "%Y" %}
+  {% if currentdate != date %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h2 id=year class=center>{{ currentdate }}</h2>
+    <ul class=list>
+    {% assign date = currentdate %}
+  {% endif %}
   <li class=list-item>
     <div class=list-timestamp><date>{{ post.date | date: "%b %d, %Y" }}</date></div>
     <div class=list-truncate>{% if post.link %}✈ {% endif %}<a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a></div>
   </li>
-</ul>
-
+  {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
