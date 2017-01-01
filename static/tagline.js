@@ -1,15 +1,13 @@
 var tags = [
-  'Registered CSS offender.',
-  'Mum, I\'m on the Internet!',
-  '#implications',
-  'Powered by magic beans',
-  'Brought to you by Caprisuns',
-  'A new design every week or your money back',
-  'Come on, grab your friends!',
-  'Follow me on Twitter!',
-  'Steamed hams',
-  'My other blog gets updates',
-  '<i>"lol"</i> - you'
+  'loves waffles',
+  'uses the <marquee>&lt;marquee&gt;</marquee> tag',
+  'implores you to inspect element',
+  'watches mr robot',
+  'just wants to talk'
 ];
 
 var random_tag = tags[Math.round(Math.random()*(tags.length-1))];
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.getElementById("random-tag").innerHTML = " " + random_tag
+})
