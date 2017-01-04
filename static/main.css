@@ -5,7 +5,7 @@ html { background: #fff; color: #333; font: 16px/1.4 Open Sans, Helvetica, Arial
 .wrapper { max-width: 700px; margin: 0 auto; padding: 30px; }
 a, a:visited { text-decoration: none; color: #ff5252; }
 a:hover { color: #fff; background: #ff5252; }
-article h1, h2#year { color: #ff5252; }
+article h1, h2#year { color: #ff5252; text-align: center; }
 
 header { padding-top: 50px; padding-bottom: 10px; /*background: url(http://i.imgur.com/VYyW6ES.jpg);*/ }
 header, footer { text-align: center; }
