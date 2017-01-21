@@ -5,7 +5,7 @@ headline: "First time JavaScript be gentle"
 category: snippet
 ---
 
-<iframe width="540" height="304" src="//www.youtube.com/embed/MVRg8gZ8zPA" frameborder="0" allowfullscreen="0"> </iframe>
+<iframe width="700" height="394" src="//www.youtube.com/embed/MVRg8gZ8zPA" frameborder="0" allowfullscreen="0"> </iframe>
 
 ## redesigned
 
@@ -43,8 +43,18 @@ var random_tag = tags[Math.round(Math.random()*(tags.length-1))];
 
 ## step three: it's lit
 
+Throw in a cheeky tag into where you want your random tag:
+
 {% highlight html %}
-<script>document.write(random_tag);</script>
+<span id=random-tag></span>
+{% endhighlight %}
+
+then add a not so cheeky ```document.addEventListener``` to insert ```random_tag``` into your page:
+
+{% highlight js %}
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.getElementById("random-tag").innerHTML = " " + random_tag
+})
 {% endhighlight %}
 
 ## there's probably a better way to do this
