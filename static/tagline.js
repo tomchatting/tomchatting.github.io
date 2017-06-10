@@ -20,7 +20,8 @@ var tags = [
   'drinks iced tea',
   'thinks bernie can still win',
   'assures you there\'s no problem',
-  '2: electric boogaloo'
+  '2: electric boogaloo',
+  '🤔'
 ];
 
 var random_tag = tags[Math.round(Math.random()*(tags.length-1))];
