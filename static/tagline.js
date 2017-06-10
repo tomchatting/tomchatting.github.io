@@ -14,8 +14,13 @@ var tags = [
   'escapes characters',
   'wrote a lot of random taglines',
   'thinks he\'s hilarious',
-  'thinks you\`re great',
-  'regularly edits old articles'
+  'thinks you\'re great',
+  'regularly edits old articles',
+  '',
+  'drinks iced tea',
+  'thinks bernie can still win',
+  'assures you there\'s no problem',
+  '2: electric boogaloo'
 ];
 
 var random_tag = tags[Math.round(Math.random()*(tags.length-1))];
