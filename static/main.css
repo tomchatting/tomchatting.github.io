@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italc,400,400italic,500,700);
 @import url(/static/normalize.css);
 
-html { background: #fff; color: #333; font: 16px/1.4 Open Sans, Helvetica, Arial, sans-serif; letter-spacing: -.028em;}
+html { background: #fff; color: #333; font: 16px/1.4 'Open Sans', Helvetica, Arial, sans-serif; letter-spacing: -.028em;}
 .wrapper { max-width: 700px; margin: 0 auto; padding: 30px; }
 a, a:visited { text-decoration: none; color: #ff5252; }
 a:hover { color: #fff; background: #ff5252; }
