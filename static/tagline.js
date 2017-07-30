@@ -14,7 +14,7 @@ var tags = [
   'escapes characters',
   'wrote a lot of random taglines',
   'thinks he\'s hilarious',
-  'thinks you\`re great',
+  'thinks you\'re great',
   'regularly edits old articles'
 ];
 

@@ -28,7 +28,7 @@ My greatest accomplishment in 2016 stood on the shoulders of my second-greatest:
 
 ![london trip photo](http://s23.postimg.org/b8n1j2msb/IMG_0194.jpg){: width="200px" style="float:left; padding-right: 10px;"}
 
-2016 was the first year I actually enjoyed public social networks. From Twitter to SnapChat and Instagram and back I actually enjoyed sharing my life on social networks. Actually, no, I wasn't hung up on exactly what I was sharing anymore, because I was just sharing snippets of my life. I think that's kinda the point though, so go me for finally getting it?
+2016 was the first year I actually enjoyed public social networks. From Twitter to SnapChat and Instagram and back I actually enjoyed sharing my life on social networks. Actually, no, I wasn't hung up on exactly what I was sharing anymore because I was just sharing snippets of my life. I think that's kinda the point though, so go me for finally getting it?
 
 I just spent 20 minutes or so reviewing Photos on the MacBook (which, by the way, is fucking seamless) and it reminded me of how much I've actually done this year, and more surprisingly, how much I've actually documented. Fuck, I've even taken *selfies*.
 
@@ -36,7 +36,7 @@ I just spent 20 minutes or so reviewing Photos on the MacBook (which, by the way
 
 ![selfie](https://s23.postimg.org/hnm2fqti3/IMG_0289.jpg){: width="200px" style="float:right; padding-left: 10px;"}
 
-I seemed to finally, after 24 years, crack the answer to the age old question of "how do you want it?" when going to the barbers. In doing that (and after receiving at least *one* compliment) I've found myself taking much more pictures of my face. Until tonight I really didn't appreciate how useful that actually is, as it's enabled me to take stock on a lot of positives this year (*right: German Christmas market with Alex*). On a serious note, it's really shown how much my confidence has improved this year on the whole--for one I'm now leading a team of 12 people which requires a lot of public speaking, which I'm unashamedly loving!
+I seemed to finally, after 24 years, crack the answer to the age-old question of "how do you want it?" when going to the barbers. In doing that (and after receiving at least *one* compliment) I've found myself taking much more pictures of my face. Until tonight I really didn't appreciate how useful that actually is, as it's enabled me to take stock on a lot of positives this year (*right: German Christmas market with Alex*). On a serious note, it's really shown how much my confidence has improved this year on the whole--for one I'm now leading a team of 12 people which requires a lot of public speaking, which I'm unashamedly loving!
 
 ## other memories (in no particular order)
 
