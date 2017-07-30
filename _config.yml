@@ -1,9 +1,5 @@
 name: tomchatting
 highlighter: rouge
-paginate: 1
 markdown: kramdown
 url: "http://tomchatting.github.io"
 permalink: /:year/:month/:day/:title
-
-# Gems
-gems: [jekyll-paginate]
