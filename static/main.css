@@ -7,9 +7,10 @@ a, a:visited { text-decoration: none; color: #ff5252; }
 a:hover { color: #fff; background: #ff5252; }
 article h1, h2#year { color: #ff5252; text-align: center; }
 
-header { padding-top: 50px; padding-bottom: 10px; /*background: url(http://i.imgur.com/VYyW6ES.jpg);*/ }
-header, footer { text-align: center; }
-header img { border-radius: 100% }
+header, footer { text-align: left; }
+header {  }
+header h1 { display: inline-block; text-align: center; font-size: 3em; }
+header h1 span { background-position: 0 80px; background-size: 3px 3px; background-image: linear-gradient(#fbd200,#fbd200); text-decoration: none; background-repeat: repeat-x;  }
 footer nav ul { list-style: none; padding: 0; }
 footer nav li { display: inline-block; }
 footer nav li:not(:last-child):after { content: ',' }
