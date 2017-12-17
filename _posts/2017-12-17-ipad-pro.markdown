@@ -1,0 +1,44 @@
+---
+layout: post
+title: "ipad pro: the least ipad ipad yet 💻"
+category: ramble
+---
+
+<iframe width="700" height="394" src="//www.youtube.com/embed/RwaYflHAIGQ" frameborder="0" allowfullscreen="0"> </iframe>
+
+## The iPad has been around for the longest time now, even longer if you believe it started life as what the iPhone turned into. Apple has revised and retuned it’s glorified giant iPod touch time and time again, and now—fully indoctrined into the ways of Apple—I’ve jumped into the fray. But can this device truly hit the mark as a “Pro” device?
+
+----
+
+I’ve been using the new iPad Pro as my daily driver for just over 48 hours now, but I don’t feel like I’m using an iPad—and I think that’s Apple’s intention.
+
+[iPad Pro — What’s a computer — Apple](https://youtu.be/sQB2NjhJHvY)
+
+Whilst I don’t see myself being so... forceful with this over £600 piece of equipment (though I’ve totally nailed the fold slam trick) I can completely understand Apple’s logic on the direction they’ve taken with their Pro device. The iPad is for people who want a couch computer, a device they can watch YouTube and browse the web on. The Pro takes that concept and blurs the line further between itself and a laptop. The Pro sports Apple’s new custom built A10X chip, which drives a beautiful Retina display and up to 120Hz refresh rates (which seems to be supported on everything from _Hearthstone_ to the Home Screen). The result of this is a snappy, gorgeous machine which feels as premium as its’ cost demands. Of course, this is only half the story. In previous iterations of iPad, the device has only been as good as the giant iPhone software it’s running. Enter iOS 11.
+
+## macos meets ios meets macos
+Users of the Mac will know that over the past couple of versions of the OS, the gap between iOS and MacOS has been shrinking (hello Siri). I almost consider Yosemite the practice-version of what would become iOS 11 with it’s Windows 7 snap-style take on multitasking and it’s obsession with full screen. I will admit on the 13” MacBook Pro, and indeed on larger screens, full screen computing frustrates me; I do consider myself a “Windows” user (in the sense that I like to have lots going on with my screen at once),  but the iPad, with iOS 11, finally obliges my hardstuck ways.
+
+The new operating system feels fluid and intuitive, and apps snap freely between iPad versions (in 50-100% size) and iPhone versions (at less than 50% size), leaving you able to do crazy things, like watching a YouTube video and reading BBC News at the same time. 2017 is crazy.
+
+## accessories are power
+The iPad Pro carries much more than a shiny OS and multitasking, it is also backed by exclusive accessories. One of said accessories makes complete sense to me and I feel should be included with the device. The other is a £99 stylus.
+
+The iPad Pro Smart Keyboard is small, discreet, and doubles as a stand for when you don’t want to type and just want to watch/play. The key travel is shallow and does take getting used it, but it carries a tactile feel and I’ve been able to get up to full-speed typing within a few hours of using it. The keyboard supports all the usual array of shortcuts fresh from the Mac, including `cmd+tab` (iOS now sports a cute task switched) and `cmd+h` to go to the home screen. Where the struggle begins is more to do with what I’m used to. I’m missing my 7” slab of glass underneath the space bar that lets me point to things on my screen<sup>[1](#footnotes/pointing)</sup>.
+
+The Apple Pencil is difficult. In theory I feel like it makes complete sense. The pencil is to the iPad Pro what the Smart Keyboard is to the iPad Pro. One lets you write away and pro-user-shortcut your way around the device, and seems the perfect match for writers; the other is a pencil. And I guess the pencil carries with it the ability to draw, and point with greater accuracy, or colour, or stencil, or whatever, but for me it’s come as an expensive “also this”. I’m not saying there’s anything inherently _wrong_ with the thing—it feels weighted in your hand and is precise _af_—rather, it just doesn’t feel like it holds a true... use for me. I have, however, still found myself reaching for it instead of pointing with my finger whilst using the Smart Keyboard, as it bridges the gap quite nicely and leaves me not having to lean in to point.
+
+![iPad with Pencil and Smart Keyboard](https://i.imgur.com/DnGmAzf.jpg)
+
+## so who is this for?
+The iPad Pro sits on the forefront of what can only be described as a two-pronged niche. On one hand are the professionals who needs a solid, reliable, tablet to draw on or write with. iOS has really matured over the years and the operating system can finally comfortably support a power user with their “lighter” tasks, and almost all apps from the App Store support some kind of hand off to a fully fledged power app on the Mac proper. On the other hand, the iPad Pro sits in a rather new market; the “Pro Consumer”. Some people (particularly me... and probably other nerds) need a device that is light enough and good enough to run YouTube, Music, and a couple of games without choking; but also heavy-duty enough to keep up, multitask, and carry through an entire day without a charge<sup>[2](#footnotes/battery-life)</sup>. I think Apple has truly reimagined what the word “Pro” means in it’s Pro line, and I don’t think it’s short for Professional anymore.
+
+## conclusion
+The iPad Pro presents itself as a Microsoft Surface killer, but I think Apple missed the mark there. What I really see the iPad Pro as is a MacBook Air killer. This device is exactly what I wanted in Uni, and to be honest it fits my niche quite well. If you’re anything like me and you need a “Pro by 2017’s Pro” device, I’d recommend buying the shit outta this device. For anyone else, I think a trip to the Apple Store to just have a play with the thing would soon swing you into the former category.
+
+![iPad with Tom](https://i.imgur.com/nt9kry8.jpg)
+(“What’s a computer?” — Whilst I find it completely obnoxious when taken literally, I totally get where the marketing department was coming from with that line... sorry)
+- - - -
+<a name="footnotes/pointing">1</a>: The touch screen on the iPad is incredibly responsive, 20ms to be precise, however there is a learning curve for keyboard and mouse diehards such as myself to learn to reach out and touch rather than using a secondary device.
+
+<a name="footnotes/battery-life">2</a>: Apple has claimed 10 hours on devices before and been very, very wrong (and have stung me for that, thanks man). So far the iPad Pro seems to live true to the 10 hour claim, though I’d be silly to bet against that changing after more battery cycles.
