@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "my new typewriter - the powerbook g4 "
+title: "my new typewriter - the powerbook g4"
 category: ramble
 ---
 
@@ -14,6 +14,8 @@ As a kid I hated Apple products. Actually, let me be honest, I hated rich people
 Flash forward to 2014, I got a full time job. With a full time job came an income, with an income came spending. At first: an iPhone; then came an iPad, eventually I moved onto a MacBook Air, then a MacBook Pro, an Apple Watch and finally the AirPods. I am fully indoctrinated into the Church of Jobs. I fucking love it.
 
 ## obsolescence drives productivity
+
+![PowerBook G4 12 inch](https://i.imgur.com/VboWv6Q.jpg)
 
 My biggest issue when completing any task is procrastination. Essay? Xbox. Research? League of Legends. I find that if I can do something else, I generally will, this blog was actually once of my procrastinatory efforts throughout education. Therein lies the problem. My work rarely requires me to take anything home, which means I no longer need to procrastinate anything beyond laundry or cooking or food shopping, all tasks which (for now) have a novelty and an allure. This means (probably noticeably) this blog has been neglected, as have my other previously procrastination driven hobbies such as PC gaming and programming. What this means is when I do actually want to complete tasks like OC gaming or programming or writing for this blog; I procrastinate it. We’ve reached meta-crastination, people.
 
