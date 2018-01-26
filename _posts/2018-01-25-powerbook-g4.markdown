@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "my new typewriter - the powerbook g4"
+title: "my new typewriter - the powerbook g4 🍎"
 category: ramble
 ---
 
