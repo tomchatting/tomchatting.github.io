@@ -2,19 +2,29 @@
 layout: default
 title: Home
 ---
-<h2 class=center>My name's Tom. Sometimes I blog things. Here are some of those things:</h2>
 
-{% for post in site.posts %}
-  {% assign currentdate = post.date | date: "%Y" %}
-  {% if currentdate != date %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h2 id=year class=center>{{ currentdate }}</h2>
-    <ul class=list>
-    {% assign date = currentdate %}
-  {% endif %}
-  <li class=list-item>
-    <div class=list-timestamp><date>{{ post.date | date: "%b %d, %Y" }}</date></div>
-    <div class=list-truncate>{% if post.link %}✈ {% endif %}<a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a></div>
-  </li>
-  {% if forloop.last %}</ul>{% endif %}
+{% for post in paginator.posts %}
+  <article>
+    <h1><a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a></h1>
+    <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time>
+{{ post.content }}
+  </article>
+  <hr>
 {% endfor %}
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

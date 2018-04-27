@@ -1,32 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang=en>
 <meta charset=utf-8>
 <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
-<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16" />
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
 
 <title>{% if page.title == "Home" %}@PhenomenonTom{% else %}{{ page.title }} - @PhenomenonTom{% endif %}</title>
 <link rel=stylesheet href=/static/main.css>
-<link rel=stylesheet href=/static/syntax.css>
-<script src=/static/tagline.js></script>
-
-<div class=wrapper>
 
 <header>
-  <h1><span>Thomas Chatting thinks this blog is a healthy outlet</span></h1>
+  <div id=container>
+    <h1>Thomas Chatting 🧙</h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=#>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
 </header>
 
+<div id=container>
 {{ content }}
+</div>
 
-  <footer>
-    <hr>
-    <nav>
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
       <ul>
         <li><a href=/about/>about</a></li>
         <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
         <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
       </ul>
-    </nav>
-    <p>&copy; <a href=/about>Thomas Chatting</a> 2017. Site built in <a href=//atom.io target=_blank>Atom</a> and hosted by <a href=//pages.github.com target=_blank>GitHub</a>.</p>
-  </footer>
-</div>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>

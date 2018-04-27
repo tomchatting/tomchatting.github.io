@@ -1,5 +1,7 @@
 name: tomchatting
-highlighter: rouge
 markdown: kramdown
 url: "http://tomchatting.github.io"
-permalink: /:year/:month/:day/:title
+permalink: pretty
+paginate: 5
+
+plugins: [jekyll-paginate]
