@@ -3,40 +3,24 @@ layout: default
 ---
 <p><a href=/>↩ Home</a></p>
 
-<article class={{ page.category }}>
-  {% if page.hero %}
-  <p class=center><date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date></p>
-  <div style='background: url({{ page.hero }}) no-repeat 50%; min-height: 200px; position:relative; text-align: center;'><h1 class=hero>{{ page.title }}</h1></div>
-  {% else %}
-  <p class=center><date datetime={{ page.date | date: "%Y-%m-%d" }}>{{ page.date | date: "%B %-d, %Y" }}</date></p>
-  <h1 class=article-title>{{ page.title }}</h1>
-  {% endif %}
-
-  {% if page.link %}
-  {% if page.category == "photo" %}
-  <p><img src={{ page.link }}></p>
-  {% elsif page.category == "video" %}
-  <iframe allowfullscreen="1" frameborder="0" height="376" src="{{ page.link }}" width="668"> </iframe>
-  {% endif %}
-  {% endif %}
-
-  {% if page.headline %}
-  <h2 class=headline>{{ page.headline }}</h2>
-  {% endif %}
-  <div class=content>
-  {{ content }}
-  </div>
+<article>
+  <h1><a href={% if page.link %}{{ page.link }}{% else %}{{ page.url }}{% endif %}>{{ page.title }}</a></h1>
+  <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time>
+{{ page.content }}
+</article>
   {% include end_plug.html %}
 </article>
 
+<hr>
+
 <aside class=related>
-  <h2>Recent posts</h2>
-  <ul class='related-posts'>
+  <h2>Recent pages</h2>
+  <ul class='related-pages'>
   {% for post in site.related_posts limit:3 %}
   <li>
     <h3>
       <a href='{{ post.url }}'>
-        {{ post.title }}
+        {{ page.title }}
         <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
       </a>
     </h3>
