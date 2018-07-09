@@ -1,0 +1,301 @@
+html {
+  font-family: Helvetica, Arial, sans-serif ;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-weight: 100;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#circle {
+  border: 8px solid #268bd2;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 100px auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a, a:visited {
+  color: #268bd2;
+  text-decoration: none;
+  border-bottom: 1px dashed #333;
+}
+
+a:hover {
+  border: none;
+}
+
+blockquote{
+  font-size: 1em;
+  width:60%;
+  margin: 0;
+  font-style:italic;
+  color: #333;
+  padding:0.3em 30px 1.0em 75px;
+  border-left: 8px solid #fbd200 ;
+  line-height: 1.6;
+  position: relative;
+  background: #f3f3f3;
+}
+
+blockquote::before {
+  content: "\201C";
+  color:#fbd200;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: '';
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+code {
+  color: #d5d5d5;
+  font-family: Menlo,Roboto Mono,Courier New,monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  font-weight: 400;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  border-radius: 6px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+@media (min-width: 600px), all pre code {
+  padding: 1.5rem;
+}
+
+pre code {
+display: block;
+padding: 1rem;
+overflow: auto;
+background-color: #333;
+box-shadow: 2px 3px 20px rgba(0,0,0,.1);
+}
+
+img, iframe, pre {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+mark {
+  background-color: #f1dd38;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+time:not(small time) {
+  color: #9a9a9a;
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+}
+
+small time {
+  font-size: 0.8em;
+  color: #a1a7b9;
+}
+
+.related-posts {
+  list-style: none;
+  padding: 0;
+}
+
+.related-posts li a {
+  border: none;
+}
+
+hr {
+    border: 0;
+    background: #ddd;
+    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    height: 1px;
+    margin: 2.5em 0;
+}
+
+header, footer {
+  text-align: left;
+  margin: 0;
+  display: block;
+}
+
+header {
+  padding: 1rem 0;
+  margin-bottom: 100px;
+}
+
+footer {
+  color: #a1a7b9;
+}
+
+footer h1 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer a, footer a:visited {
+  color: #a1a7b9;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul li + li::before {
+    content: " | ";
+}
+
+/*
+ * Pagination
+ *
+ * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+ * there are no more previous or next posts to show.
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  border: 1px solid #eee !important;
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+  background-color: #268bd2;
+  border-color: #268bd2;
+}
+
+@media (min-width: 600px) {
+  .pagination {
+    margin: 3rem 0;
+  }
+  .pagination-item {
+    float: left;
+    width: 44%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius:    4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius:    4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+  #container {
+    max-width: 680px;
+  }
+  footer {
+    text-align: left;
+  }
+  footer #left {
+    float: left;
+    width: 50%;
+    display: inline;
+  }
+  footer #right {
+    float: right;
+    width: 50%;
+    display: inline;
+  }
+  footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

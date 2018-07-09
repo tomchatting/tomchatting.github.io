@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<title>quick and lazy random titles 💻 - Thomas Chatting 🤘</title>
+<link rel=stylesheet href=/static/main.css>
+
+<header>
+  <div id=container>
+    <div id=circle></div>
+    <h1><a href=/>Thomas Chatting 🤘</a></h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
+</header>
+
+<div id=container>
+<p><a href=/>↩ Home</a></p>
+
+<article>
+  <h1><a href=/snippet/2016/11/06/quick-and-lazy-random-titles/>quick and lazy random titles 💻</a></h1>
+  <time datetime='2016-11-06'>06 Nov 2016</time>
+<iframe width="700" height="394" src="//www.youtube.com/embed/MVRg8gZ8zPA" frameborder="0" allowfullscreen="0"> </iframe>
+
+<h2 id="redesigned">redesigned</h2>
+
+<p>Just to add some context to this: I refreshed the blog design <em>again</em>, and in part with stealing every idea I come across I’ve made a really quick and dirty random tagline picker thing. For a demo, refresh this page a few times.</p>
+
+<h2 id="step-one-create-an-array">step one: create an array</h2>
+
+<p>Something as quick and dirty as I’m making here needs a dirty and quick array:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">'Registered CSS offender.'</span><span class="p">,</span>
+  <span class="s1">'Mum, I</span><span class="se">\'</span><span class="s1">m on the Internet!'</span><span class="p">,</span>
+  <span class="s1">'#implications'</span><span class="p">,</span>
+  <span class="s1">'Powered by magic beans'</span><span class="p">,</span>
+  <span class="s1">'Brought to you by Caprisuns'</span><span class="p">,</span>
+  <span class="s1">'A new design every week or your money back'</span><span class="p">,</span>
+  <span class="s1">'Come on, grab your friends!'</span><span class="p">,</span>
+  <span class="s1">'Follow me on Twitter!'</span><span class="p">,</span>
+  <span class="s1">'Steamed hams'</span><span class="p">,</span>
+  <span class="s1">'My other blog gets updates'</span><span class="p">,</span>
+  <span class="s1">'&lt;i&gt;"lol"&lt;/i&gt; - you'</span>
+<span class="p">];</span></code></pre></figure>
+
+<h2 id="step-two-pseudorandom-number-generator">step two: pseudorandom number generator</h2>
+
+<p>Anyone who’s ever done “randomness” in computer programming before knows the general formula <code class="highlighter-rouge">random() * (max - min + 1)) + min</code> (where <code class="highlighter-rouge">random()</code> generally gives a number between 0 and 1). I won’t pretend to understand or remember how this works, however if you’re interested in the how check <a href="http://stackoverflow.com/a/1527820">this excellent explanation</a> on StackOverflow out.</p>
+
+<p>Now since our array starts at 0 (so we have no min), our next–and only other–line can just be:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">random_tag</span> <span class="o">=</span> <span class="nx">tags</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">tags</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">))];</span></code></pre></figure>
+
+<h2 id="step-three-its-lit">step three: it’s lit</h2>
+
+<p>Throw in a cheeky tag into where you want your random tag:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">random-tag</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></figure>
+
+<p>then add a not so cheeky <code class="highlighter-rouge">document.addEventListener</code> to insert <code class="highlighter-rouge">random_tag</code> into your page:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"DOMContentLoaded"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"random-tag"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nx">random_tag</span>
+<span class="p">})</span></code></pre></figure>
+
+<h2 id="theres-probably-a-better-way-to-do-this">there’s probably a better way to do this</h2>
+
+<p>Full disclosure: I generally have no idea what I’m doing, so if you know of or find a better way of performing this fairly simple task: go ahead and use it.</p>
+
+</article>
+  <p>:-),</p>
+<p>@<a href='//twitter.com/phenomenontom' target='_blank'>phenomenontom</a></p>
+
+</article>
+
+<hr>
+
+<aside class=related>
+  <h2>More like this</h2>
+  <ul class='related-posts'>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/12/17/ipad-pro/'>
+        ipad pro: the least ipad ipad yet 💻
+        <small><time datetime="2017-12-17T00:00:00+00:00">17 Dec 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/08/30/you-should-watch-the-digimon-movie/'>
+        you should watch the digimon movie 📽
+        <small><time datetime="2017-08-30T00:00:00+01:00">30 Aug 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/08/08/fizzbuzz/'>
+        fizzbuzz 💻
+        <small><time datetime="2017-08-08T00:00:00+01:00">08 Aug 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  </ul>
+</aside>
+
+</div>
+
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>

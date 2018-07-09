@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<title>Home - page 4 - Thomas Chatting 🤘</title>
+<link rel=stylesheet href=/static/main.css>
+
+<header>
+  <div id=container>
+    <div id=circle></div>
+    <h1><a href=/>Thomas Chatting 🤘</a></h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
+</header>
+
+<div id=container>
+
+  <article>
+    <h1><a href=/article/2015/05/01/pdo/>Dropping mysql_connect, or how I learned to PDO</a></h1>
+    <time datetime='2015-05-01'>01 May 2015</time>
+<p>So I finally got around to fixing the mySQL connector in Square:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">database_connect</span><span class="p">(</span><span class="nv">$dbHost</span><span class="p">,</span> <span class="nv">$dbName</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="nv">$dbHost</span><span class="s2">;dbname=</span><span class="nv">$dbName</span><span class="s2">;charset=utf8"</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$PDOexception</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">exit</span><span class="p">(</span><span class="s2">"&lt;p&gt;An error ocurred: Can't connect to database. &lt;/p&gt;&lt;p&gt;More preciesly: "</span><span class="o">.</span> <span class="nv">$PDOexception</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span><span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Then it’s just a matter of replacing all your old calls (<em>this is why you should do things more procedurally, Tom</em>) in every instance you expected a mysql_ query and now receive a PDO object:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$db</span> <span class="o">=</span> <span class="nx">database_connect</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">database</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">);</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT * FROM posts"</span><span class="p">);</span>
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span></code></pre></figure>
+
+<p>Insert your usual <code class="highlighter-rouge">for each $post in $posts</code> and you’re golden!</p>
+
+<p><strong>Tl;dr</strong>: <em>just use Jekyll now, PHP is a bad language anyway.</em></p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=https://play.spotify.com/user/126028736/playlist/64CqgONJ4PD1YBaWvHmH1w>Current Spotify playlist</a></h1>
+    <time datetime='2015-01-06'>06 Jan 2015</time>
+<p>Not mine, but the majority of these songs are my jam.</p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=/article/2014/11/07/hard-boiled-wonderland-and-the-end-of-the-world/>Tom does reading: Hard-Boiled Wonderland and the End of the World</a></h1>
+    <time datetime='2014-11-07'>07 Nov 2014</time>
+<h3 id="how-i-fell-in-love-with-murakami">How I fell in love with Murakami</h3>
+
+<p>In my quest to invest myself more heavily in Japanese culture (beyond Japanese game shows and manga) I decided to plunge into the world of Japanese literature. After much thought and blurb-reading, I happened upon <em>Hard-Boiled Wonderland and the End of the World</em> by Haruki Murakami. The author, speculated to have been shortlisted for the Nobel Prize for Literature multiple times, is said to be “poetic” in his writing style; easy to read, yet thought-provoking and impactful. I was told to expect a mix of “western-style fantasy” and “science-fiction mystery”, and boy, does Murakami deliver.</p>
+
+<p>The novel follows two narratives which standalone and later intertwine: <em>Hard-Boiled Wonderland</em> tells the story of a successful corporate/government agent, dutifully fulfilling his set tasks whilst enjoying an almost pragmatic lifestyle, in a tone not dissimilar to the narrators in <em>The Humans</em> or <em>The Curious Tale</em>. <em>The End of the World</em> tells the tale of a lost soul, who departs with his shadow to gain entry to a town at the end of the world. He is given the task of “dream reading” until such a time his shadow dies, and he can become immortal and “at one” with the town which protects him from the outside world that all within strive to forget.</p>
+
+<p>The pure beauty of Murakami’s writing is that even within the translation, subtleties creep in. It took me half a dozen chapters (and a re-read of two) to realise the author never actually divulges the name of a single character, yet his writing style and descriptive narrative leave me questioning whether a name is ever needed. The author also switches between the personal past tense and present tense in alternate chapters in such a subtle way, leaving a strong satisfaction as you try to puzzle the ending together.</p>
+
+<p>A fascinating mystery science-fiction adventure with an ending that leaves you to think. <em>Hard-Boiled Wonderland and the End of the World</em> is a fantastic introduction to an obviously strong writer and, as my new copy of <em>A Wild Sheep Chase</em> suggests, is a great gateway novel to more of the same.</p>
+
+<p>♦ 4.5/5</p>
+
+<hr />
+
+<h4 id="footnotes">Footnotes</h4>
+
+<ul>
+  <li>Hard-Boiled Wonderland and the End of the World is available on <a href="http://www.amazon.co.uk/Hard-Boiled-Wonderland-End-World-International/dp/0679743464">Amazon</a> and all good book stores</li>
+  <li>For Japanese game shows I highly recommend <a href="http://www.reddit.com/r/japanesegameshows">/r/japanesegameshows</a></li>
+  <li>My current manga of choice is <em>Deadman Wonderland</em>, review of part one coming soon™</li>
+</ul>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=http://fat.gfycat.com/MellowSkinnyCuttlefish.gif>Ranked rewards? I get them.</a></h1>
+    <time datetime='2014-11-07'>07 Nov 2014</time>
+<p>So this happened…</p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=//www.youtube.com/embed/xtXjJGdA3lw>Enter Shikari - The Last Garrison</a></h1>
+    <time datetime='2014-10-30'>30 Oct 2014</time>
+<p>I will never stop loving this band.</p>
+
+  </article>
+  <hr>
+
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page/5">Older</a>
+  
+  
+    
+      <a class="pagination-item newer" href="/page/3">Newer</a>
+    
+  
+</div>
+
+</div>
+
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
