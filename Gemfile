@@ -7,6 +7,6 @@ end
 
 gem "jekyll", "~> 3.6.0"
 gem "github-pages",
-  github: 'UnderpantsGnome/pages-gem@127c31b',
+  github: 'UnderpantsGnome/pages-gem',
   branch: "paginate-v2",
   group: :jekyll_plugins
