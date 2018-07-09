@@ -18,75 +18,324 @@
 </header>
 
 <div id=container>
+<ol class=posts>
 
-  <article>
-    <h1><a href=/link/2012/03/08/normalize/>CSS Normalize > CSS Reset</a></h1>
-    <time datetime='2012-03-08'>08 Mar 2012</time>
-<p><a href="https://github.com/CoryMathews/normalize.css">https://github.com/CoryMathews/normalize.css</a></p>
+  <li>
+    <a href=/ramble/2017/12/17/ipad-pro/>ipad pro: the least ipad ipad yet 💻</a>
+    <small><time datetime='2017-12-17'>17 Dec 2017</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=/ramble/2017/08/30/you-should-watch-the-digimon-movie/>you should watch the digimon movie 📽</a>
+    <small><time datetime='2017-08-30'>30 Aug 2017</time></small>
+  </li>
 
-  <article>
-    <h1><a href=/note/2012/03/08/subtle-links-with-css/>Subtle Links with CSS</a></h1>
-    <time datetime='2012-03-08'>08 Mar 2012</time>
-<p>I think every time I recreate this blog I end up posting a few little CSS tips that I use constantly, and when I say constantly I mean consistently for over three or so years now.</p>
+  <li>
+    <a href=/ramble/2017/08/08/fizzbuzz/>fizzbuzz 💻</a>
+    <small><time datetime='2017-08-08'>08 Aug 2017</time></small>
+  </li>
 
-<p>##Visible Clicks</p>
+  <li>
+    <a href=/ramble/2017/07/30/half-time/>half time 👟</a>
+    <small><time datetime='2017-07-30'>30 Jul 2017</time></small>
+  </li>
 
-<p>Most people add a custom colour to <code class="highlighter-rouge">a:links</code> and <code class="highlighter-rouge">a:hover</code> in their CSS using the latter to show when a user has hovered over a clickable link, but what about when the user actually clicks? For that most old school browsers added a dotted outline to a:active which was all well and good back in the days of 800x600 and Web 1.0, but apparently we’ve moved passed that, with most sites not even employing any form of “active event” (see Twitter). This can be seen as a bad thing as for people without mouses employing the tab button to navigate a site it then becomes near on impossible to see what link you’ve selected, but I digress. A really subtle touch you can add to links to show a user has clicked is to employ a:active to show a small change to the link; my favourite being:</p>
+  <li>
+    <a href=/ramble/2017/01/01/my-annual-year/>my annual year 📖</a>
+    <small><time datetime='2017-01-01'>01 Jan 2017</time></small>
+  </li>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span><span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="nl">top</span><span class="p">:</span> <span class="m">1px</span><span class="p">;}</span></code></pre></figure>
+  <li>
+    <a href=/snippet/2016/11/06/quick-and-lazy-random-titles/>quick and lazy random titles 💻</a>
+    <small><time datetime='2016-11-06'>06 Nov 2016</time></small>
+  </li>
 
-<p>You can try that on this null link (click and hold to see the position of the link change slightly). As you’ll be able to see, clicking pushes the entire link down by a single pixel, generating a really subtle “pushed in” effect.</p>
+  <li>
+    <a href=/ramble/2016/08/09/organisation/>organisation 📕</a>
+    <small><time datetime='2016-08-09'>09 Aug 2016</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=/ramble/2016/07/16/shifting-gears/>switching gears, or how i accidentally stumbled my way into the fray of a management job contest 🏆</a>
+    <small><time datetime='2016-07-16'>16 Jul 2016</time></small>
+  </li>
 
-  <article>
-    <h1><a href=/article/2012/03/07/in-the-case-of-php-evals/>In the case of evals in PHP</a></h1>
-    <time datetime='2012-03-07'>07 Mar 2012</time>
-<blockquote>
-  <p>The eval() language construct is very dangerous because it allows execution of arbitrary PHP code. Its use thus is discouraged. If you have carefully verified that there is no other option than to use this construct, pay special attention not to pass any user provided data into it without properly validating it beforehand.</p>
-</blockquote>
+  <li>
+    <a href=/game-review/2016/04/27/hyper-light-drifter/>hyper light drifter 🎮</a>
+    <small><time datetime='2016-04-27'>27 Apr 2016</time></small>
+  </li>
 
-<p>Today I got a bit of a coding itch, it ended up in me having an epiphany in the shower of all places as to why in <em>hells</em> name I’d ever used <code class="highlighter-rouge">eval</code> in making SquareCMS, and how to fix it. After a lot of work this afternoon I’ve managed to rewrite <a href="https://github.com/tomchatting/SquareCMS/blob/master/square/controllers/theme.php">/controllers/theme.php</a> from scratch using functions to output text then displaying that to the user. Originally I did some rather recursive and <em>dangerous</em> stuff (see blockquote from PHP.net) within the theme file, using it to generate another PHP file within itself then using <code class="highlighter-rouge">eval</code> to execute it within theme.php.</p>
+  <li>
+    <a href=/article/2016/03/25/thoughts-on-square/>thoughts on squarecms 🚀</a>
+    <small><time datetime='2016-03-25'>25 Mar 2016</time></small>
+  </li>
 
-<p>theme.php originally had a few functions or different roles. At it’s simplest, theme.php would always be called by a function using eval in a way such as:</p>
+  <li>
+    <a href=/article/2016/02/23/quick-and-dirty-referencing/>quick and dirty referencing 🖊</a>
+    <small><time datetime='2016-02-23'>23 Feb 2016</time></small>
+  </li>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval(echo 'themeFunction($file)';)  and would be passed a file in plain text, usually a theme file such as [this](https://github.com/tomchatting/SquareCMS/blob/master/square/themes/default/index.page) one. This file would then be stripped of all its' `&lt;square:tags /&gt;` by using regular expressions or simple find and replace functions, in these tags places would be the raw code required to do what the theme writer wanted to be present, for example `&lt;square:url /&gt;` returns the blogs' URL using the pre-set constant, but returns it as `'.URL.'` so the PHP can be executed (as if you look above the eval call is echoing the output) and leaves the next returned string able to do the same, leaving an even playing field. This file would then be saved to a variable, ready to be eval'd by the calling function.
-</code></pre></div></div>
+  <li>
+    <a href=/article/2016/02/14/kanye/>Kanye West 30 Hours</a>
+    <small><time datetime='2016-02-14'>14 Feb 2016</time></small>
+  </li>
 
-<p>Eval executes arbitrary PHP code, exactly as it would run as if you’d called it from the web browser or included it from another file; so it runs with the same privileges as such a file would if it were uploaded via FTP and executed. This produces an inherent problem particularly with something like a blog engine such as the one I made, not because you can generate execution issues (this is true, debugging with eval is much, much harder as I discovered) but because when you begin introducing user generated content like themes and plugins; security becomes a huge issue.</p>
+  <li>
+    <a href=/article/2015/12/16/december-update/>The December update</a>
+    <small><time datetime='2015-12-16'>16 Dec 2015</time></small>
+  </li>
 
-<h2 id="trust-no-one">Trust No-One</h2>
+  <li>
+    <a href=/article/2015/11/16/time-passes/>At some point between hitting the real world and now, I lost track of time</a>
+    <small><time datetime='2015-11-16'>16 Nov 2015</time></small>
+  </li>
 
-<p>Herein lies the problem: if you allow a user to begin adding non-verified and non-tested components to your software, is it right to allow them to operate at the same execution level as the verified and tested components? Of course not, that’s suicide. If a malicious user were to set up a file or plugin that put the users server, or worse their <em>data</em> at risk, it wouldn’t be the fault of the user for installing such a component, nor would it be the malicious guy (well, it would, but that’s not the point) it’d be the jack-ass that allowed for this sort of stuff to happen in the first place.</p>
+  <li>
+    <a href=/article/2015/05/03/season-2015-supporting/>Supporting in Season 2015</a>
+    <small><time datetime='2015-05-03'>03 May 2015</time></small>
+  </li>
 
-<p>So before anything like this was able to happen to anyone that may use/fork Square in the future, I decided to completely remove all evals from SquareCMS, and as of tomorrow on GitHub the code this server is running will be pushed into the Repo for review/proof.</p>
+  <li>
+    <a href=/article/2015/05/01/pdo/>Dropping mysql_connect, or how I learned to PDO</a>
+    <small><time datetime='2015-05-01'>01 May 2015</time></small>
+  </li>
 
-<h2 id="simple-take-out">Simple take-out</h2>
+  <li>
+    <a href=https://play.spotify.com/user/126028736/playlist/64CqgONJ4PD1YBaWvHmH1w>Current Spotify playlist</a>
+    <small><time datetime='2015-01-06'>06 Jan 2015</time></small>
+  </li>
 
-<p>The main conclusion to gain from this article/apology is not that you should never use evals, they can be quite useful for a variety of reasons, and in some cases they are the only solution to a problem; but you <strong>have</strong> to be 110% sure that all parameters are both correct (to save difficult debugging) and trusted, and in the case of third-party solutions being added to your project, you can guarantee neither, so a different option is often the better one.</p>
+  <li>
+    <a href=/article/2014/11/07/hard-boiled-wonderland-and-the-end-of-the-world/>Tom does reading: Hard-Boiled Wonderland and the End of the World</a>
+    <small><time datetime='2014-11-07'>07 Nov 2014</time></small>
+  </li>
 
-<p>For what it’s worth, it turns out SquareCMS runs around 0.01 seconds <em>slower</em> now it doesn’t run evals to parse themes, as it has to parse files two or three times separately due to the nature of how I construct pages from files, though I’m sure I can shave that back off down the road when I get my next itch.</p>
+  <li>
+    <a href=http://fat.gfycat.com/MellowSkinnyCuttlefish.gif>Ranked rewards? I get them.</a>
+    <small><time datetime='2014-11-07'>07 Nov 2014</time></small>
+  </li>
 
-<p>1 <a href="http://php.net/manual/en/function.eval.php">http://php.net/manual/en/function.eval.php</a></p>
+  <li>
+    <a href=//www.youtube.com/embed/xtXjJGdA3lw>Enter Shikari - The Last Garrison</a>
+    <small><time datetime='2014-10-30'>30 Oct 2014</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=http://giant.gfycat.com/DeadLimitedHanumanmonkey.gif>I did it (again)! Do I get to play with all the best people now?</a>
+    <small><time datetime='2014-10-07'>07 Oct 2014</time></small>
+  </li>
 
+  <li>
+    <a href=/note/2014/08/09/lazy-scaling-for-lazy-people/>Lazy scaling for lazy people</a>
+    <small><time datetime='2014-08-09'>09 Aug 2014</time></small>
+  </li>
 
-<div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    
-      <a class="pagination-item newer" href="/page/12">Newer</a>
-    
-  
-</div>
+  <li>
+    <a href=/note/2014/05/04/tom-inside/>New design, or Tom inside</a>
+    <small><time datetime='2014-05-04'>04 May 2014</time></small>
+  </li>
+
+  <li>
+    <a href=//www.youtube.com/embed/fdKsgBNEHUU>Not strapped, nor booted</a>
+    <small><time datetime='2014-05-03'>03 May 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/7Oh5B1A.gif>I did it! Do I get to play with all the best people now?</a>
+    <small><time datetime='2014-03-23'>23 Mar 2014</time></small>
+  </li>
+
+  <li>
+    <a href=//www.youtube.com/embed/pHHWPTs1zxg>Gambino</a>
+    <small><time datetime='2014-01-16'>16 Jan 2014</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2014/01/07/chromebook/>HP Chromebook 11</a>
+    <small><time datetime='2014-01-07'>07 Jan 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/9jq9hhZ.png>Ever seen me and Krepo in the same room at the same time?</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/niQ5IEA.jpg>My current wallpaper</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=-8lYRmYmdn0>Hagimura Suzu snaps in Engrish</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://blog.brackets.io/2013/11/20/1240/>Brackets update</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/TV5d9wz.png>So I'm into Seitokai Yakuindomo in a big way</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/ObIFqYi.jpg>Objects in mirror are losing</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/11/28/supporting-part-2/>League of Legends: Supporting 101, a pre-season update</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.raspberrypi.org/phpBB3/viewtopic.php?f=56&t=58259>Windows CE BSP for Raspberry Pi</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://markdownpad.com/>MarkdownPad</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/M4YXHP3.png>League of Legends: Season 4 support masteries</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=rBRPXtJLnpU>Ellen trolling</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:not>:not()</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/TXvY8Y0.jpg>Yorkshire hills by my friend Alex</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/11/02/life/>Life</a>
+    <small><time datetime='2013-11-02'>02 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/08/09/google-play-music-all-access/>Google Play Music All Access: terrible title, terrific service</a>
+    <small><time datetime='2013-08-09'>09 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/08/06/the-plan-has-failed/>Abort the mission, I've fallen in love with Jekyll</a>
+    <small><time datetime='2013-08-06'>06 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/08/04/oscar-wilde/>Oscar Wilde</a>
+    <small><time datetime='2013-08-04'>04 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/link/2013/08/04/alt-j-dissolve-me/>The banner image took too long to load so here's a fun video and a new banner colour</a>
+    <small><time datetime='2013-08-04'>04 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/07/31/supporting-101/>League of Legends: Supporting 101</a>
+    <small><time datetime='2013-07-31'>31 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/07/29/the-world-is-going-flat/>The world is (going) flat</a>
+    <small><time datetime='2013-07-29'>29 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/07/14/mobile-tech/>Mobile Tech Rant</a>
+    <small><time datetime='2013-07-14'>14 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/07/04/michael-scott/>Michael Scott</a>
+    <small><time datetime='2013-07-04'>04 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/27/nuzlocke/>Pokemon Two Player Nuzlocke Challenge</a>
+    <small><time datetime='2013-06-27'>27 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/06/27/digg-reader/>Digg Reader. Yes.</a>
+    <small><time datetime='2013-06-27'>27 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/25/surviving-without-reader/>Surviving Without Google Reader</a>
+    <small><time datetime='2013-06-25'>25 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=UxtfsX722Yk>Stutter--Marianas Trench</a>
+    <small><time datetime='2013-06-21'>21 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/cX1Rd0l.jpg>I figuratively just posted this</a>
+    <small><time datetime='2013-06-20'>20 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/06/20/about-jekyll/>About Jekyll</a>
+    <small><time datetime='2013-06-20'>20 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/06/19/hello-world/>Hello World!</a>
+    <small><time datetime='2013-06-19'>19 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/09/welcome-to-jekyll/>Welcome to Jekyll!</a>
+    <small><time datetime='2013-06-09'>09 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/DcHLtpB.jpg>Time Well Spent</a>
+    <small><time datetime='2013-01-20'>20 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/01/17/finding-the-perfect-writing-tool/>Finding the perfect writing tool</a>
+    <small><time datetime='2013-01-17'>17 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/fByfd.jpg>Nexus 4 Homescreen</a>
+    <small><time datetime='2013-01-17'>17 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/link/2012/03/08/normalize/>CSS Normalize > CSS Reset</a>
+    <small><time datetime='2012-03-08'>08 Mar 2012</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2012/03/08/subtle-links-with-css/>Subtle Links with CSS</a>
+    <small><time datetime='2012-03-08'>08 Mar 2012</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2012/03/07/in-the-case-of-php-evals/>In the case of evals in PHP</a>
+    <small><time datetime='2012-03-07'>07 Mar 2012</time></small>
+  </li>
+
+</ol>
 
 </div>
 

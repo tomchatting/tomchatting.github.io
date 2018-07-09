@@ -18,233 +18,324 @@
 </header>
 
 <div id=container>
-
-  <article>
-    <h1><a href=/snippet/2016/11/06/quick-and-lazy-random-titles/>quick and lazy random titles 💻</a></h1>
-    <time datetime='2016-11-06'>06 Nov 2016</time>
-<iframe width="700" height="394" src="//www.youtube.com/embed/MVRg8gZ8zPA" frameborder="0" allowfullscreen="0"> </iframe>
-
-<h2 id="redesigned">redesigned</h2>
-
-<p>Just to add some context to this: I refreshed the blog design <em>again</em>, and in part with stealing every idea I come across I’ve made a really quick and dirty random tagline picker thing. For a demo, refresh this page a few times.</p>
-
-<h2 id="step-one-create-an-array">step one: create an array</h2>
-
-<p>Something as quick and dirty as I’m making here needs a dirty and quick array:</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">'Registered CSS offender.'</span><span class="p">,</span>
-  <span class="s1">'Mum, I</span><span class="se">\'</span><span class="s1">m on the Internet!'</span><span class="p">,</span>
-  <span class="s1">'#implications'</span><span class="p">,</span>
-  <span class="s1">'Powered by magic beans'</span><span class="p">,</span>
-  <span class="s1">'Brought to you by Caprisuns'</span><span class="p">,</span>
-  <span class="s1">'A new design every week or your money back'</span><span class="p">,</span>
-  <span class="s1">'Come on, grab your friends!'</span><span class="p">,</span>
-  <span class="s1">'Follow me on Twitter!'</span><span class="p">,</span>
-  <span class="s1">'Steamed hams'</span><span class="p">,</span>
-  <span class="s1">'My other blog gets updates'</span><span class="p">,</span>
-  <span class="s1">'&lt;i&gt;"lol"&lt;/i&gt; - you'</span>
-<span class="p">];</span></code></pre></figure>
-
-<h2 id="step-two-pseudorandom-number-generator">step two: pseudorandom number generator</h2>
-
-<p>Anyone who’s ever done “randomness” in computer programming before knows the general formula <code class="highlighter-rouge">random() * (max - min + 1)) + min</code> (where <code class="highlighter-rouge">random()</code> generally gives a number between 0 and 1). I won’t pretend to understand or remember how this works, however if you’re interested in the how check <a href="http://stackoverflow.com/a/1527820">this excellent explanation</a> on StackOverflow out.</p>
-
-<p>Now since our array starts at 0 (so we have no min), our next–and only other–line can just be:</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">random_tag</span> <span class="o">=</span> <span class="nx">tags</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">tags</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">))];</span></code></pre></figure>
-
-<h2 id="step-three-its-lit">step three: it’s lit</h2>
-
-<p>Throw in a cheeky tag into where you want your random tag:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">random-tag</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></figure>
-
-<p>then add a not so cheeky <code class="highlighter-rouge">document.addEventListener</code> to insert <code class="highlighter-rouge">random_tag</code> into your page:</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"DOMContentLoaded"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"random-tag"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nx">random_tag</span>
-<span class="p">})</span></code></pre></figure>
-
-<h2 id="theres-probably-a-better-way-to-do-this">there’s probably a better way to do this</h2>
-
-<p>Full disclosure: I generally have no idea what I’m doing, so if you know of or find a better way of performing this fairly simple task: go ahead and use it.</p>
-
-  </article>
-  <hr>
-
-  <article>
-    <h1><a href=/ramble/2016/08/09/organisation/>organisation 📕</a></h1>
-    <time datetime='2016-08-09'>09 Aug 2016</time>
-<iframe width="740" height="416" src="//www.youtube.com/embed/PT2_F-1esPk" frameborder="0" allowfullscreen="0"> </iframe>
-
-<p>So yeah, I got the job.</p>
-
-<h2 id="deep-end-">deep end 🌊</h2>
-
-<p>After a full week managing I think I can safely say I will never think I know everything in a job role ever again. All internal (<em>and external</em>) panicking aside, I bought myself a Moleskine diary and a journal, in a thinly veiled attempt to look organised.</p>
-
-<h2 id="prioritising">prioritising</h2>
-
-<p>I find now that if I don’t tackle more tasks than I have set, I’m going to feel like I had an unproductive day. Sometimes this will happen, however what I’ve tried to do is always make sure I have three tasks that I will focus on; it could be a specific objective or a broad task, but as long as I can say I tackled my three priorities I can say I’ve at least had a productive day.</p>
-
-<h2 id="day-planning">day planning</h2>
-
-<p>I take around twenty minutes per day laying out how I would like my day to go. This is done by writing down every task I can think of in any order. I then mark important tasks with a *, tasks that <strong>need</strong> doing with a !, tasks that require research with a 🔎 and tasks that can be delegated with →. As the day progresses I can mark tasks started with a ⚫️ and tick off completed items.</p>
-
-<h2 id="meetings">meetings</h2>
-
-<p>Meetings are inevitable, but it’s a good idea to pen them in. Having something pop up in Outlook is also good, but for the times I’m not at my computer it’s good to just pop open the book and see what I have coming up.</p>
-
-<h2 id="workbasket">workbasket</h2>
-
-<p>Something I added after having a chat with another manager is a “workbasket”, it’s a view of how I feel my time has been spent on any given day. I break the day down into its seven working hours, and give each block a code as to what I feel I was spending most of my time doing, be it meetings, management, coaching or feedback. There’s no perfect balance of activities and not every day will feature every task, but it gives me an idea of how I’m spending my time; plus it gives me a heads up as to why I might be getting behind on a task (for example, if my observations are behind, maybe I should be spending more time doing feedback or coaching).</p>
-
-<p><img src="http://i.imgur.com/VMWX2OPm.png" alt="" /></p>
-
-<p>For the diary I cut out one of the Author of the Weeks from the <a href="http://moleskine.com/template">MSK/template</a> website.</p>
-
-<h2 id="u-do-u">u do u</h2>
-
-<p>All this said and done, I think everyone will find their own magic super secret way to organise themselves. I think the biggest thing to focus on isn’t anything to do with organisation or making sure you act the part; it’s asking for help. Attaching to as many people who have been in your position to find what you need to do and how you can do it can be the difference between whether you succeed or fail, because at this stage tasks are rarely delegated from above.</p>
-
-  </article>
-  <hr>
-
-  <article>
-    <h1><a href=/ramble/2016/07/16/shifting-gears/>switching gears, or how i accidentally stumbled my way into the fray of a management job contest 🏆</a></h1>
-    <time datetime='2016-07-16'>16 Jul 2016</time>
-<iframe width="740" height="416" src="//www.youtube.com/embed/LVltnKhb_vo" frameborder="0" allowfullscreen="1"> </iframe>
-
-<p>As I alluded to in a previous rant, I have the unnatural talent of allowing myself into slumping. By this I mean I can be quite content in the art of settling. I’m coming up to the two-year mark at <em>big red bank</em>, and until very recently I was reaching a similar position I was in this time last year: complacency.</p>
-
-<p>In my last month’s career conversation my manager hit the nail on the head; I am happy to silently pay my dues, get on with the work and take no recognition for it. I hit &gt;90% of my performance indicators, I cause little to no drama and I don’t like to draw any attention to myself. She continued that she fears I will become bored in my role, so she offered I become an SME in a new focus for the bank: digital opportunities, in order to give me something new to do. Alongside this she suggested I keep an open mind about “progression”, to which I agreed. Later that day I applied for a manager job. Not even four days later I’m told I have a preliminary interview on Monday.</p>
-
-<p>I don’t necessarily think I’ll even pass the prelim stage, hell I’m surprised my <cite>written in thirty minutes oh Dog I sent it before even proof-reading it</cite> cover letter even got me this far; but so far my Saturday has been spent swatting up on policies and procedures a manager undertakes ready for a roleplay and a presentation. Oh boy.</p>
-
-<h2 id="so-what-else-is-new">so what else is new?</h2>
-
-<p>I bought myself a Ducky One keyboard, partly because I quite fancy taking up writing (be it notes, blogs, reviews, stories I’ll never publish) and the Ducky is renowned for being a delight to type on—which it is—but also because CLACK CLACK. The sound of a fully mechanical, cherry switched keyboard is just downright… pleasurable to type on (see attached YouTube video for evidence).</p>
-
-<iframe width="740" height="416" src="//www.youtube.com/embed/BhWac4ksHss" frameborder="0" allowfullscreen="1"> </iframe>
-
-<blockquote>
-  <p>CLACK CLACK</p>
-</blockquote>
-
-<p>After a few months of owning a PS4 and a PS Vita I’ve established a fairly healthy amount of games to play through. I recently completed played through <em>Uncharted 4, Until Dawn, Ratchet and Clank, Rogue Warrior, Hyper Light Drifter, NBA 2k16</em> and <em>The Last of Us</em>, thanks to PlayStation Plus however, the list doesn’t go down at any scary speed. I still have <em>Dragon Age, Uncharted: Golden Abyss, Gravity Falls, Life is Strange</em> and <em>Persona 4</em> to chug through, I might even hit this shit up with some notes or a review about them. All the while I’m mid-Gold on <em>League of Legends</em>, though with the shake up in the ranked queue system I really don’t know if I can get carried to Platinum again like last season, but y’know.</p>
-
-<h2 id="so-whats-the-plan">so what’s the plan?</h2>
-
-<p>Lawyer up, hit the gym, delete Facebook. Seriously though I have no idea, <em>voice in my head</em>, I can see myself going in a few different directions and to be honest I kind of like the idea of all of them. Hopefully I learn enough from failing my assessment on Monday to get a shoe onto the ladder, if not: I have things lined up still, I’m happy enough where I am, albeit I would love to move out (big up the rental market); but that takes money. Money I keep spending on Ducky keyboards and every games console going. Adulting is easy, right?</p>
-
-<p>And oh yeah, <em>Pokémon Go</em> is a thing.</p>
-
-  </article>
-  <hr>
-
-  <article>
-    <h1><a href=/game-review/2016/04/27/hyper-light-drifter/>hyper light drifter 🎮</a></h1>
-    <time datetime='2016-04-27'>27 Apr 2016</time>
-<p>Having now dabbled in the <em>Souls</em> series I can say with certainty that I am a
-masochist.</p>
-
-<p>Hyper Light Drifter appeared on my Steam queue as a game it thought I would like
- (<em>as Steam does</em>). After reading the reviews and watching a couple of the
-videos, I was sold. 30 minutes later I was hooked.</p>
-
-<h2 id="okay-ill-try-one-more-time-then-im-going-to-bed">‘okay, i’ll try one more time then i’m going to bed’</h2>
-
-<p>Hyper Light Drifter is a game about… well… I don’t really know. The only
-backstory you get is from the odd cutscene which is backed by the game’s
-incredible soundtrack. The cutscenes are not spoken. There are no subtitles.
-The only ‘language’ is the odd grunt from NPCs. So far all I can tell is the PC
-has some sort of illness that makes him periodically cough up blood, and some
-friendly fella took him to a central city. From this central city you are free
-to tackle the game in any direction you like. From what I have begun to gather
-from the game the objective is to dungeon crawl four areas which piece together
-four… things. These things seem to be the focal point of the game. I have
-encountered a couple of NPCs who have tried to distract me with what looks
-like optional boss rooms, but I’m not too sure yet (I’m only 30-40% through the
-game).</p>
-
-<p>The game’s central mechanic revolves around timing. This game is <em>fucking hard</em>.
-You are given 5 hit points (which I am yet to find a way to increase), and the
-game is lightly littered with HP boosters (which get you from any health to max).
-But it’s not about hit points or healing–it’s about getting it fucking right.</p>
-
-<div style="position:relative;padding-bottom:calc(100% / 1.78)"><iframe src="https://gfycat.com/ifr/DecisiveCrispAphid" frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen=""></iframe></div>
-
-<p>The PC has three real moves (more if you collect the games rare ‘currency’).
-A hack/slash, a gun which recharges bullets from hacking/slashing and your
-bread and butter: a dash which can be used three times in quick succession.
-Each game area usually has an exploration area, followed by some warm up creatures
-unique to that area. Then there is a ‘boss room’ which throws everything at you
-at once. After a succession of deaths you slowly learn the
-area’s pattern, you change your style, you become more patient. You <em>become</em> a
-ninja. This game does not allow a simple -run in hack slash spam A- approach, in
-fact, it <em>punishes</em> it; and when you finally get that checkpoint and quadrant,
-holy fuck does it feel rewarding.</p>
-
-<h1 id="you-could-legit-gfycat-any-scene-in-this-game">you could legit gfycat any scene in this game</h1>
-
-<p>This game is downright beautiful. It’s ambiance is created by the amazing
-backdrop and colours, combined with it’s sombre soundtrack, which slowly builds
-up from the melodic piano in the safe habour central city up to the rhythmic
-dungeon crawling soundtrack (which really gets me in the zone). Occasionally
-the game feels fairly <em>wtf</em>, particularly with it’s non-language cryptic
-backstory and random blood-coughing moments, but on the whole Hyper Light Drifter
-feels like a game that should cost more than it’s £15.99 price tag.</p>
-
-  </article>
-  <hr>
-
-  <article>
-    <h1><a href=/article/2016/03/25/thoughts-on-square/>thoughts on squarecms 🚀</a></h1>
-    <time datetime='2016-03-25'>25 Mar 2016</time>
-<iframe width="650" height="315" src="//www.youtube.com/embed/W_rC-495Z_A" frameborder="0" allowfullscreen="1"> </iframe>
-
-<p>I’ve started working on SquareCMS again recently after having some time off work, the <a href="//github.com/tomchatting/square">GitHub</a> is being updated a lot more and there’s a working demo <a href="//square-shiftysu.rhcloud.com">here</a> if you want to have a play.</p>
-
-<p><img src="http://i.imgur.com/CYyqyD7.png" alt="square admin" /></p>
-
-<h2 id="so-will-i-go-back-to-running-on-square">so will i go back to running on square?</h2>
-
-<p>Probably not, simply because I’m so used to running my blog as a git repo now, and I love GitHub flavoured markdown (which I’m probably going to build a plugin for Square anyway).</p>
-
-<h2 id="so-why-do-it">so why do it?</h2>
-
-<p>Because I actually want to, and I actually enjoy writing code again.</p>
-
-<h2 id="so-whats-to-come-false-promises-time">so what’s to come? (false promises time)</h2>
-
-<p>So at the moment I’m focusing on getting the thing working as it was before (over five years ago), but there <em>is</em> some stuff I want to work on adding:</p>
-
-<ul>
-  <li>full plugin support (the PDO should help here)</li>
-  <li>shit tonnes better documentation</li>
-  <li>multi-user support (although I’m not too sure on this one)</li>
-  <li>ability to add custom tags without changing a line of code (thinking of how Jekyll handles custom tags in the layout of the <code class="highlighter-rouge">_posts</code> markdown files)</li>
-</ul>
-
-<h2 id="when-will-20-drop-its-alpha-tag">when will 2.0 drop it’s alpha tag?</h2>
-
-<p>Well, it’ll go beta when I’m ready, and it’ll go final when I’m ready too. So basically don’t hold your breath.</p>
-
-  </article>
-  <hr>
-
-
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page/3">Older</a>
-  
-  
-    
-      <a class="pagination-item newer" href="/">Newer</a>
-    
-  
-</div>
+<ol class=posts>
+
+  <li>
+    <a href=/ramble/2017/12/17/ipad-pro/>ipad pro: the least ipad ipad yet 💻</a>
+    <small><time datetime='2017-12-17'>17 Dec 2017</time></small>
+  </li>
+
+  <li>
+    <a href=/ramble/2017/08/30/you-should-watch-the-digimon-movie/>you should watch the digimon movie 📽</a>
+    <small><time datetime='2017-08-30'>30 Aug 2017</time></small>
+  </li>
+
+  <li>
+    <a href=/ramble/2017/08/08/fizzbuzz/>fizzbuzz 💻</a>
+    <small><time datetime='2017-08-08'>08 Aug 2017</time></small>
+  </li>
+
+  <li>
+    <a href=/ramble/2017/07/30/half-time/>half time 👟</a>
+    <small><time datetime='2017-07-30'>30 Jul 2017</time></small>
+  </li>
+
+  <li>
+    <a href=/ramble/2017/01/01/my-annual-year/>my annual year 📖</a>
+    <small><time datetime='2017-01-01'>01 Jan 2017</time></small>
+  </li>
+
+  <li>
+    <a href=/snippet/2016/11/06/quick-and-lazy-random-titles/>quick and lazy random titles 💻</a>
+    <small><time datetime='2016-11-06'>06 Nov 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/ramble/2016/08/09/organisation/>organisation 📕</a>
+    <small><time datetime='2016-08-09'>09 Aug 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/ramble/2016/07/16/shifting-gears/>switching gears, or how i accidentally stumbled my way into the fray of a management job contest 🏆</a>
+    <small><time datetime='2016-07-16'>16 Jul 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/game-review/2016/04/27/hyper-light-drifter/>hyper light drifter 🎮</a>
+    <small><time datetime='2016-04-27'>27 Apr 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2016/03/25/thoughts-on-square/>thoughts on squarecms 🚀</a>
+    <small><time datetime='2016-03-25'>25 Mar 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2016/02/23/quick-and-dirty-referencing/>quick and dirty referencing 🖊</a>
+    <small><time datetime='2016-02-23'>23 Feb 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2016/02/14/kanye/>Kanye West 30 Hours</a>
+    <small><time datetime='2016-02-14'>14 Feb 2016</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2015/12/16/december-update/>The December update</a>
+    <small><time datetime='2015-12-16'>16 Dec 2015</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2015/11/16/time-passes/>At some point between hitting the real world and now, I lost track of time</a>
+    <small><time datetime='2015-11-16'>16 Nov 2015</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2015/05/03/season-2015-supporting/>Supporting in Season 2015</a>
+    <small><time datetime='2015-05-03'>03 May 2015</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2015/05/01/pdo/>Dropping mysql_connect, or how I learned to PDO</a>
+    <small><time datetime='2015-05-01'>01 May 2015</time></small>
+  </li>
+
+  <li>
+    <a href=https://play.spotify.com/user/126028736/playlist/64CqgONJ4PD1YBaWvHmH1w>Current Spotify playlist</a>
+    <small><time datetime='2015-01-06'>06 Jan 2015</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2014/11/07/hard-boiled-wonderland-and-the-end-of-the-world/>Tom does reading: Hard-Boiled Wonderland and the End of the World</a>
+    <small><time datetime='2014-11-07'>07 Nov 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://fat.gfycat.com/MellowSkinnyCuttlefish.gif>Ranked rewards? I get them.</a>
+    <small><time datetime='2014-11-07'>07 Nov 2014</time></small>
+  </li>
+
+  <li>
+    <a href=//www.youtube.com/embed/xtXjJGdA3lw>Enter Shikari - The Last Garrison</a>
+    <small><time datetime='2014-10-30'>30 Oct 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://giant.gfycat.com/DeadLimitedHanumanmonkey.gif>I did it (again)! Do I get to play with all the best people now?</a>
+    <small><time datetime='2014-10-07'>07 Oct 2014</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2014/08/09/lazy-scaling-for-lazy-people/>Lazy scaling for lazy people</a>
+    <small><time datetime='2014-08-09'>09 Aug 2014</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2014/05/04/tom-inside/>New design, or Tom inside</a>
+    <small><time datetime='2014-05-04'>04 May 2014</time></small>
+  </li>
+
+  <li>
+    <a href=//www.youtube.com/embed/fdKsgBNEHUU>Not strapped, nor booted</a>
+    <small><time datetime='2014-05-03'>03 May 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/7Oh5B1A.gif>I did it! Do I get to play with all the best people now?</a>
+    <small><time datetime='2014-03-23'>23 Mar 2014</time></small>
+  </li>
+
+  <li>
+    <a href=//www.youtube.com/embed/pHHWPTs1zxg>Gambino</a>
+    <small><time datetime='2014-01-16'>16 Jan 2014</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2014/01/07/chromebook/>HP Chromebook 11</a>
+    <small><time datetime='2014-01-07'>07 Jan 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/9jq9hhZ.png>Ever seen me and Krepo in the same room at the same time?</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/niQ5IEA.jpg>My current wallpaper</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=-8lYRmYmdn0>Hagimura Suzu snaps in Engrish</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://blog.brackets.io/2013/11/20/1240/>Brackets update</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/TV5d9wz.png>So I'm into Seitokai Yakuindomo in a big way</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/ObIFqYi.jpg>Objects in mirror are losing</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/11/28/supporting-part-2/>League of Legends: Supporting 101, a pre-season update</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.raspberrypi.org/phpBB3/viewtopic.php?f=56&t=58259>Windows CE BSP for Raspberry Pi</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://markdownpad.com/>MarkdownPad</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/M4YXHP3.png>League of Legends: Season 4 support masteries</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=rBRPXtJLnpU>Ellen trolling</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:not>:not()</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/TXvY8Y0.jpg>Yorkshire hills by my friend Alex</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/11/02/life/>Life</a>
+    <small><time datetime='2013-11-02'>02 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/08/09/google-play-music-all-access/>Google Play Music All Access: terrible title, terrific service</a>
+    <small><time datetime='2013-08-09'>09 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/08/06/the-plan-has-failed/>Abort the mission, I've fallen in love with Jekyll</a>
+    <small><time datetime='2013-08-06'>06 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/08/04/oscar-wilde/>Oscar Wilde</a>
+    <small><time datetime='2013-08-04'>04 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/link/2013/08/04/alt-j-dissolve-me/>The banner image took too long to load so here's a fun video and a new banner colour</a>
+    <small><time datetime='2013-08-04'>04 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/07/31/supporting-101/>League of Legends: Supporting 101</a>
+    <small><time datetime='2013-07-31'>31 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/07/29/the-world-is-going-flat/>The world is (going) flat</a>
+    <small><time datetime='2013-07-29'>29 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/07/14/mobile-tech/>Mobile Tech Rant</a>
+    <small><time datetime='2013-07-14'>14 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/07/04/michael-scott/>Michael Scott</a>
+    <small><time datetime='2013-07-04'>04 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/27/nuzlocke/>Pokemon Two Player Nuzlocke Challenge</a>
+    <small><time datetime='2013-06-27'>27 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/06/27/digg-reader/>Digg Reader. Yes.</a>
+    <small><time datetime='2013-06-27'>27 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/25/surviving-without-reader/>Surviving Without Google Reader</a>
+    <small><time datetime='2013-06-25'>25 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=UxtfsX722Yk>Stutter--Marianas Trench</a>
+    <small><time datetime='2013-06-21'>21 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/cX1Rd0l.jpg>I figuratively just posted this</a>
+    <small><time datetime='2013-06-20'>20 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/06/20/about-jekyll/>About Jekyll</a>
+    <small><time datetime='2013-06-20'>20 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/06/19/hello-world/>Hello World!</a>
+    <small><time datetime='2013-06-19'>19 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/09/welcome-to-jekyll/>Welcome to Jekyll!</a>
+    <small><time datetime='2013-06-09'>09 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/DcHLtpB.jpg>Time Well Spent</a>
+    <small><time datetime='2013-01-20'>20 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/01/17/finding-the-perfect-writing-tool/>Finding the perfect writing tool</a>
+    <small><time datetime='2013-01-17'>17 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/fByfd.jpg>Nexus 4 Homescreen</a>
+    <small><time datetime='2013-01-17'>17 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/link/2012/03/08/normalize/>CSS Normalize > CSS Reset</a>
+    <small><time datetime='2012-03-08'>08 Mar 2012</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2012/03/08/subtle-links-with-css/>Subtle Links with CSS</a>
+    <small><time datetime='2012-03-08'>08 Mar 2012</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2012/03/07/in-the-case-of-php-evals/>In the case of evals in PHP</a>
+    <small><time datetime='2012-03-07'>07 Mar 2012</time></small>
+  </li>
+
+</ol>
 
 </div>
 
