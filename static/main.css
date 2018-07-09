@@ -7,18 +7,32 @@ html {
   font-weight: 100;
 }
 
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#circle {
+  border: 8px solid #268bd2;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 100px auto;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
 a, a:visited {
-  text-decoration: none;
   color: #268bd2;
+  text-decoration: none;
+  border-bottom: 1px dashed #333;
 }
 
-a:hover, a:active {
-  text-decoration: underline;
+a:hover {
+  border: none;
 }
 
 blockquote{
@@ -131,37 +145,25 @@ h2 {
   font-size: 1.5rem;
 }
 
-#container {
-  max-width: 38rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-article h1 {
-  display: inline-block;
-}
-
-article h1 a, article h1 a:visited {
-  color: inherit;
-  background-position: 0 1.0em;
-  background-size: 3px 3px;
-  background-image: linear-gradient(#fbd200,#fbd200);
-  text-decoration: none;
-  background-repeat: repeat-x;
-}
-
-article h1 a:hover {
-  text-decoration: none;
-  background: #fbd200;
-}
-
-time {
+time:not(small time) {
   color: #9a9a9a;
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
+}
+
+small time {
+  font-size: 0.8em;
+  color: #a1a7b9;
+}
+
+.related-posts {
+  list-style: none;
+  padding: 0;
+}
+
+.related-posts li a {
+  border: none;
 }
 
 hr {
@@ -175,35 +177,14 @@ hr {
 }
 
 header, footer {
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding: 1rem 0;
   display: block;
 }
 
 header {
-  background-color: #df4a56;
-  background-image: linear-gradient(to bottom, #f45461 0%, #df4a56 100%);
-  padding-bottom: 3rem;
-}
-
-header a, header a:visited {
-  color: #fff;
-}
-
-header a:visited {
-  text-decoration: underline;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #fff;
-  display: inline-block;
-}
-
-header h2 {
-  font-size: 1.2rem;
-  color: #ff819b;
+  padding: 1rem 0;
+  margin-bottom: 100px;
 }
 
 footer {
@@ -257,7 +238,7 @@ footer ul li + li::before {
   position: relative;
   display: block;
   padding: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid #eee !important;
 }
 .pagination-item:first-child {
   margin-bottom: -1px;
@@ -295,6 +276,9 @@ a.pagination-item:hover {
 @media (min-width: 600px) {
   html {
     font-size: 18px;
+  }
+  #container {
+    max-width: 680px;
   }
   footer {
     text-align: left;
