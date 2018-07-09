@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<title>Dropping mysql_connect, or how I learned to PDO - Thomas Chatting 🤘</title>
+<link rel=stylesheet href=/static/main.css>
+
+<header>
+  <div id=container>
+    <div id=circle></div>
+    <h1><a href=/>Thomas Chatting 🤘</a></h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
+</header>
+
+<div id=container>
+<p><a href=/>↩ Home</a></p>
+
+<article>
+  <h1><a href=/article/2015/05/01/pdo/>Dropping mysql_connect, or how I learned to PDO</a></h1>
+  <time datetime='2015-05-01'>01 May 2015</time>
+<p>So I finally got around to fixing the mySQL connector in Square:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">database_connect</span><span class="p">(</span><span class="nv">$dbHost</span><span class="p">,</span> <span class="nv">$dbName</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="nv">$dbHost</span><span class="s2">;dbname=</span><span class="nv">$dbName</span><span class="s2">;charset=utf8"</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$PDOexception</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">exit</span><span class="p">(</span><span class="s2">"&lt;p&gt;An error ocurred: Can't connect to database. &lt;/p&gt;&lt;p&gt;More preciesly: "</span><span class="o">.</span> <span class="nv">$PDOexception</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span><span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Then it’s just a matter of replacing all your old calls (<em>this is why you should do things more procedurally, Tom</em>) in every instance you expected a mysql_ query and now receive a PDO object:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$db</span> <span class="o">=</span> <span class="nx">database_connect</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">database</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">);</span>
+<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT * FROM posts"</span><span class="p">);</span>
+<span class="nv">$posts</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span></code></pre></figure>
+
+<p>Insert your usual <code class="highlighter-rouge">for each $post in $posts</code> and you’re golden!</p>
+
+<p><strong>Tl;dr</strong>: <em>just use Jekyll now, PHP is a bad language anyway.</em></p>
+
+</article>
+  <p>:-),</p>
+<p>@<a href='//twitter.com/phenomenontom' target='_blank'>phenomenontom</a></p>
+
+</article>
+
+<hr>
+
+<aside class=related>
+  <h2>More like this</h2>
+  <ul class='related-posts'>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/12/17/ipad-pro/'>
+        ipad pro: the least ipad ipad yet 💻
+        <small><time datetime="2017-12-17T00:00:00+00:00">17 Dec 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/08/30/you-should-watch-the-digimon-movie/'>
+        you should watch the digimon movie 📽
+        <small><time datetime="2017-08-30T00:00:00+01:00">30 Aug 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/08/08/fizzbuzz/'>
+        fizzbuzz 💻
+        <small><time datetime="2017-08-08T00:00:00+01:00">08 Aug 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  </ul>
+</aside>
+
+</div>
+
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>

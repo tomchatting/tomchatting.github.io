@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<title>Home - page 5 - Thomas Chatting 🤘</title>
+<link rel=stylesheet href=/static/main.css>
+
+<header>
+  <div id=container>
+    <div id=circle></div>
+    <h1><a href=/>Thomas Chatting 🤘</a></h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
+</header>
+
+<div id=container>
+
+  <article>
+    <h1><a href=http://giant.gfycat.com/DeadLimitedHanumanmonkey.gif>I did it (again)! Do I get to play with all the best people now?</a></h1>
+    <time datetime='2014-10-07'>07 Oct 2014</time>
+<p><em>PENTAKILL</em></p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=/note/2014/08/09/lazy-scaling-for-lazy-people/>Lazy scaling for lazy people</a></h1>
+    <time datetime='2014-08-09'>09 Aug 2014</time>
+<iframe width="640" height="315" src="//www.youtube.com/embed/qAkasSdD4M0" frameborder="0" allowfullscreen="1"> </iframe>
+
+<p>While device optimisation appears to be the Flavour of The Year(TM) effort for web developers, many (such as I) may find this laborious.</p>
+
+<h2 id="smack-it-with-snippets-until-it-works">Smack it with snippets until it works</h2>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, user-scalable=no"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>The above demands mobile browsers (namely Safari and Chrome) back-off on their normal charade of imitating fullscreen browsers, and instead report their true width to the CSS, meaning users are served what is considered a “mobile” friendly site.</p>
+
+<p>This is only one part of the puzzle, however, since you will still need to scale your content in CSS accordingly.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span> <span class="p">{</span> <span class="nl">max-width</span><span class="p">:</span> <span class="m">38rem</span><span class="p">;</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span> <span class="nl">padding-left</span><span class="p">:</span> <span class="m">2%</span><span class="p">;</span> <span class="nl">padding-right</span><span class="p">:</span> <span class="m">2%</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
+<p>Something like the above keeps your site running at most resolutions with minimum work. Of course, it’s still recommended you scale fonts and the like using media queries; but we’re far too lazy for that now, aren’t we?</p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=/note/2014/05/04/tom-inside/>New design, or Tom inside</a></h1>
+    <time datetime='2014-05-04'>04 May 2014</time>
+<iframe width="640" height="315" src="//www.youtube.com/embed/6YZlFdTIdzM" frameborder="0" allowfullscreen="1"> </iframe>
+
+<p>Please excuse the live changes I’m making to the site. I’ve upgraded my PC, updated my CV, and got the itch to redesign this site. Hang tight.</p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=//www.youtube.com/embed/fdKsgBNEHUU>Not strapped, nor booted</a></h1>
+    <time datetime='2014-05-03'>03 May 2014</time>
+<p>It’s good to be back.</p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=http://i.imgur.com/7Oh5B1A.gif>I did it! Do I get to play with all the best people now?</a></h1>
+    <time datetime='2014-03-23'>23 Mar 2014</time>
+<p><em>(inb4 my duo partner did all the heavy lifting)</em></p>
+
+  </article>
+  <hr>
+
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page/6">Older</a>
+  
+  
+    
+      <a class="pagination-item newer" href="/page/4">Newer</a>
+    
+  
+</div>
+
+</div>
+
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>

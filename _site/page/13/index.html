@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<title>Home - page 13 - Thomas Chatting 🤘</title>
+<link rel=stylesheet href=/static/main.css>
+
+<header>
+  <div id=container>
+    <div id=circle></div>
+    <h1><a href=/>Thomas Chatting 🤘</a></h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
+</header>
+
+<div id=container>
+
+  <article>
+    <h1><a href=/link/2012/03/08/normalize/>CSS Normalize > CSS Reset</a></h1>
+    <time datetime='2012-03-08'>08 Mar 2012</time>
+<p><a href="https://github.com/CoryMathews/normalize.css">https://github.com/CoryMathews/normalize.css</a></p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=/note/2012/03/08/subtle-links-with-css/>Subtle Links with CSS</a></h1>
+    <time datetime='2012-03-08'>08 Mar 2012</time>
+<p>I think every time I recreate this blog I end up posting a few little CSS tips that I use constantly, and when I say constantly I mean consistently for over three or so years now.</p>
+
+<p>##Visible Clicks</p>
+
+<p>Most people add a custom colour to <code class="highlighter-rouge">a:links</code> and <code class="highlighter-rouge">a:hover</code> in their CSS using the latter to show when a user has hovered over a clickable link, but what about when the user actually clicks? For that most old school browsers added a dotted outline to a:active which was all well and good back in the days of 800x600 and Web 1.0, but apparently we’ve moved passed that, with most sites not even employing any form of “active event” (see Twitter). This can be seen as a bad thing as for people without mouses employing the tab button to navigate a site it then becomes near on impossible to see what link you’ve selected, but I digress. A really subtle touch you can add to links to show a user has clicked is to employ a:active to show a small change to the link; my favourite being:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span><span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="nl">top</span><span class="p">:</span> <span class="m">1px</span><span class="p">;}</span></code></pre></figure>
+
+<p>You can try that on this null link (click and hold to see the position of the link change slightly). As you’ll be able to see, clicking pushes the entire link down by a single pixel, generating a really subtle “pushed in” effect.</p>
+
+  </article>
+  <hr>
+
+  <article>
+    <h1><a href=/article/2012/03/07/in-the-case-of-php-evals/>In the case of evals in PHP</a></h1>
+    <time datetime='2012-03-07'>07 Mar 2012</time>
+<blockquote>
+  <p>The eval() language construct is very dangerous because it allows execution of arbitrary PHP code. Its use thus is discouraged. If you have carefully verified that there is no other option than to use this construct, pay special attention not to pass any user provided data into it without properly validating it beforehand.</p>
+</blockquote>
+
+<p>Today I got a bit of a coding itch, it ended up in me having an epiphany in the shower of all places as to why in <em>hells</em> name I’d ever used <code class="highlighter-rouge">eval</code> in making SquareCMS, and how to fix it. After a lot of work this afternoon I’ve managed to rewrite <a href="https://github.com/tomchatting/SquareCMS/blob/master/square/controllers/theme.php">/controllers/theme.php</a> from scratch using functions to output text then displaying that to the user. Originally I did some rather recursive and <em>dangerous</em> stuff (see blockquote from PHP.net) within the theme file, using it to generate another PHP file within itself then using <code class="highlighter-rouge">eval</code> to execute it within theme.php.</p>
+
+<p>theme.php originally had a few functions or different roles. At it’s simplest, theme.php would always be called by a function using eval in a way such as:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval(echo 'themeFunction($file)';)  and would be passed a file in plain text, usually a theme file such as [this](https://github.com/tomchatting/SquareCMS/blob/master/square/themes/default/index.page) one. This file would then be stripped of all its' `&lt;square:tags /&gt;` by using regular expressions or simple find and replace functions, in these tags places would be the raw code required to do what the theme writer wanted to be present, for example `&lt;square:url /&gt;` returns the blogs' URL using the pre-set constant, but returns it as `'.URL.'` so the PHP can be executed (as if you look above the eval call is echoing the output) and leaves the next returned string able to do the same, leaving an even playing field. This file would then be saved to a variable, ready to be eval'd by the calling function.
+</code></pre></div></div>
+
+<p>Eval executes arbitrary PHP code, exactly as it would run as if you’d called it from the web browser or included it from another file; so it runs with the same privileges as such a file would if it were uploaded via FTP and executed. This produces an inherent problem particularly with something like a blog engine such as the one I made, not because you can generate execution issues (this is true, debugging with eval is much, much harder as I discovered) but because when you begin introducing user generated content like themes and plugins; security becomes a huge issue.</p>
+
+<h2 id="trust-no-one">Trust No-One</h2>
+
+<p>Herein lies the problem: if you allow a user to begin adding non-verified and non-tested components to your software, is it right to allow them to operate at the same execution level as the verified and tested components? Of course not, that’s suicide. If a malicious user were to set up a file or plugin that put the users server, or worse their <em>data</em> at risk, it wouldn’t be the fault of the user for installing such a component, nor would it be the malicious guy (well, it would, but that’s not the point) it’d be the jack-ass that allowed for this sort of stuff to happen in the first place.</p>
+
+<p>So before anything like this was able to happen to anyone that may use/fork Square in the future, I decided to completely remove all evals from SquareCMS, and as of tomorrow on GitHub the code this server is running will be pushed into the Repo for review/proof.</p>
+
+<h2 id="simple-take-out">Simple take-out</h2>
+
+<p>The main conclusion to gain from this article/apology is not that you should never use evals, they can be quite useful for a variety of reasons, and in some cases they are the only solution to a problem; but you <strong>have</strong> to be 110% sure that all parameters are both correct (to save difficult debugging) and trusted, and in the case of third-party solutions being added to your project, you can guarantee neither, so a different option is often the better one.</p>
+
+<p>For what it’s worth, it turns out SquareCMS runs around 0.01 seconds <em>slower</em> now it doesn’t run evals to parse themes, as it has to parse files two or three times separately due to the nature of how I construct pages from files, though I’m sure I can shave that back off down the road when I get my next itch.</p>
+
+<p>1 <a href="http://php.net/manual/en/function.eval.php">http://php.net/manual/en/function.eval.php</a></p>
+
+  </article>
+  <hr>
+
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/page/12">Newer</a>
+    
+  
+</div>
+
+</div>
+
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>

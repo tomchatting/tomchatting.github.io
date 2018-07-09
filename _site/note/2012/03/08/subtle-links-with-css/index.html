@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<title>Subtle Links with CSS - Thomas Chatting 🤘</title>
+<link rel=stylesheet href=/static/main.css>
+
+<header>
+  <div id=container>
+    <div id=circle></div>
+    <h1><a href=/>Thomas Chatting 🤘</a></h1>
+    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
+  </div>
+</header>
+
+<div id=container>
+<p><a href=/>↩ Home</a></p>
+
+<article>
+  <h1><a href=/note/2012/03/08/subtle-links-with-css/>Subtle Links with CSS</a></h1>
+  <time datetime='2012-03-08'>08 Mar 2012</time>
+<p>I think every time I recreate this blog I end up posting a few little CSS tips that I use constantly, and when I say constantly I mean consistently for over three or so years now.</p>
+
+<p>##Visible Clicks</p>
+
+<p>Most people add a custom colour to <code class="highlighter-rouge">a:links</code> and <code class="highlighter-rouge">a:hover</code> in their CSS using the latter to show when a user has hovered over a clickable link, but what about when the user actually clicks? For that most old school browsers added a dotted outline to a:active which was all well and good back in the days of 800x600 and Web 1.0, but apparently we’ve moved passed that, with most sites not even employing any form of “active event” (see Twitter). This can be seen as a bad thing as for people without mouses employing the tab button to navigate a site it then becomes near on impossible to see what link you’ve selected, but I digress. A really subtle touch you can add to links to show a user has clicked is to employ a:active to show a small change to the link; my favourite being:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span><span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="nl">top</span><span class="p">:</span> <span class="m">1px</span><span class="p">;}</span></code></pre></figure>
+
+<p>You can try that on this null link (click and hold to see the position of the link change slightly). As you’ll be able to see, clicking pushes the entire link down by a single pixel, generating a really subtle “pushed in” effect.</p>
+
+</article>
+  <p>:-),</p>
+<p>@<a href='//twitter.com/phenomenontom' target='_blank'>phenomenontom</a></p>
+
+</article>
+
+<hr>
+
+<aside class=related>
+  <h2>More like this</h2>
+  <ul class='related-posts'>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/12/17/ipad-pro/'>
+        ipad pro: the least ipad ipad yet 💻
+        <small><time datetime="2017-12-17T00:00:00+00:00">17 Dec 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/08/30/you-should-watch-the-digimon-movie/'>
+        you should watch the digimon movie 📽
+        <small><time datetime="2017-08-30T00:00:00+01:00">30 Aug 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2017/08/08/fizzbuzz/'>
+        fizzbuzz 💻
+        <small><time datetime="2017-08-08T00:00:00+01:00">08 Aug 2017</time></small>
+      </a>
+    </h3>
+  </li>
+  
+  </ul>
+</aside>
+
+</div>
+
+<footer>
+  <div id=container>
+    <div id=left>
+      <h1>Thomas Chatting</h1>
+      <ul>
+        <li><a href=/about/>about</a></li>
+        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
+        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
+      </ul>
+    </div>
+    <div id=right>
+      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
