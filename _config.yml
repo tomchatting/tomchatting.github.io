@@ -2,6 +2,7 @@ name: tomchatting
 markdown: kramdown
 url: "http://tomchatting.github.io"
 permalink: pretty
+debug: true
 
 plugins: [jekyll-paginate-v2]
 
