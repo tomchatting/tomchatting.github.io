@@ -18,96 +18,324 @@
 </header>
 
 <div id=container>
+<ol class=posts>
 
-  <article>
-    <h1><a href=/article/2015/05/01/pdo/>Dropping mysql_connect, or how I learned to PDO</a></h1>
-    <time datetime='2015-05-01'>01 May 2015</time>
-<p>So I finally got around to fixing the mySQL connector in Square:</p>
+  <li>
+    <a href=/ramble/2017/12/17/ipad-pro/>ipad pro: the least ipad ipad yet 💻</a>
+    <small><time datetime='2017-12-17'>17 Dec 2017</time></small>
+  </li>
 
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">database_connect</span><span class="p">(</span><span class="nv">$dbHost</span><span class="p">,</span> <span class="nv">$dbName</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="nv">$dbHost</span><span class="s2">;dbname=</span><span class="nv">$dbName</span><span class="s2">;charset=utf8"</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$PDOexception</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">exit</span><span class="p">(</span><span class="s2">"&lt;p&gt;An error ocurred: Can't connect to database. &lt;/p&gt;&lt;p&gt;More preciesly: "</span><span class="o">.</span> <span class="nv">$PDOexception</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span><span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+  <li>
+    <a href=/ramble/2017/08/30/you-should-watch-the-digimon-movie/>you should watch the digimon movie 📽</a>
+    <small><time datetime='2017-08-30'>30 Aug 2017</time></small>
+  </li>
 
-<p>Then it’s just a matter of replacing all your old calls (<em>this is why you should do things more procedurally, Tom</em>) in every instance you expected a mysql_ query and now receive a PDO object:</p>
+  <li>
+    <a href=/ramble/2017/08/08/fizzbuzz/>fizzbuzz 💻</a>
+    <small><time datetime='2017-08-08'>08 Aug 2017</time></small>
+  </li>
 
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$db</span> <span class="o">=</span> <span class="nx">database_connect</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">database</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">);</span>
-<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT * FROM posts"</span><span class="p">);</span>
-<span class="nv">$posts</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span></code></pre></figure>
+  <li>
+    <a href=/ramble/2017/07/30/half-time/>half time 👟</a>
+    <small><time datetime='2017-07-30'>30 Jul 2017</time></small>
+  </li>
 
-<p>Insert your usual <code class="highlighter-rouge">for each $post in $posts</code> and you’re golden!</p>
+  <li>
+    <a href=/ramble/2017/01/01/my-annual-year/>my annual year 📖</a>
+    <small><time datetime='2017-01-01'>01 Jan 2017</time></small>
+  </li>
 
-<p><strong>Tl;dr</strong>: <em>just use Jekyll now, PHP is a bad language anyway.</em></p>
+  <li>
+    <a href=/snippet/2016/11/06/quick-and-lazy-random-titles/>quick and lazy random titles 💻</a>
+    <small><time datetime='2016-11-06'>06 Nov 2016</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=/ramble/2016/08/09/organisation/>organisation 📕</a>
+    <small><time datetime='2016-08-09'>09 Aug 2016</time></small>
+  </li>
 
-  <article>
-    <h1><a href=https://play.spotify.com/user/126028736/playlist/64CqgONJ4PD1YBaWvHmH1w>Current Spotify playlist</a></h1>
-    <time datetime='2015-01-06'>06 Jan 2015</time>
-<p>Not mine, but the majority of these songs are my jam.</p>
+  <li>
+    <a href=/ramble/2016/07/16/shifting-gears/>switching gears, or how i accidentally stumbled my way into the fray of a management job contest 🏆</a>
+    <small><time datetime='2016-07-16'>16 Jul 2016</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=/game-review/2016/04/27/hyper-light-drifter/>hyper light drifter 🎮</a>
+    <small><time datetime='2016-04-27'>27 Apr 2016</time></small>
+  </li>
 
-  <article>
-    <h1><a href=/article/2014/11/07/hard-boiled-wonderland-and-the-end-of-the-world/>Tom does reading: Hard-Boiled Wonderland and the End of the World</a></h1>
-    <time datetime='2014-11-07'>07 Nov 2014</time>
-<h3 id="how-i-fell-in-love-with-murakami">How I fell in love with Murakami</h3>
+  <li>
+    <a href=/article/2016/03/25/thoughts-on-square/>thoughts on squarecms 🚀</a>
+    <small><time datetime='2016-03-25'>25 Mar 2016</time></small>
+  </li>
 
-<p>In my quest to invest myself more heavily in Japanese culture (beyond Japanese game shows and manga) I decided to plunge into the world of Japanese literature. After much thought and blurb-reading, I happened upon <em>Hard-Boiled Wonderland and the End of the World</em> by Haruki Murakami. The author, speculated to have been shortlisted for the Nobel Prize for Literature multiple times, is said to be “poetic” in his writing style; easy to read, yet thought-provoking and impactful. I was told to expect a mix of “western-style fantasy” and “science-fiction mystery”, and boy, does Murakami deliver.</p>
+  <li>
+    <a href=/article/2016/02/23/quick-and-dirty-referencing/>quick and dirty referencing 🖊</a>
+    <small><time datetime='2016-02-23'>23 Feb 2016</time></small>
+  </li>
 
-<p>The novel follows two narratives which standalone and later intertwine: <em>Hard-Boiled Wonderland</em> tells the story of a successful corporate/government agent, dutifully fulfilling his set tasks whilst enjoying an almost pragmatic lifestyle, in a tone not dissimilar to the narrators in <em>The Humans</em> or <em>The Curious Tale</em>. <em>The End of the World</em> tells the tale of a lost soul, who departs with his shadow to gain entry to a town at the end of the world. He is given the task of “dream reading” until such a time his shadow dies, and he can become immortal and “at one” with the town which protects him from the outside world that all within strive to forget.</p>
+  <li>
+    <a href=/article/2016/02/14/kanye/>Kanye West 30 Hours</a>
+    <small><time datetime='2016-02-14'>14 Feb 2016</time></small>
+  </li>
 
-<p>The pure beauty of Murakami’s writing is that even within the translation, subtleties creep in. It took me half a dozen chapters (and a re-read of two) to realise the author never actually divulges the name of a single character, yet his writing style and descriptive narrative leave me questioning whether a name is ever needed. The author also switches between the personal past tense and present tense in alternate chapters in such a subtle way, leaving a strong satisfaction as you try to puzzle the ending together.</p>
+  <li>
+    <a href=/article/2015/12/16/december-update/>The December update</a>
+    <small><time datetime='2015-12-16'>16 Dec 2015</time></small>
+  </li>
 
-<p>A fascinating mystery science-fiction adventure with an ending that leaves you to think. <em>Hard-Boiled Wonderland and the End of the World</em> is a fantastic introduction to an obviously strong writer and, as my new copy of <em>A Wild Sheep Chase</em> suggests, is a great gateway novel to more of the same.</p>
+  <li>
+    <a href=/article/2015/11/16/time-passes/>At some point between hitting the real world and now, I lost track of time</a>
+    <small><time datetime='2015-11-16'>16 Nov 2015</time></small>
+  </li>
 
-<p>♦ 4.5/5</p>
+  <li>
+    <a href=/article/2015/05/03/season-2015-supporting/>Supporting in Season 2015</a>
+    <small><time datetime='2015-05-03'>03 May 2015</time></small>
+  </li>
 
-<hr />
+  <li>
+    <a href=/article/2015/05/01/pdo/>Dropping mysql_connect, or how I learned to PDO</a>
+    <small><time datetime='2015-05-01'>01 May 2015</time></small>
+  </li>
 
-<h4 id="footnotes">Footnotes</h4>
+  <li>
+    <a href=https://play.spotify.com/user/126028736/playlist/64CqgONJ4PD1YBaWvHmH1w>Current Spotify playlist</a>
+    <small><time datetime='2015-01-06'>06 Jan 2015</time></small>
+  </li>
 
-<ul>
-  <li>Hard-Boiled Wonderland and the End of the World is available on <a href="http://www.amazon.co.uk/Hard-Boiled-Wonderland-End-World-International/dp/0679743464">Amazon</a> and all good book stores</li>
-  <li>For Japanese game shows I highly recommend <a href="http://www.reddit.com/r/japanesegameshows">/r/japanesegameshows</a></li>
-  <li>My current manga of choice is <em>Deadman Wonderland</em>, review of part one coming soon™</li>
-</ul>
+  <li>
+    <a href=/article/2014/11/07/hard-boiled-wonderland-and-the-end-of-the-world/>Tom does reading: Hard-Boiled Wonderland and the End of the World</a>
+    <small><time datetime='2014-11-07'>07 Nov 2014</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=http://fat.gfycat.com/MellowSkinnyCuttlefish.gif>Ranked rewards? I get them.</a>
+    <small><time datetime='2014-11-07'>07 Nov 2014</time></small>
+  </li>
 
-  <article>
-    <h1><a href=http://fat.gfycat.com/MellowSkinnyCuttlefish.gif>Ranked rewards? I get them.</a></h1>
-    <time datetime='2014-11-07'>07 Nov 2014</time>
-<p>So this happened…</p>
+  <li>
+    <a href=//www.youtube.com/embed/xtXjJGdA3lw>Enter Shikari - The Last Garrison</a>
+    <small><time datetime='2014-10-30'>30 Oct 2014</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=http://giant.gfycat.com/DeadLimitedHanumanmonkey.gif>I did it (again)! Do I get to play with all the best people now?</a>
+    <small><time datetime='2014-10-07'>07 Oct 2014</time></small>
+  </li>
 
-  <article>
-    <h1><a href=//www.youtube.com/embed/xtXjJGdA3lw>Enter Shikari - The Last Garrison</a></h1>
-    <time datetime='2014-10-30'>30 Oct 2014</time>
-<p>I will never stop loving this band.</p>
+  <li>
+    <a href=/note/2014/08/09/lazy-scaling-for-lazy-people/>Lazy scaling for lazy people</a>
+    <small><time datetime='2014-08-09'>09 Aug 2014</time></small>
+  </li>
 
-  </article>
-  <hr>
+  <li>
+    <a href=/note/2014/05/04/tom-inside/>New design, or Tom inside</a>
+    <small><time datetime='2014-05-04'>04 May 2014</time></small>
+  </li>
 
+  <li>
+    <a href=//www.youtube.com/embed/fdKsgBNEHUU>Not strapped, nor booted</a>
+    <small><time datetime='2014-05-03'>03 May 2014</time></small>
+  </li>
 
-<div class="pagination">
-  
-    <a class="pagination-item older" href="/page/5">Older</a>
-  
-  
-    
-      <a class="pagination-item newer" href="/page/3">Newer</a>
-    
-  
-</div>
+  <li>
+    <a href=http://i.imgur.com/7Oh5B1A.gif>I did it! Do I get to play with all the best people now?</a>
+    <small><time datetime='2014-03-23'>23 Mar 2014</time></small>
+  </li>
+
+  <li>
+    <a href=//www.youtube.com/embed/pHHWPTs1zxg>Gambino</a>
+    <small><time datetime='2014-01-16'>16 Jan 2014</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2014/01/07/chromebook/>HP Chromebook 11</a>
+    <small><time datetime='2014-01-07'>07 Jan 2014</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/9jq9hhZ.png>Ever seen me and Krepo in the same room at the same time?</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/niQ5IEA.jpg>My current wallpaper</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=-8lYRmYmdn0>Hagimura Suzu snaps in Engrish</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://blog.brackets.io/2013/11/20/1240/>Brackets update</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/TV5d9wz.png>So I'm into Seitokai Yakuindomo in a big way</a>
+    <small><time datetime='2013-12-08'>08 Dec 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/ObIFqYi.jpg>Objects in mirror are losing</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/11/28/supporting-part-2/>League of Legends: Supporting 101, a pre-season update</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.raspberrypi.org/phpBB3/viewtopic.php?f=56&t=58259>Windows CE BSP for Raspberry Pi</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://markdownpad.com/>MarkdownPad</a>
+    <small><time datetime='2013-11-28'>28 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/M4YXHP3.png>League of Legends: Season 4 support masteries</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=rBRPXtJLnpU>Ellen trolling</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:not>:not()</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/TXvY8Y0.jpg>Yorkshire hills by my friend Alex</a>
+    <small><time datetime='2013-11-24'>24 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/11/02/life/>Life</a>
+    <small><time datetime='2013-11-02'>02 Nov 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/08/09/google-play-music-all-access/>Google Play Music All Access: terrible title, terrific service</a>
+    <small><time datetime='2013-08-09'>09 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/08/06/the-plan-has-failed/>Abort the mission, I've fallen in love with Jekyll</a>
+    <small><time datetime='2013-08-06'>06 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/08/04/oscar-wilde/>Oscar Wilde</a>
+    <small><time datetime='2013-08-04'>04 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/link/2013/08/04/alt-j-dissolve-me/>The banner image took too long to load so here's a fun video and a new banner colour</a>
+    <small><time datetime='2013-08-04'>04 Aug 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/07/31/supporting-101/>League of Legends: Supporting 101</a>
+    <small><time datetime='2013-07-31'>31 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/07/29/the-world-is-going-flat/>The world is (going) flat</a>
+    <small><time datetime='2013-07-29'>29 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/07/14/mobile-tech/>Mobile Tech Rant</a>
+    <small><time datetime='2013-07-14'>14 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/07/04/michael-scott/>Michael Scott</a>
+    <small><time datetime='2013-07-04'>04 Jul 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/27/nuzlocke/>Pokemon Two Player Nuzlocke Challenge</a>
+    <small><time datetime='2013-06-27'>27 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/06/27/digg-reader/>Digg Reader. Yes.</a>
+    <small><time datetime='2013-06-27'>27 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/25/surviving-without-reader/>Surviving Without Google Reader</a>
+    <small><time datetime='2013-06-25'>25 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://www.youtube.com/watch?v=UxtfsX722Yk>Stutter--Marianas Trench</a>
+    <small><time datetime='2013-06-21'>21 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/cX1Rd0l.jpg>I figuratively just posted this</a>
+    <small><time datetime='2013-06-20'>20 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/quote/2013/06/20/about-jekyll/>About Jekyll</a>
+    <small><time datetime='2013-06-20'>20 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2013/06/19/hello-world/>Hello World!</a>
+    <small><time datetime='2013-06-19'>19 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/06/09/welcome-to-jekyll/>Welcome to Jekyll!</a>
+    <small><time datetime='2013-06-09'>09 Jun 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/DcHLtpB.jpg>Time Well Spent</a>
+    <small><time datetime='2013-01-20'>20 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2013/01/17/finding-the-perfect-writing-tool/>Finding the perfect writing tool</a>
+    <small><time datetime='2013-01-17'>17 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=http://i.imgur.com/fByfd.jpg>Nexus 4 Homescreen</a>
+    <small><time datetime='2013-01-17'>17 Jan 2013</time></small>
+  </li>
+
+  <li>
+    <a href=/link/2012/03/08/normalize/>CSS Normalize > CSS Reset</a>
+    <small><time datetime='2012-03-08'>08 Mar 2012</time></small>
+  </li>
+
+  <li>
+    <a href=/note/2012/03/08/subtle-links-with-css/>Subtle Links with CSS</a>
+    <small><time datetime='2012-03-08'>08 Mar 2012</time></small>
+  </li>
+
+  <li>
+    <a href=/article/2012/03/07/in-the-case-of-php-evals/>In the case of evals in PHP</a>
+    <small><time datetime='2012-03-07'>07 Mar 2012</time></small>
+  </li>
+
+</ol>
 
 </div>
 

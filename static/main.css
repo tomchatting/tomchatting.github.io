@@ -162,7 +162,35 @@ small time {
   padding: 0;
 }
 
-.related-posts li a {
+.posts {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.posts li {
+  counter-increment: step-counter;
+  padding: 10px 0;
+}
+
+.posts li a, .posts li a:visited {
+  color: #000;
+}
+
+.posts li::before {
+  content: counter(step-counter, decimal-leading-zero);
+  color: #a1a7b9;
+}
+
+.posts li a:hover {
+  color: #268bd2 !important;
+}
+
+.posts li::before, .posts date {
+  font-size: 80%;
+}
+
+.related-posts li a, .posts li a {
   border: none;
 }
 
