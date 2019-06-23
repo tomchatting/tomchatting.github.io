@@ -49,8 +49,8 @@ p > * + * {
   height: 8px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1;
-  max-width: 860px;
   width: 100%;
 }
 
