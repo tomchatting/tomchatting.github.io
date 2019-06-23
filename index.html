@@ -5,11 +5,27 @@ pagination:
   enabled: true
 ---
 
-<ol class=posts>
-{% for post in site.posts %}
-  <li>
-    <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
-    <small><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time></small>
-  </li>
-{% endfor %}
-</ol>
+<div class="with-sidebar">
+  <div>
+    <div class="sidebar">
+      <h4>Hello 👋. My name's Tom and I occasionally write about my life.</h4>
+      <p>You can read my very infrequent ramblings over here ➡, or you can check me on the interwebs below ⬇.</p>
+      <ul class="posts">
+        <li>👨‍💻 <a href=//github.com/tomchatting target=_blank>github</a></li>
+        <li>📷 <a href=//instagram.com/tomchatting target=_blank>insta</a></li>
+        <li>🐤 <a href=//twitter.com/phenomenontom target=_blank>twitter</a></li>
+      </ul>
+      <p>To get in touch: you can ping me on twitter or, more formally, you can email me by typing <i>chattt (at) protonmail (dot) ch</i> into the "To:" box in your favourite email client.</p>
+    </div>
+    <div class="not-sidebar">
+      <ul class=posts>
+      {% for post in site.posts %}
+        <li>
+          <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
+          <br><small><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time></small>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

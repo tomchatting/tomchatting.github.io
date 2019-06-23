@@ -1,15 +1,30 @@
 ---
 layout: default
 ---
+
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+
 <p><a href=/>↩ Home</a></p>
 
-<article>
-  <h1><a href={% if page.link %}{{ page.link }}{% else %}{{ page.url }}{% endif %}>{{ page.title }}</a></h1>
-  <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time>
-{{ page.content }}
-</article>
-  {% include end_plug.html %}
-</article>
+
+<div class="with-sidebar">
+  <div>
+    <div class="not-sidebar">
+      <article>
+        <h1>{{ page.title }}</h1>
+        <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time>
+      {{ page.content }}
+        {% include end_plug.html %}
+      </article>
+    </div>
+    <div class="sidebar">
+      <h2>Current Spotify playlist</h2>
+      <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYqdkUCLfYzP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+</div>
 
 <hr>
 
@@ -28,3 +43,15 @@ layout: default
   {% endfor %}
   </ul>
 </aside>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>

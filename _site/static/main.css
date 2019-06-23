@@ -7,32 +7,75 @@ html {
   font-weight: 100;
 }
 
-#container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#circle {
-  border: 8px solid #268bd2;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin: 100px auto;
-}
-
 body {
-  padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 16px;
+}
+
+/* ↓ targets the intermediary wrapper */
+.with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+.with-sidebar > * > * {
+  /* ↓ applies to both elements */
+  margin: 0.5rem;
+}
+
+.sidebar {
+  flex-basis: 15rem;
+  flex-grow: 1;
+}
+
+.not-sidebar {
+  /* ↓ grow from nothing */
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - 1rem);
+}
+
+p {
+  font-family: Georgia, Times, serif;
+}
+
+p > * + * {
+  margin-top: 1.5rem;
+}
+
+.progress-container {
+  height: 8px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  max-width: 860px;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #268bd2;
+  width: 0%;
+}
+
+article h1 {
+  background: #268bd2;
+  color: white;
+}
+
+article h1 a {
+  color: white;
 }
 
 a, a:visited {
   color: #268bd2;
   text-decoration: none;
-  border-bottom: 1px dashed #333;
 }
 
 a:hover {
-  border: none;
+  text-decoration: underline;
 }
 
 blockquote{
@@ -87,16 +130,33 @@ code {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-@media (min-width: 600px), all pre code {
-  padding: 1.5rem;
+pre code {
+  display: block;
+  padding: 1rem;
+  overflow: auto;
+  background-color: #333;
+  box-shadow: 2px 3px 20px rgba(0,0,0,.1);
 }
 
-pre code {
-display: block;
-padding: 1rem;
-overflow: auto;
-background-color: #333;
-box-shadow: 2px 3px 20px rgba(0,0,0,.1);
+figure {
+  margin: 0;
+}
+
+ul.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ul.posts li {
+  margin-top: 1rem;
+  clear: both;
+}
+
+ul.posts time {
+  font-weight: normal;
 }
 
 img, iframe, pre {
@@ -145,55 +205,6 @@ h2 {
   font-size: 1.5rem;
 }
 
-time:not(small time) {
-  color: #9a9a9a;
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-}
-
-small time {
-  font-size: 0.8em;
-  color: #a1a7b9;
-}
-
-.related-posts {
-  list-style: none;
-  padding: 0;
-}
-
-.posts {
-  margin-left: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.posts li {
-  counter-increment: step-counter;
-  padding: 10px 0;
-}
-
-.posts li a, .posts li a:visited {
-  color: #000;
-}
-
-.posts li::before {
-  content: counter(step-counter, decimal-leading-zero);
-  color: #a1a7b9;
-}
-
-.posts li a:hover {
-  color: #268bd2 !important;
-}
-
-.posts li::before, .posts date {
-  font-size: 80%;
-}
-
-.related-posts li a, .posts li a {
-  border: none;
-}
-
 hr {
     border: 0;
     background: #ddd;
@@ -204,46 +215,20 @@ hr {
     margin: 2.5em 0;
 }
 
-header, footer {
-  text-align: left;
-  margin: 0;
-  display: block;
-}
-
-header {
-  padding: 1rem 0;
-  margin-bottom: 100px;
-}
-
 footer {
-  color: #a1a7b9;
+  font-size: 1.2em;
+  background: black;
+  color: grey;
+  padding: 16px;
+  margin-top: 1.5rem;
 }
 
-footer h1 {
-  font-size: 1.2rem;
-  color: #333;
+footer p {
+  font-family: Helvetica, Arial, sans-serif ;
 }
 
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-footer a, footer a:visited {
-  color: #a1a7b9;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer ul li + li::before {
-    content: " | ";
+footer b {
+  color: white;
 }
 
 /*
@@ -279,51 +264,4 @@ a.pagination-item:hover {
   text-decoration: none;
   background-color: #268bd2;
   border-color: #268bd2;
-}
-
-@media (min-width: 600px) {
-  .pagination {
-    margin: 3rem 0;
-  }
-  .pagination-item {
-    float: left;
-    width: 44%;
-  }
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius:    4px;
-    border-bottom-left-radius: 4px;
-  }
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius:    4px;
-    border-bottom-right-radius: 4px;
-  }
-}
-
-@media (min-width: 600px) {
-  html {
-    font-size: 18px;
-  }
-  #container {
-    max-width: 680px;
-  }
-  footer {
-    text-align: left;
-  }
-  footer #left {
-    float: left;
-    width: 50%;
-    display: inline;
-  }
-  footer #right {
-    float: right;
-    width: 50%;
-    display: inline;
-  }
-  footer:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }

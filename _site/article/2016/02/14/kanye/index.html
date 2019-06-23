@@ -6,40 +6,59 @@
 <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
 
-<title>Kanye West 30 Hours - Thomas Chatting 🤘</title>
+<title>Kanye West 30 Hours - Thomas Chatting 👻</title>
 <link rel=stylesheet href=/static/main.css>
 
 <header>
-  <div id=container>
-    <div id=circle></div>
-    <h1><a href=/>Thomas Chatting 🤘</a></h1>
-    <h2>The infrequent ramblings and typings of <a href=//twitter.com/phenomenontom>@PhenomenonTom</a>. Enjoys comic books, <a href=/ramble/2018/01/25/powerbook-g4/>vintage computers</a>, and the Oxford comma.</h2>
-  </div>
+  <h1><a name=top href=/>Thomas Chatting 👻</a></h1>
 </header>
 
 <div id=container>
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+
 <p><a href=/>↩ Home</a></p>
 
-<article>
-  <h1><a href=/article/2016/02/14/kanye/>Kanye West 30 Hours</a></h1>
-  <time datetime='2016-02-14'>14 Feb 2016</time>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/246700455&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<div class="with-sidebar">
+  <div>
+    <div class="not-sidebar">
+      <article>
+        <h1>Kanye West 30 Hours</h1>
+        <time datetime='2016-02-14'>14 Feb 2016</time>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/246700455&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 <p>The Life of Pablo has finally dropped, it’s up for streaming/download on Tidal, and in one week it’ll hit all good streaming services. Old Kanye West seems to be back, I just hope he lets us in on the right memes.</p>
 
 <p><a href="https://kanyewest.tidal.com"><img src="http://i.imgur.com/MG8vpPd.png" alt="Kanye West laughs at your conventions of fair currency conversion" /></a></p>
 
-</article>
-  <p>:-),</p>
+        <p>:-),</p>
 <p>@<a href='//twitter.com/phenomenontom' target='_blank'>phenomenontom</a></p>
 
-</article>
+      </article>
+    </div>
+    <div class="sidebar">
+      <h2>Current Spotify playlist</h2>
+      <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYqdkUCLfYzP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+</div>
 
 <hr>
 
 <aside class=related>
   <h2>More like this</h2>
   <ul class='related-posts'>
+  
+  <li>
+    <h3>
+      <a href='/ramble/2018/01/25/powerbook-g4/'>
+        my new typewriter - the powerbook g4 🍎
+        <small><time datetime="2018-01-25T00:00:00+00:00">25 Jan 2018</time></small>
+      </a>
+    </h3>
+  </li>
   
   <li>
     <h3>
@@ -59,34 +78,26 @@
     </h3>
   </li>
   
-  <li>
-    <h3>
-      <a href='/ramble/2017/08/08/fizzbuzz/'>
-        fizzbuzz 💻
-        <small><time datetime="2017-08-08T00:00:00+01:00">08 Aug 2017</time></small>
-      </a>
-    </h3>
-  </li>
-  
   </ul>
 </aside>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
 
 </div>
 
 <footer>
-  <div id=container>
-    <div id=left>
-      <h1>Thomas Chatting</h1>
-      <ul>
-        <li><a href=/about/>about</a></li>
-        <li>✈︎ <a href=//twitter.com/phenomenontom>twitter</a></li>
-        <li>✈︎ <a href=//instagram.com/tomchatting>insta</a></li>
-      </ul>
-    </div>
-    <div id=right>
-      <p>Hello 👋. My name's Tom and I occasionally write about my life.</p>
-    </div>
-  </div>
+  <p><b>Tom</b> is a 27 year old human who works in IT.</p>
+  <p>Return to the <a href=#top>top</a>.</p>
 </footer>
 
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
