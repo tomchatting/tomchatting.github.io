@@ -1,9 +1,0 @@
----
-layout: post
-title: "Brackets update"
-date: 2013-12-08 01:10
-category: link
-link: http://blog.brackets.io/2013/11/20/1240/
----
-
-The Open Source Brackets has recently hit Sprint 34, I still use it religiously when maintaining this website.

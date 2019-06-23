@@ -1,9 +1,0 @@
----
-layout: post
-title:  "Gambino"
-date:   2014-01-16 17:00
-category: video
-link:   //www.youtube.com/embed/pHHWPTs1zxg
----
-
-It feels like only Gaminbo gets me. Y'know?
