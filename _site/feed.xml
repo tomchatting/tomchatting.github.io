@@ -4,13 +4,50 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-06-23T15:59:02+01:00</updated>
+ <updated>2019-06-24T21:01:04+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
    <email>thomas.chatting@icloud.com</email>
  </author>
 
+ 
+ <entry>
+   <title>life update 👶</title>
+   <link href="http://localhost:4000/ramble/2019/06/24/life-update/"/>
+   <updated>2019-06-24T00:00:00+01:00</updated>
+   <id>http://localhost:4000/ramble/2019/06/24/life-update</id>
+    <content type="html"><h3 id="its-been-a-while-since-i-posted-on-this-blog-in-between-then-and-now-i-had-another-website-which-i-didnt-renew-and-i-forgot-to-backup-the-posts-so-go-me">it’s been a while since i posted on this blog, in between then and now i had another website which i didn’t renew and i forgot to backup the posts, so go me</h3>
+
+<p><img src="https://i.imgur.com/yQZEeaAl.png" alt="Detective Pikachu" /></p>
+
+<p>I have unashamedly neglected this blog since the 28th January 2018, and
+ invariably I am a monster.</p>
+
+<p>Here are some things that have happened in my life since I last posted, I:</p>
+
+<ul>
+  <li>got a new job to try working in IT</li>
+  <li>learned (some) C++</li>
+  <li>sold all of my Apple products and switched to a Google Pixel 3</li>
+  <li>moved into a house</li>
+  <li>got another new job working in IT</li>
+  <li>enjoyed the <strong>shit</strong> out of <em>Detective Pikachu</em> (the movie and the DS game)</li>
+  <li>forgot to cancel the free Spotify trial that came with my PS4 but stuck with it</li>
+  <li>signed up for an unlimited travel card to get discount public transport through work</li>
+  <li>(tried to) got over myself</li>
+  <li><strong>had a baby</strong></li>
+</ul>
+
+<p>Niamh Imogen is 10 weeks old and she is my absolute world. I joked for a while
+ that I wouldn’t dare bring a child into this world in the state that it’s in;
+ but at the same time I’m nearly 30 and everything just kind of fell
+ into place with the love of my life. I don’t think I can change the world or
+ save anyone or anything, but I can try to be the best version of myself to
+ give her the best possible chance. Plus: now I have someone to look after me
+ when I’m in a care home.</p>
+</content>
+ </entry>
  
  <entry>
    <title>my new typewriter - the powerbook g4 🍎</title>
@@ -776,42 +813,6 @@ manage just enough of a change to nudge myself into another New Tom. Future Tom.
  </entry>
  
  <entry>
-   <title>Dropping mysql_connect, or how I learned to PDO</title>
-   <link href="http://localhost:4000/article/2015/05/01/pdo/"/>
-   <updated>2015-05-01T22:38:00+01:00</updated>
-   <id>http://localhost:4000/article/2015/05/01/pdo</id>
-    <content type="html"><p>So I finally got around to fixing the mySQL connector in Square:</p>
-
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">function</span> <span class="nf">database_connect</span><span class="p">(</span><span class="nv">$dbHost</span><span class="p">,</span> <span class="nv">$dbName</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=</span><span class="nv">$dbHost</span><span class="s2">;dbname=</span><span class="nv">$dbName</span><span class="s2">;charset=utf8"</span><span class="p">,</span> <span class="nv">$dbUsername</span><span class="p">,</span> <span class="nv">$dbPassword</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$PDOexception</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">exit</span><span class="p">(</span><span class="s2">"&lt;p&gt;An error ocurred: Can't connect to database. &lt;/p&gt;&lt;p&gt;More preciesly: "</span><span class="o">.</span> <span class="nv">$PDOexception</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span><span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>Then it’s just a matter of replacing all your old calls (<em>this is why you should do things more procedurally, Tom</em>) in every instance you expected a mysql_ query and now receive a PDO object:</p>
-
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nv">$db</span> <span class="o">=</span> <span class="nx">database_connect</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span> <span class="nx">database</span><span class="p">,</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">);</span>
-<span class="nv">$query</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT * FROM posts"</span><span class="p">);</span>
-<span class="nv">$posts</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span></code></pre></figure>
-
-<p>Insert your usual <code class="highlighter-rouge">for each $post in $posts</code> and you’re golden!</p>
-
-<p><strong>Tl;dr</strong>: <em>just use Jekyll now, PHP is a bad language anyway.</em></p>
-</content>
- </entry>
- 
- <entry>
-   <title>Current Spotify playlist</title>
-   <link href="http://localhost:4000/link/2015/01/06/playlist/"/>
-   <updated>2015-01-06T22:43:00+00:00</updated>
-   <id>http://localhost:4000/link/2015/01/06/playlist</id>
-    <content type="html"><p>Not mine, but the majority of these songs are my jam.</p>
-</content>
- </entry>
- 
- <entry>
    <title>Tom does reading: Hard-Boiled Wonderland and the End of the World</title>
    <link href="http://localhost:4000/article/2014/11/07/hard-boiled-wonderland-and-the-end-of-the-world/"/>
    <updated>2014-11-07T23:11:00+00:00</updated>
@@ -837,33 +838,6 @@ manage just enough of a change to nudge myself into another New Tom. Future Tom.
   <li>For Japanese game shows I highly recommend <a href="http://www.reddit.com/r/japanesegameshows">/r/japanesegameshows</a></li>
   <li>My current manga of choice is <em>Deadman Wonderland</em>, review of part one coming soon™</li>
 </ul>
-</content>
- </entry>
- 
- <entry>
-   <title>Ranked rewards? I get them.</title>
-   <link href="http://localhost:4000/photo/2014/11/07/diamond/"/>
-   <updated>2014-11-07T22:22:00+00:00</updated>
-   <id>http://localhost:4000/photo/2014/11/07/diamond</id>
-    <content type="html"><p>So this happened…</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Enter Shikari - The Last Garrison</title>
-   <link href="http://localhost:4000/video/2014/10/30/shikari/"/>
-   <updated>2014-10-30T22:48:00+00:00</updated>
-   <id>http://localhost:4000/video/2014/10/30/shikari</id>
-    <content type="html"><p>I will never stop loving this band.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>I did it (again)! Do I get to play with all the best people now?</title>
-   <link href="http://localhost:4000/photo/2014/10/07/plat/"/>
-   <updated>2014-10-07T12:15:00+01:00</updated>
-   <id>http://localhost:4000/photo/2014/10/07/plat</id>
-    <content type="html"><p><em>PENTAKILL</em></p>
 </content>
  </entry>
  
@@ -898,33 +872,6 @@ manage just enough of a change to nudge myself into another New Tom. Future Tom.
     <content type="html"><iframe width="640" height="315" src="//www.youtube.com/embed/6YZlFdTIdzM" frameborder="0" allowfullscreen="1"> </iframe>
 
 <p>Please excuse the live changes I’m making to the site. I’ve upgraded my PC, updated my CV, and got the itch to redesign this site. Hang tight.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Not strapped, nor booted</title>
-   <link href="http://localhost:4000/video/2014/05/03/not-strapped-nor-booted/"/>
-   <updated>2014-05-03T23:59:00+01:00</updated>
-   <id>http://localhost:4000/video/2014/05/03/not-strapped-nor-booted</id>
-    <content type="html"><p>It’s good to be back.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>I did it! Do I get to play with all the best people now?</title>
-   <link href="http://localhost:4000/photo/2014/03/23/gold/"/>
-   <updated>2014-03-23T15:15:00+00:00</updated>
-   <id>http://localhost:4000/photo/2014/03/23/gold</id>
-    <content type="html"><p><em>(inb4 my duo partner did all the heavy lifting)</em></p>
-</content>
- </entry>
- 
- <entry>
-   <title>Gambino</title>
-   <link href="http://localhost:4000/video/2014/01/16/gambino/"/>
-   <updated>2014-01-16T17:00:00+00:00</updated>
-   <id>http://localhost:4000/video/2014/01/16/gambino</id>
-    <content type="html"><p>It feels like only Gaminbo gets me. Y’know?</p>
 </content>
  </entry>
  
@@ -964,51 +911,6 @@ manage just enough of a change to nudge myself into another New Tom. Future Tom.
 <h2 id="this-is-my-usage-yours-may-vary">This is my usage, yours may vary</h2>
 
 <p>It is difficult to tell someone a Chromebook would work for them, because it depends on your use case. In my case, I needed a laptop that could use <a href="http://jstorrent.com/">torrents</a>, git (included in <a href="https://chrome.google.com/webstore/detail/tailor/mfakmogheanjhlgjhpijkhdjegllgenf/related?hl=en">Tailor</a>), some form of document editor (included with Google Docs), the web, and last at least 6 hours without juice (since I have a gaming PC for the rest) and the Chromebook 11 hits all these points. So, <strong>go Scroogle yourself Microsoft</strong>.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Ever seen me and Krepo in the same room at the same time?</title>
-   <link href="http://localhost:4000/photo/2013/12/08/krepo/"/>
-   <updated>2013-12-08T01:18:00+00:00</updated>
-   <id>http://localhost:4000/photo/2013/12/08/krepo</id>
-    <content type="html"><p>Just sayin’. <em>inb4 my kda is actually bad</em></p>
-</content>
- </entry>
- 
- <entry>
-   <title>My current wallpaper</title>
-   <link href="http://localhost:4000/photo/2013/12/08/wallpaper/"/>
-   <updated>2013-12-08T01:15:00+00:00</updated>
-   <id>http://localhost:4000/photo/2013/12/08/wallpaper</id>
-    <content type="html"><p>This is kinda Anime meets <em>Borderlands</em>, and I love both.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Hagimura Suzu snaps in Engrish</title>
-   <link href="http://localhost:4000/link/2013/12/08/engrish/"/>
-   <updated>2013-12-08T01:12:00+00:00</updated>
-   <id>http://localhost:4000/link/2013/12/08/engrish</id>
-    <content type="html"><p>Thank you, little girl!</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Brackets update</title>
-   <link href="http://localhost:4000/link/2013/12/08/brackets/"/>
-   <updated>2013-12-08T01:10:00+00:00</updated>
-   <id>http://localhost:4000/link/2013/12/08/brackets</id>
-    <content type="html"><p>The Open Source Brackets has recently hit Sprint 34, I still use it religiously when maintaining this website.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>So I'm into Seitokai Yakuindomo in a big way</title>
-   <link href="http://localhost:4000/photo/2013/12/08/seitokai/"/>
-   <updated>2013-12-08T01:05:00+00:00</updated>
-   <id>http://localhost:4000/photo/2013/12/08/seitokai</id>
-    <content type="html"><p>If you’re big into Anime, Seitokai Yakuindomo is just all-round fantastic.</p>
 </content>
  </entry>
  
@@ -1077,38 +979,11 @@ As alluded to previously, here's another post on the popular <abbr title="Multip
  </entry>
  
  <entry>
-   <title>Windows CE BSP for Raspberry Pi</title>
-   <link href="http://localhost:4000/link/2013/11/28/windows-ce-pi/"/>
-   <updated>2013-11-28T18:25:00+00:00</updated>
-   <id>http://localhost:4000/link/2013/11/28/windows-ce-pi</id>
-    <content type="html"><p>For anyone else that has a Raspberry Pi, some clever sod has managed to get Windows 7 CE up and running.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>MarkdownPad</title>
-   <link href="http://localhost:4000/link/2013/11/28/markdown-pad/"/>
-   <updated>2013-11-28T18:23:00+00:00</updated>
-   <id>http://localhost:4000/link/2013/11/28/markdown-pad</id>
-    <content type="html"><p>If you’re like me and write pretty much everything in Markdown, this application is a must.</p>
-</content>
- </entry>
- 
- <entry>
    <title>League of Legends: Season 4 support masteries</title>
    <link href="http://localhost:4000/photo/2013/11/24/league/"/>
    <updated>2013-11-24T19:31:00+00:00</updated>
    <id>http://localhost:4000/photo/2013/11/24/league</id>
     <content type="html"><p>From the few days I’ve had playing League in the new pre-season I think this is probably one of the better mastery pages to run. I’ll post an updated rundown on how to support in the new season soon™.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Ellen trolling</title>
-   <link href="http://localhost:4000/link/2013/11/24/ellen-trolling/"/>
-   <updated>2013-11-24T17:23:00+00:00</updated>
-   <id>http://localhost:4000/link/2013/11/24/ellen-trolling</id>
-    <content type="html"><p>Ellen trolls more members of the public–I’m not ashamed to be a fan of Ellen.</p>
 </content>
  </entry>
  
@@ -1364,63 +1239,6 @@ While gold quintessences give you +3 GP10 (<em>Philo gives you +5/10 as a compar
  </entry>
  
  <entry>
-   <title>Michael Scott</title>
-   <link href="http://localhost:4000/quote/2013/07/04/michael-scott/"/>
-   <updated>2013-07-04T22:00:00+01:00</updated>
-   <id>http://localhost:4000/quote/2013/07/04/michael-scott</id>
-    <content type="html"><blockquote>
-  <p>I fell in love with these kids. And I didn’t want to see them fall victim to the system. So I made ‘em a promise. I told them if they graduated from high school, I would pay for their college education. I have made some empty promises in my life but, hands down that was the most generous.</p>
-</blockquote>
-</content>
- </entry>
- 
- <entry>
-   <title>Pokemon Two Player Nuzlocke Challenge</title>
-   <link href="http://localhost:4000/article/2013/06/27/nuzlocke/"/>
-   <updated>2013-06-27T10:00:00+01:00</updated>
-   <id>http://localhost:4000/article/2013/06/27/nuzlocke</id>
-    <content type="html"><p>My friend Matty and I have decided to run a two-player Nuzlocke challenge with Pokemon Diamond and Pearl.</p>
-
-<p><img src="http://cdn.bulbagarden.net/upload/6/65/Basic_Nuzlocke_rules.png" alt="The basic rules" title="The basic rules" /></p>
-
-<p><img src="http://i.imgur.com/xISdT3f.png" class="float-left" alt="" /></p>
-
-<p>The rules we are using are adapted from a Red and Blue challenge, so the levels may turn out to be a bit difficult, but who doesn’t like a challenge?</p>
-
-<p>The first dilemma is our rule-set states you may only have as many <em>active</em> Pokemon as your rival had at your last battle, but Nuzlocke rules state you must “catch the first Pokemon in each area and nothing else”.</p>
-
-<p>The easiest way around this was to follow the Nuzlocke rules, but box all “inactives” at Gyms and WiFi battles.</p>
-
-<p><img src="http://i.imgur.com/qCLxyL9.png" class="float-right" alt="" /></p>
-
-<p>My main issue with the system at the moment, at the early stages of the game, is that mine and Matty’s teams are <em>very</em> similar, due to the fact that early routes are filled with Bidoof and Starly. That being said, I managed to catch a Magikarp while Matty got an Abra, I got a Shinx while he got an Onix, so hopefully our parties will be diverse and fights won’t just be pound-offs.</p>
-
-<h2 id="my-party">My Party</h2>
-
-<p><em>All level 10, inactives in italics</em></p>
-
-<p><img src="https://www.pokecheck.org/i/anim/393.gif" alt="" /> Darwin, the Bidoof.</p>
-
-<p><img src="https://www.pokecheck.org/i/anim/403.gif" alt="" /> Sparks, the Shinx.</p>
-
-<p><img src="https://www.pokecheck.org/i/anim/399.gif" alt="" /> <em>Buck, the Bidoof.</em></p>
-
-<p><img src="https://www.pokecheck.org/i/anim/129.gif" alt="" /> <em>Gulp, the Magikarp.</em></p>
-
-<p><img src="https://www.pokecheck.org/i/anim/401.gif" alt="" /> <em>Bugsy, the Kricketot.</em></p>
-
-<h2 id="grinding-is-a-real-grind">Grinding is a real grind</h2>
-
-<p>Getting Pokemon to flat levels is a real bore, especially early game when all wild Pokemon do is use Growl and Growth; I would <em>kill</em> for an exp share.</p>
-
-<h2 id="anyway">Anyway</h2>
-
-<p>I’ll be updating the blog with notes on my (and Matty’s) progress in the coming days/weeks.</p>
-
-</content>
- </entry>
- 
- <entry>
    <title>Digg Reader. Yes.</title>
    <link href="http://localhost:4000/note/2013/06/27/digg-reader/"/>
    <updated>2013-06-27T01:00:00+01:00</updated>
@@ -1476,35 +1294,6 @@ While gold quintessences give you +3 GP10 (<em>Philo gives you +5/10 as a compar
  </entry>
  
  <entry>
-   <title>Stutter--Marianas Trench</title>
-   <link href="http://localhost:4000/link/2013/06/21/stutter-marianas-trench/"/>
-   <updated>2013-06-21T23:28:00+01:00</updated>
-   <id>http://localhost:4000/link/2013/06/21/stutter-marianas-trench</id>
-    <content type="html"><p>Got to say I’m loving this song at the minute.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>I figuratively just posted this</title>
-   <link href="http://localhost:4000/photo/2013/06/20/literally/"/>
-   <updated>2013-06-20T19:05:00+01:00</updated>
-   <id>http://localhost:4000/photo/2013/06/20/literally</id>
-    <content type="html">
-</content>
- </entry>
- 
- <entry>
-   <title>About Jekyll</title>
-   <link href="http://localhost:4000/quote/2013/06/20/about-jekyll/"/>
-   <updated>2013-06-20T01:03:00+01:00</updated>
-   <id>http://localhost:4000/quote/2013/06/20/about-jekyll</id>
-    <content type="html"><blockquote>
-  <p>Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through Markdown (or Textile) and Liquid converters, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers <strong>for free</strong>.</p>
-</blockquote>
-</content>
- </entry>
- 
- <entry>
    <title>Hello World!</title>
    <link href="http://localhost:4000/note/2013/06/19/hello-world/"/>
    <updated>2013-06-19T21:02:51+01:00</updated>
@@ -1528,15 +1317,6 @@ While gold quintessences give you +3 GP10 (<em>Philo gives you +5/10 as a compar
  </entry>
  
  <entry>
-   <title>Time Well Spent</title>
-   <link href="http://localhost:4000/photo/2013/01/20/time-well-spent/"/>
-   <updated>2013-01-20T19:38:51+00:00</updated>
-   <id>http://localhost:4000/photo/2013/01/20/time-well-spent</id>
-    <content type="html">
-</content>
- </entry>
- 
- <entry>
    <title>Finding the perfect writing tool</title>
    <link href="http://localhost:4000/article/2013/01/17/finding-the-perfect-writing-tool/"/>
    <updated>2013-01-17T19:38:51+00:00</updated>
@@ -1552,41 +1332,6 @@ There are a multitude of available “Zen writers” available, several of which
 </blockquote>
 
 <p>I suppose if anything, my adventure in finding a better writing tool has led me to realise a few things: the simplest option is often the best, I’ll never be happy with my blogs design, and ignore the surroundings, focus on the task in front of you.</p>
-</content>
- </entry>
- 
- <entry>
-   <title>Nexus 4 Homescreen</title>
-   <link href="http://localhost:4000/photo/2013/01/17/nexus-4/"/>
-   <updated>2013-01-17T19:38:51+00:00</updated>
-   <id>http://localhost:4000/photo/2013/01/17/nexus-4</id>
-    <content type="html">
-</content>
- </entry>
- 
- <entry>
-   <title>CSS Normalize > CSS Reset</title>
-   <link href="http://localhost:4000/link/2012/03/08/normalize/"/>
-   <updated>2012-03-08T20:02:51+00:00</updated>
-   <id>http://localhost:4000/link/2012/03/08/normalize</id>
-    <content type="html"><p><a href="https://github.com/CoryMathews/normalize.css">https://github.com/CoryMathews/normalize.css</a></p>
-</content>
- </entry>
- 
- <entry>
-   <title>Subtle Links with CSS</title>
-   <link href="http://localhost:4000/note/2012/03/08/subtle-links-with-css/"/>
-   <updated>2012-03-08T20:02:51+00:00</updated>
-   <id>http://localhost:4000/note/2012/03/08/subtle-links-with-css</id>
-    <content type="html"><p>I think every time I recreate this blog I end up posting a few little CSS tips that I use constantly, and when I say constantly I mean consistently for over three or so years now.</p>
-
-<p>##Visible Clicks</p>
-
-<p>Most people add a custom colour to <code class="highlighter-rouge">a:links</code> and <code class="highlighter-rouge">a:hover</code> in their CSS using the latter to show when a user has hovered over a clickable link, but what about when the user actually clicks? For that most old school browsers added a dotted outline to a:active which was all well and good back in the days of 800x600 and Web 1.0, but apparently we’ve moved passed that, with most sites not even employing any form of “active event” (see Twitter). This can be seen as a bad thing as for people without mouses employing the tab button to navigate a site it then becomes near on impossible to see what link you’ve selected, but I digress. A really subtle touch you can add to links to show a user has clicked is to employ a:active to show a small change to the link; my favourite being:</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">a</span><span class="nd">:active</span> <span class="p">{</span><span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="nl">top</span><span class="p">:</span> <span class="m">1px</span><span class="p">;}</span></code></pre></figure>
-
-<p>You can try that on this null link (click and hold to see the position of the link change slightly). As you’ll be able to see, clicking pushes the entire link down by a single pixel, generating a really subtle “pushed in” effect.</p>
 </content>
  </entry>
  
