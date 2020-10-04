@@ -8,23 +8,12 @@ layout: default
 
 <p><a href=/>↩ Home</a></p>
 
-
-<div class="with-sidebar">
-  <div>
-    <div class="not-sidebar">
-      <article>
-        <h1>{{ page.title }}</h1>
-        <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time>
-      {{ page.content }}
-        {% include end_plug.html %}
-      </article>
-    </div>
-    <div class="sidebar">
-      <h3>Current Spotify playlist</h3>
-      <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYqdkUCLfYzP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </div>
-</div>
+<article>
+  <h1>{{ page.title }}</h1>
+  <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time>
+  {{ page.content }}
+  {% include end_plug.html %}
+</article>
 
 <hr>
 
