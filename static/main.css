@@ -38,7 +38,7 @@ body {
 }
 
 p {
-  font-family: Georgia, Times, serif;
+  font-family: "IBM Plex Serif", Georgia, Times, serif;
 }
 
 p > * + * {
