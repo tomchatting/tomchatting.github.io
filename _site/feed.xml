@@ -4,7 +4,7 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-04-05T19:28:03+01:00</updated>
+ <updated>2021-04-05T19:32:38+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
@@ -60,7 +60,7 @@ ruby 2.7.1p83 <span class="o">(</span>2020-03-31 revision a0c7c23c9c<span class=
 
 <p><a href="//bundler.io">Bundler</a> is recommended to install and run Jekyll on your local machine. Bundler manages all of your gem dependencies, and mirrors the build environment used by GitHub.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>rvm <span class="nt">--default</span> use 2.7.1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>gem <span class="nb">install </span>bundler</code></pre></figure>
 
 <h2 id="pulling-your-repo"><a id="git"></a>pulling your repo</h2>
 
