@@ -4,7 +4,7 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-06-24T21:01:04+01:00</updated>
+ <updated>2021-04-05T17:51:16+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
@@ -105,7 +105,7 @@ I flirted with the idea of returning to the OG Google Chromebook (link to review
 <h2 id="accessories-are-power">accessories are power</h2>
 <p>The iPad Pro carries much more than a shiny OS and multitasking, it is also backed by exclusive accessories. One of said accessories makes complete sense to me and I feel should be included with the device. The other is a £99 stylus.</p>
 
-<p>The iPad Pro Smart Keyboard is small, discreet, and doubles as a stand for when you don’t want to type and just want to watch/play. The key travel is shallow and does take getting used it, but it carries a tactile feel and I’ve been able to get up to full-speed typing within a few hours of using it. The keyboard supports all the usual array of shortcuts fresh from the Mac, including <code class="highlighter-rouge">cmd+tab</code> (iOS now sports a cute task switched) and <code class="highlighter-rouge">cmd+h</code> to go to the home screen. Where the struggle begins is more to do with what I’m used to. I’m missing my 7” slab of glass underneath the space bar that lets me point to things on my screen<sup><a href="#footnotes/pointing">1</a></sup>.</p>
+<p>The iPad Pro Smart Keyboard is small, discreet, and doubles as a stand for when you don’t want to type and just want to watch/play. The key travel is shallow and does take getting used it, but it carries a tactile feel and I’ve been able to get up to full-speed typing within a few hours of using it. The keyboard supports all the usual array of shortcuts fresh from the Mac, including <code class="language-plaintext highlighter-rouge">cmd+tab</code> (iOS now sports a cute task switched) and <code class="language-plaintext highlighter-rouge">cmd+h</code> to go to the home screen. Where the struggle begins is more to do with what I’m used to. I’m missing my 7” slab of glass underneath the space bar that lets me point to things on my screen<sup><a href="#footnotes/pointing">1</a></sup>.</p>
 
 <p>The Apple Pencil is difficult. In theory I feel like it makes complete sense. The pencil is to the iPad Pro what the Smart Keyboard is to the iPad Pro. One lets you write away and pro-user-shortcut your way around the device, and seems the perfect match for writers; the other is a pencil. And I guess the pencil carries with it the ability to draw, and point with greater accuracy, or colour, or stencil, or whatever, but for me it’s come as an expensive “also this”. I’m not saying there’s anything inherently <em>wrong</em> with the thing—it feels weighted in your hand and is precise <em>af</em>—rather, it just doesn’t feel like it holds a true… use for me. I have, however, still found myself reaching for it instead of pointing with my finger whilst using the Smart Keyboard, as it bridges the gap quite nicely and leaves me not having to lean in to point.</p>
 
@@ -194,17 +194,11 @@ I flirted with the idea of returning to the OG Google Chromebook (link to review
 <p>There’s tonnes of great resources online on FizzBuzz, including <a href="https://www.youtube.com/watch?v=QPZ0pIK_wsc">this video</a> by Tom Scott on the various methods people use to solve FizzBuzz. My method is below, in Swift.</p>
 
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="mi">100</span> <span class="p">{</span>
-
     <span class="k">var</span> <span class="nv">output</span> <span class="o">=</span> <span class="s">""</span>
-
     <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span> <span class="n">output</span> <span class="o">+=</span> <span class="s">"Fizz"</span> <span class="p">}</span>
-
     <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span> <span class="n">output</span> <span class="o">+=</span> <span class="s">"Buzz"</span> <span class="p">}</span>
-
     <span class="k">if</span> <span class="n">output</span> <span class="o">==</span> <span class="s">""</span> <span class="p">{</span> <span class="n">output</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">}</span>
-
     <span class="nf">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-
 <span class="p">}</span></code></pre></figure>
 
 <p>And here’s the output:</p>
@@ -319,22 +313,22 @@ manage just enough of a change to nudge myself into another New Tom. Future Tom.
 <p>Something as quick and dirty as I’m making here needs a dirty and quick array:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">'Registered CSS offender.'</span><span class="p">,</span>
-  <span class="s1">'Mum, I</span><span class="se">\'</span><span class="s1">m on the Internet!'</span><span class="p">,</span>
-  <span class="s1">'#implications'</span><span class="p">,</span>
-  <span class="s1">'Powered by magic beans'</span><span class="p">,</span>
-  <span class="s1">'Brought to you by Caprisuns'</span><span class="p">,</span>
-  <span class="s1">'A new design every week or your money back'</span><span class="p">,</span>
-  <span class="s1">'Come on, grab your friends!'</span><span class="p">,</span>
-  <span class="s1">'Follow me on Twitter!'</span><span class="p">,</span>
-  <span class="s1">'Steamed hams'</span><span class="p">,</span>
-  <span class="s1">'My other blog gets updates'</span><span class="p">,</span>
-  <span class="s1">'&lt;i&gt;"lol"&lt;/i&gt; - you'</span>
+  <span class="dl">'</span><span class="s1">Registered CSS offender.</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Mum, I</span><span class="se">\'</span><span class="s1">m on the Internet!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">#implications</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Powered by magic beans</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Brought to you by Caprisuns</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">A new design every week or your money back</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Come on, grab your friends!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Follow me on Twitter!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Steamed hams</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">My other blog gets updates</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">&lt;i&gt;"lol"&lt;/i&gt; - you</span><span class="dl">'</span>
 <span class="p">];</span></code></pre></figure>
 
 <h2 id="step-two-pseudorandom-number-generator">step two: pseudorandom number generator</h2>
 
-<p>Anyone who’s ever done “randomness” in computer programming before knows the general formula <code class="highlighter-rouge">random() * (max - min + 1)) + min</code> (where <code class="highlighter-rouge">random()</code> generally gives a number between 0 and 1). I won’t pretend to understand or remember how this works, however if you’re interested in the how check <a href="http://stackoverflow.com/a/1527820">this excellent explanation</a> on StackOverflow out.</p>
+<p>Anyone who’s ever done “randomness” in computer programming before knows the general formula <code class="language-plaintext highlighter-rouge">random() * (max - min + 1)) + min</code> (where <code class="language-plaintext highlighter-rouge">random()</code> generally gives a number between 0 and 1). I won’t pretend to understand or remember how this works, however if you’re interested in the how check <a href="http://stackoverflow.com/a/1527820">this excellent explanation</a> on StackOverflow out.</p>
 
 <p>Now since our array starts at 0 (so we have no min), our next–and only other–line can just be:</p>
 
@@ -346,10 +340,10 @@ manage just enough of a change to nudge myself into another New Tom. Future Tom.
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">random-tag</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></figure>
 
-<p>then add a not so cheeky <code class="highlighter-rouge">document.addEventListener</code> to insert <code class="highlighter-rouge">random_tag</code> into your page:</p>
+<p>then add a not so cheeky <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to insert <code class="language-plaintext highlighter-rouge">random_tag</code> into your page:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"DOMContentLoaded"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"random-tag"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nx">random_tag</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">random-tag</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2"> </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">random_tag</span>
 <span class="p">})</span></code></pre></figure>
 
 <h2 id="theres-probably-a-better-way-to-do-this">there’s probably a better way to do this</h2>
@@ -514,7 +508,7 @@ feels like a game that should cost more than it’s £15.99 price tag.</p>
   <li>full plugin support (the PDO should help here)</li>
   <li>shit tonnes better documentation</li>
   <li>multi-user support (although I’m not too sure on this one)</li>
-  <li>ability to add custom tags without changing a line of code (thinking of how Jekyll handles custom tags in the layout of the <code class="highlighter-rouge">_posts</code> markdown files)</li>
+  <li>ability to add custom tags without changing a line of code (thinking of how Jekyll handles custom tags in the layout of the <code class="language-plaintext highlighter-rouge">_posts</code> markdown files)</li>
 </ul>
 
 <h2 id="when-will-20-drop-its-alpha-tag">when will 2.0 drop it’s alpha tag?</h2>
@@ -701,7 +695,7 @@ like to credit my entire degree.</p>
 <ul>
   <li>I’m twenty four in less than four months</li>
   <li>I probably wouldn’t survive the Commonwealth as long as I have in Fallout 4</li>
-  <li>The font/size for optimal reading on the web is up for debate, but <code class="highlighter-rouge">18px/1.5 sans-serif</code> seems like a fairly good bet</li>
+  <li>The font/size for optimal reading on the web is up for debate, but <code class="language-plaintext highlighter-rouge">18px/1.5 sans-serif</code> seems like a fairly good bet</li>
   <li>Pagination should run from Newest-Oldest/Left-Right, because if it were page numbers it’d go 1-x; also western=left-right writing</li>
   <li>Making lists is an easy way to fill a blog post</li>
 </ul>
@@ -762,7 +756,7 @@ life.</p>
 
 <h2 id="ultimately-i-may-have-inadvertently-done-a-lot-of-growing-up-over-the-past-12-months">Ultimately I may have inadvertently done a lot of growing up over the past 12 months</h2>
 
-<p>It’s my 12 months anniversary of starting my job at <code class="highlighter-rouge">Big Red Bank</code>. I’ve
+<p>It’s my 12 months anniversary of starting my job at <code class="language-plaintext highlighter-rouge">Big Red Bank</code>. I’ve
 never missed a day, I’ve never been later than 30 minutes early. Head down,
 full-charge. Every. Damn. Day. I look back at myself 12 months ago and see
 a much shyer, reclusive young man. Working at a call centre has a very important
@@ -1327,7 +1321,7 @@ While gold quintessences give you +3 GP10 (<em>Philo gives you +5/10 as a compar
 There are a multitude of available “Zen writers” available, several of which include their own soundtracks, which change depending on how fast you are typing (to really get you in the zone). The editor I’m using at the moment is called “Writer” and is available on the Google Play Store for Android phones and tablets. While you might think typing essays and blog posts on a phone keyboard could be a chore, I’ve found with Jelly Beans new swipe gesture keyboard my typing is actually faster than I can physically write, the biggest barrier to the speed is how much you trust the software; as I find the more often I check for errors, the slower I go.</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Ignore the surroundings, focus on the task in front of you
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Ignore the surroundings, focus on the task in front of you
 </code></pre></div>  </div>
 </blockquote>
 
@@ -1344,11 +1338,11 @@ There are a multitude of available “Zen writers” available, several of which
   <p>The eval() language construct is very dangerous because it allows execution of arbitrary PHP code. Its use thus is discouraged. If you have carefully verified that there is no other option than to use this construct, pay special attention not to pass any user provided data into it without properly validating it beforehand.</p>
 </blockquote>
 
-<p>Today I got a bit of a coding itch, it ended up in me having an epiphany in the shower of all places as to why in <em>hells</em> name I’d ever used <code class="highlighter-rouge">eval</code> in making SquareCMS, and how to fix it. After a lot of work this afternoon I’ve managed to rewrite <a href="https://github.com/tomchatting/SquareCMS/blob/master/square/controllers/theme.php">/controllers/theme.php</a> from scratch using functions to output text then displaying that to the user. Originally I did some rather recursive and <em>dangerous</em> stuff (see blockquote from PHP.net) within the theme file, using it to generate another PHP file within itself then using <code class="highlighter-rouge">eval</code> to execute it within theme.php.</p>
+<p>Today I got a bit of a coding itch, it ended up in me having an epiphany in the shower of all places as to why in <em>hells</em> name I’d ever used <code class="language-plaintext highlighter-rouge">eval</code> in making SquareCMS, and how to fix it. After a lot of work this afternoon I’ve managed to rewrite <a href="https://github.com/tomchatting/SquareCMS/blob/master/square/controllers/theme.php">/controllers/theme.php</a> from scratch using functions to output text then displaying that to the user. Originally I did some rather recursive and <em>dangerous</em> stuff (see blockquote from PHP.net) within the theme file, using it to generate another PHP file within itself then using <code class="language-plaintext highlighter-rouge">eval</code> to execute it within theme.php.</p>
 
 <p>theme.php originally had a few functions or different roles. At it’s simplest, theme.php would always be called by a function using eval in a way such as:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval(echo 'themeFunction($file)';)  and would be passed a file in plain text, usually a theme file such as [this](https://github.com/tomchatting/SquareCMS/blob/master/square/themes/default/index.page) one. This file would then be stripped of all its' `&lt;square:tags /&gt;` by using regular expressions or simple find and replace functions, in these tags places would be the raw code required to do what the theme writer wanted to be present, for example `&lt;square:url /&gt;` returns the blogs' URL using the pre-set constant, but returns it as `'.URL.'` so the PHP can be executed (as if you look above the eval call is echoing the output) and leaves the next returned string able to do the same, leaving an even playing field. This file would then be saved to a variable, ready to be eval'd by the calling function.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eval(echo 'themeFunction($file)';)  and would be passed a file in plain text, usually a theme file such as [this](https://github.com/tomchatting/SquareCMS/blob/master/square/themes/default/index.page) one. This file would then be stripped of all its' `&lt;square:tags /&gt;` by using regular expressions or simple find and replace functions, in these tags places would be the raw code required to do what the theme writer wanted to be present, for example `&lt;square:url /&gt;` returns the blogs' URL using the pre-set constant, but returns it as `'.URL.'` so the PHP can be executed (as if you look above the eval call is echoing the output) and leaves the next returned string able to do the same, leaving an even playing field. This file would then be saved to a variable, ready to be eval'd by the calling function.
 </code></pre></div></div>
 
 <p>Eval executes arbitrary PHP code, exactly as it would run as if you’d called it from the web browser or included it from another file; so it runs with the same privileges as such a file would if it were uploaded via FTP and executed. This produces an inherent problem particularly with something like a blog engine such as the one I made, not because you can generate execution issues (this is true, debugging with eval is much, much harder as I discovered) but because when you begin introducing user generated content like themes and plugins; security becomes a huge issue.</p>

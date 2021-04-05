@@ -6,11 +6,12 @@
 <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
 
-<title>quick and lazy random titles 💻 - Thomas Chatting</title>
+<title>quick and lazy random titles 💻 - tomwillgoto.space</title>
 <link rel=stylesheet href=/static/main.css>
+<link rel=stylesheet href=/static/monokai.css>
 
 <header>
-  <h1><a name=top href=/>Thomas Chatting</a></h1>
+  <h1><a name=top href=/>//tomwillgoto.space 🚀</a></h1>
 </header>
 
 <div id=container>
@@ -18,16 +19,10 @@
   <div class="progress-bar" id="myBar"></div>
 </div>
 
-<p><a href=/>↩ Home</a></p>
-
-
-<div class="with-sidebar">
-  <div>
-    <div class="not-sidebar">
-      <article>
-        <h1>quick and lazy random titles 💻</h1>
-        <time datetime='2016-11-06'>06 Nov 2016</time>
-      <iframe width="700" height="394" src="//www.youtube.com/embed/MVRg8gZ8zPA" frameborder="0" allowfullscreen="0"> </iframe>
+<article>
+  <h1>quick and lazy random titles 💻</h1>
+  <time datetime='2016-11-06'>06 Nov 2016</time>
+  <iframe width="700" height="394" src="//www.youtube.com/embed/MVRg8gZ8zPA" frameborder="0" allowfullscreen="0"> </iframe>
 
 <h2 id="redesigned">redesigned</h2>
 
@@ -38,22 +33,22 @@
 <p>Something as quick and dirty as I’m making here needs a dirty and quick array:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">'Registered CSS offender.'</span><span class="p">,</span>
-  <span class="s1">'Mum, I</span><span class="se">\'</span><span class="s1">m on the Internet!'</span><span class="p">,</span>
-  <span class="s1">'#implications'</span><span class="p">,</span>
-  <span class="s1">'Powered by magic beans'</span><span class="p">,</span>
-  <span class="s1">'Brought to you by Caprisuns'</span><span class="p">,</span>
-  <span class="s1">'A new design every week or your money back'</span><span class="p">,</span>
-  <span class="s1">'Come on, grab your friends!'</span><span class="p">,</span>
-  <span class="s1">'Follow me on Twitter!'</span><span class="p">,</span>
-  <span class="s1">'Steamed hams'</span><span class="p">,</span>
-  <span class="s1">'My other blog gets updates'</span><span class="p">,</span>
-  <span class="s1">'&lt;i&gt;"lol"&lt;/i&gt; - you'</span>
+  <span class="dl">'</span><span class="s1">Registered CSS offender.</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Mum, I</span><span class="se">\'</span><span class="s1">m on the Internet!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">#implications</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Powered by magic beans</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Brought to you by Caprisuns</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">A new design every week or your money back</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Come on, grab your friends!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Follow me on Twitter!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">Steamed hams</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">My other blog gets updates</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">&lt;i&gt;"lol"&lt;/i&gt; - you</span><span class="dl">'</span>
 <span class="p">];</span></code></pre></figure>
 
 <h2 id="step-two-pseudorandom-number-generator">step two: pseudorandom number generator</h2>
 
-<p>Anyone who’s ever done “randomness” in computer programming before knows the general formula <code class="highlighter-rouge">random() * (max - min + 1)) + min</code> (where <code class="highlighter-rouge">random()</code> generally gives a number between 0 and 1). I won’t pretend to understand or remember how this works, however if you’re interested in the how check <a href="http://stackoverflow.com/a/1527820">this excellent explanation</a> on StackOverflow out.</p>
+<p>Anyone who’s ever done “randomness” in computer programming before knows the general formula <code class="language-plaintext highlighter-rouge">random() * (max - min + 1)) + min</code> (where <code class="language-plaintext highlighter-rouge">random()</code> generally gives a number between 0 and 1). I won’t pretend to understand or remember how this works, however if you’re interested in the how check <a href="http://stackoverflow.com/a/1527820">this excellent explanation</a> on StackOverflow out.</p>
 
 <p>Now since our array starts at 0 (so we have no min), our next–and only other–line can just be:</p>
 
@@ -65,27 +60,20 @@
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">random-tag</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></figure>
 
-<p>then add a not so cheeky <code class="highlighter-rouge">document.addEventListener</code> to insert <code class="highlighter-rouge">random_tag</code> into your page:</p>
+<p>then add a not so cheeky <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to insert <code class="language-plaintext highlighter-rouge">random_tag</code> into your page:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"DOMContentLoaded"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"random-tag"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nx">random_tag</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">random-tag</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2"> </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">random_tag</span>
 <span class="p">})</span></code></pre></figure>
 
 <h2 id="theres-probably-a-better-way-to-do-this">there’s probably a better way to do this</h2>
 
 <p>Full disclosure: I generally have no idea what I’m doing, so if you know of or find a better way of performing this fairly simple task: go ahead and use it.</p>
 
-        <p>:-),</p>
-<p>@<a href='//twitter.com/phenomenontom' target='_blank'>phenomenontom</a></p>
+  <p>:-),</p>
+<p>@<a href='//twitter.com/_tomch' target='_blank'>_tomch</a></p>
 
-      </article>
-    </div>
-    <div class="sidebar">
-      <h3>Current Spotify playlist</h3>
-      <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYqdkUCLfYzP" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-  </div>
-</div>
+</article>
 
 <hr>
 
@@ -137,9 +125,9 @@ function myFunction() {
 
 </div>
 
-<footer>
-  <p><b>Tom</b> is a human who works in IT.</p>
-  <p>Return to the <a href=#top>top</a>.</p>
-</footer>
+<hr>
 
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+<footer>
+  <p>Return to the <a href=#top>top</a>.</p>
+  <p>&copy; 2012-2021 Thomas Chatting</p>
+</footer>

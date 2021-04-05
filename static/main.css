@@ -13,34 +13,6 @@ body {
   padding: 16px;
 }
 
-/* ↓ targets the intermediary wrapper */
-.with-sidebar > * {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.5rem;
-}
-
-.with-sidebar > * > * {
-  /* ↓ applies to both elements */
-  margin: 0.5rem;
-}
-
-.sidebar {
-  flex-basis: 15rem;
-  flex-grow: 1;
-}
-
-.not-sidebar {
-  /* ↓ grow from nothing */
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: calc(50% - 1rem);
-}
-
-p {
-  font-family: "IBM Plex Serif", Georgia, Times, serif;
-}
-
 p > * + * {
   margin-top: 1.5rem;
 }
@@ -56,12 +28,12 @@ p > * + * {
 
 .progress-bar {
   height: 5px;
-  background: #268bd2;
+  background: #F2EEB3;
   width: 0%;
 }
 
 article h1 {
-  background: #268bd2;
+  background: #68788C;
   color: white;
 }
 
@@ -70,8 +42,21 @@ article h1 a {
 }
 
 a, a:visited {
-  color: #268bd2;
+  color: #68788C;
   text-decoration: none;
+}
+
+header {
+  padding-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.2em;
+}
+
+header a, header a:visited {
+  color: #000000;
+  font-weight: bold;
 }
 
 a:hover {
@@ -114,7 +99,7 @@ blockquote span {
 
 code {
   color: #d5d5d5;
-  font-family: Menlo,Roboto Mono,Courier New,monospace;
+  font-family: Menlo,"Roboto Mono","Courier New",monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -146,7 +131,7 @@ ul.posts {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 1.2em;
+  font-size: 1.0em;
   font-weight: bold;
 }
 
@@ -155,8 +140,20 @@ ul.posts li {
   clear: both;
 }
 
+ul.posts li a {
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  display: inline-block;
+}
+
 ul.posts time {
   font-weight: normal;
+  color: #d5d5d5;
+  font-family: Menlo,"Roboto Mono","Courier New",monospace;
+  float: right;
 }
 
 img, iframe, pre {
@@ -217,10 +214,8 @@ hr {
 
 footer {
   font-size: 1.2em;
-  background: black;
   color: grey;
   padding: 16px;
-  margin-top: 1.5rem;
 }
 
 footer p {
@@ -229,39 +224,4 @@ footer p {
 
 footer b {
   color: white;
-}
-
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
-
-.pagination {
-  overflow: hidden; /* clearfix */
-  margin-left: -1rem;
-  margin-right: -1rem;
-  color: #ccc;
-  text-align: center;
-}
-
-/* Pagination items can be `span`s or `a`s */
-.pagination-item {
-  position: relative;
-  display: block;
-  padding: 1rem;
-  border: 1px solid #eee !important;
-}
-.pagination-item:first-child {
-  margin-bottom: -1px;
-}
-
-/* Only provide a hover state for linked pagination items */
-a.pagination-item:hover {
-  z-index: 2;
-  color: #fff;
-  text-decoration: none;
-  background-color: #268bd2;
-  border-color: #268bd2;
 }
