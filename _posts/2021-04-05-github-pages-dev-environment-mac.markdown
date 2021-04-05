@@ -52,7 +52,7 @@ $ rvm --default use 2.7.1
 [Bundler](//bundler.io) is recommended to install and run Jekyll on your local machine. Bundler manages all of your gem dependencies, and mirrors the build environment used by GitHub.
 
 {% highlight bash %}
-$ rvm --default use 2.7.1
+$ gem install bundler
 {% endhighlight %}
 
 ## <a id=git></a>pulling your repo
