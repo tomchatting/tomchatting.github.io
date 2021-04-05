@@ -145,7 +145,7 @@ ul.posts li a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 80%;
+  max-width: 70%;
   display: inline-block;
 }
 
@@ -213,9 +213,8 @@ hr {
 }
 
 footer {
-  font-size: 1.2em;
+  font-size: 0.9em;
   color: grey;
-  padding: 16px;
 }
 
 footer p {

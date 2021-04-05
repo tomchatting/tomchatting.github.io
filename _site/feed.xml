@@ -4,13 +4,92 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-04-05T17:51:16+01:00</updated>
+ <updated>2021-04-05T19:28:03+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
    <email>thomas.chatting@icloud.com</email>
  </author>
 
+ 
+ <entry>
+   <title>setting up a dev environment for github pages ⌨️</title>
+   <link href="http://localhost:4000/tech/2021/04/05/github-pages-dev-environment-mac/"/>
+   <updated>2021-04-05T00:00:00+01:00</updated>
+   <id>http://localhost:4000/tech/2021/04/05/github-pages-dev-environment-mac</id>
+    <content type="html"><p>I’m hoping that sharing this will save somebody else the same headaches I went through trying to get a dev environment set up for GitHub pages on a Mac.</p>
+
+<hr />
+
+<h2 id="table-of-contents">table of contents</h2>
+
+<ol>
+  <li><a href="#ruby">updating ruby</a></li>
+  <li><a href="#bundle">installing bundler</a></li>
+  <li><a href="#git">pulling your repo</a></li>
+  <li><a href="#build">building the environment</a></li>
+  <li><a href="#serve">serve –watch</a></li>
+  <li><a href="#updates">further info and updates</a></li>
+</ol>
+
+<hr />
+
+<h2 id="updating-ruby"><a id="ruby"></a>updating ruby</h2>
+
+<p>Your first step is to update the version of Ruby installed by default to the currently supported version by GitHub Pages (<em>see ‘further info and updates’</em>).</p>
+
+<p>Open terminal and run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>rvm <span class="nb">install </span>ruby-2.7.1</code></pre></figure>
+
+<p>replacing the version number where appropriate.</p>
+
+<p>This install can be fairly needy, so keep by it while it asks you for your sudo password and permission every 20 seconds or so. This step is limited by your processing power and internet connection, and can take a while.</p>
+
+<p>Once complete, use:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ruby <span class="nt">-v</span>
+
+ruby 2.7.1p83 <span class="o">(</span>2020-03-31 revision a0c7c23c9c<span class="o">)</span> <span class="o">[</span>x86_64-darwin19]</code></pre></figure>
+
+<p>to confirm the install has set your new version as the default for the rvm. If not, use:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>rvm <span class="nt">--default</span> use 2.7.1</code></pre></figure>
+
+<h2 id="installing-bundler"><a id="bundler"></a>installing bundler</h2>
+
+<p><a href="//bundler.io">Bundler</a> is recommended to install and run Jekyll on your local machine. Bundler manages all of your gem dependencies, and mirrors the build environment used by GitHub.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>rvm <span class="nt">--default</span> use 2.7.1</code></pre></figure>
+
+<h2 id="pulling-your-repo"><a id="git"></a>pulling your repo</h2>
+
+<p>Now we’re cooking with gas. Pull your repo using your method of choice. The easiest way is to download the GitHub app for Mac and pull your Pages repo. You can also use CLI/SSH/GH-CLI (no judgement zone).</p>
+
+<h2 id="building-the-environment"><a id="build"></a>building the environment</h2>
+
+<p>Come back to Terminal and navigate to the root directory of your site.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">install</span></code></pre></figure>
+
+<p>If you receive any build errors at this point, check your Ruby version. If this matches what’s in this article, check ‘further info and updates’ just in case the version requirements have changed.</p>
+
+<h2 id="serve-watch"><a id="serve"></a>serve –watch</h2>
+
+<p>Now you can run your Jekyll site locally, and edit ‘til your hearts content. I use the –watch argument as it means I can continue to edit the site and changes will be picked up on the fly. Page builds are, again, limited by your machine. I say this as I recall being able to build my site in &lt;0.4 seconds on my old PC build, but it now takes around 7-8 seconds on the MacBook.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--watch</span></code></pre></figure>
+
+<p><img src="/static/images/github-pages-dev-environment-mac.png" alt="screenshot of mid 2010 macbook editing this post" /></p>
+
+<h2 id="further-info-and-updates"><a id="updates"></a>further info and updates</h2>
+
+<ul>
+  <li>The official GitHub Pages dependancies versions are found <a href="//pages.github.com/versions">here</a>. If you are using Bundler, the first thing to check is your Ruby version</li>
+  <li>If your version of github-pages or the other dependancies slip out of date on your local machine, you need to update them using <code class="language-plaintext highlighter-rouge">bundle update github-pages</code></li>
+</ul>
+</content>
+ </entry>
  
  <entry>
    <title>life update 👶</title>
