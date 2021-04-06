@@ -4,13 +4,179 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-04-05T19:32:38+01:00</updated>
+ <updated>2021-04-06T22:43:04+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
    <email>thomas.chatting@icloud.com</email>
  </author>
 
+ 
+ <entry>
+   <title>ubuntu portable setup and hardening 🐧</title>
+   <link href="http://localhost:4000/tech/2021/04/06/ubuntu-portable-hardened/"/>
+   <updated>2021-04-06T00:00:00+01:00</updated>
+   <id>http://localhost:4000/tech/2021/04/06/ubuntu-portable-hardened</id>
+    <content type="html"><p>While I’ve recently mentioned how I’ve been doing some work from a mid-2010 Unibody MacBook, I also like to use my more modern HP Envy 13. The problem is, as mentioned before, that it’s become a <em>Sims 4</em> box that I don’t always have access to. Also, disk space on a machine with such a small HD and a big <strong>thicc</strong> Windows 10 install can be quite tight.</p>
+
+<p>Anyway, below I chronicle the process of installing an OS onto a USB stick, and then hardening it.</p>
+
+<blockquote>
+  <p>“Hardening” is the process of better securing your operating system/hardware.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">table of contents</h2>
+
+<ol>
+  <li><a href="#setup">the setup</a></li>
+  <li><a href="#install">installing ubuntu</a></li>
+  <li><a href="#harden">hardening ubuntu</a>
+    <ol>
+      <li><a href="#livepatch">enable livepatch</a></li>
+      <li><a href="#updates">check for updates</a></li>
+      <li><a href="#avahi">remove avahi</a></li>
+      <li><a href="#madagascar">make like madagascar</a>
+        <ol>
+          <li><a href="#ufwdeny">deny all inbound and outbound connections</a></li>
+          <li><a href="#ufwinterface">find your interface</a></li>
+          <li><a href="#ufwexceptions">create firewall exceptions and force external dns</a></li>
+          <li><a href="#ufwlogs">monitor firewall logs</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#todo">next steps (and todo)</a></li>
+</ol>
+
+<hr />
+
+<h2 id="setup"><a id="setup"></a>setup</h2>
+
+<p><a href="https://www.amazon.co.uk/SanDisk-Ultra-Drive-Type-C-devices/dp/B07YYJRXQR/ref=sr_1_4?crid=A0ZKIWP768CI&amp;dchild=1&amp;keywords=sandisk+ultra+dual+drive+usb+type-c&amp;qid=1615329676&amp;sprefix=sandisk+ultra+dual+%2Caps%2C162&amp;sr=8-4">Here is an Amazon UK link to the USB stick I went with.</a></p>
+
+<p>This stick seemed to have the most recommendations when I searched for “Best USB stick to run an OS from”.</p>
+
+<p><img src="/static/images/ubuntu-hardening-desktop.png" alt="a screenshot from ubuntu desktop 20.04 LTS" /></p>
+
+<p>I went with Ubuntu 20.04 LTS because of its great hardware support, easy hardening options, and also due to the fact I’ve used Ubuntu/Xubuntu on-and-off for 15 years.</p>
+
+<h2 id="installing-ubuntu"><a id="install"></a>installing ubuntu</h2>
+
+<p>I lost my (now secondary) USB stick. It’s somewhere in the house but I think there’s a distinct possibility it’s inside my daughters intestinal tract. Or she’s just hidden it from me. Anyway, I used VirtualBox to install Ubuntu onto the USB stick.</p>
+
+<p>Use Disk Manager in Windows 10 or gparted or your disk manager of choice to remove all partitions and data from the USB stick.</p>
+
+<p>Uninstall WireShark if you have it. Install VirtualBox and the Additions extension pack to enable USB 3 support. <strong>Restart the host machine</strong>.</p>
+
+<blockquote>
+  <p>This bit took me absolutely ages and I nearly resorted to buying an extra USB stick. Persevere with the steps above and use any errors VBox gives you to find people with the same issue.</p>
+</blockquote>
+
+<p>Create a virtual machine with at least 2 GB RAM with no hard disk. Enable networking. Enable USB 3 support and create a filter for your USB stick. Unplug the USB stick and boot the machine from the Ubuntu 20.04 live USB ISO. Once loaded, plug the USB stick back in.</p>
+
+<p>From here, you should be able to install Ubuntu using the defaults. I selected Minimal Installation, unchecked the proprietary software option, and selected the option to encrypt my disk.</p>
+
+<p>As I had chosen to encrypt the disk, I created a user account with a different strong passphrase and allowed auto login. I have enabled live patch which meant I have setup another strong passphrase, and the account password uses another strong passphrase. I have also set the machine to auto lock after 5 minutes and always require a password on wake.</p>
+
+<h2 id="hardening-ubuntu"><a id="harden"></a>hardening ubuntu</h2>
+
+<p>There’s not actually loads required when looking to harden Ubuntu. The OS is mature and Canonical offer good transparency on <a href="https://ubuntu.com/security/livepatch">CVE reporting</a>.</p>
+
+<h3 id="enable-livepatch"><a id="livepatch"></a>enable livepatch</h3>
+
+<p>Ubuntu 20.04 prompts on first launch to enable <a href="https://ubuntu.com/security/livepatch">livepatch</a>. The elevator pitch is fairly simple: allow automatic critical kernel patching without the need for a restart.</p>
+
+<h3 id="check-for-updates"><a id="updates"></a>check for updates</h3>
+
+<p>Even if you enabled network updates during install, this is just good practice. Either use the auto updates if prompted, or head to terminal:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>apt update &amp; <span class="nb">sudo </span>apt upgrade</code></pre></figure>
+
+<h3 id="remove-avahi"><a id="avahi"></a>remove avahi</h3>
+
+<p>The <a href="http://manpages.ubuntu.com/manpages/bionic/man8/avahi-daemon.8.html">Avahi Daemon</a> implements Apple’s Rendevous/Bonjour. 👾<a href="https://nvd.nist.gov/vuln/detail/CVE-2011-1002">CVE-2011-1002</a> demonstrates the relative ease for bad actors to find vulnerabilities in the protocol, though it references Avahi &lt;0.6.29. Ubuntu 20.04 LTS ships with avahi-daemon_0.7-3.1, however, I don’t plan on using any hook-ups between this device and any Apple products so it may as well be purged.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>apt purge avahi-daemon</code></pre></figure>
+
+<h3 id="make-like-madagascar"><a id="madagascar"></a>make like madagascar</h3>
+
+<p><img src="/static/images/ubuntu-hardening-shut-down-everything.png" alt="shut. down. everything." /></p>
+
+<p>Any idiot with a laptop and a follow-along “hacker guide” from Mr Robot could try setting up a reverse shell or find an open port to get up to no good. Hell, there’s in production industry standard software I am aware of which will crash if a certain port is sniffed. Uncomplicated Firewall (UFW) provides an iptables front-end and an easy way to manage firewall rules and work on an exception-only basis.</p>
+
+<h4 id="deny-all-inbound-and-outbound-connections"><a id="ufwdeny"></a>deny all inbound and outbound connections</h4>
+
+<p>First, enable UFW:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>ufw <span class="nb">enable
+
+</span>Firewall is active and enabled on system startup</code></pre></figure>
+
+<p>Deny incoming connections:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>ufw default deny incoming</code></pre></figure>
+
+<p>Now forward connections:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>ufw default deny forwarding</code></pre></figure>
+
+<p>And finally, outgoing connections (all internet access will be blocked from this point):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>ufw default deny outgoing</code></pre></figure>
+
+<h3 id="find-your-ufwinterface"><a id="ufwinterface"></a>find your ufwinterface</h3>
+
+<p>To allow outgoing connections, you will need to reference your network adapter’s name. This is easy enough:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ip a
+
+2: wlo1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    <span class="nb">link</span>/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff
+    altname wlp2s0
+    inet 192.168.1.14/24 brd 192.168.1.255 scope global dynamic noprefixroute wlo1</code></pre></figure>
+
+<h3 id="create-firewall-exceptions-and-allow-force-external-dns"><a id="ufwexceptions"></a>create firewall exceptions and <del>allow</del> force external dns</h3>
+
+<p>Allow DNS, HTTP, and HTTPS traffic out over your chosen interface:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>ufw allow out on wlo1 to 9.9.9.9 proto udp port 53 comment <span class="s1">'allow DNS on wlo1 ipv4'</span>
+<span class="nv">$ </span><span class="nb">sudo </span>ufw allow out on wlo1 to 2620:fe::fe proto udp port 53 comment <span class="s1">'allow DNS on wlo1 ipv6'</span>
+<span class="nv">$ </span><span class="nb">sudo </span>ufw allow out on wlo1 to any proto tcp port 80 comment <span class="s1">'allow HTTP on wlo1'</span>
+<span class="nv">$ </span><span class="nb">sudo </span>ufw allow out on wlo1 to any proto tcp port 443 comment <span class="s1">'allow HTTPS on wlo1'</span></code></pre></figure>
+
+<p>After setting these rules, make sure you add the external DNS settings to your network interface device:</p>
+
+<p><img src="/static/images/ubuntu-hardening-dns.png" alt="screenshot of dns settings panel in ubuntu" /></p>
+
+<p>If these rules are blocking too much, allow all outgoing packets again:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>ufw default allow outgoing</code></pre></figure>
+
+<h3 id="monitor-firewall-logs"><a id="ufwlogs"></a>monitor firewall logs</h3>
+
+<p>To debug incoming or outgoing connections, use tail with the -f arg:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">tail</span> <span class="nt">-f</span> /var/log/ufw.log</code></pre></figure>
+
+<p>You can use this to identify the IP, protocol, and port of any blocked connections and allow them where needed. Where IPs are fixed (with Quad9, for example) you can allow outbound connections to specific IPs and ports. Where IPs float, however, you may want to consider opening the port to all; keep in mind this approach increases your surface area to attackers.</p>
+
+<h2 id="next-steps-and-todo"><a id="todo"></a>next steps and todo</h2>
+
+<p>This is where I leave you. You should now have a decently working, hardened, Ubuntu 20.04 LTS persistant USB stick. You can treat it like a normal OS running on your machine. Below are some considerations and things you can do to check your understanding of what we’ve been through:</p>
+
+<ul>
+  <li>look at improving USB performance, investigate noatime (stackoverflow has some good discussions on this)</li>
+  <li>regularly check your firewall logs. What else is being blocked?</li>
+  <li>install some apps, like Spotify or Atom</li>
+  <li>consider browser security. Look into plugins for FireFox and make sure to set Duck Duck Go as your default browser</li>
+  <li>pen test this machine from a Kali Linux box</li>
+  <li>use a password manager (<em>that one’s just in general, not just for this</em>)</li>
+  <li>look at running through a VPN (<em>remember you’ll need to set firewall exceptions for that!</em>)</li>
+</ul>
+</content>
+ </entry>
  
  <entry>
    <title>setting up a dev environment for github pages ⌨️</title>

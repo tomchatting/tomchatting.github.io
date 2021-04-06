@@ -33,12 +33,9 @@ p > * + * {
 }
 
 article h1 {
-  background: #68788C;
-  color: white;
-}
-
-article h1 a {
-  color: white;
+  color: #333333;
+  font-weight: bold;
+  font-size: 2.5em;
 }
 
 a, a:visited {
@@ -64,12 +61,11 @@ a:hover {
 }
 
 blockquote{
+  display: block;
   font-size: 1em;
-  width:60%;
   margin: 0;
-  font-style:italic;
   color: #333;
-  padding:0.3em 30px 1.0em 75px;
+  padding:0.3em 30px 1.0em 50px;
   border-left: 8px solid #fbd200 ;
   line-height: 1.6;
   position: relative;
@@ -77,12 +73,12 @@ blockquote{
 }
 
 blockquote::before {
-  content: "\201C";
+  content: "💡";
   color:#fbd200;
-  font-size: 4em;
+  font-size: 1em;
   position: absolute;
-  left: 10px;
-  top: -10px;
+  left: 20px;
+  top: 20px;
 }
 
 blockquote::after {
@@ -188,10 +184,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
 }
 
 h1 {
