@@ -204,6 +204,12 @@ hr {
     margin: 2.5em 0;
 }
 
+.nhs {
+  background-color: #005eb8;
+  color: #fff;
+  font-style: italic;
+}
+
 footer {
   font-size: 0.9em;
   color: grey;
