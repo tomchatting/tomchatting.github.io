@@ -3,12 +3,18 @@ layout: default
 title: Home
 ---
 
-<p>👋, my name is Thomas. I am a 29 year old <span class=nhs>NHS</span> colleague from Leeds, currently living <em>not in Leeds</em>.</p>
+<div class=hero>
+  <div class=content>
+    <h1>Girl dad, Business Intelligence Developer, runner</h1>
+    <h2>Thomas Chatting is a 30 year old IT professional working in the public sector in Data Warehousing. Thomas works with T-SQL, C# and coffee.</h2>
+    <h2>When not writing in the third-person, Thomas can be found on Twitter as <a href=//twitter.com/_tomch target=_blank>@_tomch</a>, <a href=//github.com/tomchatting>GitHub</a>, <a href=//linkedin.com/in/thomas-chatting>LinkedIn</a>, and Instagram.</h2>
+  </div>
+</div>
 
-<ul class=posts>
-{% for post in site.posts %}
-  <li>
-    <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a> <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}
-  </li>
-{% endfor %}
-</ul>
+<div class="page-width text-centre">
+  <h2>This site is hosted on <a href=//pages.github.com>GitHub pages</a> using <a href=//github.com/mojombo/jekyll>Jekyll</a>, and most of the content is written in John Gruber's <a href=//daringfireball.net/projects/markdown/>Markdown</a>.</h2>
+
+  <h2>The code for this site and all of the posts in raw format can be poked around with on its <a href=//github.com/tomchatting/tomchatting.github.io>GitHub Repository</a>, but please don't steal (my) stuff.</h2>
+
+  <h2>This site is designed on and for Mac, iPhone and iPad. I'm not sorry.</h2>
+</div>

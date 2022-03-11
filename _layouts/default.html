@@ -2,25 +2,34 @@
 <html lang=en>
 <meta charset=utf-8>
 <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+<meta name="supported-color-schemes" content="light dark">
+<meta name="theme-color" content="#04233D">
 
 <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
 
-<title>{% if page.title == "Home" %}tomwillgoto.space{% else %}{{ page.title }} - tomwillgoto.space{% endif %}</title>
+<title>{% if page.title == "Home" %}Thomas Chatting{% else %}{{ page.title }} - Thomas Chatting{% endif %}</title>
 <link rel=stylesheet href=/static/main.css>
 <link rel=stylesheet href=/static/monokai.css>
 
 <header>
-  <h1><a name=top href=/>//tomwillgoto.space 🚀</a></h1>
+  <div class=page-width>
+    <h1><a name=top href=/>Thomas Chatting</a></h1>
+    <nav>
+      <ul>
+        <li><a href=/archive>Blog</a></li>
+        <li><a href=/about>About me</a></li>
+        <li><a href=//twitter.com/_tomch target=_blank>@_tomch</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<div id=container>
 {{ content }}
-</div>
-
-<hr>
 
 <footer>
-  <p>Return to the <a href=#top>top</a>.</p>
-  <p>&copy; 2012-2022 Thomas Chatting</p>
+  <div class=page-width>
+    <p>Return to the <a href=#top>top</a>.</p>
+    <p>&copy; 2012-2022 Thomas Chatting</p>
+  </div>
 </footer>

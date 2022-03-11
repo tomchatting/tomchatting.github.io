@@ -1,14 +1,17 @@
 ---
-layout: page
+layout: default
 title: archive
 permalink: /archive/
 ---
 
-<h1>archive</h1>
-<ul class=archive>
-{% for post in site.posts %}
-<li><a href="{{ post.url }}">{{ post.title }}</a> <date>{{ post.date | date: '%B %d, %Y %H:%M %Z' }}</date></li>
-{% endfor %}
-</ul>
+<div class=container>
+  <p>👋, my name is Thomas. I am a 29 year old <span class=nhs>NHS</span> colleague from Leeds, currently living <em>not in Leeds</em>.</p>
 
-<hr>
+  <ul class=posts>
+  {% for post in site.posts %}
+    <li>
+      <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a> <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}
+    </li>
+  {% endfor %}
+  </ul>
+</div>

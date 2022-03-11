@@ -6,13 +6,13 @@ permalink: /about/
 
 <h1 class="article-title">hello, world!</h1>
 
-My name is Tom. I am 29 years old and I work for the NHS.
+My name is Tom. I am 30 years old and I work for the NHS.
 
 ## tom
 
-My earliest computer memory was of my family DOS box but I can't remember much of that. The first family PC I remember was a custom OEM built Windows 98SE box in coral blue, which we had from when I was about 7 up until just before high school when we upgraded the machine and stuck with Windows XP until I got my own laptop running Windows Vista. Since then, I've just built my own PCs but sometimes you can see me hipstering out with my MacBook Pro.
+My earliest computer memory was of my family DOS box but I can't remember much of that. The first family PC I remember was a custom OEM built Windows 98SE box in coral blue, which we had from when I was about 7 up until just before high school when we upgraded the machine and stuck with Windows XP until I got my own laptop running Windows Vista. Since then, I've just built my own PCs but sometimes you can see me hipstering out with my mid-2010 MacBook.
 
-Phone wise I've gone from an Android G1 to an iPhone and back... then back again... then *back again*. I currently rock an iPhone SE 2020, because I have a pretty amazing partner.
+Phone wise I've gone from an Android G1 to an iPhone and back... then back again... then *back again*. I currently rock an iPhone 12 in the lovely blue colour.
 
 ## contact
 

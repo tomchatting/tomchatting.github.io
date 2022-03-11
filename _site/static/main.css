@@ -1,5 +1,9 @@
+:root {
+  --hero-colour: #04233D;
+}
+
 html {
-  font-family: Helvetica, Arial, sans-serif ;
+  font-family: -apple-system, Helvetica, Arial, sans-serif ;
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -8,6 +12,11 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
   margin: 0 auto;
   max-width: 40rem;
   padding: 16px;
@@ -28,7 +37,7 @@ p > * + * {
 
 .progress-bar {
   height: 5px;
-  background: #F2EEB3;
+  background: var(--hero-colour);
   width: 0%;
 }
 
@@ -43,21 +52,100 @@ a, a:visited {
   text-decoration: none;
 }
 
-header {
-  padding-bottom: 2rem;
+header, .hero {
+  overflow: visible;
+  padding-top: 1px;
+  margin: 0;
+  position: relative;
+  z-index: 500;
+}
+
+header, footer, .hero {
+  background-color: var(--hero-colour);
+  color: #fff;
+  display: inline-block;
+  width: 100vw;
+  max-width: 100%;
 }
 
 header h1 {
-  font-size: 1.2em;
+  float: left;
+  display: inline-block;
+}
+
+header h1, footer p {
+  text-rendering: optimizeLegibility;
+}
+
+footer p {
+  margin: 0;
+  padding: 0.6em 0;
+}
+
+.page-width {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4rem !important;
 }
 
 header a, header a:visited {
-  color: #000000;
-  font-weight: bold;
+  color: #fff;
+}
+
+header nav {
+  display: block;
+  text-align: right;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 1.5rem 0 1.5rem 3rem;
+  font-weight: 100;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.hero .content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h2 {
+  font-weight: 100;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.home-image {
+  float: left;
+  max-width: 25%;
+  width: auto;
+}
+
+.text-centre {
+  text-align: center;
 }
 
 blockquote{
@@ -204,6 +292,12 @@ hr {
     margin: 2.5em 0;
 }
 
+.nhs {
+  background-color: #005eb8;
+  color: #fff;
+  font-style: italic;
+}
+
 footer {
   font-size: 0.9em;
   color: grey;
@@ -215,4 +309,48 @@ footer p {
 
 footer b {
   color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6, ul.posts li a, article h1 {
+    color: #fefefe;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hero h1, .hero h2 {
+    color: #fefefe;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  @supports (padding:max(0px)) {
+    header, header nav, .container, footer, .page-width {
+      box-sizing: border-box;
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+  }
+
+  .page-width, .container {
+    max-width: 95%;
+  }
+
+  header h1 {
+    padding-top: 1rem;
+    float: none;
+  }
+
+  header nav {
+    text-align: left;
+    display: block;
+  }
+
+  header nav ul {
+    padding: 0;
+  }
+
+  header nav ul li:first-child {
+    padding-left: 0;
+  }
 }
