@@ -117,7 +117,7 @@ header nav ul li {
 .hero {
   text-align: center;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .hero .content {
@@ -344,7 +344,7 @@ footer b {
 
   .hero {
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
   }
 
   .hero h1 {
