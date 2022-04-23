@@ -307,7 +307,7 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 1112px) {
+@media only screen and (max-width: 1170px) {
   @supports (padding:max(0px)) {
     header, header nav, .container, footer, .page-width {
       box-sizing: border-box;
@@ -352,7 +352,7 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 844px) {
   .page-width, .container {
     max-width: 90%;
   }
