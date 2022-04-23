@@ -1,9 +1,15 @@
 :root {
-  --hero-colour: #04233D;
+  --hero-color: #F8F1E3;
+  --background-color: #F8F1E3;
+  --text-color: #4e311b;
+  --link-color: #d19600;
+  --blockquote-color: #8b6f4e;
 }
 
 html {
-  font-family: -apple-system, Helvetica, Arial, sans-serif ;
+  background: var(--background-color);
+  font-family: -apple-system, "San Francisco", Helvetica, Arial, sans-serif;
+  color: var(--text-color);
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -35,20 +41,13 @@ p > * + * {
   width: 100%;
 }
 
-.progress-bar {
-  height: 5px;
-  background: var(--hero-colour);
-  width: 0%;
-}
-
 article h1 {
-  color: #333333;
   font-weight: bold;
   font-size: 2.5em;
 }
 
 a, a:visited {
-  color: #68788C;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -61,8 +60,6 @@ header, .hero {
 }
 
 header, footer, .hero {
-  background-color: var(--hero-colour);
-  color: #fff;
   display: inline-block;
   width: 100vw;
   max-width: 100%;
@@ -94,7 +91,7 @@ header h1 {
 }
 
 header a, header a:visited {
-  color: #fff;
+  color: var(--text-color);
 }
 
 header nav {
@@ -150,36 +147,25 @@ a:hover {
 }
 
 blockquote{
-  display: block;
   font-size: 1em;
+  font-style: italic;
   margin: 0;
-  color: #333;
-  padding:0.3em 30px 1.0em 50px;
-  border-left: 8px solid #fbd200 ;
-  line-height: 1.6;
-  position: relative;
-  background: #f3f3f3;
+  color: var(--blockquote-color)
 }
 
 blockquote::before {
-  content: "💡";
-  color:#fbd200;
-  font-size: 1em;
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  content: "\201C";
 }
 
 blockquote::after {
-  content: '';
+  content: "\201D"
 }
 
-blockquote span {
-  display: block;
-  color: #333333;
-  font-style: normal;
-  font-weight: bold;
-  margin-top: 0.5em;
+blockquote p {
+  display: inline;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
 }
 
 code {
@@ -226,7 +212,6 @@ ul.posts li {
 }
 
 ul.posts li a {
-  color: #000000;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -236,7 +221,6 @@ ul.posts li a {
 
 ul.posts time {
   font-weight: normal;
-  color: #d5d5d5;
   font-family: Menlo,"Roboto Mono","Courier New",monospace;
   float: right;
 }
@@ -271,7 +255,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #313131;
   text-rendering: optimizeLegibility;
 }
 
@@ -308,23 +291,23 @@ footer p {
   font-family: Helvetica, Arial, sans-serif ;
 }
 
-footer b {
-  color: white;
-}
-
 @media (prefers-color-scheme: dark) {
-  h1, h2, h3, h4, h5, h6, ul.posts li a, article h1 {
-    color: #fefefe;
+  html {
+    background: #434346;
+    color: #b0b0b1;
+  }
+  header a, header a:visited {
+    color: #b0b0b1;
+  }
+  blockquote {
+    color: #9e9da0;
+  }
+  a, a:visited {
+    color: #59c7f9;
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .hero h1, .hero h2 {
-    color: #fefefe;
-  }
-}
-
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1112px) {
   @supports (padding:max(0px)) {
     header, header nav, .container, footer, .page-width {
       box-sizing: border-box;
@@ -334,7 +317,7 @@ footer b {
   }
 
   .page-width, .container {
-    max-width: 95%;
+    max-width: 80%;
   }
 
   header h1 {
@@ -366,5 +349,11 @@ footer b {
 
   header nav ul li:first-child {
     padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .page-width, .container {
+    max-width: 90%;
   }
 }

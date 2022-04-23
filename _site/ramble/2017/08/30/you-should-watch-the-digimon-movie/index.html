@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang=en>
 <meta charset=utf-8>
-<meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+<meta name=viewport content="initial-scale=1, minimum-scale=1, viewport-fit=cover">
 <meta name="supported-color-schemes" content="light dark">
-<meta name="theme-color" content="#04233D">
+<meta name="theme-color" content="#F8F1E3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#434346" media="(prefers-color-scheme: dark)">
 
 <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
@@ -24,10 +25,6 @@
     </nav>
   </div>
 </header>
-
-<div class="progress-container">
-  <div class="progress-bar" id="myBar"></div>
-</div>
 
 <div class=container>
   <article>
@@ -80,18 +77,6 @@
     </ul>
   </aside>
 </div>
-
-<script>
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-</script>
 
 
 <footer>
