@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "ubuntu portable setup and hardening 🐧"
+blurb: securing your devices is more important than ever, but what does this look like for me?
 category: tech
 ---
 
-While I've recently mentioned how I've been doing some work from a mid-2010 Unibody MacBook, I also like to use my more modern HP Envy 13. The problem is, as mentioned before, that it's become a *Sims 4* box that I don't always have access to. Also, disk space on a machine with such a small HD and a big **thicc** Windows 10 install can be quite tight.
+While I've recently mentioned how I've been doing some work from a mid-2010 Unibody MacBook, I also like to use my more modern HP Envy 13. The problem is, as mentioned before, that it's become a Sims 4 box that I don't always have access to. Also, disk space on a machine with such a small HD and a big thicc Windows 10 install can be quite tight.
 
 Anyway, below I chronicle the process of installing an OS onto a USB stick, and then hardening it.
 

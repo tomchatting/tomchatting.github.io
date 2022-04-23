@@ -46,6 +46,10 @@ article h1 {
   font-size: 2.5em;
 }
 
+article summary {
+  font-size: 2em;
+}
+
 a, a:visited {
   color: var(--link-color);
   text-decoration: none;
@@ -297,7 +301,7 @@ footer p {
     color: #b0b0b1;
   }
   header a, header a:visited {
-    color: #b0b0b1;
+    color: #D6D6D7;
   }
   blockquote {
     color: #9e9da0;

@@ -4,7 +4,7 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-04-23T23:26:28+01:00</updated>
+ <updated>2022-04-23T23:42:18+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
@@ -17,7 +17,7 @@
    <link href="http://localhost:4000/tech/2021/04/06/ubuntu-portable-hardened/"/>
    <updated>2021-04-06T00:00:00+01:00</updated>
    <id>http://localhost:4000/tech/2021/04/06/ubuntu-portable-hardened</id>
-    <content type="html"><p>While I’ve recently mentioned how I’ve been doing some work from a mid-2010 Unibody MacBook, I also like to use my more modern HP Envy 13. The problem is, as mentioned before, that it’s become a <em>Sims 4</em> box that I don’t always have access to. Also, disk space on a machine with such a small HD and a big <strong>thicc</strong> Windows 10 install can be quite tight.</p>
+    <content type="html"><p>While I’ve recently mentioned how I’ve been doing some work from a mid-2010 Unibody MacBook, I also like to use my more modern HP Envy 13. The problem is, as mentioned before, that it’s become a Sims 4 box that I don’t always have access to. Also, disk space on a machine with such a small HD and a big thicc Windows 10 install can be quite tight.</p>
 
 <p>Anyway, below I chronicle the process of installing an OS onto a USB stick, and then hardening it.</p>
 
