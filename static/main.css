@@ -309,7 +309,7 @@ footer p {
 
 @media only screen and (max-width: 1170px) {
   @supports (padding:max(0px)) {
-    header, header nav, .container, footer, .page-width {
+    body {
       box-sizing: border-box;
       padding-left: env(safe-area-inset-left);
       padding-right: env(safe-area-inset-right);
