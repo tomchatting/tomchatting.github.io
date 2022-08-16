@@ -11,15 +11,6 @@ I sit on a new bed in the same room wearing my second ever pair of joggers typin
 
 ---
 
-In [November 2015](/2015/11/16/time-passes) I reflected on the life I was living, and alluded to a discontent in *how* I was living said life:
-
-> Maybe I'll
-fall into the same slump as before (again even if only slightly), or maybe I'll
-manage just enough of a change to nudge myself into another New Tom. Future Tom.
- I hope he looks back at this release and cringes.
-
-Well, I'm looking back and I'm not cringing. This self-reflection really put gears in motion in my mind to produce what has become one of my favourite years alive so far.
-
 ## 2016: the year of "did *I* do that?"
 
 My greatest accomplishment in 2016 stood on the shoulders of my second-greatest: I became a manager at *big red*. I was voted "People's Choice" for best Customer Service Team Leader/Adviser. Now, I'm not the work obsessed gremlin ranking such an achievement would suggest, but it was the moment I accepted what I meant to others. I saw my best friend cry as I took the prize and felt like I'd really done them proud, in fact, I'd done *myself* proud.
