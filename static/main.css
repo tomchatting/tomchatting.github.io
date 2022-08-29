@@ -59,7 +59,7 @@ body > * {
 }
 
 img, iframe {
-  width: min(100%, var(--max-width));
+  max-width: min(100%, var(--max-width));
 }
 
 pre { overflow: scroll; }
