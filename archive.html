@@ -1,19 +1,19 @@
 ---
-layout: default
-title: archive
-permalink: /archive/
+layout: archive
+title: writing
+permalink: /writing/
 ---
 
-<div class=container>
-  <p>👋, my name is Thomas. I am a 30 year old <span class=nhs>NHS</span> colleague from Leeds, currently living <em>not in Leeds</em>.</p>
+<main>
+  <article>
+    <p>Every now and again, I dare to write a post for my blog. Below are all the posts I've written over the last 7 years or so, and a few I've chosen not to delete from the last 10.</p>
 
-  <p>Every now and again, I dare to write a post for my blog. Below are all the posts I've written over the last 7 years or so, and a few I've chosen not to delete from the last 10.</p>
-
-  <ul class=posts>
-  {% for post in site.posts %}
-    <li>
-      <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a> <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}
-    </li>
-  {% endfor %}
-  </ul>
-</div>
+    <ul class=posts>
+    {% for post in site.posts %}
+      <li>
+        <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a> <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}
+      </li>
+    {% endfor %}
+    </ul>
+  </article>
+</main>

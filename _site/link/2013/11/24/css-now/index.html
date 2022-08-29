@@ -1,36 +1,43 @@
 <!doctype html>
 <html lang=en>
 <meta charset=utf-8>
-<meta name=viewport content="initial-scale=1, minimum-scale=1, viewport-fit=cover">
+<meta name=viewport content="initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Website and musings of Thomas Chatting, a business intelligence developer and all-round nerd from the UK.">
 <meta name="supported-color-schemes" content="light dark">
-<meta name="theme-color" content="#F8F1E3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#434346" media="(prefers-color-scheme: dark)">
+<!--<meta name="theme-color" content="#F8F1E3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#434346" media="(prefers-color-scheme: dark)">-->
 
-<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 
-<title>:not() - Thomas Chatting</title>
+<title>:not() ~ Thomas Chatting</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <link rel=stylesheet href=/static/main.css>
 <link rel=stylesheet href=/static/monokai.css>
 
+<body class="post">
+
 <header>
   <div class=page-width>
-    <h1><a name=top href=/>Thomas Chatting</a></h1>
+    <h1><a href=/>Thomas Chatting</a></h1>
     <nav>
       <ul>
-        <li><a href=/archive>Blog</a></li>
-        <li><a href=/about>About me</a></li>
-        <li><a href=//twitter.com/_tomch target=_blank>@_tomch</a></li>
+        <li><a href=/>About</a></li>
+        <li><a href=/writing>Writing</a></li>
+        <li><a>Reading</a></li>
+        <li><a href=//twitter.com/_tomch target=_blank>@_tomch*</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class=container>
+<main>
   <article>
+    <p class=date><time datetime='2013-11-24'>24 Nov 2013</time></p>
     <h1>:not()</h1>
     <summary></summary>
-    <time datetime='2013-11-24'>24 Nov 2013</time>
     <p>A quick <em>how-to</em> on using the :not() selector in CSS.</p>
 
     <p>:-),</p>
@@ -41,44 +48,36 @@
   <hr>
 
   <aside class=related>
-    <h2>More like this</h2>
-    <ul class='related-posts'>
+    <h2>Recent posts:</h2>
     
-    <li>
-      <h3>
-        <a href='/tech/2021/04/06/ubuntu-portable-hardened/'>
-          ubuntu portable setup and hardening 🐧
-          <small><time datetime="2021-04-06T00:00:00+01:00">06 Apr 2021</time></small>
-        </a>
-      </h3>
-    </li>
+    <p>
+      <a href='/2022/08/29/two-thousand-and-twenty-two/'>
+        two thousand and twenty two 🏕️ - 
+        <small><time datetime="2022-08-29T00:00:00+01:00">29 Aug 2022</time></small>
+      </a>
+    </p>
     
-    <li>
-      <h3>
-        <a href='/tech/2021/04/05/github-pages-dev-environment-mac/'>
-          setting up a dev environment for github pages ⌨️
-          <small><time datetime="2021-04-05T00:00:00+01:00">05 Apr 2021</time></small>
-        </a>
-      </h3>
-    </li>
+    <p>
+      <a href='/tech/2021/04/06/ubuntu-portable-hardened/'>
+        ubuntu portable setup and hardening 🐧 - 
+        <small><time datetime="2021-04-06T00:00:00+01:00">06 Apr 2021</time></small>
+      </a>
+    </p>
     
-    <li>
-      <h3>
-        <a href='/ramble/2019/06/24/life-update/'>
-          life update 👶
-          <small><time datetime="2019-06-24T00:00:00+01:00">24 Jun 2019</time></small>
-        </a>
-      </h3>
-    </li>
+    <p>
+      <a href='/tech/2021/04/05/github-pages-dev-environment-mac/'>
+        setting up a dev environment for github pages ⌨️ - 
+        <small><time datetime="2021-04-05T00:00:00+01:00">05 Apr 2021</time></small>
+      </a>
+    </p>
     
-    </ul>
   </aside>
-</div>
+</main>
 
 
 <footer>
   <div class=page-width>
-    <p>Return to the <a href=#top>top</a>.</p>
-    <p>&copy; 2012-2022 Thomas Chatting</p>
+    <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a href=https://github.com>GitHub</a>.<br>
+      &copy; 2012-2022 Thomas Chatting</p>
   </div>
 </footer>

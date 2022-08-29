@@ -4,13 +4,38 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-04-23T23:47:47+01:00</updated>
+ <updated>2022-08-29T19:32:24+01:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
    <email>thomas.chatting@icloud.com</email>
  </author>
 
+ 
+ <entry>
+   <title>two thousand and twenty two 🏕️</title>
+   <link href="http://localhost:4000/2022/08/29/two-thousand-and-twenty-two/"/>
+   <updated>2022-08-29T00:00:00+01:00</updated>
+   <id>http://localhost:4000/2022/08/29/two-thousand-and-twenty-two</id>
+    <content type="html"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/gb/album/black-dog/1502254966?i=1502254973"></iframe>
+
+<p>Quick note: I’ve noticed that YouTube are clamping down super hard on embedding music, which sucks. The YouTube link to the above song is <a href="https://www.youtube.com/watch?v=QOu0Ht0-D4M">here</a>.</p>
+
+<p>I went kind of hard on neglecting this website, other than quietly changing the style a couple of times when I got an <em>itch</em>.</p>
+
+<p>This year I’ve pivoted career within IT to <em>Business Intelligence</em>, more specifically: Data Warehousing. I think in 🇺🇸 it’s more known as Data Science, though I’d probably be considered more of a “dba”. The pace is very different to working in IT Operations (which was basically retail), and I’m really settled into the role after six months. To quote a manager “you get to chill out and make some cool shit”.</p>
+
+<p>We’ve also taken the little one on a camping trip. This was way too much fun, weirdly even the five hour drive down to North Norfolk (Aha!).</p>
+
+<p class="center-text"><img alt="A map showing Hunstanton in The Wash of the United Kingdom's east coast" src="/static/images/IMG_2243.jpg" /></p>
+
+<p>After getting each other some proper walking boots on our birthdays, we’ve also taken up hiking. Me and the guys climbed the 16km <a href="https://www.nationaltrust.org.uk/marsden-moor-estate/trails/standedge-circuit-walk">Standedge Circuit</a> (435 m), armed with tuna sandwiches, whiskey and plenty of beer on my birthday, then more recently on Jenni’s birthday we climbed Pen-y-ghent (694 m). Both have very short, sharp scrambles and beautiful views.</p>
+
+<h2 id="anyway">anyway</h2>
+
+<p>There’s a lot of articles I’ve been reading for work (and not for work) which led to the inspiration for me to take fingers-to-keyboard and update/write for this blog again. I’ll try to share them Soon™️, however no promises as the little one has nearly finished her Turkey Dinosaurs and Chips so it’s nearly story time.</p>
+</content>
+ </entry>
  
  <entry>
    <title>ubuntu portable setup and hardening 🐧</title>
@@ -494,17 +519,6 @@ I flirted with the idea of returning to the OG Google Chromebook (link to review
 
 <hr />
 
-<p>In <a href="/2015/11/16/time-passes">November 2015</a> I reflected on the life I was living, and alluded to a discontent in <em>how</em> I was living said life:</p>
-
-<blockquote>
-  <p>Maybe I’ll
-fall into the same slump as before (again even if only slightly), or maybe I’ll
-manage just enough of a change to nudge myself into another New Tom. Future Tom.
- I hope he looks back at this release and cringes.</p>
-</blockquote>
-
-<p>Well, I’m looking back and I’m not cringing. This self-reflection really put gears in motion in my mind to produce what has become one of my favourite years alive so far.</p>
-
 <h2 id="2016-the-year-of-did-i-do-that">2016: the year of “did <em>I</em> do that?”</h2>
 
 <p>My greatest accomplishment in 2016 stood on the shoulders of my second-greatest: I became a manager at <em>big red</em>. I was voted “People’s Choice” for best Customer Service Team Leader/Adviser. Now, I’m not the work obsessed gremlin ranking such an achievement would suggest, but it was the moment I accepted what I meant to others. I saw my best friend cry as I took the prize and felt like I’d really done them proud, in fact, I’d done <em>myself</em> proud.</p>
@@ -948,74 +962,6 @@ like to credit my entire degree.</p>
 <p>Merry Holiday, I’ll write again next year* (*maybe)</p>
 
 <p><img src="http://i.imgur.com/Jf9sGwr.png" alt="" /></p>
-</content>
- </entry>
- 
- <entry>
-   <title>At some point between hitting the real world and now, I lost track of time</title>
-   <link href="http://localhost:4000/article/2015/11/16/time-passes/"/>
-   <updated>2015-11-16T00:00:00+00:00</updated>
-   <id>http://localhost:4000/article/2015/11/16/time-passes</id>
-    <content type="html"><iframe width="640" height="315" src="//www.youtube.com/embed/7gtdpnKbT10" frameborder="0" allowfullscreen="1"> </iframe>
-
-<h2 id="sometimes-i-sit-here-staring-at-the-blinking-cursor-like-an-artist-stares-at-a-blank-canvas">Sometimes I sit here staring at the blinking cursor like an artist stares at a blank canvas</h2>
-
-<p><img src="http://zippy.gfycat.com/CalculatingApprehensiveAtlanticridleyturtle.gif" alt="" /></p>
-
-<p>But this isn’t art, it’s a release. Or is a release a kind of art?</p>
-
-<p>Since May, I can’t think of a massive amount in my life that has changed, but a
-lot of minor things can be reeled off the top of my head which I think add up
-to a fairly huge change.</p>
-
-<h2 id="i-now-own-my-first-and-only-pair-of-tracksuit-bottoms">I now own my first and only pair of tracksuit bottoms</h2>
-
-<p>I’ve left the phase of my life where I’d revolve around the PC: bed, PC; work,
-PC; home, PC; eat, PC; bed.</p>
-
-<p>In a quest to free myself from the chair and desk, I bought a MacBook Air and a
-Kindle; using the money from an accolade at work to fund several books. I burned
- through the books and used the MacBook as an ASMR machine. I bought loose
-fitting tracksuit bottoms and plain-cotton tees. I wrote a lot of letters to
-people which I’d never deliver. I culled my <a href="https://open.spotify.com/user/tomchatting/playlist/06BE3SX9j3lDJVSdaHCgRh">Spotify playlist</a> and started
-again. But I always find a way to relapse, even if slightly. I write this post
-after a week of computer-slump. I have neglected the MacBook, left the Kindle
-in deep sleep, and reverted my Spotify playlist. Maybe people can’t change.</p>
-
-<p>I remember when I once idolised a friend (and part-time lover), and I could
-never understand their obsession with ‘making a change’, pledging every other
-month that they’d finally break their mould and get a full-time lover, a
-fulfilling job, move out of the house. It seemingly never happened, until the
-proactivity from a new interest ended up in everything falling into place.
-They’re getting married now, fuck, even having a kid; and yet here I lay, still
-pledging to not committing until I’m ready, still ultimately alone.</p>
-
-<h2 id="dont-take-for-granted-one-you-can-confide-in-because-once-theyre-gone-theres-no-lonelier-place">Don’t take for granted one you can confide in, because once they’re gone there’s no lonelier place</h2>
-
-<p>Although I count myself lucky enough to have three close (<em>best</em>) friends, I
-find myself no longer having someone I can tell <em>everything</em>. My idol was the
-one I would share everything with, and they reciprocated. Although at the time
-it felt very natural and familiar, now they’re gone there’s a crippling
-loneliness that could almost be mistaken for sadness. But it’s not: it’s real
-life.</p>
-
-<h2 id="ultimately-i-may-have-inadvertently-done-a-lot-of-growing-up-over-the-past-12-months">Ultimately I may have inadvertently done a lot of growing up over the past 12 months</h2>
-
-<p>It’s my 12 months anniversary of starting my job at <code class="language-plaintext highlighter-rouge">Big Red Bank</code>. I’ve
-never missed a day, I’ve never been later than 30 minutes early. Head down,
-full-charge. Every. Damn. Day. I look back at myself 12 months ago and see
-a much shyer, reclusive young man. Working at a call centre has a very important
- early lesson: talk spreads. That includes information about myself. Some people
- embrace me, others do not. But ultimately the difference between now Tom and
-then Tom is: I simply don’t care.</p>
-
-<p>So where does this leave the next 12 months? I still have short-term goals. But
-I’m looking much more long-term than I ever have before. I want to learn more
-culture, I want to develop my vocabulary, I want to try new food. Maybe I’ll
-fall into the same slump as before (again even if only slightly), or maybe I’ll
-manage just enough of a change to nudge myself into another New Tom. Future Tom.
- I hope he looks back at this release and cringes.</p>
-
 </content>
  </entry>
  
