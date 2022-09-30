@@ -17,10 +17,17 @@ permalink: /reading/
     </tr>
 
     <tr>
+        <td>2022-09-30</td>
+        <td>why fish don't exist</td>
+        <td>lulu miller</td>
+        <td>🟢</td>
+    </tr>
+
+    <tr>
         <td>2022-09-19</td>
         <td>never let me go</td>
         <td>kazuo ishiguro</td>
-        <td>🟢</td>
+        <td>☑️</td>
     </tr>
 
     <tr>
