@@ -4,13 +4,47 @@
  <title>Thomas Chatting</title>
  <link href="http://localhost:4000/feed.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-09-30T22:19:01+01:00</updated>
+ <updated>2023-01-09T20:24:15+00:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Thomas Chatting</name>
    <email>thomas.chatting@icloud.com</email>
  </author>
 
+ 
+ <entry>
+   <title>hp ubuntu stuck in boot ➰</title>
+   <link href="http://localhost:4000/2023/01/09/hp-ubuntu-stuck-on-boot/"/>
+   <updated>2023-01-09T00:00:00+00:00</updated>
+   <id>http://localhost:4000/2023/01/09/hp-ubuntu-stuck-on-boot</id>
+    <content type="html"><p>I installed Ubuntu 22.04 LTS into my laptop, and after completing first time setup and completing software updates the laptop only booted successfully about 50% of the time.</p>
+
+<h2 id="troubleshooting-steps">troubleshooting steps</h2>
+
+<ul>
+  <li>boot into recovery mode</li>
+  <li>enable networking</li>
+  <li>drop to root recovery</li>
+  <li>
+    <blockquote>
+      <p>sudo apt update &amp;&amp; sudo apt upgrade -y</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>journalctl –since today</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>systemctl disable systemd-networkd-wait-online.service</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Turns out the Wi-Fi was stuck in a loop waiting to connect and was stopping the login screen from launching. Boot is now way quicker now too.</p>
+</content>
+ </entry>
  
  <entry>
    <title>two thousand and twenty two 🏕️</title>
