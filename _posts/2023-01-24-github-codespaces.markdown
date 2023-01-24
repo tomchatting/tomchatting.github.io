@@ -21,3 +21,5 @@ $ rails server
 You get a considerable amount of free-use for running your dev environment, and the enterprise options don't seem ridiculous, either.
 
 Controversial thought: GitHub has gone from strength to strength since the Microsoft acquisition--with the exception of sunsetting Atom. Rip Atom.
+
+Complete aside: [https://github.com/github/renaming](https://github.com/github/renaming)
