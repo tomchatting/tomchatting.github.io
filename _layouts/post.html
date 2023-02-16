@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<main>
+<section class=post>
   <article>
-    <p class=date><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time></p>
     <h1>{{ page.title }}</h1>
+    <p class=post-meta><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time></p>
     <summary>{{page.blurb}}</summary>
     {{ page.content }}
     {% include end_plug.html %}
@@ -24,4 +24,4 @@ layout: default
     </p>
     {% endfor %}
   </aside>
-</main>
+</section>

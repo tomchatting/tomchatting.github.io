@@ -2,42 +2,54 @@
 <html lang=en>
 <meta charset=utf-8>
 <meta name=viewport content="initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Website and musings of Thomas Chatting, a business intelligence developer and all-round nerd from the UK.">
+<meta name="description"
+  content="Website and musings of Thomas Chatting, a business intelligence developer and all-round nerd from the UK.">
 <meta name="supported-color-schemes" content="light dark">
-<!--<meta name="theme-color" content="#F8F1E3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#434346" media="(prefers-color-scheme: dark)">-->
+<meta name="theme-color" content="#F8F1E3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#434346" media="(prefers-color-scheme: dark)">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+<script src=/static/lights.js defer></script>
+
+<link rel="icon"
+  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 
 <title>Surviving Without Google Reader ~ Thomas Chatting</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,500&display=swap" rel="stylesheet">
-<link rel=stylesheet href=/static/main.css>
+<link rel=stylesheet href=/static/style.css>
 <link rel=stylesheet href=/static/monokai.css>
 
 <body class="post">
 
-<header>
-  <div class=page-width>
-    <h1><a href=/>Thomas Chatting</a></h1>
-    <nav>
-      <ul>
-        <li><a href=/>About</a></li>
-        <li><a href=/writing>Writing</a></li>
-        <li><a href=/reading>Reading</a></li>
-        <li><a href=/running>Running</a></li>
-        <li><a href="https://hexagon.tomwillgoto.space">PHP Sandbox</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header>
+    <section>
+      <h1><a href= />Thomas Chatting</a></h1>
+      <nav>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul>
+          <li><a href= />About</a></li>
+          <li><a href=/writing>Writing</a></li>
+          <li><a href=/reading>Reading</a></li>
+          <li><a href=/running>Running</a></li>
+          <li>
+            <div class=theme>
+              <div class=theme-switch-wrapper>
+                <label class=theme-switch for=checkbox>
+                  <input type=checkbox id=checkbox class=toggle>
+                  <em>Dark mode toggle</em>
+                </label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
 
-<main>
+  <section class=post>
   <article>
-    <p class=date><time datetime='2013-06-25'>25 Jun 2013</time></p>
     <h1>Surviving Without Google Reader</h1>
+    <p class=post-meta><time datetime='2013-06-25'>25 Jun 2013</time></p>
     <summary></summary>
     <h2 id="rss-is-dead-long-live-rss">RSS is dead, long live RSS</h2>
 
@@ -104,12 +116,13 @@
     </p>
     
   </aside>
-</main>
+</section>
 
 
-<footer>
-  <div class=page-width>
-    <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a href=https://github.com>GitHub</a>.<br>
-      &copy; 2012-2023 <a href=//twitter.com/_tomch target="_blank">Thomas Chatting</a></p>
-  </div>
-</footer>
+  <footer>
+    <div>
+      <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a
+          href=https://github.com>GitHub</a>.<br>
+        &copy; 2012-2023 <a href=//twitter.com/_tomch target="_blank">Thomas Chatting</a></p>
+    </div>
+  </footer>
