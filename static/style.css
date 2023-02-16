@@ -1,0 +1,266 @@
+:root {
+    --color-primary: #302AE6;
+    --color-secondary: #536390;
+    --color-font: #424242;
+    --color-bg: #fff;
+    --color-heading: #292922;
+    --color-href: #0077aa;
+    --section-width: 68%;
+}
+
+@media only screen and (max-width: 809px) {
+    :root {
+        --section-width: 100%;
+    }
+}
+
+[data-theme="dark"] {
+    --color-primary: #9A97F3;
+    --color-secondary: #818cab;
+    --color-font: #e1e1ff;
+    --color-bg: #161625;
+    --color-heading: #818cab;
+}
+
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: calc(1rem + 0.25vh);
+    line-height: 1.5;
+    color: var(--color-font);
+    background-color: var(--color-bg);
+}
+
+header section {
+    display: grid;
+    grid-template-areas:
+        "title nav";
+    align-items: start;
+}
+
+header h1 {
+    grid-area: title;
+    margin-top: 0.7rem;
+}
+
+header nav {
+    grid-area: nav;
+
+}
+
+
+header nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    padding-top: 8px;
+}
+
+header nav ul li {
+    display: block;
+}
+
+header nav li a:hover,
+header nav .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+header nav {
+    clear: both;
+    max-height: fit-content;
+    transition: max-height .2s ease-out;
+}
+
+
+header nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+}
+
+header nav .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+header nav .menu-icon .navicon:before,
+header nav .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+header nav .menu-icon .navicon:before {
+    top: 5px;
+}
+
+header nav .menu-icon .navicon:after {
+    top: -5px;
+}
+
+header nav ul {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+header nav .menu-btn {
+    display: none;
+}
+
+header nav .menu-btn:checked~ul {
+    max-height: 240px !important;
+}
+
+header nav .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+header nav .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header nav .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+header nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+
+@media (min-width: 48em) {
+    nav li {
+        display: inline-block !important;
+    }
+
+    header li a {
+        padding: 20px 30px;
+    }
+
+    header li a:hover {
+        background-color: transparent !important;
+    }
+
+    header nav ul {
+        clear: none;
+        max-height: none;
+        top: 0 !important;
+        left: 0;
+    }
+
+    nav .menu-icon {
+        display: none !important;
+    }
+}
+
+h1 {
+    color: var(--color-heading);
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+    color: var(--color-href);
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+
+section {
+    max-width: var(--section-width);
+    margin: 0 auto;
+}
+
+.post-meta {
+    font-size: 1rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 4vh;
+}
+
+.theme {
+    grid-area: theme-switcher;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch-wrapper em {
+    display: none;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.toggle {
+    --size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: 999px;
+    color: #e6e6ff;
+    transition: all 500ms;
+}
+
+.toggle:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    color: #ffaa00;
+    box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+table {
+    display: grid;
+    justify-content: center;
+}
+
+img, iframe, pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+pre, code, figure {
+    margin: 0;
+}
