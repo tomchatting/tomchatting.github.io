@@ -47,9 +47,11 @@ body.default:before {
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
-  }
+}
 
-body.default header, body.default section, body.default footer {
+body.default header,
+body.default section,
+body.default footer {
     position: relative;
 }
 
@@ -58,7 +60,7 @@ header section {
     grid-template-areas:
         "title nav";
     align-items: start;
-    justify-content:  space-between;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -66,14 +68,15 @@ header h1 {
     margin-top: 0.7rem;
 }
 
-.home h1 {
+.home h1,
+h1.page-top {
     font-size: 52px !important;
     line-height: 50px !important;
     font-weight: 600 !important;
     letter-spacing: -0.96px;
 }
 
-.home p.lede {  
+.home p.lede {
     color: var(--color-secondary);
     font-size: 18px !important;
     line-height: 30px !important;
@@ -112,7 +115,7 @@ header nav .menu-btn:hover {
 header nav .menu-icon {
     width: 20px;
     height: 20px;
-    padding-top: 1em;
+    padding-top: 2em;
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -176,43 +179,6 @@ header nav .menu-btn:checked~.menu-icon .navicon:after {
 header nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
 header nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
     top: 0;
-}
-
-
-
-@media (min-width: 1321px) {
-    nav li {
-        display: inline-block !important;
-    }
-
-    header li a {
-        padding: 20px 30px;
-    }
-
-    header li a:hover {
-        background-color: transparent !important;
-    }
-
-    header nav ul {
-        clear: none;
-        max-height: none;
-        top: 0 !important;
-        left: 0;
-    }
-
-    nav .menu-icon {
-        display: none !important;
-    }
-    
-    .home h1 {
-        font-size: 96px !important;
-        line-height: 100px !important;
-    }
-
-    .home p.lede {
-        font-size: 32px !important;
-        line-height: 44px !important;
-    }
 }
 
 h1 {
@@ -302,17 +268,122 @@ table {
     justify-content: center;
 }
 
-img, iframe, pre, code {
+img,
+iframe,
+pre,
+code {
     max-width: 100%;
     overflow-x: auto;
 }
 
-pre, code, figure {
+pre,
+code,
+figure {
     margin: 0;
+}
+
+.reading-top {
+    background: url(/static/images/reading-top.png) no-repeat center center;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: block;
+}
+
+.running-top,
+.reading-top {
+    height: 200px;
+}
+
+.running-top {
+    background: url(/static/images/running-top.png) no-repeat center center;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: block;
+}
+
+.running-top svg,
+.reading-top svg {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.running-stats {
+    background: #f2f8ff;
+    color: #3a68bb;
+    padding: 1.5rem;
+}
+
+.running-stats p {
+    display: inline-block;
+    width: 400px;
+}
+
+.running-stats span:nth-child(1) {
+    display: inline-block;
+    width: 150px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    border-right: 1px solid #3a67bb57;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.running-stats span:nth-child(2) {
+    display: inline-block;
+    width: 200px;
+    word-break: break-all;
 }
 
 footer section {
     text-align: center;
     margin-top: 1rem;
     border-top: 1px solid var(--color-secondary);
+}
+
+@media (min-width: 1321px) {
+    nav li {
+        display: inline-block !important;
+    }
+
+    header li a {
+        padding: 20px 30px;
+    }
+
+    header li a:hover {
+        background-color: transparent !important;
+    }
+
+    header nav ul {
+        clear: none;
+        max-height: none;
+        top: 0 !important;
+        left: 0;
+    }
+
+    nav .menu-icon {
+        display: none !important;
+    }
+
+    .home h1 {
+        font-size: 96px !important;
+        line-height: 100px !important;
+    }
+
+    .home p.lede {
+        font-size: 32px !important;
+        line-height: 44px !important;
+    }
+
+    .reading-top,
+    .running-top {
+        height: 300px;
+    }
+
+    .reading-top svg,
+    .running-top svg {
+        padding-top: 100px;
+    }
 }
