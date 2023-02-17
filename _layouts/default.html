@@ -22,9 +22,9 @@
 
   <header>
     <section>
-      <h1><a href= />Thomas Chatting</a></h1>
+      <h1><a href= />🚀{% if page.title != "Home" %} Thomas Chatting{% endif %}</a></h1>
       <nav>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <input class="menu-btn" type="checkbox" id="menu-btn">
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul>
           <li><a href= />About</a></li>
@@ -35,7 +35,7 @@
             <div class=theme>
               <div class=theme-switch-wrapper>
                 <label class=theme-switch for=checkbox>
-                  <input type=checkbox id=checkbox class=toggle>
+                  <input type=checkbox id=checkbox class=toggle checked>
                   <em>Dark mode toggle</em>
                 </label>
               </div>
@@ -49,9 +49,9 @@
   {{ content }}
 
   <footer>
-    <div>
+    <section>
       <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a
           href=https://github.com>GitHub</a>.<br>
         &copy; 2012-2023 <a href=//twitter.com/_tomch target="_blank">Thomas Chatting</a></p>
-    </div>
+      </section>
   </footer>
