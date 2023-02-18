@@ -76,7 +76,7 @@ h1.page-top {
     letter-spacing: -0.96px;
 }
 
-.home p.lede {
+p.lede {
     color: var(--color-secondary);
     font-size: 18px !important;
     line-height: 30px !important;
@@ -188,9 +188,18 @@ h1 {
     margin-bottom: 1vh;
 }
 
+h2 {
+    margin-top: 1vh;
+    margin-bottom: 0;
+}
+
 p {
     font-size: 1.1rem;
     line-height: 1.6rem;
+}
+
+h2 + p {
+    margin-top: 0;
 }
 
 a {
@@ -215,6 +224,7 @@ section {
     font-size: 1rem;
     font-style: italic;
     display: block;
+    margin-top: 0;
     margin-bottom: 4vh;
 }
 
@@ -338,9 +348,37 @@ figure {
     word-break: break-all;
 }
 
+.archive h1.hero {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.archive ul.posts {
+    list-style: none;
+    display: block;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.archive ul.posts li {
+    margin: 1.5vw 0;
+    border-top: #cccccc21 1px solid;
+    padding-top: 1.5vw;
+}
+
+.archive ul.posts li time {
+    display: block;
+    font-size: 1rem;
+}
+
 footer section {
     text-align: center;
     margin-top: 1rem;
+    border-top: 1px solid var(--color-secondary);
+}
+
+hr {
+    border: none;
     border-top: 1px solid var(--color-secondary);
 }
 
@@ -363,6 +401,10 @@ footer section {
         background-color: transparent !important;
     }
 
+    .archive h1.hero {
+        margin-top: 1rem;
+    }
+
     header nav ul {
         clear: none;
         max-height: none;
@@ -379,7 +421,7 @@ footer section {
         line-height: 100px !important;
     }
 
-    .home p.lede {
+    p.lede {
         font-size: 32px !important;
         line-height: 44px !important;
     }
