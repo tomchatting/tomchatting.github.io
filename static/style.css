@@ -2,7 +2,7 @@
     --color-primary: #302AE6;
     --color-secondary: #536390;
     --color-font: #424242;
-    --color-bg: #fff;
+    --color-bg: #fefefe;
     --color-heading: #292922;
     --color-href: #0077aa;
     --section-width: 68%;
@@ -138,7 +138,7 @@ header nav .menu-icon .navicon:after {
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: all 200ms ease-out;
     width: 100%;
 }
 
@@ -153,11 +153,12 @@ header nav .menu-icon .navicon:after {
 header nav ul {
     clear: both;
     max-height: 0;
-    transition: max-height .2s ease-out;
+    transition: max-height 500ms ease-in;
 }
 
 header nav .menu-btn {
     display: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 header nav .menu-btn:checked~ul {
@@ -251,7 +252,7 @@ section {
     box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
     border-radius: 999px;
     color: #e6e6ff;
-    transition: all 500ms;
+    transition: all 1000ms ease;
 }
 
 .toggle:checked {
