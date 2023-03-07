@@ -24,17 +24,24 @@ permalink: /reading/
         </tr>
 
         <tr>
+            <td>2023-03-02</td>
+            <td>the book of lost things</td>
+            <td>john connolly</td>
+            <td>🟢</td>
+        </tr>
+        
+        <tr>
             <td>2023-02-17</td>
             <td>woman, girl, other</td>
             <td>bernardine evaristo</td>
-            <td>🟢</td>
+            <td>☑️</td>
         </tr>
 
         <tr>
             <td>2022-09-30</td>
             <td>why fish don't exist</td>
             <td>lulu miller</td>
-            <td>🟢</td>
+            <td>☑️</td>
         </tr>
 
         <tr>
