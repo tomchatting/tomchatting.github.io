@@ -9,7 +9,7 @@
     --p-size: 1.33rem;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     :root {
         --section-width: 100%;
         --p-size: 1rem;
