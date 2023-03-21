@@ -7,7 +7,7 @@ category: article
 
 I've spent some time setting up and configuring macOS Ventura on a rescued Dell Latitude 7280.
 
-![A screenshot of a macOS desktop displaying "About this Mac"](https://github.com/tomchatting/Dell_Latitude_7280_macOS/raw/main/Screenshots/AboutThisMac.png)
+<img src="https://github.com/tomchatting/Dell_Latitude_7280_macOS/raw/main/Screenshots/AboutThisMac.png" alt="A screenshot of a macOS desktop displaying About this Mac" width=800 height=450 />
 
 I've documented my endeavour, as well as a list of what's working (most of it) on [GitHub](https://github.com/tomchatting/Dell_Latitude_7280_macOS) for anyone with a similar spec machine.
 

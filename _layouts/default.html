@@ -9,6 +9,7 @@
 <meta name="theme-color" content="#161625" media="(prefers-color-scheme: dark)">
 
 <script src=/static/lights.js defer></script>
+<script src=/static/battery.js defer></script>
 
 <link rel="icon"
   href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
@@ -45,6 +46,10 @@
       </nav>
     </section>
   </header>
+
+  <section id="fully-charged" class="battery-alert d-none">
+    <p>Your device's 🔋 is fully charged, consider unplugging to <a href=https://www.apple.com/uk/batteries/ target=_blank>maximise battery health</a> and reduce energy use.</p>
+  </section>
 
   {{ content }}
 
