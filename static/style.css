@@ -5,12 +5,14 @@
     --color-bg: #fefefe;
     --color-heading: #292922;
     --color-href: #0077aa;
-    --section-width: 68%;
+    --section-width: 800px;
+    --p-size: 1.33rem;
 }
 
-@media only screen and (max-width: 1079px) {
+@media only screen and (max-width: 1000px) {
     :root {
         --section-width: 100%;
+        --p-size: 1rem;
     }
 }
 
@@ -32,7 +34,7 @@ body {
     height: 100vh;
     margin: 0 auto;
     font-size: calc(1rem + 0.25vh);
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--color-font);
 }
 
@@ -115,6 +117,7 @@ header nav .menu-icon {
     display: inline-block;
     position: relative;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 header nav .menu-icon .navicon {
@@ -189,8 +192,7 @@ h2 {
 }
 
 p {
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-size: var(--p-size);
 }
 
 h2 + p {
@@ -202,13 +204,13 @@ a {
     border-bottom: 3px solid transparent;
     font-weight: bold;
     color: var(--color-href);
+    -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
 
 a:hover,
 a:focus {
     text-decoration: underline;
 }
-
 
 section {
     max-width: var(--section-width);
@@ -248,6 +250,7 @@ section {
     --size: calc(1rem + 0.25vh);
     -webkit-appearance: none;
     -moz-appearance: none;
+    -webkit-tap-highlight-color: transparent;
     appearance: none;
     vertical-align: text-top;
     outline: none;
@@ -389,7 +392,7 @@ hr {
     }
 
     header li a {
-        padding: 20px 30px;
+        padding: 20px 20px;
     }
 
     header li a:hover {
@@ -412,23 +415,23 @@ hr {
     }
 
     .home h1 {
-        font-size: 96px !important;
-        line-height: 100px !important;
+        font-size: 60px !important;
+        line-height: 65px !important;
     }
 
     p.lede {
-        font-size: 32px !important;
-        line-height: 44px !important;
+        font-size: 28px !important;
+        line-height: 40px !important;
     }
 
     .reading-top,
     .running-top {
-        height: 300px;
+        height: 200px;
     }
 
     .reading-top svg,
     .running-top svg {
-        padding-top: 100px;
+        padding-top: 50px;
     }
     .running-stats p {
         width: 400px;
