@@ -4,7 +4,7 @@ title: "my new typewriter - the powerbook g4 🍎"
 category: ramble
 ---
 
-<iframe width="700" height="394" src="//www.youtube.com/embed/gA-NDZb29I4" frameborder="0" allowfullscreen="0"> </iframe>
+<iframe class="video" src="//www.youtube.com/embed/gA-NDZb29I4" frameborder="0" allowfullscreen="0"> </iframe>
 
 ## In 2003, Steve Jobs introduced the 15” PowerBook series of notebooks to the world. A year later, he sandwiched the 15” machine in between 12” and 17” counterparts. 13 years later, I bought a 12” PowerBook G4. Why? How? What? And, most importantly, why?
 

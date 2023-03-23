@@ -4,7 +4,7 @@ title: "ipad pro: surely apple will kill this before it dies 👻"
 category: ramble
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VaNslyQe6_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="0"> </iframe>
+<iframe class="video" src="https://www.youtube.com/embed/VaNslyQe6_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="0"> </iframe>
 
 [Back in late 2017](https://www.tomwillgoto.space/ramble/2017/12/17/ipad-pro/), I posted a review of my 10.5 inch iPad Pro. Over five years later, I'm sat at my kitchen table with that same (*model of*) iPad Pro hooked up to a 22" monitor with an Apple Keyboard typing away at this blog post.
 
