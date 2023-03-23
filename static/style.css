@@ -372,6 +372,10 @@ figure {
     font-size: 1rem;
 }
 
+footer {
+    padding-bottom: 1rem;
+}
+
 footer section {
     text-align: center;
     margin-top: 1rem;
