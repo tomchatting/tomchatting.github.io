@@ -191,7 +191,7 @@ h2 {
     margin-bottom: 0;
 }
 
-p {
+p, li {
     font-size: var(--p-size);
 }
 
