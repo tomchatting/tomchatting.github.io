@@ -18,10 +18,17 @@ permalink: /reading/
         </tr>
 
         <tr>
+            <td>2023-03-30</td>
+            <td>to be a machine</td>
+            <td>mark o'connell</td>
+            <td>🟢</td>
+        </tr>
+
+        <tr>
             <td>2023-03-02</td>
             <td>the book of lost things</td>
             <td>john connolly</td>
-            <td>🟢</td>
+            <td>☑️</td>
         </tr>
         
         <tr>

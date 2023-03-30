@@ -12,6 +12,6 @@ permalink: /running/
     <div class=running-stats>
         <p><span>107km</span> <span>Distance run in 2021</span></p>
         <p><span>101km</span> <span>Distance run in 2022</span></p>
-        <p><span>21km</span> <span>Distance run in 2023</span></p>
+        <p><span>56km</span> <span>Distance run in 2023</span></p>
     </div>
 </section>
