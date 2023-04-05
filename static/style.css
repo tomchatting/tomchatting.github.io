@@ -340,6 +340,10 @@ figure {
     margin: 0;
 }
 
+pre {
+    padding: 1em;
+}
+
 .reading-top {
     background: url(/static/images/reading-top.png) no-repeat center center;
     max-width: 1280px;
