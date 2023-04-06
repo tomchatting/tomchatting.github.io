@@ -419,8 +419,12 @@ pre {
 
 .archive ul.posts li {
     margin: 1.5vw 0;
-    border-top: #cccccc21 1px solid;
+    border-top: #cccccc6e 1px solid;
     padding-top: 1.5vw;
+}
+
+.archive ul.posts li a {
+    display: block;
 }
 
 .archive ul.posts li time {
