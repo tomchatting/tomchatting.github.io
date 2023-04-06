@@ -62,7 +62,7 @@ header section {
 
 header h1 {
     grid-area: title;
-    margin-top: 0.7rem;
+    margin-top: 0.8rem;
 }
 
 .home h1,
