@@ -4,7 +4,7 @@ title: "flaky-toothbrush, a ci/cd playground built on surge.sh 🧑‍💻"
 category: ramble
 ---
 
-<iframe class="video" src="https://www.youtube.com/embed/SrMK8d9H_GM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="0"> </iframe>
+<iframe class="video" src="https://www.youtube.com/embed/L9HYJbe9Y18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="0"> </iframe>
 
 I've hinted in a [previous post](https://www.tomwillgoto.space/article/2023/01/24/github-codespaces/) that I was using GitHub Codespaces to complete some of my development without having to spin up my dev environment on every machine I use. I'm now also using GitHub Actions to teach myself [CI/CD](https://en.wikipedia.org/wiki/CI/CD), and I've managed to plug it into [surge.sh](https://surge.sh) so I can play around with some front-end development without having to commit any time to looking after a server.
 
