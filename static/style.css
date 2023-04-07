@@ -62,7 +62,7 @@ header section {
 
 header h1 {
     grid-area: title;
-    margin-top: 0.7rem;
+    margin-top: 0.8rem;
 }
 
 .home h1,
@@ -340,6 +340,10 @@ figure {
     margin: 0;
 }
 
+pre {
+    padding: 1em;
+}
+
 .reading-top {
     background: url(/static/images/reading-top.png) no-repeat center center;
     max-width: 1280px;
@@ -415,8 +419,12 @@ figure {
 
 .archive ul.posts li {
     margin: 1.5vw 0;
-    border-top: #cccccc21 1px solid;
+    border-top: #cccccc6e 1px solid;
     padding-top: 1.5vw;
+}
+
+.archive ul.posts li a {
+    display: block;
 }
 
 .archive ul.posts li time {
@@ -440,8 +448,8 @@ hr {
 }
 
 .battery-alert {
-    border: 1px solid #4bdc79;
-    background: #3abb3a33;
+    border: 1px solid #bbd8c5;
+    background: #92b89233;
     text-align: center;
 }
 
@@ -478,7 +486,7 @@ iframe.video {
     }
 
     header li a {
-        padding: 20px 20px;
+        padding: 20px 15px;
     }
 
     header li a:hover {
