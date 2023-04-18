@@ -405,8 +405,8 @@ pre {
 }
 
 .archive h1.hero, article h1.post-title {
-    font-size: 3rem;
-    line-height: 3.4rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
     margin-top: 0;
 }
 
@@ -495,6 +495,12 @@ iframe.video {
 
     .archive h1.hero {
         margin-top: 1rem;
+    }
+
+    .archive h1.hero, article h1.post-title {
+        font-size: 3rem;
+        line-height: 3.4rem;
+        margin-top: 0;
     }
 
     header nav ul {
