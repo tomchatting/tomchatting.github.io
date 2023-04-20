@@ -27,7 +27,7 @@ There are services like Sean Inman's [Fever][fever] and [Tiny Tiny RSS][ttrss], 
 
 Sadly, I did concede in the end and couldn't persevere to find a good solution. I uninstalled the Google Reader app from my phone and removed it from the default tabs on Chrome. My information glut has begun.
 
-![Filling the gap](/static/images/4nb5s4t.png)
+![Filling the gap](/static/images/4nb5s4t.png.jpeg)
 
 My only viable alternative for now has been to install [Hacker News][hn] and [Reddit][reddit] apps, which I try to keep on top of at least 2-3 times a day, but sadly, much like it used to pre-Reader, news and information can just pass me by. (Luckily the big stuff like all the current Snowden malarky stays on the frontpages for long enough for me to pick up on.)
 
