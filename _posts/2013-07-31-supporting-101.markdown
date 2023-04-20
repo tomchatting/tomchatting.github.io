@@ -37,18 +37,18 @@ The "easiest" support champion I could recommend at the moment is Leona. If you'
 
 I swear by Gold runes. They are very expensive though so you don't need to necessarily buy them if you're smurfing, but if you're planning on playing more than one support, I highly recommend you buy Gold Quintessences.
 
-![Example rune page](http://i.imgur.com/14fWefZ.png)
+![Example rune page](/static/images/14fWefZ.png)
 
 > **Wait, why no Gold yellows?**  
 > While gold quintessences give you +3 GP10 (*Philo gives you +5/10 as a comparison*), nine gold yellows only add +2 GP10, which may sound like a lot, but leaves you missing out on 12 armour which armour yellows could be providing. That's the difference between an auto attack killing you, and leaving you with enough health to return to base.
 
 ### Masteries
 
-I like to go [1/12/17 for melee supports](http://i.imgur.com/YJ9zmye.jpg) and [5/0/25 for ranged](http://i.imgur.com/jLFzwF7.jpg), with a completed Utility tree and more cooldown reduction for ranged supports and a slightly sacrificed Utility tree and more defence points for melee (the explanation shouldn't be necessary). 
+I like to go [1/12/17 for melee supports](/static/images/YJ9zmye.jpg) and [5/0/25 for ranged](/static/images/jLFzwF7.jpg), with a completed Utility tree and more cooldown reduction for ranged supports and a slightly sacrificed Utility tree and more defence points for melee (the explanation shouldn't be necessary). 
 
 ### Playing Leona
 
-![Playing Leona](http://i.imgur.com/AE9oErN.gif)
+![Playing Leona](/static/images/AE9oErN.gif)
 
 Level Shield of Daybreak (Q), Zenith Blade (E) , Eclipse (W). Max W first followed by Q. Your "combo" is to activate your Q and W, then E onto the enemy marksman and let things happen. Your ultimate is great at locking down enemies, or slowing/stopping them when they try to run. Remember Solar Flare stuns enemies trapped in the centre, and slows enemies around it.
 
@@ -56,7 +56,7 @@ Level Shield of Daybreak (Q), Zenith Blade (E) , Eclipse (W). Max W first follow
 
 In ranked, counter Leona with champions like Soraka, Lulu, Alistar, and Janna. These heroes all have interrupts, heals and/or shields to disrupt and fix the damage from a Leona.
 
-![Beating Leona](http://i.imgur.com/UbZnDdM.gif)
+![Beating Leona](/static/images/UbZnDdM.gif)
 
 A quick E, W, Q combo can protect your carry from Leona, and deal tonnes of damage in return.
 
@@ -72,13 +72,13 @@ Yesterday, I had a game which was a prime example of this. As Thresh, I had a Tr
 
 Your greatest asset as a support is your kit. Learn your Q through R, buy items like Aegis (upgrade it to a Locket), Randuin's, Zeke's Herald, Twin Shadows, Mikael's Crucible etc. Have trouble remembering? Make a custom item set, you want something that looks like this:
 
-![How to support](http://i.imgur.com/g1jfTZ7.png)
+![How to support](/static/images/g1jfTZ7.png)
 
 Keep your carry alive, keep yourself alive (unless you need a "calculated death"), **secure the kills for the team, then your carry**. By that, I mean, only leave a kill if you are certain your carry can lasthit it. If you're on Skype or TeamSpeak, great, they're going to be telling you straight away if you need to lasthit; on solo queue, it's more of a gained skill. As a rule in thumb: when in doubt, just do as much damage as you can, even if it means *taking the kill*. At the end of the day, assist gold is better than no gold for your carry/jungler/roaming mid/tp'ing top laner.
 
 ### Wards are not an optional endeavour
 
-![Minimum wards](http://i.imgur.com/hX27BeQ.jpg)
+![Minimum wards](/static/images/hX27BeQ.jpg)
 
 The sightstone is an incredible item. If you're not building it first you should be building it either directly after your gold item or at the same time as level 1 boots. When you b, always buy a pink and a couple of pots if you can. Mapped above are common locations for wards and smart locations for wards if you're on bot lane, top lane can be translated similarly. **Make bottom lane an impenetrable fortress for all but your team**. (*NB: if the enemy purple team has a Zac, or Thresh, ward purple side tri bush to stop lantern/jump ganks.*)
 

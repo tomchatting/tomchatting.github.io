@@ -60,4 +60,4 @@ for i in 1...100 {
 
 And here's the output:
 
-![fizzbuzz](http://i.imgur.com/moQqpet.png)
+![fizzbuzz](/static/images/moQqpet.png)

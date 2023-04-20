@@ -6,7 +6,7 @@ category: ramble
 
 ### it's been a while since i posted on this blog, in between then and now i had another website which i didn't renew and i forgot to backup the posts, so go me
 
-![Detective Pikachu](https://i.imgur.com/yQZEeaAl.png)
+![Detective Pikachu](/static/images/yQZEeaAl.png.jpeg)
 
 I have unashamedly neglected this blog since the 28th January 2018, and
  invariably I am a monster.

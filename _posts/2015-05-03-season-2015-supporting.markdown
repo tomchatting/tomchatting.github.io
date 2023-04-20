@@ -27,4 +27,4 @@ Roaming and edging advantages means more than ever this season, games are incred
 
 Zero AP Annie/Morgana sounds like trash, but support this season isn't about carrying with damage, it's about carrying with [utility](http://matchhistory.euw.leagueoflegends.com/en/#match-details/EUW1/2092496922/36795625?tab=stats).
 
-![](http://i.imgur.com/CNX5hZN.png)
+![](/static/images/CNX5hZN.png)

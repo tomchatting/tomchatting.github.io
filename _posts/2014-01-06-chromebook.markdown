@@ -13,7 +13,7 @@ Hands down, the 1366x768 IPS display is the best screen on any device I've ever 
 
 ## The year old Exynos 5 still screams
 
-![Meta](http://i.imgur.com/7o8ujnf.png)
+![Meta](/static/images/7o8ujnf.png)
 
 The Samsung Exynos 5 dual-core ARMv7 processor the Chromebook contains is the exact same chip that's inside the Samsung Series 3 from 2012 (which is still on sale at a slightly lower price today), and it's performance shows why Google chose it over putting something newer (and therefore, more expensive) inside the 11. As of writing, I have a Chrome port of Brackets, the code editor I use, called [Tailor](https://chrome.google.com/webstore/detail/tailor/mfakmogheanjhlgjhpijkhdjegllgenf/related?hl=en) running, Spotify playing, and 4 other tabs open in Chrome. Many times I can have two Twitch streams playing at "source" resolution (generally 1080p) without the Chromebook skipping a beat. This is **insane**, my mother's £600 Pavillion laptop running Windows 8.1 can't do this, my £550 year old gaming rig can barely do this, I don't know if it's down to Windows vs Chrome OS or just the ability of the CPU, but this is insanity. Strangely, the Chromebook does struggle when playing audio with Google Play Music's flash player when scrolling through heavy sites like [The Verge](http://theverge.com), but a couple of seconds of stuttering isn't annoying enough to warrant a rant.
 

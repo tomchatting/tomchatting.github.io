@@ -9,7 +9,7 @@ category: article
 
 I've started working on SquareCMS again recently after having some time off work, the [GitHub](//github.com/tomchatting/square) is being updated a lot more and there's a working demo [here](//square-shiftysu.rhcloud.com) if you want to have a play.
 
-![square admin](http://i.imgur.com/CYyqyD7.png)
+![square admin](/static/images/CYyqyD7.png)
 
 ## so will i go back to running on square?
 

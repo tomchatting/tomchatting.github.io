@@ -31,4 +31,4 @@ li {
 
 Merry Holiday, I'll write again next year* (\*maybe)
 
-![](http://i.imgur.com/Jf9sGwr.png)
+![](/static/images/Jf9sGwr.png)

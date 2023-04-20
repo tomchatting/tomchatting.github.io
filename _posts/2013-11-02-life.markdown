@@ -9,7 +9,7 @@ category: note
 
 It's been three months since my last blog post, so I thought I'd post some updates on my life <sup>and excuses for not posting</sup>.
 
-![](http://i.imgur.com/Fbqgtaz.png)
+![](/static/images/Fbqgtaz.png)
 
 ## What is life
 

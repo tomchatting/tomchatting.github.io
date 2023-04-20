@@ -3,7 +3,7 @@ layout: post
 title: "hyper light drifter 🎮"
 headline: "i have no idea what is going on but i love it"
 category: game-review
-hero: http://i.imgur.com/0KRb6U2.gif
+hero: /static/images/0KRb6U2.gif
 date: 2016-04-27
 ---
 

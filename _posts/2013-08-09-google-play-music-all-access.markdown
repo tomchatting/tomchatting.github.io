@@ -7,7 +7,7 @@ category: note
 
 <iframe width="640" height="315" src="//www.youtube.com/embed/2o-bAHQs1cc" frameborder="0" allowfullscreen="1"> </iframe>
 
-<img src="http://i.imgur.com/sVWe3ny.png" height="300px" class="float-left" />
+<img src="/static/images/sVWe3ny.png" height="300px" class="float-left" />
 
 [Google Play Music All Access](https://play.google.com/about/music/) may well hold the title for being the worst named product in Google history, but for £7.99 a month with a 30 day free trial it may also well be the best-value product in Google history.
 

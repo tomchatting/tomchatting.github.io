@@ -29,7 +29,7 @@ Meetings are inevitable, but it's a good idea to pen them in. Having something p
 
 Something I added after having a chat with another manager is a "workbasket", it's a view of how I feel my time has been spent on any given day. I break the day down into its seven working hours, and give each block a code as to what I feel I was spending most of my time doing, be it meetings, management, coaching or feedback. There's no perfect balance of activities and not every day will feature every task, but it gives me an idea of how I'm spending my time; plus it gives me a heads up as to why I might be getting behind on a task (for example, if my observations are behind, maybe I should be spending more time doing feedback or coaching).
 
-![](http://i.imgur.com/VMWX2OPm.png)
+![](/static/images/VMWX2OPm.png)
 
 For the diary I cut out one of the Author of the Weeks from the [MSK/template](http://moleskine.com/template) website.
 
