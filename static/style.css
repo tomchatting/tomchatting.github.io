@@ -512,12 +512,12 @@ iframe.video {
     }
 
     .home h1 {
-        font-size: 60px !important;
-        line-height: 65px !important;
+        font-size: 3.5rem !important;
+        line-height: 4rem !important;
     }
 
     p.lead {
-        font-size: 2.0rem !important;
+        font-size: 1.7rem !important;
         line-height: 2.4rem !important;
     }
 
