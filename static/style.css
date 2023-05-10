@@ -14,6 +14,11 @@
         --section-width: 100%;
         --p-size: 1rem;
     }
+
+    p.lead {
+        font-size: 1.2rem !important;
+        line-height: 1.8rem !important;
+    }
 }
 
 [data-theme="dark"] {
@@ -59,7 +64,7 @@ header h1 {
 
 .home h1,
 h1.page-top {
-    font-size: 52px !important;
+    font-size: 2.8rem !important;
     line-height: 50px !important;
     font-weight: 600 !important;
     letter-spacing: -0.96px;
