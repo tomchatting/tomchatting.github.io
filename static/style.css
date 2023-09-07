@@ -32,13 +32,13 @@
 html {
     background-color: var(--color-bg);
     overflow-y: scroll;
+    margin: 0;
 }
 
 body {
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    max-width: 90%;
-    height: 100vh;
-    margin: 0 auto;
+    min-height: 100%;
     font-size: calc(1rem + 0.25vh);
     line-height: 1.6;
     color: var(--color-font);
@@ -50,17 +50,16 @@ body.default footer {
     position: relative;
 }
 
-header section {
-    display: grid;
-    grid-template-areas:
-        "title nav";
-    align-items: start;
-    justify-content: space-between;
+body section,
+body footer {
+    max-width: 80vw;
+    margin: 0 auto;
 }
+
 
 header h1 {
     grid-area: title;
-    margin-top: 0.8rem;
+    margin:0;
 }
 
 .home h1,
@@ -77,107 +76,68 @@ p.lead {
     line-height: 2.0rem !important;
 }
 
+header {
+    background: #161625;
+    min-height: 75px;
+    padding-top: 0.8em;
+}
+
 header h1 a:hover {
     text-decoration: none;
     opacity: 0.7;
 }
 
-header nav {
-    grid-area: nav;
-    clear: both;
-    max-height: fit-content;
-    transition: max-height .2s ease-out;
-    text-align: right;
+header:focus,
+header button:hover {
+    background: #fff;
+    color: #000;
 }
 
+header nav button {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    background: transparent;
+    color: #fff;
+    display: none;
+}
+header nav button:focus, header nav button:hover {
+    background: #fff;
+    color: #000;
+}
 
 header nav ul {
     list-style: none;
-    overflow: hidden;
-    padding: 0;
-    padding-top: 8px;
+    padding:0;
+    margin:0;
+    padding-bottom: 1em;
 }
 
-header nav ul li {
+header nav ul li a {
+    color: #fff;
+}
+
+header nav a {
     display: block;
 }
 
-header nav li a:hover,
-header nav .menu-btn:hover {
-    background-color: #f4f4f4;
-}
-
-header nav .menu-icon {
-    width: 20px;
-    height: 20px;
-    padding-top: 2em;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-header nav .menu-icon .navicon {
-    background: var(--color-heading);
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
-
-header nav .menu-icon .navicon:before,
-header nav .menu-icon .navicon:after {
-    background: var(--color-heading);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 200ms ease-out;
-    width: 100%;
-}
-
-header nav .menu-icon .navicon:before {
-    top: 5px;
-}
-
-header nav .menu-icon .navicon:after {
-    top: -5px;
-}
-
-header nav ul {
-    clear: both;
-    max-height: 0;
-    transition: max-height 500ms ease-in;
-}
-
-header nav .menu-btn {
+.js-enabled header nav ul {
     display: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
-header nav .menu-btn:checked~ul {
-    max-height: 240px !important;
+.js-enabled header nav button {
+    display: block;
 }
 
-header nav .menu-btn:checked~.menu-icon .navicon {
-    background: transparent;
+header nav ul.is-active {
+    display: block;
 }
 
-header nav .menu-btn:checked~.menu-icon .navicon:before {
-    transform: rotate(-45deg);
-}
-
-header nav .menu-btn:checked~.menu-icon .navicon:after {
-    transform: rotate(45deg);
-}
-
-header nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-header nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-    top: 0;
-}
-
+  
 h1 {
     color: var(--color-heading);
     font-size: 2rem;
@@ -273,9 +233,11 @@ article h3:hover .heading-link, article h4:hover .heading-link {
 }
 
 .theme {
-    grid-area: theme-switcher;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
+}
+
+.js-enabled .theme {
+    display: block;
 }
 
 /*Simple css to style it like a toggle switch*/
@@ -479,19 +441,7 @@ iframe.video {
 }
 
 @media (min-width: 1399px) {
-    nav li {
-        display: inline-block !important;
-    }
-
-    header li a {
-        padding: 20px 15px;
-    }
-
-    header li a:hover {
-        background-color: transparent !important;
-    }
-
-    .archive h1.hero {
+     .archive h1.hero {
         margin-top: 1rem;
     }
 
@@ -500,18 +450,6 @@ iframe.video {
         line-height: 3.4rem;
         margin-top: 0;
     }
-
-    header nav ul {
-        clear: none;
-        max-height: none;
-        top: 0 !important;
-        left: 0;
-    }
-
-    nav .menu-icon {
-        display: none !important;
-    }
-
     .home h1 {
         font-size: 3.5rem !important;
         line-height: 4rem !important;
@@ -545,3 +483,25 @@ iframe.video {
         width: 200px;
     }
 }
+
+@media (min-width: 700px) {
+    .js-enabled header nav ul {
+      display: block;
+    }
+  
+    .js-enabled header nav button {
+      display: none;
+    }
+  
+    header nav button {
+      display: none;
+    }
+  
+    header nav {
+      padding-left: 0;
+    }
+    header nav li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }

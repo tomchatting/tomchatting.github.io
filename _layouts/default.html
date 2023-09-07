@@ -8,6 +8,10 @@
   <meta name="supported-color-schemes" content="light dark">
   <meta name="theme-color" content="#161625">
 
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/zenburn.css">
+
+
   <script src=/static/lights.js defer></script>
   <script src=/static/battery.js defer></script>
 
@@ -16,20 +20,19 @@
 
   <title>{% if page.title == "Home" %}Thomas Chatting{% else %}{{ page.title }} ~ Thomas Chatting{% endif %}</title>
 
-<link rel=stylesheet href=/static/style.css>
-<link rel=stylesheet href=/static/zenburn.css>
-
 </head>
 
 <body class="{{ page.layout }}">
+  <script>document.documentElement.className = ((document.documentElement.className) ? document.documentElement.className + ' js-enabled' : 'js-enabled');</script>
 
   <header>
     <section>
       <h1><a href=/>🚀{% if page.title != "Home" %} Thomas C<span>hatting</span>{% endif %}</a></h1>
-      <nav>
-        <input class="menu-btn" type="checkbox" id="menu-btn">
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul>
+      <nav aria-label="Main Navigation" role="navigation">
+        <button id="toggle" aria-expanded="false" aria-controls="menu">
+          Menu
+        </button>
+        <ul id="menu">
           <li><a href=/>About</a></li>
           <li><a href=/writing>Writing</a></li>
           <li><a href=/reading>Reading</a></li>
@@ -38,7 +41,7 @@
             <div class=theme>
               <div class=theme-switch-wrapper>
                 <label class=theme-switch for=checkbox>
-                  <input type=checkbox id=checkbox class=toggle checked>
+                  <input aria-label="Light/dark mode toggle" type=checkbox id=checkbox class=toggle checked>
                   <em>Dark mode toggle</em>
                 </label>
               </div>
@@ -49,9 +52,25 @@
     </section>
   </header>
 
+  <script id="rendered-js" >
+    var toggle = document.querySelector('#toggle');
+    var menu = document.querySelector('#menu');
+    var menuItems = document.querySelectorAll('#menu li a');
+
+    toggle.addEventListener('click', function () {
+      if (menu.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+      } else {
+        menu.classList.add('is-active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+    </script>
+
   {{ content }}
 
-  <footer>
+  <footer aria-label="Footer Navidation" role="contentinfo">
     <section>
       <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a
           href=https://github.com>GitHub</a>.<br>
