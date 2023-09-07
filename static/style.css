@@ -63,11 +63,16 @@ header h1 {
 }
 
 .home h1,
-h1.page-top {
+h1.page-top :not(.post h1) {
     font-size: 2.8rem !important;
     line-height: 50px !important;
     font-weight: 600 !important;
     letter-spacing: -0.96px;
+}
+
+body.post h1.page-top {
+    font-size: 2rem;
+    line-height: 2.2rem;
 }
 
 p.lead {
@@ -96,7 +101,7 @@ header button:hover {
 header nav button {
     position: absolute;
     right: 0em;
-    top: 0.3em;
+    top: 1.0em;
     padding: 8px;
     border: 2px solid #fff;
     border-radius: 5px;
@@ -508,5 +513,10 @@ iframe.video {
       display: inline-block;
       margin-right: 1em;
       font-size: var(--p-size);
+    }
+
+    body.post .page-top {
+        font-size: 2.8rem !important;
+        line-height: 50px !important;
     }
   }
