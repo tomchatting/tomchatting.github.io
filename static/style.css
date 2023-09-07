@@ -95,8 +95,8 @@ header button:hover {
 
 header nav button {
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 0em;
+    top: 0.3em;
     padding: 8px;
     border: 2px solid #fff;
     border-radius: 5px;
@@ -115,6 +115,10 @@ header nav ul {
     padding:0;
     margin:0;
     padding-bottom: 1em;
+}
+
+header nav ul li {
+    font-size: 1em;
 }
 
 header nav ul li a {
@@ -503,5 +507,6 @@ iframe.video {
     header nav li {
       display: inline-block;
       margin-right: 1em;
+      font-size: var(--p-size);
     }
   }
