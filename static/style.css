@@ -505,6 +505,12 @@ iframe.video {
     header nav button {
       display: none;
     }
+
+    body section,
+    body footer {
+        max-width: 960px;
+        margin: 0 auto;
+    }
   
     header nav {
       padding-left: 0;
