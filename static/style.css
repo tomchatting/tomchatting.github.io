@@ -44,6 +44,13 @@ body {
     color: var(--color-font);
 }
 
+article p {
+    font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+    font-size: calc(1rem + 0.5vh);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 body.default header,
 body.default section,
 body.default footer {
@@ -101,7 +108,7 @@ header button:hover {
 header nav button {
     position: absolute;
     right: 0em;
-    top: 1.0em;
+    top: 0.2em;
     padding: 8px;
     border: 2px solid #fff;
     border-radius: 5px;
@@ -109,6 +116,10 @@ header nav button {
     background: transparent;
     color: #fff;
     display: none;
+}
+body:not(.default) header nav button {
+    top: 1.0em;
+    right: 1.6em
 }
 header nav button:focus, header nav button:hover {
     background: #fff;
