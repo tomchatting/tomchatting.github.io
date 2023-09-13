@@ -51,6 +51,10 @@ article p {
     text-justify: inter-word;
 }
 
+abbr {
+    border-bottom: var(--color-font) dashed 1px;
+}
+
 body.default header,
 body.default section,
 body.default footer {

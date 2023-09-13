@@ -1,0 +1,25 @@
+---
+layout: post
+title: "'you couldn't live with your own failure, where did that bring you? back to me' 🫰"
+category: ramble
+---
+
+I think I dislike the cloud ⛈.
+
+Don't get me wrong, <abbr title="Software as a service">SAAS</abbr> and <abbr title="Platform as a service">PAAS</abbr> have their place in the world, but I think I have a severe soft spot for statically generated blogs. Maybe it feeds into my penchant for static typed programming languages.
+
+<iframe class="video" src="https://www.youtube.com/embed/kVM1QEEXG1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="0"> </iframe>
+
+We have a cloud SQL Instance and Data Warehouse/Transformation layer at work. It's not our primary system, but it provides 30% of our warehouse footprint. On the cloud, it costs in the region of £350-400 excl VAT per month. Out IT department do not recost server infrastructure to us. Our cloud ETL takes in the region of 90-120 minutes per morning. Our on prem trnsformations are complete within 30-45 minutes.
+
+On Google Compute Engine, my initial experiment to build a PHP blog were actually free. I didn't use any kind of frameworks, rather I stuck to vanilla PHP and postgresql. This obviously made things much cheaper to run, but it relied on my prowess as a developer to ensure the system was secure and stable. I switched to Ruby on Rails and relied heavily on pre-built libraries and frameworks. Costs ballooned and I ended up exceeding the gratuity limits for Google Compute Engine, averaging between £0.01 and £0.02 per calendar month.
+
+This obviously doesn't sound like much, but I'd put this site behind a cached cloudflare instance, and had even gone as far as installing redis (just in case).
+
+I think I confused the mercy of work cost wise with what I was willing to afford myself. This blog gets very few hits (hi mum), but it could, or it could get interest from someone who wants to cost-bomb me. Fow now, whilst a good experiment I think it's best to leave the costs to GitHub Pages.
+
+# Asides
+
+At work I've managed to deploy a webapp using an open source front-end to provide a front-door for our department. I built it in C# and I'm very proud of it.
+
+My little one started school and I'm very proud of her.
