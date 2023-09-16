@@ -47,8 +47,6 @@ body {
 article p {
     font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
     font-size: calc(1rem + 0.5vh);
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 abbr {
