@@ -18,10 +18,17 @@ permalink: /reading/
         </tr>
 
         <tr>
+            <td>2023-09-10</td>
+            <td>code of conduct</td>
+            <td>chris bryant</td>
+            <td>☑️</td>
+        </tr>
+
+        <tr>
             <td>2023-03-30</td>
             <td>to be a machine</td>
             <td>mark o'connell</td>
-            <td>🟢</td>
+            <td>☑️</td>
         </tr>
 
         <tr>
