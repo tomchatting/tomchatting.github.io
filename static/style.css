@@ -44,10 +44,6 @@ body {
     color: var(--color-font);
 }
 
-article p {
-    font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
-}
-
 abbr {
     border-bottom: var(--color-font) dashed 1px;
 }
