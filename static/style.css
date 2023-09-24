@@ -461,6 +461,7 @@ iframe.video {
     body section,
     body footer {
         max-width: 760px !important;
+        width: 90vw;
         margin: 0 auto;
     }
 }
