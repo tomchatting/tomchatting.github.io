@@ -457,6 +457,14 @@ iframe.video {
     }
 }
 
+@media (max-width: 1399px) {
+    body section,
+    body footer {
+        max-width: 760px !important;
+        margin: 0 auto;
+    }
+}
+
 @media (min-width: 1399px) {
      .archive h1.hero {
         margin-top: 1rem;
@@ -501,7 +509,7 @@ iframe.video {
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     .js-enabled header nav ul {
       display: block;
     }
