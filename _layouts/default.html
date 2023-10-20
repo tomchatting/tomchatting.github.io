@@ -1,19 +1,16 @@
 <!doctype html>
-<html lang=en data-theme=light>
+<html lang="en">
+
 <head>
   <meta charset=utf-8>
   <meta name=viewport content="initial-scale=1, viewport-fit=cover">
   <meta name="description"
     content="Website and musings of Thomas Chatting, a business intelligence developer and all-round nerd from the UK.">
-  <meta name="supported-color-schemes" content="light dark">
+  <meta name="supported-color-schemes" content="light">
   <meta name="theme-color" content="#161625">
 
   <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="/static/zenburn.css">
-
-
-  <script src=/static/lights.js defer></script>
-  <script src=/static/battery.js defer></script>
 
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
@@ -25,59 +22,69 @@
 <body class="{{ page.layout }}">
   <script>document.documentElement.className = ((document.documentElement.className) ? document.documentElement.className + ' js-enabled' : 'js-enabled');</script>
 
-  <header>
-    <section>
-      <h1><a href=/>🚀{% if page.title != "Home" %} Thomas C<span>hatting</span>{% endif %}</a></h1>
-      <nav aria-label="Main Navigation" role="navigation">
-        <button id="toggle" aria-expanded="false" aria-controls="menu">
-          Menu
-        </button>
-        <ul id="menu">
-          <li><a href=/>About</a></li>
-          <li><a href=/writing>Writing</a></li>
-          <li><a href=/reading>Reading</a></li>
-          <li><a href=https://flaky-toothbrush.surge.sh/1000-mile-challenge.html title="A record of my running and walking distance (in miles) for 2023">Moving</a></li>
-          <li>
-            <div class=theme>
-              <div class=theme-switch-wrapper>
-                <label class=theme-switch for=checkbox>
-                  <input aria-label="Light/dark mode toggle" type=checkbox id=checkbox class=toggle checked>
-                  <em>Dark mode toggle</em>
-                </label>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </section>
-  </header>
+  <a class="[ skip-link ] [ button ]" href="#main-content">Skip to content</a>
 
-  <script id="rendered-js" >
-    var toggle = document.querySelector('#toggle');
-    var menu = document.querySelector('#menu');
-    var menuItems = document.querySelectorAll('#menu li a');
+  <div class="site-wrapper">
+    <header role="banner" class="site-header">
+      <div class="wrapper">
+        <div class="site-header__inner">
+          <a href="/" aria-label="Thomas Chatting - homepage" class="site-header__brand">
+            Thomas Chatting
+          </a>
+          <nav class="nav">
+            <ul  class="nav__list">
+              <li><a href=#>Testing 123</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-    toggle.addEventListener('click', function () {
-      if (menu.classList.contains('is-active')) {
-        this.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('is-active');
-      } else {
-        menu.classList.add('is-active');
-        this.setAttribute('aria-expanded', 'true');
-      }
+    {{ content }}
+
+    <footer role="contentinfo" class="site-footer">
+      <div class="wrapper">
+        <h2 class="visually-hidden">Contact me</h2>
+        <p>I'm on <a href="https://twitter.com/_tomch">Twitter</a>, <a href=https://github.com/tomchatting>GitHub</a>, 
+          and <a href=https://linkedin.com/in/thomas-chatting>LinkedIn</a>.</p>
+        <noscript><p>I'm also contable by email. Enable JavaScript for my email address.</p></noscript>
+        <p class=d-none id=contact>If you'd like to say hello, I can be reached via email at <a id=email-link></a>.</p>
+        <h2 class="visually-hidden">About this site</h2>
+        <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a
+            href=https://github.com>GitHub</a>.<br>
+          &copy; 2012-2023 <a href=https://twitter.com/_tomch target="_blank">Thomas Chatting</a></p>
+        </div>
+    </footer>
+
+  </div>
+
+  <script>
+    setTimeout(function setEmailAddress() {
+      const email = [
+        'm', 'o', 'c',
+        '.',
+        'l', 'i', 'a', 'm', 'g',
+        String.fromCharCode(64), // @
+        'g', 'n', 'i', 't', 't', 'a', 'h', 'c', '.', 's', 'a', 'm', 'o', 'h', 't'
+      ].reverse().join('')
+  
+      const linkEl = document.getElementById('email-link')
+      linkEl.href = 'mailto:' + email
+      linkEl.innerText = email
+    }, 200)
+  
+    const contactEl = document.getElementById('contact')
+    contactEl.classList.remove('d-none')
+
+    // Loops through dom and finds all elements with nhsuk-card--clickable class
+    document.querySelectorAll('.card--clickable').forEach((card) => {
+        // Check if card has a link within it
+        if (card.querySelector('a') !== null) {
+            // Clicks the link within the heading to navigate to desired page
+            card.addEventListener('click', () => {
+                card.querySelector('a').click();
+            });
+        }
     });
-    </script>
-
-  {{ content }}
-
-  <footer aria-label="Footer Navidation" role="contentinfo">
-    <section>
-      <p>This site is powered by <a href=https://jekyllrb.com>Jekyll</a> and hosted by <a
-          href=https://github.com>GitHub</a>.<br>
-        &copy; 2012-2023 <a href=https://twitter.com/_tomch target="_blank">Thomas Chatting</a></p>
-    </section>
-    <section id="fully-charged" class="battery-alert d-none">
-      <p>Your device's 🔋 is fully charged, consider unplugging to <a href=https://www.apple.com/uk/batteries/
-          target=_blank>maximise battery health</a> and reduce energy use.</p>
-    </section>
-  </footer>
+  
+  </script>
