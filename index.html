@@ -3,46 +3,42 @@ layout: default
 title: Home
 ---
 
-<section class=home>
-  <h1>Thomas Chatting works in data.</h1>
-
-  <p class=lead>
-    👋, my name is Thomas and I'm a girl dad, Business Intelligence (and Full-Stack) developer, and all round IT professional. 
-    I'm currently working in the public sector in Data Warehousing. 
-    I can usually be found creating solutions in various SQL languages or creating modern front-ends for our internal stakeholders.
-    I can be found on Twitter as <a href=https://twitter.com/_tomch target=_blank>@_tomch</a>, 
-    <a href=https://github.com/tomchatting>GitHub</a>, 
-    and <a href=https://linkedin.com/in/thomas-chatting>LinkedIn</a>.
-  </p>
-
-  <p>I have messed around with computers as a hobby for as long as I can remember. I noodle in Ruby, C#, SQL, JavaScript and more.</p>
-
-  <p>This site is hosted on <a href=https://pages.github.com>GitHub pages</a> using <a href=https://github.com/mojombo/jekyll>Jekyll</a>, 
-    and most of the content is written in John Gruber's <a href=https://daringfireball.net/projects/markdown/>Markdown</a>.</p>
-
-  <p>The code for this site and all of the posts in raw format can be poked around with on its 
-    <a href=https://github.com/tomchatting/tomchatting.github.io>GitHub Repository</a>, but please don't steal (my) stuff.</p>
-
-  <noscript>If you want to contact me, I'm avaiable via LinkedIn and Twitter (links above).</noscript>
-  <p class=d-none id=contact>If you'd like to say hello, I can be reached via email at <a id=email-link></a>.</p>
+<section class="hero">
+  <div class="wrapper">
+      <div class="hero--wrapper">
+          <h1 class="hero__header">👋, I'm Tom</h1>
+          <p class="intro no-margin">
+              A <strong>senior business intelligence developer</strong> skilled in 
+              data-warehousing, full-stack web development, and automation. 
+              Currently working in the NHS.
+          </p>
+      </div>
+  </div>
 </section>
 
-<script>
-  setTimeout(function setEmailAddress() {
-    const email = [
-      'm', 'o', 'c',
-      '.',
-      'l', 'i', 'a', 'm', 'g',
-      String.fromCharCode(64), // @
-      'g', 'n', 'i', 't', 't', 'a', 'h', 'c', '.', 's', 'a', 'm', 'o', 'h', 't'
-    ].reverse().join('')
+<main tabindex="-1" id="main-content" class="main">
 
-    const linkEl = document.getElementById('email-link')
-    linkEl.href = 'mailto:' + email
-    linkEl.innerText = email
-  }, 200)
+  <div class="wrapper">
+      <h2 id="work" class="visually-hidden">My work</h2>
+      <ul class="card-group">
+          <li class="card card--clickable">
+              <img class="card__img" src="/static/images/bing_creator_laptop_img.jpg" alt="">
+              <h3 class="card__title">
+                  <a href="/writing/">Blog posts</a>
+              </h3>
+              <p class="card__description">Whatever has filtered to the top after 13 years with an unlicensed website.</p>
+          </li>
+          <li class="card card--clickable">
+              <img class="card__img" src="https://placehold.co/600x400" alt="">
+              <h3 class="card__title">
+                  <a href="#">Performance and Information Centre</a>
+              </h3>
+              <p class="card__description">Coming soon - how I helped design, build and maintain a front door for 
+                our Information Services team.
+              </p>
+          </li>
+      </ul>
 
-  const contactEl = document.getElementById('contact')
-  contactEl.classList.remove('d-none')
+  </div>
 
-</script>
+</main>
