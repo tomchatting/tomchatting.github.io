@@ -31,6 +31,7 @@ a:not([class]) {
 
 img, iframe {
     max-width: 100%;
+    height: auto;
     display:block;
 }
 
@@ -156,7 +157,7 @@ h1, h2, h3, h4 {
 .site-header__brand {
     color: #37474f;
     flex-shrink: 0;
-    font-size: 1.1875rem;
+    font-size: 1.75rem;
     font-weight: 700;
     margin-inline-end: 2rem;
     text-decoration:none
