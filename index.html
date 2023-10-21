@@ -22,7 +22,11 @@ title: Home
       <h2 id="work" class="visually-hidden">My work</h2>
       <ul class="card-group">
           <li class="card card--clickable">
-              <img class="card__img" src="/static/images/bing_creator_laptop_img.jpg" alt="">
+              <picture>
+                <source type="image/webp" srcset="/static/images/bing_creator_laptop_img.webp">
+                <source type="image/jpeg" srcset="/static/images/bing_creator_laptop_img.jpg">
+                <img class="card__img" src="/static/images/bing_creator_laptop_img.jpg" alt="">
+              </picture>
               <h3 class="card__title">
                   <a href="/writing/">Blog posts</a>
               </h3>
