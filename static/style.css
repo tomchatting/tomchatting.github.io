@@ -13,7 +13,7 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     --color-secondary: #536390;
     --color-font: #424242;
     --color-bg: #fefefe;
-    --color-heading: #302AE6;
+    --color-heading: #0077aa;
     --color-href: #0077aa;
     --max-width: 70rem;
     --p-size: 1.33rem;
@@ -241,6 +241,14 @@ img.card__img {
     background: #f5f5f5;
     margin-top: -4px;
     padding:3rem 0
+}
+
+.hero__header span {
+    color: var(--color-font);
+}
+
+.hero__header {
+    color: #663399;
 }
 
 .hero__header {
