@@ -253,6 +253,40 @@ img.card__img {
     padding: 5px 0 20px 0;
 }
 
+.chevron-card__link::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.chevron-card__link::before {
+    border-right: 3px solid #1d70b8;
+    border-top: 3px solid #1d70b8;
+    content: "";
+    display: block;
+    height: 7px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: 5px;
+    -webkit-transform: translateY(0) rotate(45deg) scale(1);
+    -ms-transform: translateY(0) rotate(45deg) scale(1);
+    transform: translateY(0) rotate(45deg) scale(1);
+    width: 7px
+}
+
+.chevron-card__link:hover::before {
+    border-color: #003078
+}
+
+.chevron-card__link:focus::before {
+    border-color: #0b0c0c
+}
+
 .chevron-card:first-child .chevron-card__wrapper {
     padding-top: 0;
 }
