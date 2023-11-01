@@ -237,6 +237,31 @@ img.card__img {
     cursor:pointer
 }
 
+.work__list {
+    list-style: none;
+    margin: 0 -15px;
+    padding: 0;
+}
+
+.chevron-card:first-child {
+    border-top: none;
+}
+
+.chevron-card {
+    border-top: 1px solid #b1b4b6;
+    margin: 0 15px;
+    padding: 5px 0 20px 0;
+}
+
+.chevron-card:first-child .chevron-card__wrapper {
+    padding-top: 0;
+}
+
+.chevron-card__wrapper {
+    padding: 19px 0 4px;
+    position: relative;
+}
+
 .hero {
     background: #f5f5f5;
     margin-top: -4px;
