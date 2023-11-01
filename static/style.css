@@ -249,11 +249,11 @@ img.card__img {
 
 .chevron-card {
     border-top: 1px solid #b1b4b6;
-    margin: 0 15px;
+    margin: 0;
     padding: 5px 0 20px 0;
 }
 
-.chevron-card__link::after {
+.chevron-card__link::after, .card__link::after {
     bottom: 0;
     content: "";
     display: block;
@@ -279,11 +279,11 @@ img.card__img {
     width: 7px
 }
 
-.chevron-card__link:hover::before {
+.chevron-card__link:hover::before, .card__link:hover::before {
     border-color: #003078
 }
 
-.chevron-card__link:focus::before {
+.chevron-card__link:focus::before, .card__link:focus::before {
     border-color: #0b0c0c
 }
 

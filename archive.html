@@ -15,10 +15,12 @@ permalink: /writing/
       <ul class="list">
         {% for post in site.posts %}
         <li class="chevron-card card--clickable">  
-          <h3 class="card__title">
-            <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
-          </h3>
-          <p class="card__description"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time></p>
+          <div class="chevron-card__wrapper">
+            <h3 class="card__title">
+              <a class="card__link" href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
+            </h3>
+            <p class="card__description"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time></p>
+          </div>
         </li>
         {% endfor %}
       </ul>
