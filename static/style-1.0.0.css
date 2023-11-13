@@ -230,7 +230,8 @@ img.card__img {
 }
 
 .card__description {
-    margin-bottom:0
+    margin-bottom:0;
+    padding-right: 25px
 }
 
 .card--clickable:hover {
