@@ -94,7 +94,7 @@ body {
     color: --var(--color-font);
     line-height: 1.5;
     font-size: 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 :focus {
@@ -106,8 +106,11 @@ main:focus {
     outline:0
 }
 
-h1, h2, h3, h4 {
+h1 {
     color: var(--color-heading);
+}
+
+h1, h2, h3, h4 {
     font-weight: 700;
     font-family: Raleway, Arial, sans-serif;
     line-height:1.1
@@ -383,7 +386,7 @@ h3 {
     }
 }
 
-.list, p {
+.list, p, pre, code {
     margin-bottom: 2rem;
     max-width:44rem
 }
