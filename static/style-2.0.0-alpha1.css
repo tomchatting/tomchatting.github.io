@@ -11,16 +11,33 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
 :root {
     --color-primary: #302AE6;
     --color-secondary: #536390;
-    --color-font: #424242;
+    --color-tertiary: #f5f5f5;
+    --color-font: #303030;
     --color-bg: #fefefe;
     --color-heading: #0077aa;
+    --color-hero: #37474f;
     --color-href: #0077aa;
+    --color-faded: #b1b4b6;
     --max-width: 70rem;
     --p-size: 1.33rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #625dff;
+        --color-secondary: #8090bb;
+        --color-tertiary: #2e2e2e;
+        --color-font: #fefefe;
+        --color-bg: #303030;
+        --color-heading: #0077aa;
+        --color-hero: #8bb2c5;
+        --color-href: #009bdd;
+        --color-faded: #515355;
+    }
+}
+
 html {
-    scroll-behavior:smooth
+    scroll-behavior: smooth;
 }
 
 a:not([class]) {
@@ -117,12 +134,12 @@ h1, h2, h3, h4 {
 }
 
 ::selection {
-    color: #f5f5f5;
+    color: var(--color-tertiary);
     background:rgba(55, 71, 79, .99)
 }
 
 .site-footer {
-    background: #f5f5f5;
+    background: var(--color-tertiary);
     font-size: 1rem;
     padding:2rem 0
 }
@@ -139,8 +156,8 @@ h1, h2, h3, h4 {
 }
 
 .site-header {
-    background: #fff;
-    border-bottom: 4px solid #f5f5f5;
+    background: var(--color-bg);
+    border-bottom: 4px solid var(--color-tertiary);
     padding:1.5rem 0
 }
 
@@ -158,7 +175,7 @@ h1, h2, h3, h4 {
 }
 
 .site-header__brand {
-    color: #37474f;
+    color: var(--color-hero);
     flex-shrink: 0;
     font-size: 1.75rem;
     font-weight: 700;
@@ -252,7 +269,7 @@ img.card__img {
 }
 
 .chevron-card {
-    border-top: 1px solid #b1b4b6;
+    border-top: 1px solid var(--color-faded);
     margin: 0;
     padding: 5px 0 20px 0;
 }
@@ -301,7 +318,7 @@ img.card__img {
 }
 
 .hero {
-    background: #f5f5f5;
+    background: var(--color-tertiary);
     margin-top: -4px;
     padding:3rem 0
 }
@@ -311,7 +328,7 @@ img.card__img {
 }
 
 .hero__header {
-    color: #663399;
+    color: var(--color-primary);
 }
 
 .hero__header {
@@ -329,7 +346,7 @@ img.card__img {
 }
 
 .main {
-    background: #fff;
+    background: var(--color-bg);
     padding:2.5rem 0
 }
 
@@ -528,8 +545,8 @@ ul.list-group {
 }
 
 .section {
-    background: #f5f5f5;
-    border-bottom: 4px solid #fff;
+    background: var(--color-tertiary);
+    border-bottom: 4px solid var(--color-bg);
     padding:2.5rem 0
 }
 
