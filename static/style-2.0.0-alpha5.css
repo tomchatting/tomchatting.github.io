@@ -360,6 +360,7 @@ a {
 a:hover {
     color: var(--color-primary);
     text-decoration: underline;
+    text-decoration-color: var(--color-primary);
     text-decoration-thickness:.25rem
 }
 
@@ -403,9 +404,14 @@ h3 {
     }
 }
 
-.list, p, pre, code {
+.list, p, pre, code, hr {
     margin-bottom: 2rem;
     max-width:44rem
+}
+
+hr {
+    margin-left: 0;
+    border: 1px dashed var(--color-faded);
 }
 
 .list + h2, p + h2 {
