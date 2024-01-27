@@ -4,6 +4,11 @@
     box-sizing:border-box
 }
 
+* {
+    position: relative;
+    min-width: 0;
+}
+
 blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     margin:0
 }
@@ -105,7 +110,7 @@ button, input, select, textarea {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100vdh;
     text-rendering: optimizeSpeed;
     background: var(--color-bg);
     color: var(--color-font);
@@ -124,13 +129,14 @@ main:focus {
 }
 
 h1 {
-    color: var(--color-heading);
+    color: var(--color-heading)
 }
 
 h1, h2, h3, h4 {
     font-weight: 700;
     font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    line-height:1.1
+    line-height:1.1;
+    text-wrap: balance
 }
 
 ::selection {
@@ -402,6 +408,10 @@ h3 {
         font-size: 2rem;
         margin-bottom:1.5rem
     }
+}
+
+p {
+    text-wrap: pretty
 }
 
 .list, p, pre, code, hr {
