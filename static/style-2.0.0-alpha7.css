@@ -280,6 +280,10 @@ img.card__img {
     padding: 5px 0 20px 0;
 }
 
+.chevron-card__link {
+    display: block;
+}
+
 .chevron-card__link::after, .card__link::after {
     bottom: 0;
     content: "";
