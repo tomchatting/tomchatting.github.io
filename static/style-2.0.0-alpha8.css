@@ -17,7 +17,8 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     --color-primary: #302AE6;
     --color-secondary: #536390;
     --color-tertiary: #f5f5f5;
-    --color-font: #303030;
+    --color-quaternary: #484f58;
+    --color-font: #22272e;
     --color-bg: #fefefe;
     --color-heading: #0077aa;
     --color-hero: #37474f;
@@ -31,9 +32,9 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     :root {
         --color-primary: #625dff;
         --color-secondary: #8090bb;
-        --color-tertiary: #373737;
+        --color-tertiary: #161b22;
         --color-font: #fefefe;
-        --color-bg: #303030;
+        --color-bg: #22272e;
         --color-heading: #0077aa;
         --color-hero: #8bb2c5;
         --color-href: #009bdd;
@@ -163,7 +164,7 @@ h1, h2, h3, h4 {
 
 .site-header {
     background: var(--color-bg);
-    border-bottom: 4px solid var(--color-tertiary);
+    border-bottom: 1px solid var(--color-quaternary);
     padding:1.5rem 0
 }
 
@@ -329,7 +330,7 @@ img.card__img {
 
 .hero {
     background: var(--color-tertiary);
-    margin-top: -4px;
+    margin-top: 0;
     padding:3rem 0
 }
 
