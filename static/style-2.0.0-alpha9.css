@@ -58,6 +58,26 @@ img, iframe {
     display:block;
 }
 
+.pt-1 {
+    padding-top: calc(1rem * 0.25)
+}
+
+.pt-2 {
+    padding-top: calc(1rem * 0.5)
+}
+
+.pt-3 {
+    padding-top: calc(1rem)
+}
+
+.pt-4 {
+    padding-top: calc(1rem * 1.5)
+}
+
+.pt-5 {
+    padding-top: calc(1rem * 2)
+}
+
 iframe.video {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -640,3 +660,181 @@ ol[class], ul[class] {
     color: #37474f;
     text-decoration:none
 }
+
+.summary-list {
+    font-size: 19px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0;
+    margin-bottom: calc(1rem * 3);
+}
+
+.summary-list__row {
+    border-bottom: 1px solid var(--color-faded);
+    display: table-row;
+}
+
+.summary-list__row:not(.summary-list__row--no-actions) > :last-child {
+    padding-right: 0;
+}
+
+.summary-list__row-no-actions::after {
+    content: "";
+    display: table-cell;
+    width: 20%;
+}
+
+.summary-list__key,
+.summary-list__value,
+.summary-list__actions {
+  margin: 0;
+    display: table-cell;
+    padding-top: calc(1rem * 0.5);
+    padding-right: calc(1rem * 3);
+    padding-bottom: calc(1rem * 0.5);
+  }
+
+.summary-list__actions {
+  margin-bottom: calc(1rem * 2);
+    width: 20%;
+    text-align: right;
+}
+
+.summary-list__key {
+    margin-bottom: calc(1rem * 0.25);
+    font-weight: bold;
+    width: 30%
+}
+
+  .summary-list__value > p {
+    margin-bottom: calc(1rem * 0.5);
+  }
+
+  .summary-list__value > :last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-list__actions-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .summary-list__actions-list-item {
+    display: inline-block;
+  }
+
+    .summary-list__actions-list-item:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      border: 0;
+    }
+
+    .summary-list__actions-list-item {
+      margin-left: calc(1rem * 0.5);
+      padding-left: calc(1rem * 0.5);
+    }
+
+    .summary-list__actions-list-item:not(:first-child) {
+      border-left: 1px solid var(--color-faded);
+    }
+
+    .summary-list__actions-list-item:first-child {
+      margin-left: 0;
+      padding-left: 0;
+      border: 0;
+    }
+
+  .summary-list__actions-list-item .link:focus {
+    isolation: isolate;
+  }
+
+  .summary-list--no-border
+      .summary-list__key,
+      .summary-list--no-border
+      .summary-list__value,
+      .summary-list--no-border
+      .summary-list__actions {
+        padding-bottom: calc(1rem * 0.5 + 1px);
+      }
+
+  .summary-list--no-border .summary-list__row {
+    border: 0;
+  }
+
+  .summary-list__row--no-border {
+    border: 0;
+  }
+   
+  .summary-list__row--no-border .summary-list__key,
+  .summary-list__row--no-border .summary-list__value,
+  .summary-list__row--no-border .summary-list__actions {
+        padding-bottom: calc(1rem * 0.25 + 1px);
+      }
+    
+  .summary-card {
+    margin-bottom: calc(1rem * 3);
+    border: 1px solid var(--color-faded)
+  }
+
+  .summary-card__title-wrapper {
+    padding: 1rem;
+
+    border-bottom: 1px solid transparent;
+    background-color: var(--color-quaternary);
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      padding: 1rem calc(1rem * 1.5);
+  }
+
+  .summary-card__title {
+    font-size: 19px;
+    font-weight: bold;
+    margin: calc(1rem * 0.25) calc(1rem * 1.5) calc(1rem * 0.25) calc(1rem * 1.5) 0;
+      margin-bottom: calc(1rem * 0.25);
+  }
+
+  .summary-card__actions {
+    font-size: 19px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin: calc(1rem * 0.25) 0;
+    padding: 0;
+    list-style: none;
+      justify-content: right;
+      text-align: right;
+  }
+
+  .summary-card__action {
+    display: inline;
+    margin: 0 calc(1rem * 0.5) 0 0;
+    padding-right: calc(1rem * 0.5);
+    border-right: 1px solid var(--color-faded);
+      margin-right: 0;
+  }
+
+  .summary-card__action:last-child {
+    margin: 0;
+    padding-right: 0;
+    border-right: none;
+      padding-left: calc(1rem * 0.5);
+  }
+
+  .summary-card__content {
+      padding: 1rem calc(1rem * 1.25);
+    }
+
+    .summary-list {
+      margin-bottom: 0;
+    }
+
+    .summary-list__row:last-of-type {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
