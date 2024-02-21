@@ -838,3 +838,10 @@ ol[class], ul[class] {
       margin-bottom: 0;
       border-bottom: none;
     }
+
+blockquote {
+    padding-left: 0.5em;
+    line-height: 2;
+    border-left: 0.5em solid var(--color-secondary);
+    background-color: var(--color-faded);
+}
