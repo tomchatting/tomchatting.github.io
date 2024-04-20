@@ -378,7 +378,8 @@ img.card__img {
 
 .main {
     background: var(--color-bg);
-    padding:2.5rem 0
+    padding-top:2.5rem;
+    padding-bottom:2.5rem
 }
 
 a {
@@ -402,7 +403,8 @@ h1 {
 
 @media (min-width: 37em) {
     .main {
-        padding:4rem 0
+        padding-top:4rem;
+        padding-bottom:4rem
     }
 
     h1 {
@@ -844,4 +846,16 @@ blockquote {
     line-height: 2;
     border-left: 0.5em solid var(--color-secondary);
     background-color: var(--color-faded);
+}
+
+[hidden]{
+    display:none;
+}
+
+.new-window-icon {
+    fill:currentColor;
+    height:0.75rem;
+    margin-inline-start:0.3em;
+    vertical-align:middle;
+    width:0.75rem;
 }
