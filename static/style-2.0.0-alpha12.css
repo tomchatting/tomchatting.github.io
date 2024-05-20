@@ -446,6 +446,10 @@ p {
     max-width:44rem
 }
 
+.highlight pre {
+    overflow: auto;
+}
+
 hr {
     margin-left: 0;
     border: 1px dashed var(--color-faded);
