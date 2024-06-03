@@ -22,7 +22,7 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     --color-bg: #fefefe;
     --color-heading: #0077aa;
     --color-hero: #37474f;
-    --color-href: #0077aa;
+    --color-href: #0019a8;
     --color-faded: #b1b4b6;
     --max-width: 70rem;
     --content-width: 70rem;
@@ -274,15 +274,11 @@ img.card__img {
 .work__list {
     list-style: none;
     margin: 0 -15px;
-    padding: 0;
-}
-
-.chevron-card:first-child {
-    border-top: none;
+    padding: 0
 }
 
 .chevron-card {
-    border-top: 1px solid var(--color-faded);
+    border-top: 3px solid var(--color-quaternary);
     margin: 0;
     padding: 5px 0 20px 0;
 }
@@ -325,9 +321,6 @@ img.card__img {
     border-color: #0b0c0c
 }
 
-.chevron-card:first-child .chevron-card__wrapper {
-    padding-top: 0;
-}
 
 .chevron-card__wrapper {
     padding: 19px 0 4px;
@@ -455,7 +448,8 @@ ul.list {
 }
 
 .intro {
-    font-size:1.1875rem
+    font-size:1.1875rem;
+    padding-bottom: 1.5rem
 }
 
 @media (min-width: 37em) {
@@ -564,8 +558,13 @@ ul.list-group {
 @media (min-width: 37em) {
     .post__description {
         margin-bottom: 3rem;
-        max-width:75%
+        margin: 0 auto
     }
+}
+
+.post__datetime {
+    text-align: center;
+    font-weight: 600
 }
 
 .post__img {
@@ -636,7 +635,7 @@ ol[class], ul[class] {
 }
 
 .nav a {
-    color: #00838f;
+    color: var(--color-href);
     display: block;
     font-size: 1rem;
     font-weight: 700;
