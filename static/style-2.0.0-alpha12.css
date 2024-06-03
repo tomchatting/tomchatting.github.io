@@ -29,20 +29,6 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     --p-size: 1.33rem;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-primary: #625dff;
-        --color-secondary: #8090bb;
-        --color-tertiary: #161b22;
-        --color-font: #fefefe;
-        --color-bg: #22272e;
-        --color-heading: #0077aa;
-        --color-hero: #8bb2c5;
-        --color-href: #009bdd;
-        --color-faded: #515355;
-    }
-}
-
 html {
     scroll-behavior: smooth;
 }
