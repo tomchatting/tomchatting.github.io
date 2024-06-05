@@ -24,8 +24,8 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     --color-hero: #37474f;
     --color-href: #0019a8;
     --color-faded: #b1b4b6;
-    --max-width: 70rem;
-    --content-width: 70rem;
+    --max-width: 50rem;
+    --content-width: 50rem;
     --p-size: 1.33rem;
 }
 
