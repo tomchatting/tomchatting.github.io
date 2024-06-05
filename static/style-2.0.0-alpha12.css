@@ -17,29 +17,16 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, ol[class], p, ul[class] {
     --color-primary: #302AE6;
     --color-secondary: #536390;
     --color-tertiary: #f5f5f5;
-    --color-quaternary: #484f58;
+    --color-quaternary: #f5f7fa;
     --color-font: #22272e;
     --color-bg: #fefefe;
     --color-heading: #0077aa;
     --color-hero: #37474f;
-    --color-href: #0077aa;
+    --color-href: #0019a8;
     --color-faded: #b1b4b6;
-    --max-width: 70rem;
+    --max-width: 50rem;
+    --content-width: 50rem;
     --p-size: 1.33rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-primary: #625dff;
-        --color-secondary: #8090bb;
-        --color-tertiary: #161b22;
-        --color-font: #fefefe;
-        --color-bg: #22272e;
-        --color-heading: #0077aa;
-        --color-hero: #8bb2c5;
-        --color-href: #009bdd;
-        --color-faded: #515355;
-    }
 }
 
 html {
@@ -123,7 +110,7 @@ button, input, select, textarea {
     padding: 0 1.5rem;
     margin-left: auto;
     margin-right: auto;
-    position:relative
+    position:relative;
 }
 
 :root {
@@ -184,7 +171,6 @@ h1, h2, h3, h4 {
 
 .site-header {
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-quaternary);
     padding:1.5rem 0
 }
 
@@ -288,15 +274,11 @@ img.card__img {
 .work__list {
     list-style: none;
     margin: 0 -15px;
-    padding: 0;
-}
-
-.chevron-card:first-child {
-    border-top: none;
+    padding: 0
 }
 
 .chevron-card {
-    border-top: 1px solid var(--color-faded);
+    border-top: 3px solid var(--color-quaternary);
     margin: 0;
     padding: 5px 0 20px 0;
 }
@@ -339,9 +321,6 @@ img.card__img {
     border-color: #0b0c0c
 }
 
-.chevron-card:first-child .chevron-card__wrapper {
-    padding-top: 0;
-}
 
 .chevron-card__wrapper {
     padding: 19px 0 4px;
@@ -378,8 +357,12 @@ img.card__img {
 
 .main {
     background: var(--color-bg);
+}
+
+.main > .wrapper {
     padding-top:2.5rem;
-    padding-bottom:2.5rem
+    padding-bottom:2.5rem;
+    border-top: 3px solid var(--color-quaternary)
 }
 
 a {
@@ -402,11 +385,6 @@ h1 {
 }
 
 @media (min-width: 37em) {
-    .main {
-        padding-top:4rem;
-        padding-bottom:4rem
-    }
-
     h1 {
         font-size: 4rem;
         margin-bottom:3rem
@@ -443,7 +421,7 @@ p {
 
 .list, p, pre, code, hr {
     margin-bottom: 2rem;
-    max-width:44rem
+    max-width: var(--content-width)
 }
 
 .highlight pre {
@@ -470,7 +448,8 @@ ul.list {
 }
 
 .intro {
-    font-size:1.1875rem
+    font-size:1.1875rem;
+    padding-bottom: 1.5rem
 }
 
 @media (min-width: 37em) {
@@ -559,25 +538,33 @@ ul.list-group {
 }
 
 .post__header {
-    margin-bottom:1.5rem
+    margin-bottom:0;
+    text-align: center;
 }
 
 @media (min-width: 37em) {
     .post__header {
         margin-bottom: 2rem;
-        max-width:75%
+        max-width:100%
     }
 }
 
 .post__description {
-    margin-bottom:2.5rem
+    margin-bottom:2.5rem;
+    text-align: center;
+    font-weight: 600;
 }
 
 @media (min-width: 37em) {
     .post__description {
         margin-bottom: 3rem;
-        max-width:75%
+        margin: 0 auto
     }
+}
+
+.post__datetime {
+    text-align: center;
+    font-weight: 600
 }
 
 .post__img {
@@ -648,7 +635,7 @@ ol[class], ul[class] {
 }
 
 .nav a {
-    color: #00838f;
+    color: var(--color-href);
     display: block;
     font-size: 1rem;
     font-weight: 700;
