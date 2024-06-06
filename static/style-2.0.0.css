@@ -555,7 +555,6 @@ ul.list-group {
 
 @media (min-width: 37em) {
     .post__header {
-        margin-bottom: 2rem;
         max-width:100%
     }
 }
