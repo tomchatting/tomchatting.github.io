@@ -2,27 +2,30 @@
 layout: default
 ---
 
-<div tabindex="-1" id="main-content" class="main">
-      <a href="/writing" class="back-link"><span class="visually-hidden">Back to </span>Posts</a>
+<div tabindex="-1" id="main-content">
+  <a href="/writing" class="back-link"><span class="visually-hidden">Back to </span>Posts</a>
 
-      <h1 class="post__header">{{ page.title }}</h1>
-      <p class="intro post__description">{{page.blurb}}</p>
-      <p class="post__datetime"><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time></p>
+  <div class="main">
+    <h1 class="post__header">{{ page.title }}</h1>
+    <p class="intro post__description">{{page.blurb}}</p>
+    <p class="post__datetime"><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string
+        }}</time></p>
 
-      {{ page.content }}
-
+    {{ page.content }}
+  </div>
 </div>
 
 <section class="section" role="complementary" aria-labelledby="posts">
-    <h2 id="posts">More posts</h2>
-    <ul class="card-group">
-      {% for post in site.related_posts limit:2 %}
-      <li class="card card--clickable">  
-        <h3 class="card__title">
-          <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
-        </h3>
-        <p class="card__description"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time></p>
-      </li>
-      {% endfor %}
-    </ul>
+  <h2 id="posts">More posts</h2>
+  <ul class="card-group">
+    {% for post in site.related_posts limit:2 %}
+    <li class="card card--clickable">
+      <h3 class="card__title">
+        <a href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
+      </h3>
+      <p class="card__description"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string
+          }}</time></p>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
