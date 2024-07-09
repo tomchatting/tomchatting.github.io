@@ -5,27 +5,25 @@ permalink: /writing/
 ---
 
 <main tabindex="-1" id="main-content" class="main">
+  <h1 class="post__header">Blog</h1>
+  <p class="intro post__description">
+    Between other (mostly fleeting) hyper-fixations, I sometimes write blog posts. Here's a list of any posts I've
+    written over the last 12 years which I haven't deleted.
+  </p>
 
-  <div class="wrapper">
-      <a href="/" class="back-link"><span class="visually-hidden">Back to </span>Home</a>
-
-      <h1 class="post__header">Blog</h1>
-      <p class="intro post__description">
-        Between other (mostly fleeting) hyper-fixations, I sometimes write blog posts. Here's a list of any posts I've written over the last 12 years which I haven't deleted.
-      </p>
-
-      <ul class="list card-group">
-        {% for post in site.posts %}
-        <li class="chevron-card card--clickable">  
-          <div class="chevron-card__wrapper">
-            <h3 class="card__title">
-              <a class="card__link" href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title }}</a>
-            </h3>
-            <p class="card__description"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time></p>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-  </div>
+  <ul class="list card-group">
+    {% for post in site.posts %}
+    <li class="chevron-card card--clickable">
+      <div class="chevron-card__wrapper">
+        <h5 class="card__title">
+          <a class="card__link" href={% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}>{{ post.title
+            }}</a>
+        </h5>
+        <p class="card__description"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string
+            }}</time></p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 
 </main>
