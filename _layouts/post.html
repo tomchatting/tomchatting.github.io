@@ -3,8 +3,6 @@ layout: default
 ---
 
 <div tabindex="-1" id="main-content" class="main">
-
-  <div class="wrapper">
       <a href="/writing" class="back-link"><span class="visually-hidden">Back to </span>Posts</a>
 
       <h1 class="post__header">{{ page.title }}</h1>
@@ -13,12 +11,9 @@ layout: default
 
       {{ page.content }}
 
-  </div>
-
 </div>
 
 <section class="section" role="complementary" aria-labelledby="posts">
-  <div class="wrapper">
     <h2 id="posts">More posts</h2>
     <ul class="card-group">
       {% for post in site.related_posts limit:2 %}
@@ -30,5 +25,4 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-  </div>
 </section>
