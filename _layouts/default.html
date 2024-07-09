@@ -51,26 +51,6 @@
     </div>
   </footer>
 
-  <script>
-    const setTheme = (theme) => {
-      document.documentElement.classList.add(theme);
-    }
-
-    let theme = (() => {
-      if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-        return localStorage.getItem("theme");
-      }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
-      }
-      return "light";
-    })();
-
-    theme === "light" ? setTheme("light") : setTheme("dark");
-    localStorage.setItem("theme", theme);
-
-  </script>
-
   <svg hidden>
     <symbol id="new-window-icon" viewBox="0 0 12 12">
       <title id="new-win-desc">opens in a new window</title>
