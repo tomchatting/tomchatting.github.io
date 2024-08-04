@@ -8,7 +8,11 @@ html {
 }
 
 body {
-    overflow: hidden;
+    overflow: auto;
+    height:100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 #mobile-lead-toggle {
@@ -95,7 +99,8 @@ span.check:nth-last-child(2) {
     font-size: 1.4rem;
     overflow-y: hidden;
     scrollbar-width: none;
-    height: 50px
+    height: 50px;
+    padding: 0 5px
 }
 
 #mobile-lead-toggle {
@@ -121,7 +126,7 @@ span.check:nth-last-child(2) {
     .site-lead {
         grid-area: 1 / 1 / 2 / 2;
         height: 100dvh;
-        overflow: auto
+        overflow-y: auto;
     }
 
     .site-content {
@@ -130,6 +135,12 @@ span.check:nth-last-child(2) {
 
     #mobile-lead-toggle {
         display: none
+    }
+
+    body {
+        overflow: hidden;
+        height: 100dvh;
+        width: 100dvw;
     }
 }
 
@@ -141,9 +152,10 @@ span.check:nth-last-child(2) {
 }
 
 .site-content {
-    padding-right: 16px;
     overflow-y: auto;
-    scrollbar-width: none
+    scrollbar-width: none;
+    height: 100%;
+    padding: 0 5px
 }
 
 .site-header__brand {
