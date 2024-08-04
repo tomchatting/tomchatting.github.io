@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 120%;
     font-family: sans-serif
 }
 
@@ -96,13 +96,13 @@ span.check:nth-last-child(2) {
 
 
 .site-grid {
-    
+    margin-top: 10px;
     height: 100vh;
     width: 100vw;
 }
 
 .site-lead {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     overflow-y: hidden;
     scrollbar-width: none;
     height: 50px;
@@ -126,7 +126,10 @@ span.check:nth-last-child(2) {
     grid-template-rows: 1fr;
     grid-row-gap: 0px;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 10px
+        grid-column-gap: 10px;
+
+        max-width: 1024px;
+        margin: 0 auto
     }
 
     .site-lead {
@@ -220,7 +223,7 @@ a:focus {
 
 p {
     margin-top: 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     text-wrap: pretty
 }
 
@@ -233,7 +236,7 @@ sup {
 ul {
     padding-left: 1.4em;
     margin-top: 0;
-    margin-bottom: 2.5rem
+    margin-bottom: 1.5rem
 }
 
 li {
@@ -256,9 +259,8 @@ iframe,
 img,
 video {
     max-width: calc(100vw - 15px);
-    height: auto;
     margin-top: 0;
-    margin-bottom: 2.5rem
+    margin-bottom: 2.5rem;
 }
 
 pre {
