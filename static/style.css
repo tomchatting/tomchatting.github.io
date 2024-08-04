@@ -15,13 +15,19 @@ body {
     margin: 0;
 }
 
+.check {
+    left: 90%;
+    top: 20px;
+}
+
+
 #mobile-lead-toggle {
     display: block;
     width: 40px;
     height: 32px;
     position: absolute;
-    top: -7px;
-    left: -5px;
+    left: 90%;
+    top: 20px;
 
     cursor: pointer;
 
@@ -246,9 +252,11 @@ blockquote p {
     margin-bottom: 0
 }
 
+iframe,
 img,
 video {
-    max-width: 100%;
+    max-width: calc(100vw - 15px);
+    height: auto;
     margin-top: 0;
     margin-bottom: 2.5rem
 }
